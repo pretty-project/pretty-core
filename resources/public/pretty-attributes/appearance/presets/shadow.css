@@ -1,0 +1,17 @@
+
+/***** Shadow presets *****/
+/*** Shadow color ***/
+
+[data-shadow-color="var"]       { box-shadow: 0 0 2px 0 var( --shadow-color           ); }
+[data-shadow-color="default"]   { box-shadow: 0 0 2px 0 var( --shadow-color-default   ); }
+[data-shadow-color="highlight"] { box-shadow: 0 0 2px 0 var( --shadow-color-highlight ); }
+[data-shadow-color="invert"]    { box-shadow: 0 0 2px 0 var( --shadow-color-invert    ); }
+[data-shadow-color="muted"]     { box-shadow: 0 0 2px 0 var( --shadow-color-muted     ); }
+[data-shadow-color="primary"]   { box-shadow: 0 0 2px 0 var( --shadow-color-primary   ); }
+[data-shadow-color="secondary"] { box-shadow: 0 0 2px 0 var( --shadow-color-secondary ); }
+[data-shadow-color="tertiary"]  { box-shadow: 0 0 2px 0 var( --shadow-color-tertiary  ); }
+[data-shadow-color="success"]   { box-shadow: 0 0 2px 0 var( --shadow-color-success   ); }
+[data-shadow-color="warning"]   { box-shadow: 0 0 2px 0 var( --shadow-color-warning   ); }
+
+/*** Shadow color ***/
+/***** Shadow presets *****/

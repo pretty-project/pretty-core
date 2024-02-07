@@ -1,0 +1,15 @@
+
+/***** Effect presets *****/
+/*** Hover effect ***/
+
+[data-hover-effect="opacity"]:hover { opacity: .7 !important; }
+
+/*** Hover effect ***/
+
+/*** Click effect ***/
+
+[data-click-effect="opacity"]:active,
+[data-click-effect="opacity"]:focus { opacity: .5 !important; }
+
+/*** Click effect ***/
+/***** Effect presets *****/

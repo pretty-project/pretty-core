@@ -1,0 +1,57 @@
+
+/***** Rotate keyframes *****/
+/*** Rotate 90 ***/
+
+@keyframes rotate-90-cw {
+    0% { transform: rotateZ(    0deg )}
+  100% { transform: rotateZ(  +90deg )}
+}
+
+@keyframes rotate-90-ccw {
+    0% { transform: rotateZ(    0deg )}
+  100% { transform: rotateZ(  -90deg )}
+}
+
+/*** Rotate 90 ***/
+
+/*** Rotate 180 ***/
+
+@keyframes rotate-180-cw {
+    0% { transform: rotateZ(    0deg )}
+  100% { transform: rotateZ( +180deg )}
+}
+
+@keyframes rotate-180-ccw {
+    0% { transform: rotateZ(    0deg )}
+  100% { transform: rotateZ( -180deg )}
+}
+/*** Rotate 180 ***/
+
+/*** Rotate 270 ***/
+
+@keyframes rotate-270-cw {
+    0% { transform: rotateZ(    0deg )}
+  100% { transform: rotateZ( +270deg )}
+}
+
+@keyframes rotate-270-ccw {
+    0% { transform: rotateZ(    0deg )}
+  100% { transform: rotateZ( -270deg )}
+}
+
+/*** Rotate 270 ***/
+
+/*** Rotate 360 ***/
+
+@keyframes rotate-360-cw {
+    0% { transform: rotateZ(    0deg )}
+  100% { transform: rotateZ( +360deg )}
+}
+
+@keyframes rotate-360-ccw {
+    0% { transform: rotateZ(    0deg )}
+  100% { transform: rotateZ( -360deg )}
+}
+
+/*** Rotate 360 ***/
+/***** Rotate keyframes *****/

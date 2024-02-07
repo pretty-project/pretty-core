@@ -1,0 +1,50 @@
+
+/***** Slide keyframes *****/
+/*** Slide in ***/
+
+@keyframes slide-in-ltr {
+    0% { transform: translateX( -110% )}
+  100% { transform: translateX(    0% )}
+}
+
+@keyframes slide-in-rtl {
+    0% { transform: translateX( +110% )}
+  100% { transform: translateX(    0% )}
+}
+
+@keyframes slide-in-ttb {
+    0% { transform: translateY( -110% )}
+  100% { transform: translateY(    0% )}
+}
+
+@keyframes slide-in-btt {
+    0% { transform: translateY( +110% )}
+  100% { transform: translateY(    0% )}
+}
+
+/*** Slide in ***/
+
+/*** Slide out ***/
+
+@keyframes slide-out-ltr {
+    0% { transform: translateX(    0% )}
+  100% { transform: translateX( +110% )}
+}
+
+@keyframes slide-out-rtl {
+    0% { transform: translateX(    0% )}
+  100% { transform: translateX( -110% )}
+}
+
+@keyframes slide-out-ttb {
+    0% { transform: translateY(    0% )}
+  100% { transform: translateY( +110% )}
+}
+
+@keyframes slide-out-btt {
+    0% { transform: translateY(    0% )}
+  100% { transform: translateY( -110% )}
+}
+
+/*** Slide out ***/
+/***** Slide keyframes *****/

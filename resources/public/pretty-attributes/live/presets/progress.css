@@ -1,0 +1,46 @@
+
+/***** Progress presets *****/
+/*** Progress color ***/
+
+[data-progress-color="var"]       { background-image: linear-gradient( var( --progress-color           ), var( --progress-color           )); }
+[data-progress-color="default"]   { background-image: linear-gradient( var( --progress-color-default   ), var( --progress-color-default   )); }
+[data-progress-color="muted"]     { background-image: linear-gradient( var( --progress-color-muted     ), var( --progress-color-muted     )); }
+[data-progress-color="highlight"] { background-image: linear-gradient( var( --progress-color-highlight ), var( --progress-color-highlight )); }
+[data-progress-color="invert"]    { background-image: linear-gradient( var( --progress-color-invert    ), var( --progress-color-invert    )); }
+[data-progress-color="primary"]   { background-image: linear-gradient( var( --progress-color-primary   ), var( --progress-color-primary   )); }
+[data-progress-color="secondary"] { background-image: linear-gradient( var( --progress-color-secondary ), var( --progress-color-secondary )); }
+[data-progress-color="tertiary"]  { background-image: linear-gradient( var( --progress-color-tertiary  ), var( --progress-color-tertiary  )); }
+[data-progress-color="success"]   { background-image: linear-gradient( var( --progress-color-success   ), var( --progress-color-success   )); }
+[data-progress-color="warning"]   { background-image: linear-gradient( var( --progress-color-warning   ), var( --progress-color-warning   )); }
+
+/*** Progress color ***/
+
+/*** Progress direction ***/
+
+[data-progress-direction] {
+  background-repeat: no-repeat;
+  transition: background-size var( --progress-duration ) linear;
+}
+
+[data-progress-direction="ltr"] {
+  background-position: top left;
+  background-size: var( --progress ) 100%;
+}
+
+[data-progress-direction="rtl"] {
+  background-position: top right;
+  background-size: var( --progress ) 100%;
+}
+
+[data-progress-direction="ttb"] {
+  background-position: top left;
+  background-size: 100% var( --progress );
+}
+
+[data-progress-direction="btt"] {
+  background-position: bottom left;
+  background-size: 100% var( --progress );
+}
+
+/*** Progress direction ***/
+/***** Progress presets *****/

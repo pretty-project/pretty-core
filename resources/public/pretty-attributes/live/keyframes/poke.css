@@ -1,0 +1,22 @@
+
+/***** Poke keyframes *****/
+/*** Poke in ***/
+
+@keyframes poke-in {
+    0% { transform: scale( 1.0 )}
+   50% { transform: scale( 0.8 )}
+  100% { transform: scale( 1.0 )}
+}
+
+/*** Poke in ***/
+
+/*** Poke out ***/
+
+@keyframes poke-out {
+    0% { transform: scale( 1.0 )}
+   50% { transform: scale( 1.2 )}
+  100% { transform: scale( 1.0 )}
+}
+
+/*** Poke out ***/
+/***** Poke keyframes *****/

@@ -1,0 +1,141 @@
+
+/***** Flex presets *****/
+/*** Flex gap ***/
+/* Horizontal */
+
+[data-flex-orientation="horizontal"][data-flex-gap="var"]  { column-gap: var( --flex-gap                ); }
+[data-flex-orientation="horizontal"][data-flex-gap="xxs"]  { column-gap: var( --quarter-block-width-xxs ); }
+[data-flex-orientation="horizontal"][data-flex-gap="xs"]   { column-gap: var( --quarter-block-width-xs  ); }
+[data-flex-orientation="horizontal"][data-flex-gap="s"]    { column-gap: var( --quarter-block-width-s   ); }
+[data-flex-orientation="horizontal"][data-flex-gap="m"]    { column-gap: var( --quarter-block-width-m   ); }
+[data-flex-orientation="horizontal"][data-flex-gap="l"]    { column-gap: var( --quarter-block-width-l   ); }
+[data-flex-orientation="horizontal"][data-flex-gap="xl"]   { column-gap: var( --quarter-block-width-xl  ); }
+[data-flex-orientation="horizontal"][data-flex-gap="xxl"]  { column-gap: var( --quarter-block-width-xxl ); }
+[data-flex-orientation="horizontal"][data-flex-gap="3xl"]  { column-gap: var( --quarter-block-width-3xl ); }
+[data-flex-orientation="horizontal"][data-flex-gap="4xl"]  { column-gap: var( --quarter-block-width-4xl ); }
+[data-flex-orientation="horizontal"][data-flex-gap="5xl"]  { column-gap: var( --quarter-block-width-5xl ); }
+[data-flex-orientation="horizontal"][data-flex-gap="auto"] { justify-content: space-between !important; }
+
+/* Horizontal */
+
+/* Vertical */
+
+[data-flex-orientation="vertical"][data-flex-gap="var"]  { row-gap: var( --flex-gap                 ); }
+[data-flex-orientation="vertical"][data-flex-gap="xxs"]  { row-gap: var( --quarter-block-height-xxs ); }
+[data-flex-orientation="vertical"][data-flex-gap="xs"]   { row-gap: var( --quarter-block-height-xs  ); }
+[data-flex-orientation="vertical"][data-flex-gap="s"]    { row-gap: var( --quarter-block-height-s   ); }
+[data-flex-orientation="vertical"][data-flex-gap="m"]    { row-gap: var( --quarter-block-height-m   ); }
+[data-flex-orientation="vertical"][data-flex-gap="l"]    { row-gap: var( --quarter-block-height-l   ); }
+[data-flex-orientation="vertical"][data-flex-gap="xl"]   { row-gap: var( --quarter-block-height-xl  ); }
+[data-flex-orientation="vertical"][data-flex-gap="xxl"]  { row-gap: var( --quarter-block-height-xxl ); }
+[data-flex-orientation="vertical"][data-flex-gap="3xl"]  { row-gap: var( --quarter-block-height-3xl ); }
+[data-flex-orientation="vertical"][data-flex-gap="4xl"]  { row-gap: var( --quarter-block-height-4xl ); }
+[data-flex-orientation="vertical"][data-flex-gap="5xl"]  { row-gap: var( --quarter-block-height-5xl ); }
+[data-flex-orientation="vertical"][data-flex-gap="auto"] { justify-content: space-between !important; }
+
+/* Vertical */
+/*** Flex gap ***/
+
+/*** Flex horizontal align ***/
+/* Horizontal */
+
+[data-flex-orientation="horizontal"][data-flex-horizontal-align="left"]          { justify-content: flex-start;    }
+[data-flex-orientation="horizontal"][data-flex-horizontal-align="center"]        { justify-content: center;        }
+[data-flex-orientation="horizontal"][data-flex-horizontal-align="right"]         { justify-content: flex-end;      }
+[data-flex-orientation="horizontal"][data-flex-horizontal-align="space-around"]  { justify-content: space-around;  }
+[data-flex-orientation="horizontal"][data-flex-horizontal-align="space-between"] { justify-content: space-between; }
+[data-flex-orientation="horizontal"][data-flex-horizontal-align="space-evenly"]  { justify-content: space-evenly;  }
+
+/* Horizontal */
+
+/* Vertical */
+
+[data-flex-orientation="vertical"][data-flex-horizontal-align="left"]   { align-items: flex-start; }
+[data-flex-orientation="vertical"][data-flex-horizontal-align="center"] { align-items: center;     }
+[data-flex-orientation="vertical"][data-flex-horizontal-align="right"]  { align-items: flex-end;   }
+
+/* Vertical */
+/*** Flex horizontal align ***/
+
+/*** Flex orientation ***/
+
+[data-flex-orientation="horizontal"] { display: flex; flex-direction: row;    }
+[data-flex-orientation="vertical"]   { display: flex; flex-direction: column; }
+
+/*** Flex orientation ***/
+
+/*** Flex overflow ***/
+/* Horizontal */
+
+[data-flex-orientation="horizontal"][data-flex-overflow="hidden"]  { overflow-x: hidden;  }
+[data-flex-orientation="horizontal"][data-flex-overflow="scroll"]  { overflow-x: auto;    }
+[data-flex-orientation="horizontal"][data-flex-overflow="visible"] { overflow-x: visible; }
+[data-flex-orientation="horizontal"][data-flex-overflow="wrap"]    { flex-wrap:  wrap;    }
+
+/* Horizontal */
+
+/* Vertical */
+
+[data-flex-orientation="vertical"][data-flex-overflow="hidden"]  { overflow-y: hidden;  }
+[data-flex-orientation="vertical"][data-flex-overflow="scroll"]  { overflow-y: auto;    }
+[data-flex-orientation="vertical"][data-flex-overflow="visible"] { overflow-y: visible; }
+[data-flex-orientation="vertical"][data-flex-overflow="wrap"]    { flex-wrap:  wrap;    }
+
+/* Vertical */
+
+/* Scrollbar */
+
+[data-flex-overflow="scroll"] {
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+[data-flex-overflow="scroll"]::-webkit-scrollbar {
+  /* Chrome, Safari and Opera */
+  display: none;
+}
+
+/* Scrollbar */
+/*** Flex overflow ***/
+
+/*** Flex position ***/
+/* Horizontal */
+
+[data-flex-orientation="horizontal"][data-flex-position="bottom"] { align-self: flex-end;   }
+[data-flex-orientation="horizontal"][data-flex-position="center"] { align-self: center;     }
+[data-flex-orientation="horizontal"][data-flex-position="top"]    { align-self: flex-start; }
+
+/* Horizontal */
+
+/* Vertical */
+
+[data-flex-orientation="vertical"][data-flex-position="left"]   { align-self: flex-start; }
+[data-flex-orientation="vertical"][data-flex-position="center"] { align-self: center;     }
+[data-flex-orientation="vertical"][data-flex-position="right"]  { align-self: flex-end;   }
+
+/* Vertical */
+/*** Flex position ***/
+
+/*** Flex vertical align ***/
+/* Horizontal */
+
+[data-flex-orientation="horizontal"][data-flex-vertical-align="top"]    { align-items: flex-start; }
+[data-flex-orientation="horizontal"][data-flex-vertical-align="center"] { align-items: center;     }
+[data-flex-orientation="horizontal"][data-flex-vertical-align="bottom"] { align-items: flex-end;   }
+
+/* Horizontal */
+
+/* Vertical */
+
+[data-flex-orientation="vertical"][data-flex-vertical-align="top"]           { justify-content: flex-start;    }
+[data-flex-orientation="vertical"][data-flex-vertical-align="center"]        { justify-content: center;        }
+[data-flex-orientation="vertical"][data-flex-vertical-align="bottom"]        { justify-content: flex-end;      }
+[data-flex-orientation="vertical"][data-flex-vertical-align="space-around"]  { justify-content: space-around;  }
+[data-flex-orientation="vertical"][data-flex-vertical-align="space-evenly"]  { justify-content: space-evenly;  }
+[data-flex-orientation="vertical"][data-flex-vertical-align="space-between"] { justify-content: space-between; }
+
+/* Vertical */
+/*** Flex vertical align ***/
+/***** Flex presets *****/

@@ -1,0 +1,50 @@
+
+/***** Fade keyframes *****/
+/*** Fade in ***/
+
+@keyframes fade-in-ltr {
+    0% { opacity: 0; transform: translateX( -10% )}
+  100% { opacity: 1; transform: translateX(   0% )}
+}
+
+@keyframes fade-in-rtl {
+    0% { opacity: 0; transform: translateX( +10% )}
+  100% { opacity: 1; transform: translateX(   0% )}
+}
+
+@keyframes fade-in-ttb {
+    0% { opacity: 0; transform: translateY( -10% )}
+  100% { opacity: 1; transform: translateY(   0% )}
+}
+
+@keyframes fade-in-btt {
+    0% { opacity: 0; transform: translateY( +10% )}
+  100% { opacity: 1; transform: translateY(   0% )}
+}
+
+/*** Fade in ***/
+
+/*** Fade out ***/
+
+@keyframes fade-out-ltr {
+    0% { opacity: 1; transform: translateX(   0% )}
+  100% { opacity: 0; transform: translateX( +10% )}
+}
+
+@keyframes fade-out-rtl {
+    0% { opacity: 1; transform: translateX(   0% )}
+  100% { opacity: 0; transform: translateX( -10% )}
+}
+
+@keyframes fade-out-ttb {
+    0% { opacity: 1; transform: translateY(   0% )}
+  100% { opacity: 0; transform: translateY( +10% )}
+}
+
+@keyframes fade-out-btt {
+    0% { opacity: 1; transform: translateY(   0% )}
+  100% { opacity: 0; transform: translateY( -10% )}
+}
+
+/*** Fade out ***/
+/***** Fade keyframes *****/

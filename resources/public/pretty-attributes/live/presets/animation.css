@@ -1,0 +1,53 @@
+
+/***** Animation presets *****/
+/*** Animation duration ***/
+
+[data-animation-duration="var"] { animation-duration: var( --animation-duration ); }
+
+/*** Animation duration ***/
+
+/*** Animation mode ***/
+
+[data-animation-mode="repeat"] { animation-iteration-count: infinite; }
+[data-animation-mode="single"] { animation-iteration-count: 1;        }
+
+/*** Animation mode ***/
+
+/*** Animation name ***/
+
+[data-animation-name]       { animation-fill-mode: both; }
+[data-animation-name="var"] { animation-name: var( --animation-name ); }
+[data-animation-name="fade-in"][data-animation-direction="ltr"]    { animation-name: fade-in-ltr;    }
+[data-animation-name="fade-in"][data-animation-direction="rtl"]    { animation-name: fade-in-rtl;    }
+[data-animation-name="fade-in"][data-animation-direction="ttb"]    { animation-name: fade-in-ttb;    }
+[data-animation-name="fade-in"][data-animation-direction="btt"]    { animation-name: fade-in-btt;    }
+[data-animation-name="fade-out"][data-animation-direction="ltr"]   { animation-name: fade-out-ltr;   }
+[data-animation-name="fade-out"][data-animation-direction="rtl"]   { animation-name: fade-out-rtl;   }
+[data-animation-name="fade-out"][data-animation-direction="ttb"]   { animation-name: fade-out-ttb;   }
+[data-animation-name="fade-out"][data-animation-direction="btt"]   { animation-name: fade-out-btt;   }
+[data-animation-name="slide-in"][data-animation-direction="ltr"]   { animation-name: slide-in-ltr;   }
+[data-animation-name="slide-in"][data-animation-direction="rtl"]   { animation-name: slide-in-rtl;   }
+[data-animation-name="slide-in"][data-animation-direction="ttb"]   { animation-name: slide-in-ttb;   }
+[data-animation-name="slide-in"][data-animation-direction="btt"]   { animation-name: slide-in-btt;   }
+[data-animation-name="slide-out"][data-animation-direction="ltr"]  { animation-name: slide-out-ltr;  }
+[data-animation-name="slide-out"][data-animation-direction="rtl"]  { animation-name: slide-out-rtl;  }
+[data-animation-name="slide-out"][data-animation-direction="ttb"]  { animation-name: slide-out-ttb;  }
+[data-animation-name="slide-out"][data-animation-direction="btt"]  { animation-name: slide-out-btt;  }
+[data-animation-name="rotate-90"][data-animation-direction="cw"]   { animation-name: rotate-90-cw;   }
+[data-animation-name="rotate-180"][data-animation-direction="cw"]  { animation-name: rotate-180-cw;  }
+[data-animation-name="rotate-270"][data-animation-direction="cw"]  { animation-name: rotate-270-cw;  }
+[data-animation-name="rotate-360"][data-animation-direction="cw"]  { animation-name: rotate-360-cw;  }
+[data-animation-name="rotate-90"][data-animation-direction="ccw"]  { animation-name: rotate-90-ccw;  }
+[data-animation-name="rotate-180"][data-animation-direction="ccw"] { animation-name: rotate-180-ccw; }
+[data-animation-name="rotate-270"][data-animation-direction="ccw"] { animation-name: rotate-270-ccw; }
+[data-animation-name="rotate-360"][data-animation-direction="ccw"] { animation-name: rotate-360-ccw; }
+[data-animation-name="pop-in"]                                     { animation-name: pop-in;         }
+[data-animation-name="pop-out"]                                    { animation-name: pop-out;        }
+[data-animation-name="poke-in"]                                    { animation-name: poke-in;        }
+[data-animation-name="poke-out"]                                   { animation-name: poke-out;       }
+[data-animation-name="appear-in"]                                  { animation-name: appear-in;      }
+[data-animation-name="appear-out"]                                 { animation-name: appear-out;     }
+[data-animation-name="pulse"]                                      { animation-name: pulse;          }
+
+/*** Animation name ***/
+/***** Animation presets *****/

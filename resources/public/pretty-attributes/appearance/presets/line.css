@@ -1,0 +1,51 @@
+
+/***** Line presets *****/
+/*** Line color ***/
+
+[data-line-color="var"]       { background-color: var( --line-color           ); }
+[data-line-color="default"]   { background-color: var( --line-color-default   ); }
+[data-line-color="invert"]    { background-color: var( --line-color-invert    ); }
+[data-line-color="highlight"] { background-color: var( --line-color-highlight ); }
+[data-line-color="muted"]     { background-color: var( --line-color-muted     ); }
+[data-line-color="primary"]   { background-color: var( --line-color-primary   ); }
+[data-line-color="secondary"] { background-color: var( --line-color-secondary ); }
+[data-line-color="tertiary"]  { background-color: var( --line-color-tertiary  ); }
+[data-line-color="success"]   { background-color: var( --line-color-success   ); }
+[data-line-color="warning"]   { background-color: var( --line-color-warning   ); }
+
+/*** Line color ***/
+
+/*** Line strength ***/
+/* Horizontal */
+
+[data-line-orientation="horizontal"][data-line-strength="var"] { height: var( --line-strength     ); }
+[data-line-orientation="horizontal"][data-line-strength="xxs"] { height: var( --line-strength-xxs ); }
+[data-line-orientation="horizontal"][data-line-strength="xs"]  { height: var( --line-strength-xs  ); }
+[data-line-orientation="horizontal"][data-line-strength="s"]   { height: var( --line-strength-s   ); }
+[data-line-orientation="horizontal"][data-line-strength="m"]   { height: var( --line-strength-m   ); }
+[data-line-orientation="horizontal"][data-line-strength="l"]   { height: var( --line-strength-l   ); }
+[data-line-orientation="horizontal"][data-line-strength="xl"]  { height: var( --line-strength-xl  ); }
+[data-line-orientation="horizontal"][data-line-strength="xxl"] { height: var( --line-strength-xxl ); }
+[data-line-orientation="horizontal"][data-line-strength="3xl"] { height: var( --line-strength-3xl ); }
+[data-line-orientation="horizontal"][data-line-strength="4xl"] { height: var( --line-strength-4xl ); }
+[data-line-orientation="horizontal"][data-line-strength="5xl"] { height: var( --line-strength-5xl ); }
+
+/* Horizontal */
+
+/* Vertical */
+
+[data-line-orientation="vertical"][data-line-strength="var"] { width: var( --line-strength     ); }
+[data-line-orientation="vertical"][data-line-strength="xxs"] { width: var( --line-strength-xxs ); }
+[data-line-orientation="vertical"][data-line-strength="xs"]  { width: var( --line-strength-xs  ); }
+[data-line-orientation="vertical"][data-line-strength="s"]   { width: var( --line-strength-s   ); }
+[data-line-orientation="vertical"][data-line-strength="m"]   { width: var( --line-strength-m   ); }
+[data-line-orientation="vertical"][data-line-strength="l"]   { width: var( --line-strength-l   ); }
+[data-line-orientation="vertical"][data-line-strength="xl"]  { width: var( --line-strength-xl  ); }
+[data-line-orientation="vertical"][data-line-strength="xxl"] { width: var( --line-strength-xxl ); }
+[data-line-orientation="vertical"][data-line-strength="3xl"] { width: var( --line-strength-3xl ); }
+[data-line-orientation="vertical"][data-line-strength="4xl"] { width: var( --line-strength-4xl ); }
+[data-line-orientation="vertical"][data-line-strength="5xl"] { width: var( --line-strength-5xl ); }
+
+/* Vertical */
+/*** Line strength ***/
+/***** Line presets *****/

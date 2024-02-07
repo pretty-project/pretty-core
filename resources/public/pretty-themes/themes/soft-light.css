@@ -1,0 +1,210 @@
+
+
+
+
+/* + tertiary (khaki-green) */
+
+
+
+
+
+
+/***** Theme variables *****/
+/*** Badge color ***/
+
+[data-theme="soft-light"] {
+  --badge-color-default:   var( --grey-x-light         );
+  --badge-color-muted:     var( --grey-xx-light        );
+  --badge-color-highlight: var( --white-x-dark         );
+  --badge-color-invert:    var( --black-xx-light       );
+  --badge-color-primary:   var( --soft-blue-xx-light   );
+  --badge-color-secondary: var( --soft-purple-xx-light );
+  --badge-color-success:   var( --soft-green-xx-light  );
+  --badge-color-warning:   var( --soft-red-xx-light    );
+}
+
+/*** Badge color ***/
+
+/*** Border color ***/
+
+[data-theme="soft-light"] {
+  --border-color-default:   var( --grey-x-light  );
+  --border-color-muted:     var( --grey-xx-light );
+  --border-color-highlight: var( --white-x-dark  );
+  --border-color-invert:    var( --black-x-light );
+  --border-color-primary:   var( --hard-blue     );
+  --border-color-secondary: var( --hard-purple   );
+  --border-color-success:   var( --soft-green    );
+  --border-color-warning:   var( --soft-red      );
+}
+
+/*** Border color ***/
+
+/*** Bullet color ***/
+
+[data-theme="soft-light"] {
+  --bullet-color-default:   var( --border-color-default   );
+  --bullet-color-muted:     var( --border-color-muted     );
+  --bullet-color-highlight: var( --border-color-highlight );
+  --bullet-color-invert:    var( --border-color-invert    );
+  --bullet-color-primary:   var( --border-color-primary   );
+  --bullet-color-secondary: var( --border-color-secondary );
+  --bullet-color-success:   var( --border-color-success   );
+  --bullet-color-warning:   var( --border-color-warning   );
+}
+
+/*** Bullet color ***/
+
+/*** Fill color ***/
+
+[data-theme="soft-light"] {
+  --fill-color-default:   var( --white-xx-light );
+  --fill-color-muted:     var( --white-xx-dark  );
+  --fill-color-highlight: var( --white-light    );
+  --fill-color-invert:    var( --black-x-light  );
+  --fill-color-primary:   var( --soft-blue      );
+  --fill-color-secondary: var( --soft-purple    );
+  --fill-color-success:   var( --soft-green     );
+  --fill-color-warning:   var( --soft-red       );
+}
+
+/*** Fill color ***/
+
+/*** Highlight color ***/
+
+[data-theme="soft-light"] {
+  /* XXX#5011 Using fill colors (rather than using hover colors) as highlight colors
+   * ensures that elements are distinguishable when both highlighted and hovered, compared
+   * to elements that are only hovered. */
+  --highlight-color-default:   var( --fill-color-default   );
+  --highlight-color-muted:     var( --fill-color-muted     );
+  --highlight-color-highlight: var( --fill-color-highlight );
+  --highlight-color-invert:    var( --fill-color-invert    );
+  --highlight-color-primary:   var( --fill-color-primary   );
+  --highlight-color-secondary: var( --fill-color-secondary );
+  --highlight-color-success:   var( --fill-color-success   );
+  --highlight-color-warning:   var( --fill-color-warning   );
+}
+
+/*** Highlight color ***/
+
+/*** Hover color ***/
+
+[data-theme="soft-light"] {
+  --hover-color-default:   var( --white-xx-light    );
+  --hover-color-muted:     var( --white-x-dark      );
+  --hover-color-highlight: var( --white             );
+  --hover-color-invert:    var( --black-xx-light    );
+  --hover-color-primary:   var( --soft-blue-light   );
+  --hover-color-secondary: var( --soft-purple-light );
+  --hover-color-success:   var( --soft-green-light  );
+  --hover-color-warning:   var( --soft-red-light    );
+}
+
+/*** Hover color ***/
+
+/*** Icon color ***/
+
+[data-theme="soft-light"] {
+  --icon-color-default:   var( --text-color-default   );
+  --icon-color-muted:     var( --text-color-muted     );
+  --icon-color-highlight: var( --text-color-highlight );
+  --icon-color-invert:    var( --text-color-invert    );
+  --icon-color-primary:   var( --text-color-primary   );
+  --icon-color-secondary: var( --text-color-secondary );
+  --icon-color-success:   var( --text-color-success   );
+  --icon-color-warning:   var( --text-color-warning   );
+}
+
+/*** Icon color ***/
+
+/*** Line color ***/
+
+[data-theme="soft-light"] {
+  --line-color-default:   var( --border-color-default   );
+  --line-color-muted:     var( --border-color-muted     );
+  --line-color-highlight: var( --border-color-highlight );
+  --line-color-invert:    var( --border-color-invert    );
+  --line-color-primary:   var( --border-color-primary   );
+  --line-color-secondary: var( --border-color-secondary );
+  --line-color-success:   var( --border-color-success   );
+  --line-color-warning:   var( --border-color-warning   );
+}
+
+/*** Line color ***/
+
+/*** Marker color ***/
+
+[data-theme="soft-light"] {
+  --marker-color-default:   var( --border-color-default   );
+  --marker-color-muted:     var( --border-color-muted     );
+  --marker-color-highlight: var( --border-color-highlight );
+  --marker-color-invert:    var( --border-color-invert    );
+  --marker-color-primary:   var( --border-color-primary   );
+  --marker-color-secondary: var( --border-color-secondary );
+  --marker-color-success:   var( --border-color-success   );
+  --marker-color-warning:   var( --border-color-warning   );
+}
+
+/*** Marker color ***/
+
+/*** Progress color ***/
+
+[data-theme="soft-light"] {
+  --progress-color-default:   var( --fill-color-default   );
+  --progress-color-muted:     var( --fill-color-muted     );
+  --progress-color-highlight: var( --fill-color-highlight );
+  --progress-color-invert:    var( --fill-color-invert    );
+  --progress-color-primary:   var( --fill-color-primary   );
+  --progress-color-secondary: var( --fill-color-secondary );
+  --progress-color-success:   var( --fill-color-success   );
+  --progress-color-warning:   var( --fill-color-warning   );
+}
+
+/*** Progress color ***/
+
+/*** Shadow color ***/
+
+[data-theme="soft-light"] {
+  --shadow-color-default:   var( --black-shadow-thin );
+  --shadow-color-muted:     var( --black-shadow-thin );
+  --shadow-color-highlight: var( --black-shadow-thin );
+  --shadow-color-invert:    var( --black-shadow-thin );
+  --shadow-color-primary:   var( --black-shadow-thin );
+  --shadow-color-secondary: var( --black-shadow-thin );
+  --shadow-color-success:   var( --black-shadow-thin );
+  --shadow-color-warning:   var( --black-shadow-thin );
+}
+
+/*** Shadow color ***/
+
+/*** Stroke color ***/
+
+[data-theme="soft-light"] {
+  --stroke-color-default:   var( --border-color-default   );
+  --stroke-color-muted:     var( --border-color-muted     );
+  --stroke-color-highlight: var( --border-color-highlight );
+  --stroke-color-invert:    var( --border-color-invert    );
+  --stroke-color-primary:   var( --border-color-primary   );
+  --stroke-color-secondary: var( --border-color-secondary );
+  --stroke-color-success:   var( --border-color-success   );
+  --stroke-color-warning:   var( --border-color-warning   );
+}
+
+/*** Stroke color ***/
+
+/*** Text color ***/
+
+[data-theme="soft-light"] {
+  --text-color-default:   var( --black-xx-light      );
+  --text-color-muted:     var( --grey-dark           );
+  --text-color-highlight: var( --grey-x-light        );
+  --text-color-invert:    var( --white-dark          );
+  --text-color-primary:   var( --hard-blue-xx-dark   );
+  --text-color-secondary: var( --hard-purple-xx-dark );
+  --text-color-success:   var( --hard-green-xx-dark  );
+  --text-color-warning:   var( --hard-red-xx-dark    );
+}
+
+/*** Text color ***/
+/***** Theme variables *****/

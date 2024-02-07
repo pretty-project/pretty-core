@@ -1,0 +1,33 @@
+
+/***** Tooltip presets *****/
+/*** Tooltip content ***/
+
+[data-tooltip-content]::after {
+  background-color: var( --fill-color-invert );
+  border-radius:    4px;
+  color:            var( --text-color-invert );
+  font-size:        var( --font-size-xs      );
+  font-weight:      600;
+  line-height:      28px;
+  padding:          0 14px;
+  position:         absolute;
+  white-space:      nowrap;
+  z-index:          9999;
+
+  /* XXX#0010 (resources/public/pretty-attributes/accessoriese/presets/bullet.css) */
+  display: block;
+}
+
+[data-tooltip-content]:hover::after {
+  content: attr(data-tooltip-content);
+}
+
+/*** Tooltip content ***/
+
+/*** Tooltip position ***/
+
+[data-tooltip-position="left"]::after  { left:  0; top: calc( 50% - 14px ); transform: translateX( calc( -100% - 12px )); }
+[data-tooltip-position="right"]::after { right: 0; top: calc( 50% - 14px ); transform: translateX( calc(  100% + 12px )); }
+
+/*** Tooltip position ***/
+/***** Tooltip presets *****/

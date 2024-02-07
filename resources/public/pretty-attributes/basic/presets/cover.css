@@ -1,0 +1,15 @@
+
+/***** Cover presets *****/
+/*** Cover ***/
+
+[data-covered="true"]::after {
+  content:  '';
+  height:   100%;
+  left:     0;
+  position: absolute;
+  top:      0;
+  width:    100%;
+}
+
+/*** Cover ***/
+/***** Cover presets *****/

@@ -1,0 +1,15 @@
+
+/***** Cursor presets *****/
+/*** Cursor ***/
+
+[data-cursor="var"]      { cursor: var( --cursor ); }
+[data-cursor="default"]  { cursor: default;         }
+[data-cursor="disabled"] { cursor: not-allowed;     }
+[data-cursor="grab"]     { cursor: grab;            }
+[data-cursor="grabbing"] { cursor: grabbing;        }
+[data-cursor="move"]     { cursor: move;            }
+[data-cursor="pointer"]  { cursor: pointer;         }
+[data-cursor="progress"] { cursor: progress;        }
+
+/*** Cursor ***/
+/***** Cursor presets *****/

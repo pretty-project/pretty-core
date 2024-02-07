@@ -1,0 +1,80 @@
+
+/***** Text presets *****/
+/*** Text align ***/
+
+[data-text-horizontal-align="left"]   { text-align:     left;     }
+[data-text-horizontal-align="center"] { text-align:     center;   }
+[data-text-horizontal-align="right"]  { text-align:     right;    }
+[data-text-vertical-align="baseline"] { vertical-align: baseline; }
+[data-text-vertical-align="top"]      { vertical-align: top;      }
+[data-text-vertical-align="middle"]   { vertical-align: middle;   }
+[data-text-vertical-align="bottom"]   { vertical-align: bottom;   }
+[data-text-vertical-align="sub"]      { vertical-align: sub;      }
+[data-text-vertical-align="text-top"] { vertical-align: text-top; }
+
+/*** Text align ***/
+
+/*** Text caret ***/
+
+[data-text-caret="default"] {}
+[data-text-caret="hidden"]  { caret-color: transparent; }
+
+/*** Text caret ***/
+
+/*** Text color ***/
+
+[data-text-color="var"]       { color: var( --text-color           ); }
+[data-text-color="default"]   { color: var( --text-color-default   ); }
+[data-text-color="highlight"] { color: var( --text-color-highlight ); }
+[data-text-color="invert"]    { color: var( --text-color-invert    ); }
+[data-text-color="muted"]     { color: var( --text-color-muted     ); }
+[data-text-color="primary"]   { color: var( --text-color-primary   ); }
+[data-text-color="secondary"] { color: var( --text-color-secondary ); }
+[data-text-color="tertiary"]  { color: var( --text-color-tertiary  ); }
+[data-text-color="success"]   { color: var( --text-color-success   ); }
+[data-text-color="warning"]   { color: var( --text-color-warning   ); }
+
+/*** Text color ***/
+
+/*** Text direction ***/
+
+[data-text-direction="normal"]   { direction: ltr; }
+[data-text-direction="reversed"] { direction: rtl; }
+
+/*** Text direction ***/
+
+/*** Text overflow ***/
+
+[data-text-overflow="ellipsis"] { overflow:      hidden;
+                                  text-overflow: ellipsis;
+                                  white-space:   nowrap; }
+[data-text-overflow="hidden"] {   overflow:      hidden;
+                                  white-space:   nowrap;
+                                  word-wrap:     normal; }
+[data-text-overflow="visible"] {  overflow:      hidden;
+                                  white-space:   nowrap; }
+[data-text-overflow="wrap"] {     overflow:      hidden;
+                                  word-wrap:     break-word; }
+
+/*** Text overflow ***/
+
+/*** Text selectable ***/
+
+[data-text-selectable="false"] {
+  /* The user-select is not supperted properly in all browsers! */
+  -ms-user-select:     none;
+  -moz-user-select:    none;
+  -webkit-user-select: none;
+  user-select:         none;
+}
+
+/*** Text selectable ***/
+
+/*** Text transform ***/
+
+[data-text-transform="capitalize"] { text-transform: capitalize; }
+[data-text-transform="lowercase"]  { text-transform: lowercase;  }
+[data-text-transform="uppercase"]  { text-transform: uppercase;  }
+
+/*** Text transform ***/
+/***** Text presets *****/

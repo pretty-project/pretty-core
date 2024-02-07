@@ -1,0 +1,10 @@
+
+/***** State presets *****/
+/*** Disabled ***/
+
+[data-disabled="true"] {
+  opacity: .5 !important;
+}
+
+/*** Disabled ***/
+/***** State presets *****/

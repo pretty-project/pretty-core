@@ -1,0 +1,40 @@
+
+/***** Stroke presets *****/
+/*** Stroke color ***/
+
+[data-stroke-color="var"]       { stroke: var( --stroke-color           ); }
+[data-stroke-color="default"]   { stroke: var( --stroke-color-default   ); }
+[data-stroke-color="highlight"] { stroke: var( --stroke-color-highlight ); }
+[data-stroke-color="invert"]    { stroke: var( --stroke-color-invert    ); }
+[data-stroke-color="muted"]     { stroke: var( --stroke-color-muted     ); }
+[data-stroke-color="primary"]   { stroke: var( --stroke-color-primary   ); }
+[data-stroke-color="secondary"] { stroke: var( --stroke-color-secondary ); }
+[data-stroke-color="tertiary"]  { stroke: var( --stroke-color-tertiary  ); }
+[data-stroke-color="success"]   { stroke: var( --stroke-color-success   ); }
+[data-stroke-color="warning"]   { stroke: var( --stroke-color-warning   ); }
+
+/*** Stroke color ***/
+
+/*** Stroke pattern ***/
+
+[data-stroke-pattern="var"]  { stroke-dasharray: var( --stroke-pattern ); }
+[data-stroke-pattern="full"] { stroke-dasharray: 0 }
+
+/*** Stroke pattern ***/
+
+/*** Stroke width ***/
+
+[data-stroke-width="var"] { stroke-width: var( --stroke-width     ); }
+[data-stroke-width="xxs"] { stroke-width: var( --stroke-width-xxs ); }
+[data-stroke-width="xs"]  { stroke-width: var( --stroke-width-xs  ); }
+[data-stroke-width="s"]   { stroke-width: var( --stroke-width-s   ); }
+[data-stroke-width="m"]   { stroke-width: var( --stroke-width-m   ); }
+[data-stroke-width="l"]   { stroke-width: var( --stroke-width-l   ); }
+[data-stroke-width="xl"]  { stroke-width: var( --stroke-width-xl  ); }
+[data-stroke-width="xxl"] { stroke-width: var( --stroke-width-xxl ); }
+[data-stroke-width="3xl"] { stroke-width: var( --stroke-width-3xl ); }
+[data-stroke-width="4xl"] { stroke-width: var( --stroke-width-4xl ); }
+[data-stroke-width="5xl"] { stroke-width: var( --stroke-width-5xl ); }
+
+/*** Stroke width ***/
+/***** Stroke presets *****/
