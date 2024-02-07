@@ -6,6 +6,7 @@
               [pretty-attributes.basic.attributes       :as basic.attributes]
               [pretty-attributes.content.adaptive       :as content.adaptive]
               [pretty-attributes.content.attributes     :as content.attributes]
+              [pretty-attributes.control.attributes     :as control.attributes]
               [pretty-attributes.input.attributes       :as input.attributes]
               [pretty-attributes.layout.attributes      :as layout.attributes]
               [pretty-attributes.live.attributes        :as live.attributes]

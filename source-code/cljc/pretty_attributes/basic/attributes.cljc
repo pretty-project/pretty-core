@@ -75,7 +75,7 @@
   ;  :data-disabled (boolean)
   ;  :data-highlighted (boolean)
   ;  ...}
-  [attributes {:keys [disabled? highlighted?]}]
+  [attributes {:keys [covered? disabled? highlighted?]}]
   (map/merge-some attributes {:data-covered     covered?
                               :data-disabled    disabled?
                               :data-highlighted highlighted?}))

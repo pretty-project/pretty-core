@@ -1,10 +1,10 @@
 
 (ns pretty-properties.control.props
-    #?(:clj  (:require [fruits.map.api                       :as map]
-                       [pretty-properties.accessories.config :as accessories.config])
-       :cljs (:require [dom.api                              :as dom]
-                       [fruits.map.api                       :as map]
-                       [pretty-properties.accessories.config :as accessories.config])))
+    #?(:clj  (:require [fruits.map.api                   :as map]
+                       [pretty-properties.control.config :as control.config])
+       :cljs (:require [dom.api                          :as dom]
+                       [fruits.map.api                   :as map]
+                       [pretty-properties.control.config :as control.config])))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -158,7 +158,7 @@
   ;  :on-mouse-up-f (function)(opt)
   ;  :on-right-click-f (function)(opt)
   ;  ...}
-  [{:keys [href-uri on-click-f] :as props} & [default-props]]
+  [{:keys [href-uri on-click-f on-mouse-down-f on-mouse-up-f] :as props} & [default-props]]
   (letfn [(f0 [e] #?(:clj  (do (when on-mouse-up-f (on-mouse-up-f e)))
                      :cljs (do (when on-mouse-up-f (on-mouse-up-f e))
                                (when :always       (dom/blur-active-element!)))))]

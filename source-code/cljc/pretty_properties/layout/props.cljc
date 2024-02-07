@@ -1,7 +1,6 @@
 
 (ns pretty-properties.layout.props
-    (:require [pretty-elements.properties.layout.props]
-              [fruits.map.api                  :as map]
+    (:require [fruits.map.api                  :as map]
               [pretty-properties.layout.config :as layout.config]))
 
 ;; ----------------------------------------------------------------------------

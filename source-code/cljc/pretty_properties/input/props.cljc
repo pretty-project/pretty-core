@@ -107,7 +107,7 @@
   ;  ...}
   [props & [default-props]]
   (if (-> default-props (map?))
-      (-> props (map/use-default-values default-props) default-guides-props)
+      (-> props (map/use-default-values default-props) default-input-guide-props)
       (-> props (map/update-some :error-text  metamorphic-content/compose)
                 (map/update-some :helper-text metamorphic-content/compose)
                 (map/update-some :info-text   metamorphic-content/compose))))

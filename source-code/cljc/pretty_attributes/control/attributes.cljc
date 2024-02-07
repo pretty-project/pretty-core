@@ -62,10 +62,10 @@
   ; {:disabled (boolean)
   ;  :tab-index (integer)
   ;  ...}
-  [attributes {:keys [disabled?]}]
+  [attributes {:keys [disabled? tab-disabled?]}]
   (map/merge-some attributes {:disabled  (-> disabled?)
                               :tab-index (if tab-disabled? -1)}))
-  
+
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
