@@ -1,7 +1,6 @@
 
 (ns pretty-properties.api
-    (:require [pretty-properties.accessories.props :as accessories.props]
-              [pretty-properties.appearance.props  :as appearance.props]
+    (:require [pretty-properties.appearance.props  :as appearance.props]
               [pretty-properties.basic.props       :as basic.props]
               [pretty-properties.content.props     :as content.props]
               [pretty-properties.control.props     :as control.props]
@@ -14,29 +13,11 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Badge properties
-; @redirect (pretty-properties.accessories.tutorials/badge-properties)
+; @tutorial Background color properties
+; @redirect (pretty-properties.appearance.tutorials/background-color-properties)
 
-; @tutorial Bullet properties
-; @redirect (pretty-properties.accessories.tutorials/bullet-properties)
-
-; @tutorial Marker properties
-; @redirect (pretty-properties.accessories.tutorials/marker-properties)
-
-; @tutorial Tooltip properties
-; @redirect (pretty-properties.accessories.tutorials/tooltip-properties)
-
-; @redirect (pretty-properties.accessories.props/*)
-(def default-badge-props   accessories.props/default-badge-props)
-(def default-bullet-props  accessories.props/default-bullet-props)
-(def default-marker-props  accessories.props/default-marker-props)
-(def default-tooltip-props accessories.props/default-tooltip-props)
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Background properties
-; @redirect (pretty-properties.appearance.tutorials/background-properties)
+; @tutorial Background image properties
+; @redirect (pretty-properties.appearance.tutorials/background-image-properties)
 
 ; @tutorial Border properties
 ; @redirect (pretty-properties.appearance.tutorials/border-properties)
@@ -51,11 +32,13 @@
 ; @redirect (pretty-properties.appearance.tutorials/theme-properties)
 
 ; @redirect (pretty-properties.appearance.props/*)
-(def default-background-props appearance.props/default-background-props)
-(def default-border-props     appearance.props/default-border-props)
-(def default-line-props       appearance.props/default-line-props)
-(def default-shadow-props     appearance.props/default-shadow-props)
-(def default-theme-props      appearance.props/default-theme-props)
+(def default-background-color-props appearance.props/default-background-color-props)
+(def default-background-image-props appearance.props/default-background-image-props)
+(def default-border-props           appearance.props/default-border-props)
+(def default-line-props             appearance.props/default-line-props)
+(def default-shadow-props           appearance.props/default-shadow-props)
+(def default-theme-props            appearance.props/default-theme-props)
+(def default-visibility-props       appearance.props/default-visibility-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -165,9 +148,6 @@
 ; @tutorial Grid properties
 ; @redirect (pretty-properties.layout.tutorials/grid-properties)
 
-; @tutorial Layer properties
-; @redirect (pretty-properties.layout.tutorials/layer-properties)
-
 ; @tutorial Position properties
 ; @redirect (pretty-properties.layout.tutorials/position-properties)
 
@@ -184,7 +164,6 @@
 (def flex-scroll-auto-props layout.props/flex-scroll-auto-props)
 (def default-flex-props     layout.props/default-flex-props)
 (def default-grid-props     layout.props/default-grid-props)
-(def default-layer-props    layout.props/default-layer-props)
 (def default-position-props layout.props/default-position-props)
 (def default-shape-props    layout.props/default-shape-props)
 (def default-size-props     layout.props/default-size-props)

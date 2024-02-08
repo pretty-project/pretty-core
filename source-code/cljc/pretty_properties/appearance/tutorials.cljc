@@ -4,7 +4,7 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Background properties
+; @tutorial Background color properties
 ;
 ; @title :fill-color property
 ;
@@ -57,6 +57,47 @@
 ;
 ; @code Predefined values
 ; :cover, :striped
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Background image properties
+;
+; @title :background-position property
+;
+; @code Usage
+; {:background-position (keyword)}
+; {:background-position :center}
+;
+; @code Predefined values
+; :top, :right, :bottom, :left, :center
+;
+;
+;
+; @title :background-repeat? property
+;
+; @code Usage
+; {:background-repeat? (keyword)}
+; {:background-repeat? true}
+;
+;
+;
+; @title :background-size property
+;
+; @code Usage
+; {:background-size (keyword)}
+; {:background-size :cover}
+;
+; @code Predefined values
+; :cover, :contain
+;
+;
+;
+; @title :background-uri property
+;
+; @code Usage
+; {:background-uri (string)}
+; {:background-uri "/my-image.png"}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -195,3 +236,18 @@
 ;
 ; @code Predefined values
 ; :hard-light, :soft-light, :hard-dark, :soft-dark
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Visibility properties
+;
+; @title :opacity property
+;
+; @code Usage
+; {:opacity (keyword or number)}
+; {:opacity :soft}
+; {:opacity 0.5}
+;
+; @code Predefined values
+; :soft, :medium, :hard, :full

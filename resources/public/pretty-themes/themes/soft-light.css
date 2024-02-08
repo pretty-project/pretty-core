@@ -10,21 +10,6 @@
 
 
 /***** Theme variables *****/
-/*** Badge color ***/
-
-[data-theme="soft-light"] {
-  --badge-color-default:   var( --grey-x-light         );
-  --badge-color-muted:     var( --grey-xx-light        );
-  --badge-color-highlight: var( --white-x-dark         );
-  --badge-color-invert:    var( --black-xx-light       );
-  --badge-color-primary:   var( --soft-blue-xx-light   );
-  --badge-color-secondary: var( --soft-purple-xx-light );
-  --badge-color-success:   var( --soft-green-xx-light  );
-  --badge-color-warning:   var( --soft-red-xx-light    );
-}
-
-/*** Badge color ***/
-
 /*** Border color ***/
 
 [data-theme="soft-light"] {
@@ -39,21 +24,6 @@
 }
 
 /*** Border color ***/
-
-/*** Bullet color ***/
-
-[data-theme="soft-light"] {
-  --bullet-color-default:   var( --border-color-default   );
-  --bullet-color-muted:     var( --border-color-muted     );
-  --bullet-color-highlight: var( --border-color-highlight );
-  --bullet-color-invert:    var( --border-color-invert    );
-  --bullet-color-primary:   var( --border-color-primary   );
-  --bullet-color-secondary: var( --border-color-secondary );
-  --bullet-color-success:   var( --border-color-success   );
-  --bullet-color-warning:   var( --border-color-warning   );
-}
-
-/*** Bullet color ***/
 
 /*** Fill color ***/
 
@@ -132,21 +102,6 @@
 }
 
 /*** Line color ***/
-
-/*** Marker color ***/
-
-[data-theme="soft-light"] {
-  --marker-color-default:   var( --border-color-default   );
-  --marker-color-muted:     var( --border-color-muted     );
-  --marker-color-highlight: var( --border-color-highlight );
-  --marker-color-invert:    var( --border-color-invert    );
-  --marker-color-primary:   var( --border-color-primary   );
-  --marker-color-secondary: var( --border-color-secondary );
-  --marker-color-success:   var( --border-color-success   );
-  --marker-color-warning:   var( --border-color-warning   );
-}
-
-/*** Marker color ***/
 
 /*** Progress color ***/
 

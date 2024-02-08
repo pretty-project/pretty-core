@@ -68,7 +68,8 @@
   ;  :style (map)
   ;   {"--stroke-color" (string)
   ;    "--stroke-pattern" (string)
-  ;    "--stroke-width" (string)}
+  ;    "--stroke-width" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [stroke-color stroke-pattern stroke-width]}]
   (-> attributes (utils/apply-property-value :stroke-color   :data-stroke-color   stroke-color)

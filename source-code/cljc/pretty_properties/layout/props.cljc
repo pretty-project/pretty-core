@@ -120,50 +120,31 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-layer-props
-  ; @description
-  ; Applies the given default layer properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:layer (keyword or integer)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-layer-props {...} {:layer :uppermost})
-  ; =>
-  ; {:layer :uppermost
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:layer (keyword or integer)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn default-position-props
   ; @description
   ; Applies the given default position properties on the given property map.
   ;
   ; @param (map) props
-  ; {:position (keyword)(opt)
-  ;  :positioning (keyword)(opt)
+  ; {:layer (keyword or integer)(opt)
+  ;  :position (keyword)(opt)
+  ;  :position-base (keyword)(opt)
+  ;  :position-method (keyword)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-position-props {...} {:position :tr :positioning :absolute})
+  ; (default-position-props {...} {:layer :uppermost :position :tr :position-method :absolute})
   ; =>
-  ; {:position    :tr
-  ;  :positioning :absolute
+  ; {:layer           :uppermost
+  ;  :position        :tr
+  ;  :position-method :absolute
   ;  ...}
   ;
   ; @return (map)
-  ; {:position (keyword)
-  ;  :positioning (keyword)
+  ; {:layer (keyword or integer)
+  ;  :position (keyword)
+  ;  :position-base (keyword)
+  ;  :position-method (keyword)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

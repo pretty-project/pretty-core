@@ -37,7 +37,8 @@
   ;  :data-animation-name (keyword)
   ;  :style (map)
   ;   {"--animation-duration" (string)
-  ;    "--animation-name" (string)}
+  ;    "--animation-name" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [animation-direction animation-duration animation-mode animation-name]}]
   (-> attributes (map/merge-some {:data-animation-direction animation-direction})
@@ -83,9 +84,9 @@
   ;  :data-hover-effect (keyword)
   ;  ...}
   [attributes {:keys [click-effect disabled? hover-effect]}]
-  (if disabled? (map/merge-some attributes {})
-                (map/merge-some attributes {:data-click-effect click-effect
-                                            :data-hover-effect hover-effect})))
+  (if disabled? (-> attributes (map/merge-some {}))
+                (-> attributes (map/merge-some {:data-click-effect click-effect
+                                                :data-hover-effect hover-effect}))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -124,7 +125,8 @@
   ;  :style (map)
   ;   {"--progress" (string)
   ;    "--progress-color" (string)
-  ;    "--progress-duration" (string)}
+  ;    "--progress-duration" (string)
+  ;    ...}
   ;  ...}
   [{:keys [style] :as attributes} {:keys [progress progress-color progress-direction progress-duration]}]
   (-> attributes (assoc :style (merge style (if progress          {"--progress"          (str progress          "%")})

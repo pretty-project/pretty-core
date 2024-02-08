@@ -5,6 +5,20 @@
 ;; ----------------------------------------------------------------------------
 
 ; @note (pretty-properties.accessories.config#4011)
+; @note (pretty-properties.accessories.config#4012)
+;
+; @constant (map)
+; {:background-position (keyword)
+;  :background-repeat? (boolean)
+;  :background-size (keyword)
+;  :background-uri (string)}
+(def STANDARD-BACKGROUND-IMAGE-PROPERTIES
+     {:background-position :center
+      :background-repeat?  false
+      :background-size     :cover
+      :background-uri      nil})
+
+; @note (pretty-properties.accessories.config#4011)
 ;
 ; @constant (map)
 ; {:border-color (keyword or string)

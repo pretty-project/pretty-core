@@ -45,15 +45,18 @@
 
 /*** Text overflow ***/
 
-[data-text-overflow="ellipsis"] { overflow:      hidden;
+[data-text-overflow="ellipsis"] { max-width:     100%;
+                                  overflow:      hidden;
                                   text-overflow: ellipsis;
                                   white-space:   nowrap; }
-[data-text-overflow="hidden"] {   overflow:      hidden;
+[data-text-overflow="hidden"]   { max-width:     100%;
+                                  overflow:      hidden;
                                   white-space:   nowrap;
                                   word-wrap:     normal; }
-[data-text-overflow="visible"] {  overflow:      hidden;
+[data-text-overflow="visible"]  { overflow:      hidden;
                                   white-space:   nowrap; }
-[data-text-overflow="wrap"] {     overflow:      hidden;
+[data-text-overflow="wrap"]     { max-width:     100%;
+                                  overflow:      hidden;
                                   word-wrap:     break-word; }
 
 /*** Text overflow ***/

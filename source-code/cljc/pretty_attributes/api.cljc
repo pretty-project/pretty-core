@@ -1,7 +1,6 @@
 
 (ns pretty-attributes.api
-    (:require [pretty-attributes.accessories.attributes :as accessories.attributes]
-              [pretty-attributes.appearance.attributes  :as appearance.attributes]
+    (:require [pretty-attributes.appearance.attributes  :as appearance.attributes]
               [pretty-attributes.appearance.utils       :as appearance.utils]
               [pretty-attributes.basic.attributes       :as basic.attributes]
               [pretty-attributes.content.adaptive       :as content.adaptive]
@@ -15,20 +14,16 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @redirect (pretty-attributes.accessories.attributes/*)
-(def badge-attributes   accessories.attributes/badge-attributes)
-(def bullet-attributes  accessories.attributes/bullet-attributes)
-(def marker-attributes  accessories.attributes/marker-attributes)
-(def tooltip-attributes accessories.attributes/tooltip-attributes)
-
 ; @redirect (pretty-attributes.appearance.attributes/*)
-(def background-attributes      appearance.attributes/background-attributes)
-(def border-radius-attributes   appearance.attributes/border-radius-attributes)
-(def border-attributes          appearance.attributes/border-attributes)
-(def adaptive-border-attributes appearance.attributes/adaptive-border-attributes)
-(def line-attributes            appearance.attributes/line-attributes)
-(def shadow-attributes          appearance.attributes/shadow-attributes)
-(def theme-attributes           appearance.attributes/theme-attributes)
+(def background-color-attributes appearance.attributes/background-color-attributes)
+(def background-image-attributes appearance.attributes/background-image-attributes)
+(def border-radius-attributes    appearance.attributes/border-radius-attributes)
+(def border-attributes           appearance.attributes/border-attributes)
+(def adaptive-border-attributes  appearance.attributes/adaptive-border-attributes)
+(def line-attributes             appearance.attributes/line-attributes)
+(def shadow-attributes           appearance.attributes/shadow-attributes)
+(def theme-attributes            appearance.attributes/theme-attributes)
+(def visibility-attributes       appearance.attributes/visibility-attributes)
 
 ; @redirect (pretty-attributes.appearance.utils/*)
 (def adaptive-border-radius appearance.utils/adaptive-border-radius)
@@ -70,7 +65,6 @@
 (def grid-attributes               layout.attributes/grid-attributes)
 (def indent-attributes             layout.attributes/indent-attributes)
 (def outdent-attributes            layout.attributes/outdent-attributes)
-(def layer-attributes              layout.attributes/layer-attributes)
 (def position-attributes           layout.attributes/position-attributes)
 
 ; @redirect (pretty-attributes.live.attributes/*)

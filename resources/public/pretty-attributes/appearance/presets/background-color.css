@@ -1,5 +1,5 @@
 
-/***** Background presets *****/
+/***** Background color presets *****/
 /*** Fill color ***/
 
 [data-fill-color="var"]       { background-color: var( --fill-color           ); }
@@ -89,4 +89,4 @@
 [data-hover-color="warning"][data-hover-pattern="striped"]   { background: repeating-linear-gradient(45deg, var( --hover-color-warning   ), var( --hover-color-warning   ) 10px, transparent 10px, transparent 20px ); }
 
 /*** Hover pattern ***/
-/***** Background presets *****/
+/***** Background color presets *****/

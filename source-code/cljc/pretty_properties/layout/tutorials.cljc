@@ -139,7 +139,7 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Layer properties
+; @tutorial Position properties
 ;
 ; @title :layer property
 ;
@@ -150,11 +150,8 @@
 ;
 ; @code Predefined values
 ; :lowermost, :uppermost
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Position properties
+;
+;
 ;
 ; @title :position property
 ;
@@ -163,15 +160,27 @@
 ; {:position :tr}
 ;
 ; @code Predefined values
-; :tr, :br, :bl, :tl
+; :tr, :br, :bl, :tl,
+; :left, :right, :bottom, :top, :center
 ;
 ;
 ;
-; @title :positioning property
+; @title :position-base property
 ;
 ; @code Usage
-; {:positioning (keyword)}
-; {:positioning :absolute}
+; {:position-base (keyword)}
+; {:position-base :inner}
+;
+; @code Predefined values
+; :inner, :outer
+;
+;
+;
+; @title :position-method property
+;
+; @code Usage
+; {:position-method (keyword)}
+; {:position-method :absolute}
 ;
 ; @code Predefined values
 ; :absolute, :fixed, :relative, :static, :sticky

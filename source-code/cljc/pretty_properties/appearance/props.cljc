@@ -6,9 +6,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-background-props
+(defn default-background-color-props
   ; @description
-  ; Applies the given default background properties on the given property map.
+  ; Applies the given default background color properties on the given property map.
   ;
   ; @param (map) props
   ; {:fill-color (keyword or string)(opt)
@@ -21,7 +21,7 @@
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-background-props {...} {:fill-color :primary})
+  ; (default-background-color-props {...} {:fill-color :primary})
   ; =>
   ; {:fill-color :primary
   ;  ...}
@@ -36,6 +36,39 @@
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
+
+(defn default-background-image-props
+  ; @description
+  ; - Applies the given default background image properties on the given property map.
+  ; - Applies the standard background image properties on the given property map;
+  ;   in case of any background image related value is provided.
+  ;
+  ; @param (map) props
+  ; {:background-position (keyword)(opt)
+  ;  :background-repeat? (boolean)(opt)
+  ;  :background-size (keyword)(opt)
+  ;  :background-uri (string)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-background-image-props {...} {:background-uri "/my-image.png"})
+  ; =>
+  ; {:background-position :center
+  ;  :background-repeat?  false
+  ;  :background-size     :cover
+  ;  :background-uri      "/my-image.png"
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:background-position (keyword)
+  ;  :background-repeat? (boolean)
+  ;  :background-size (keyword)
+  ;  :background-uri (string)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)
+            (map/use-default-value-group appearance.config/STANDARD-BACKGROUND-IMAGE-PROPERTIES)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -159,6 +192,30 @@
   ;
   ; @return (map)
   ; {:theme (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn default-visibility-props
+  ; @description
+  ; Applies the given default visibility properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:opacity (keyword or number)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-visibility-props {...} {:opacity :soft})
+  ; =>
+  ; {:opacity :soft
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:opacity (keyword or number)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

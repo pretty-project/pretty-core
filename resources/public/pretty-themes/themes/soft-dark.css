@@ -10,21 +10,6 @@
 
 
 /***** Theme variables *****/
-/*** Badge color ***/
-
-[data-theme="soft-dark"] {
-  --badge-color-default:   var( --black-x-light        );
-  --badge-color-muted:     var( --black-xx-light       );
-  --badge-color-highlight: var( --grey-xx-dark         );
-  --badge-color-invert:    var( --grey-xx-light        );
-  --badge-color-primary:   var( --soft-blue-xx-light   );
-  --badge-color-secondary: var( --soft-purple-xx-light );
-  --badge-color-success:   var( --soft-green-xx-light  );
-  --badge-color-warning:   var( --soft-red-xx-light    );
-}
-
-/*** Badge color ***/
-
 /*** Border color ***/
 
 [data-theme="soft-dark"] {
@@ -39,21 +24,6 @@
 }
 
 /*** Border color ***/
-
-/*** Bullet color ***/
-
-[data-theme="soft-dark"] {
-  --bullet-color-default:   var( --border-color-default   );
-  --bullet-color-muted:     var( --border-color-muted     );
-  --bullet-color-highlight: var( --border-color-highlight );
-  --bullet-color-invert:    var( --border-color-invert    );
-  --bullet-color-primary:   var( --border-color-primary   );
-  --bullet-color-secondary: var( --border-color-secondary );
-  --bullet-color-success:   var( --border-color-success   );
-  --bullet-color-warning:   var( --border-color-warning   );
-}
-
-/*** Bullet color ***/
 
 /*** Fill color ***/
 
@@ -89,14 +59,14 @@
 /*** Hover color ***/
 
 [data-theme="soft-dark"] {
-  --hover-color-default:   var( --black-xx-light );
-  --hover-color-muted:     var( --grey );
-  --hover-color-highlight: var( --grey-x-light );
-  --hover-color-invert:    var( --white-xx-light );
-  --hover-color-primary:   var( --soft-blue-x-dark );
+  --hover-color-default:   var( --black-xx-light     );
+  --hover-color-muted:     var( --grey               );
+  --hover-color-highlight: var( --grey-x-light       );
+  --hover-color-invert:    var( --white-xx-light     );
+  --hover-color-primary:   var( --soft-blue-x-dark   );
   --hover-color-secondary: var( --soft-purple-x-dark );
-  --hover-color-success:   var( --soft-green-x-dark );
-  --hover-color-warning:   var( --soft-red-x-dark );
+  --hover-color-success:   var( --soft-green-x-dark  );
+  --hover-color-warning:   var( --soft-red-x-dark    );
 }
 
 /*** Hover color ***/
@@ -131,21 +101,6 @@
 
 /*** Line color ***/
 
-/*** Marker color ***/
-
-[data-theme="soft-dark"] {
-  --marker-color-default:   var( --border-color-default   );
-  --marker-color-muted:     var( --border-color-muted     );
-  --marker-color-highlight: var( --border-color-highlight );
-  --marker-color-invert:    var( --border-color-invert    );
-  --marker-color-primary:   var( --border-color-primary   );
-  --marker-color-secondary: var( --border-color-secondary );
-  --marker-color-success:   var( --border-color-success   );
-  --marker-color-warning:   var( --border-color-warning   );
-}
-
-/*** Marker color ***/
-
 /*** Progress color ***/
 
 [data-theme="soft-dark"] {
@@ -161,6 +116,8 @@
 
 /*** Progress color ***/
 
+/*** Shadow color ***/
+
 [data-theme="soft-dark"] {
   --shadow-color-default:   var( --white-shadow-thin );
   --shadow-color-muted:     var( --white-shadow-thin );
@@ -171,6 +128,8 @@
   --shadow-color-success:   var( --white-shadow-thin );
   --shadow-color-warning:   var( --white-shadow-thin );
 }
+
+/*** Shadow color ***/
 
 /*** Stroke color ***/
 

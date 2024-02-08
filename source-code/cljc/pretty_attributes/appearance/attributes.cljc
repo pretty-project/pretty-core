@@ -1,13 +1,14 @@
 
 (ns pretty-attributes.appearance.attributes
     (:require [fruits.map.api                     :as map]
+              [fruits.css.api                     :as css]
               [pretty-attributes.appearance.utils :as appearance.utils]
               [pretty-attributes.utils            :as utils]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn background-attributes
+(defn background-color-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
@@ -18,7 +19,7 @@
   ; - Doesn't apply the highlight color and highlight pattern properties on non-highlighted elements.
   ;
   ; @description
-  ; Applies the background related values on the given attribute map.
+  ; Applies the background color related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
@@ -33,14 +34,14 @@
   ;  ...}
   ;
   ; @usage
-  ; (background-attributes {...} {:fill-color :highlight :hover-color :highlight})
+  ; (background-color-attributes {...} {:fill-color :highlight :hover-color :highlight})
   ; =>
   ; {:data-fill-color  :highlight
   ;  :data-hover-color :highlight
   ;  ...}
   ;
   ; @usage
-  ; (background-attributes {...} {:fill-color :highlight :hover-color :highlight
+  ; (background-color-attributes {...} {:fill-color :highlight :hover-color :highlight
   ;                               :disabled? true})
   ; =>
   ; {:data-fill-color :highlight
@@ -57,7 +58,8 @@
   ;  :style (map)
   ;   {"--fill-color" (string)
   ;    "--highlight-color" (string)}
-  ;    "--hover-color" (string)}
+  ;    "--hover-color" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [disabled? fill-color fill-pattern highlight-color highlight-pattern highlighted? hover-color hover-pattern]}]
   (cond (and disabled? highlighted?)
@@ -84,6 +86,42 @@
                        (map/assoc-some             :data-hover-pattern            hover-pattern)
                        (utils/apply-property-value :fill-color  :data-fill-color  fill-color)
                        (utils/apply-property-value :hover-color :data-hover-color hover-color))))
+
+(defn background-image-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the background image related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:background-position (keyword)(opt)
+  ;  :background-repeat? (boolean)(opt)
+  ;  :background-size (keyword)(opt)
+  ;  :background-uri (string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (background-image-attributes {...} {:background-size :cover})
+  ; =>
+  ; {:data-background-size :cover
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-background-image (keyword)
+  ;  :data-background-position (keyword)
+  ;  :data-background-repeat (boolean)
+  ;  :data-background-size (keyword)
+  ;  :style (map)
+  ;   {"--background-uri" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [background-position background-repeat? background-size background-uri]}]
+  (-> attributes (map/merge-some {:data-background-position background-position
+                                  :data-background-repeat   background-repeat?
+                                  :data-background-size     background-size})
+                 (utils/apply-property-value :background-uri :data-background-uri (css/url background-uri))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -123,15 +161,16 @@
   ;    "--border-radius-bl" (string)
   ;    "--border-radius-br" (string)
   ;    "--border-radius-tl" (string)
-  ;    "--border-radius-tr" (string)}
+  ;    "--border-radius-tr" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [border-radius]}]
   (letfn [(f0 [result k v]
               (let [css-var-name        (keyword (str      "border-radius-" (name k)))
                     data-attribute-name (keyword (str "data-border-radius-" (name k)))]
                    (utils/apply-property-value result css-var-name data-attribute-name v "px")))]
-         (merge attributes (if (map?            border-radius)
-                               (reduce-kv f0 {} border-radius)))))
+         (-> attributes (merge (if (map?            border-radius)
+                                   (reduce-kv f0 {} border-radius))))))
 
 (defn border-attributes
   ; @note
@@ -166,13 +205,14 @@
   ;  :data-border-width (keyword)
   ;  :style (map)
   ;   {"--border-color" (string)
-  ;    "--border-width" (string)}
+  ;    "--border-width" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [border-color border-position border-width] :as props}]
-  (-> (map/merge-some attributes {:data-border-position border-position})
-      (border-radius-attributes props)
-      (utils/apply-property-value :border-color :data-border-color border-color)
-      (utils/apply-property-value :border-width :data-border-width border-width "px")))
+  (-> attributes (map/merge-some {:data-border-position border-position})
+                 (border-radius-attributes props)
+                 (utils/apply-property-value :border-color :data-border-color border-color)
+                 (utils/apply-property-value :border-width :data-border-width border-width "px")))
 
 (defn adaptive-border-attributes
   ; @note
@@ -199,7 +239,8 @@
   ; @return (map)
   ; {:data-border-radius-all (keyword)
   ;  :style (map)
-  ;   {"--border-radius" (string)}
+  ;   {"--border-radius" (string)
+  ;    ...}
   ;  ...}
   [attributes {{:keys [all]} :border-radius} ratio]
   (let [adaptive-border-radius (appearance.utils/adaptive-border-radius all ratio)]
@@ -238,12 +279,13 @@
   ;  :data-line-strength (keyword)
   ;  :style (map)
   ;   {"--line-color" (string)
-  ;    "--line-strength" (string)}
+  ;    "--line-strength" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [line-color line-orientation line-strength] :as props}]
-  (-> (map/merge-some attributes {:data-line-orientation line-orientation})
-      (utils/apply-property-value :line-color    :data-line-color    line-color)
-      (utils/apply-property-value :line-strength :data-line-strength line-strength "px")))
+  (-> attributes (map/merge-some {:data-line-orientation line-orientation})
+                 (utils/apply-property-value :line-color    :data-line-color    line-color)
+                 (utils/apply-property-value :line-strength :data-line-strength line-strength "px")))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -269,7 +311,8 @@
   ; @return (map)
   ; {:data-shadow-color (keyword)
   ;  :style (map)
-  ;   {"--shadow-color" (string)}
+  ;   {"--shadow-color" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [shadow-color]}]
   ; + :shadow-strength: :thin ... :extra-bold
@@ -301,3 +344,32 @@
   ;  ...}
   [attributes {:keys [theme]}]
   (-> attributes (map/merge-some {:data-theme theme})))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn visibility-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the visibility related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:opacity (keyword, or number)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (visibility-attributes {...} {:opacity :soft})
+  ; =>
+  ; {:data-opacity :soft
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-opacity (keyword)
+  ;  :style (map)
+  ;   {"--opacity" (string)}
+  ;  ...}
+  [attributes {:keys [opacity]}]
+  (-> attributes (utils/apply-property-value :opacity :data-opacity opacity)))

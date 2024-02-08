@@ -44,8 +44,10 @@
   ; {:class (keywords in vector)
   ;  ...}
   [attributes {:keys [class] :as props}]
-  (assoc attributes :class (vector/concat-items (-> attributes :class mixed/to-vector)
-                                                (-> props      :class mixed/to-vector))))
+  (letfn [(f0 [] (vector/concat-items (-> attributes :class mixed/to-vector)
+                                      (-> props      :class mixed/to-vector)))]
+         (if class (-> attributes (assoc :class (f0)))
+                   (-> attributes))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -59,8 +61,7 @@
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:covered? (boolean)(opt)
-  ;  :disabled? (boolean)(opt)
+  ; {:disabled? (boolean)(opt)
   ;  :highlighted? (boolean)(opt)
   ;  ...}
   ;
@@ -71,14 +72,12 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:data-covered (boolean)
-  ;  :data-disabled (boolean)
+  ; {:data-disabled (boolean)
   ;  :data-highlighted (boolean)
   ;  ...}
-  [attributes {:keys [covered? disabled? highlighted?]}]
-  (map/merge-some attributes {:data-covered     covered?
-                              :data-disabled    disabled?
-                              :data-highlighted highlighted?}))
+  [attributes {:keys [disabled? highlighted?]}]
+  (-> attributes (map/merge-some {:data-disabled    disabled?
+                                  :data-highlighted highlighted?})))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -120,4 +119,5 @@
   ; Uses reversed merge ...
   ; ... to take the style map from the attribute map as primary source,
   ; ... to take the style map from the property map as secondary source.
-  (update attributes :style map/reversed-merge style))
+  (if style (-> attributes (update :style map/reversed-merge style))
+            (-> attributes)))

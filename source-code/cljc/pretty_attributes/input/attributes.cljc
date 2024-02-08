@@ -35,9 +35,9 @@
   ;  :name (keyword)
   ;  ...}
   [attributes {:keys [autofill-name disabled?]}]
-  (if disabled? (map/merge-some attributes {})
-                (map/merge-some attributes {:auto-complete autofill-name
-                                            :name          autofill-name})))
+  (if disabled? (-> attributes (map/merge-some {}))
+                (-> attributes (map/merge-some {:auto-complete autofill-name
+                                                :name          autofill-name}))))
 
 (defn input-field-attributes
   ; @note
@@ -85,12 +85,12 @@
   ;  :min (number or string)
   ;  :type (keyword)
   ;  ...}
-  [props {:keys [date-from date-to field-from field-to field-type max-length]}]
+  [attributes {:keys [date-from date-to field-from field-to field-type max-length]}]
   ; The range of '{:type :date}' fields is controlled by the ':min' and ':max' properties.
-  (map/merge-some props {:max-length (-> max-length)
-                         :min        (or date-from field-from)
-                         :max        (or date-to   field-to)
-                         :type       (-> field-type)}))
+  (-> attributes (map/merge-some {:max-length (-> max-length)
+                                  :min        (or date-from field-from)
+                                  :max        (or date-to   field-to)
+                                  :type       (-> field-type)})))
 
 (defn input-state-attributes
   ; @note
@@ -115,4 +115,4 @@
   ; {:disabled (boolean)
   ;  ...}
   [attributes {:keys [disabled?]}]
-  (map/merge-some attributes {:disabled disabled?}))
+  (-> attributes (map/merge-some {:disabled disabled?})))

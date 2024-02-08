@@ -34,8 +34,7 @@
   ; Applies the given default state properties on the given property map.
   ;
   ; @param (map) props
-  ; {:covered? (boolean)(opt)
-  ;  :disabled? (boolean)(opt)
+  ; {:disabled? (boolean)(opt)
   ;  :highlighted? (boolean)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -47,8 +46,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:covered? (boolean)
-  ;  :disabled? (boolean)
+  ; {:disabled? (boolean)
   ;  :highlighted? (boolean)
   ;  ...}
   [props & [default-props]]

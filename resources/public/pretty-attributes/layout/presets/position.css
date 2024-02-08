@@ -1,23 +1,37 @@
 
 /***** Position presets *****/
-/*** Positioning ***/
+/*** Position ***/
 
-[data-positioning="absolute"] { position: absolute; }
-[data-positioning="fixed"]    { position: fixed;    }
-[data-positioning="relative"] { position: relative; }
-[data-positioning="static"]   { position: static;   }
-[data-positioning="sticky"]   { position: sticky;   }
+                            [data-position="tl"]     { left:     0; top:      0; }
+                            [data-position="tr"]     { right:    0; top:      0; }
+                            [data-position="br"]     { right:    0; bottom:   0; }
+                            [data-position="bl"]     { left:     0; bottom:   0; }
+                            [data-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%,    0% ); }
+                            [data-position="right"]  { right:   0%; top:    50%; transform: translate(    0%,  -50% ); }
+                            [data-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%,    0% ); }
+                            [data-position="left"]   { left:    0%; top:    50%; transform: translate(    0%,  -50% ); }
+                            [data-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
+[data-position-base="outer"][data-position="tl"]     { left:     0; top:      0; transform: translate( -100%, -100% ); }
+[data-position-base="outer"][data-position="tr"]     { right:    0; top:      0; transform: translate( +100%, -100% ); }
+[data-position-base="outer"][data-position="br"]     { right:    0; bottom:   0; transform: translate( +100%, +100% ); }
+[data-position-base="outer"][data-position="bl"]     { left:     0; bottom:   0; transform: translate( -100%, +100% ); }
+[data-position-base="outer"][data-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%, -100% ); }
+[data-position-base="outer"][data-position="right"]  { right:   0%; top:    50%; transform: translate( +100%,  -50% ); }
+[data-position-base="outer"][data-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%, +100% ); }
+[data-position-base="outer"][data-position="left"]   { left:    0%; top:    50%; transform: translate( -100%,  -50% ); }
+[data-position-base="outer"][data-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
 
-/*** Positioning ***/
+/*** Position ***/
 
-/*** Positions ***/
+/*** Position method ***/
 
-[data-position="tl"] { left:   0; top:   0; }
-[data-position="tr"] { right:  0; top:   0; }
-[data-position="br"] { bottom: 0; right: 0; }
-[data-position="bl"] { bottom: 0; left:  0; }
+[data-position-method="absolute"] { position: absolute; }
+[data-position-method="fixed"]    { position: fixed;    }
+[data-position-method="relative"] { position: relative; }
+[data-position-method="static"]   { position: static;   }
+[data-position-method="sticky"]   { position: sticky;   }
 
-/*** Positions ***/
+/*** Position method ***/
 
 /*** Layer ***/
 

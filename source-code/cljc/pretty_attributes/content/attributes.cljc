@@ -43,11 +43,12 @@
   ; @return (map)
   ; {:data-cursor (keyword)
   ;  :style (map)
-  ;   {"--cursor" (string)}
+  ;   {"--cursor" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [cursor disabled?]}]
-  (if disabled? (utils/apply-property-value attributes :cursor :data-cursor (or cursor :default))
-                (utils/apply-property-value attributes :cursor :data-cursor (-> cursor))))
+  (if disabled? (-> attributes (utils/apply-property-value :cursor :data-cursor (or cursor :default)))
+                (-> attributes (utils/apply-property-value :cursor :data-cursor (-> cursor)))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -85,7 +86,8 @@
   ;   {"--font-size" (string)
   ;    "--font-weight" (string)
   ;    "--letter-spacing" (string)
-  ;    "--line-height" (string)}
+  ;    "--line-height" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [font-size font-weight letter-spacing line-height]}]
   (-> attributes (utils/apply-property-value :font-size      :data-font-size      font-size      "px")
@@ -128,13 +130,14 @@
   ;  :data-text-selectable (boolean)
   ;  :style (map)
   ;   {"--icon-color" (string)
-  ;    "--icon-size" (string)}
+  ;    "--icon-size" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [icon-color icon-family icon-size]}]
-  (-> (map/merge-some attributes {:data-icon-family icon-family
+  (-> attributes (map/merge-some {:data-icon-family icon-family
                                   :data-text-selectable false})
-      (utils/apply-property-value :icon-color :data-icon-color icon-color)
-      (utils/apply-property-value :icon-size  :data-icon-size  icon-size "px")))
+                 (utils/apply-property-value :icon-color :data-icon-color icon-color)
+                 (utils/apply-property-value :icon-size  :data-icon-size  icon-size "px")))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -173,7 +176,8 @@
   ;  :data-text-overflow (keyword)}
   ;  :data-text-transform (keyword)
   ;  :style (map)
-  ;   {"--text-color" (string)}
+  ;   {"--text-color" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [text-align text-caret text-color text-direction text-overflow text-selectable? text-transform]}]
   (-> attributes (map/merge-some {:data-text-caret            text-caret

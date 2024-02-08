@@ -18,14 +18,6 @@
 
 ; @tutorial State properties
 ;
-; @title :covered? property
-;
-; @code Usage
-; {:covered? (boolean)}
-; {:covered? true}
-;
-;
-;
 ; @title :disabled? property
 ;
 ; @code Usage

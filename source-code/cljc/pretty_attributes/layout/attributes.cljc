@@ -44,7 +44,8 @@
   ;    "--quarter-block-max-width" (string)
   ;    "--quarter-block-min-height" (string)
   ;    "--quarter-block-min-width" (string)
-  ;    "--quarter-block-width" (string)}
+  ;    "--quarter-block-width" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [height max-height max-width min-height min-width width]}]
   (-> attributes (utils/apply-property-value :quarter-block-height     :data-quarter-block-height     height     "px")
@@ -92,7 +93,8 @@
   ;    "--half-block-max-width" (string)
   ;    "--half-block-min-height" (string)
   ;    "--half-block-min-width" (string)
-  ;    "--half-block-width" (string)}
+  ;    "--half-block-width" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [height max-height max-width min-height min-width width]}]
   (-> attributes (utils/apply-property-value :half-block-height     :data-half-block-height     height     "px")
@@ -140,7 +142,8 @@
   ;    "--full-block-max-width" (string)
   ;    "--full-block-min-height" (string)
   ;    "--full-block-min-width" (string)
-  ;    "--full-block-width" (string)}
+  ;    "--full-block-width" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [height max-height max-width min-height min-width width]}]
   (-> attributes (utils/apply-property-value :full-block-height     :data-full-block-height     height     "px")
@@ -188,7 +191,8 @@
   ;    "--double-block-max-width" (string)
   ;    "--double-block-min-height" (string)
   ;    "--double-block-min-width" (string)
-  ;    "--double-block-width" (string)}
+  ;    "--double-block-width" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [height max-height max-width min-height min-width width]}]
   (-> attributes (utils/apply-property-value :double-block-height     :data-double-block-height     height     "px")
@@ -236,7 +240,8 @@
   ;    "--triple-block-max-width" (string)
   ;    "--triple-block-min-height" (string)
   ;    "--triple-block-min-width" (string)
-  ;    "--triple-block-width" (string)}
+  ;    "--triple-block-width" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [height max-height max-width min-height min-width width]}]
   (-> attributes (utils/apply-property-value :triple-block-height     :data-triple-block-height     height     "px")
@@ -287,7 +292,8 @@
   ;    "--content-max-width" (string)
   ;    "--content-min-height" (string)
   ;    "--content-min-width" (string)
-  ;    "--content-width" (string)}
+  ;    "--content-width" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [height max-height max-width min-height min-width width]}]
   (-> attributes (utils/apply-property-value :content-height     :data-content-height     height     "px")
@@ -370,7 +376,8 @@
   ;  :data-flex-overflow (keyword)
   ;  :data-flex-vertical-align (keyword)
   ;  :style (map)
-  ;   {"--flex-gap" (string)}
+  ;   {"--flex-gap" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [gap horizontal-align orientation overflow vertical-align]}]
   (-> attributes (map/merge-some {:data-flex-horizontal-align horizontal-align
@@ -417,7 +424,8 @@
   ;    "--grid-column-template" (string)
   ;    "--grid-row-count" (string)
   ;    "--grid-row-gap" (string)}
-  ;    "--grid-row-template" (string)}
+  ;    "--grid-row-template" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [column-count column-gap column-template row-count row-gap row-template]}]
   (-> attributes (utils/apply-property-value :grid-column-count    :data-grid-column-count    column-count)
@@ -473,15 +481,16 @@
   ;    "--indent-left" (string)
   ;    "--indent-right" (string)
   ;    "--indent-top" (string)
-  ;    "--indent-vertical" (string)}
+  ;    "--indent-vertical" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [indent]}]
   (letfn [(f0 [result k v]
               (let [css-var-name        (keyword (str      "indent-" (name k)))
                     data-attribute-name (keyword (str "data-indent-" (name k)))]
                    (utils/apply-property-value result css-var-name data-attribute-name v "px")))]
-         (merge attributes (if (map?            indent)
-                               (reduce-kv f0 {} indent)))))
+         (-> attributes (merge (if (map?            indent)
+                                   (reduce-kv f0 {} indent))))))
 
 (defn outdent-attributes
   ; @note
@@ -526,43 +535,16 @@
   ;    "--outdent-left" (string)
   ;    "--outdent-right" (string)
   ;    "--outdent-top" (string)
-  ;    "--outdent-vertical" (string)}
+  ;    "--outdent-vertical" (string)
+  ;    ...}
   ;  ...}
   [attributes {:keys [outdent]}]
   (letfn [(f0 [result k v]
               (let [css-var-name        (keyword (str      "outdent-" (name k)))
                     data-attribute-name (keyword (str "data-outdent-" (name k)))]
                    (utils/apply-property-value result css-var-name data-attribute-name v "px")))]
-         (merge attributes (if (map?            outdent)
-                               (reduce-kv f0 {} outdent)))))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn layer-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the Z-index layer related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:layer (keyword or integer)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (layer-attributes {...} {:layer :uppermost})
-  ; =>
-  ; {:data-layer :uppermost
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-layer (keyword)
-  ;  :style {"--layer" (string)}
-  ;  ...}
-  [attributes {:keys [layer]}]
-  (-> attributes (utils/apply-property-value :layer :data-layer layer)))
+         (-> attributes (merge (if (map?            outdent)
+                                   (reduce-kv f0 {} outdent))))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -572,25 +554,35 @@
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @description
-  ; Applies the grid layout related values on the given attribute map.
+  ; Applies the position related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:position (keyword)(opt)
-  ;  :positioning (keyword)(opt)
+  ; {:layer (keyword or integer)(opt)
+  ;  :position (keyword)(opt)
+  ;  :position-base (keyword)(opt)
+  ;  :position-method (keyword)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (position-attributes {...} {:position :tr :positioning :absolute})
+  ; (position-attributes {...} {:layer :uppermost :position :tr :position-method :absolute})
   ; =>
-  ; {:data-position    :tr
-  ;  :data-positioning :absolute
+  ; {:data-layer           :uppermost
+  ;  :data-position        :tr
+  ;  :data-position-method :absolute
   ;  ...}
   ;
   ; @return (map)
-  ; {:data-position (keyword)
-  ;  :data-positioning (keyword)
+  ; {:data-layer (keyword)
+  ;  :data-position (keyword)
+  ;  :position-base (keyword)
+  ;  :position-method (keyword)
+  ;  :style (map)
+  ;   {"--layer" (string)
+  ;    ...}
   ;  ...}
-  [attributes {:keys [position positioning]}]
-  (-> attributes (map/merge-some {:data-position    position
-                                  :data-positioning positioning})))
+  [attributes {:keys [layer position position-base position-method]}]
+  (-> attributes (map/merge-some {:data-position        position
+                                  :data-position-base   position-base
+                                  :data-position-method position-method})
+                 (utils/apply-property-value :layer :data-layer layer)))

@@ -32,7 +32,9 @@
   ;  :target (keyword)
   ;  ...}
   [attributes {:keys [href-target href-uri]}]
-  (map/merge-some attributes {:href href-uri :target (case href-target :blank :_blank :self :_self nil)}))
+  (let [href-target (case href-target :blank :_blank :self :_self nil)]
+       (-> attributes (map/merge-some {:href   href-uri
+                                       :target href-target}))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -63,8 +65,8 @@
   ;  :tab-index (integer)
   ;  ...}
   [attributes {:keys [disabled? tab-disabled?]}]
-  (map/merge-some attributes {:disabled  (-> disabled?)
-                              :tab-index (if tab-disabled? -1)}))
+  (-> attributes (map/merge-some {:disabled  (-> disabled?)
+                                  :tab-index (if tab-disabled? -1)})))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -95,8 +97,8 @@
   ; {:data-focus-id (keyword)
   ;  ...}
   [attributes {:keys [disabled? focus-id]}]
-  (if disabled? (map/merge-some attributes {})
-                (map/merge-some attributes {:data-focus-id (hiccup/value focus-id)})))
+  (if disabled? (-> attributes (map/merge-some {}))
+                (-> attributes (map/merge-some {:data-focus-id (hiccup/value focus-id)}))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

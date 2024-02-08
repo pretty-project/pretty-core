@@ -1,0 +1,33 @@
+
+/***** Background image presets *****/
+/*** Background position ***/
+
+[data-background-position="top"]    { background-position: top;    }
+[data-background-position="right"]  { background-position: right;  }
+[data-background-position="bottom"] { background-position: bottom; }
+[data-background-position="left"]   { background-position: left;   }
+[data-background-position="center"] { background-position: center; }
+
+/*** Background position ***/
+
+/*** Background repeat ***/
+
+[data-background-repeat="true"]  { background-repeat: repeat;    }
+[data-background-repeat="false"] { background-repeat: no-repeat; }
+
+/*** Background repeat ***/
+
+/*** Background size ***/
+
+[data-background-size="contain"] { background-size: contain; }
+[data-background-size="cover"]   { background-size: cover;   }
+
+/*** Background size ***/
+
+/*** Background uri ***/
+
+[data-background-uri="var"] { background-image: var( --background-uri );
+                              border-radius:    inherit; }
+
+/*** Background uri ***/
+/***** Background image presets *****/
