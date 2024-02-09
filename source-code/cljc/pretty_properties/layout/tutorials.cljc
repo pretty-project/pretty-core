@@ -219,7 +219,7 @@
 ; 3XL:   48px
 ; 4XL:   54px
 ; 5XL:   60px
-; ---
+; @---
 ;
 ; @code
 ; Height/width profiles in ':half-block' size system:
@@ -235,7 +235,7 @@
 ; 3XL:   96px
 ; 4XL:  108px
 ; 5XL:  120px
-; ---
+; @---
 ;
 ; @code
 ; Height/width profiles in ':full-block' size system:
@@ -251,7 +251,7 @@
 ; 3XL:  192px
 ; 4XL:  216px
 ; 5XL:  240px
-; ---
+; @---
 ;
 ; @code
 ; Height/width profiles in ':double-block' size system:
@@ -267,7 +267,7 @@
 ; 3XL:  384px
 ; 4XL:  432px
 ; 5XL:  480px
-; ---
+; @---
 ;
 ; @code
 ; Height/width profiles in ':triple-block' size system:
@@ -283,8 +283,9 @@
 ; 3XL:  576px
 ; 4XL:  648px
 ; 5XL:  720px
-; ---
+; @---
 ;
+; @code
 ; Height profiles in ':screen' size system:
 ;
 ; MICRO:  5vh
@@ -298,7 +299,9 @@
 ; 3XL:   10vh
 ; 4XL:   10vh
 ; 5XL:   10vh
+; @---
 ;
+; @code
 ; Width profiles in ':screen' size system:
 ;
 ; MICRO:  160px
@@ -312,6 +315,7 @@
 ; 3XL:   1680px
 ; 4XL:   2160px
 ; 5XL:   3840px
+; @---
 ;
 ; The '{:size-unit :screen}' setting implements an adaptive content width logic, where the width profiles
 ; are adjusted to common screen resolutions; and in case the width profile is larger than the actual screen

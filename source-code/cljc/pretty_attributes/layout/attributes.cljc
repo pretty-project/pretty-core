@@ -294,8 +294,9 @@
   ;    "--width" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [height max-height max-width min-height min-width width]}]
-  (-> attributes (utils/apply-property-value :height     :data-height     height     "px")
+  [attributes {:keys [height max-height max-width min-height min-width size-unit width]}]
+  (-> attributes (map/merge-some {:data-size-unit size-unit})
+                 (utils/apply-property-value :height     :data-height     height     "px")
                  (utils/apply-property-value :width      :data-width      width      "px")
                  (utils/apply-property-value :max-height :data-max-height max-height "px")
                  (utils/apply-property-value :max-width  :data-max-width  max-width  "px")

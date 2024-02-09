@@ -29,6 +29,32 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-lifecycle-props
+  ; @description
+  ; Applies the given default CSS lifecycle properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:on-mount-f (function)(opt)
+  ;  :on-unmount-f (function)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-lifecycle-props {...} {:on-mount-f (fn [_] ...)})
+  ; =>
+  ; {:on-mount-f (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:on-mount-f (function)
+  ;  :on-unmount-f (function)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-preset-props
   ; @description
   ; Applies the given default preset properties on the given property map.

@@ -46,6 +46,9 @@
 ; @tutorial Class properties
 ; @redirect (pretty-properties.basic.tutorials/class-properties)
 
+; @tutorial Lifecycle properties
+; @redirect (pretty-properties.basic.tutorials/lifecycle-properties)
+
 ; @tutorial Preset properties
 ; @redirect (pretty-properties.basic.tutorials/preset-properties)
 
@@ -59,11 +62,12 @@
 ; @redirect (pretty-properties.basic.tutorials/style-properties)
 
 ; @redirect (pretty-properties.basic.props/*)
-(def default-class-props  basic.props/default-class-props)
-(def default-preset-props basic.props/default-preset-props)
-(def default-react-props  basic.props/default-react-props)
-(def default-state-props  basic.props/default-state-props)
-(def default-style-props  basic.props/default-style-props)
+(def default-class-props     basic.props/default-class-props)
+(def default-lifecycle-props basic.props/default-lifecycle-props)
+(def default-preset-props    basic.props/default-preset-props)
+(def default-react-props     basic.props/default-react-props)
+(def default-state-props     basic.props/default-state-props)
+(def default-style-props     basic.props/default-style-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -157,9 +161,6 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
-
-; @tutorial Canvas properties
-; @redirect (pretty-properties.layout.tutorials/canvas-properties)
 
 ; @tutorial Flex properties
 ; @redirect (pretty-properties.layout.tutorials/flex-properties)

@@ -16,6 +16,25 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Lifecycle properties
+;
+; @title :on-mount-f property
+;
+; @code Usage
+; {:on-mount-f (function)}
+; {:on-mount-f (fn [_] ...)}
+;
+;
+;
+; @title :on-unmount-f property
+;
+; @code Usage
+; {:on-unmount-f (function)}
+; {:on-unmount-f (fn [_] ...)}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Preset properties
 ;
 ; @title :preset property

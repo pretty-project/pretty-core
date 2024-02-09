@@ -1,19 +1,19 @@
 
 /***** Space profiles *****/
-/*** Space ***/
+/*** Gap ***/
 
 body {
-  --space-micro:  3px;
-  --space-xxs:    6px;
-  --space-xs:    12px;
-  --space-s:     18px;
-  --space-m:     24px;
-  --space-l:     30px;
-  --space-xl:    36px;
-  --space-xxl:   42px;
-  --space-3xl:   48px;
-  --space-4xl:   54px;
-  --space-5xl:   60px;
+  --gap-micro:  3px;
+  --gap-xxs:    6px;
+  --gap-xs:    12px;
+  --gap-s:     18px;
+  --gap-m:     24px;
+  --gap-l:     30px;
+  --gap-xl:    36px;
+  --gap-xxl:   42px;
+  --gap-3xl:   48px;
+  --gap-4xl:   54px;
+  --gap-5xl:   60px;
 }
 
 /*** Gap ***/

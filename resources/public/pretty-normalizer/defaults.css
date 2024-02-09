@@ -114,6 +114,9 @@ button {
 
   /* Removes the inherited text transforms in Edge, Firefox and IE */
   text-transform: none;
+
+  /* Makes BUTTONs align their text content like DIVs */
+  text-align: start;
 }
 
 button,
