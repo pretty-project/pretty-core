@@ -45,20 +45,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Focus properties
-;
-; @title :focus-id property
-;
-; @note
-; Associating focus ID to elements or subitems make them focusable by side effect functions.
-;
-; @code Usage
-; {:focus-id (keyword)}
-; {:focus-id :my-target-element}
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 ; @tutorial Mouse event properties
 ;
 ; @title :on-click-f property

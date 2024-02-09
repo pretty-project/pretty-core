@@ -4,6 +4,40 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Canvas properties
+;
+; @note
+; The canvas dimension properties control inner element size within the main element.
+;
+; @title :canvas-height property
+;
+; @code Usage
+; {:canvas-height (keyword, px or string)}
+; {:canvas-height :parent}
+; {:canvas-height 10}
+; {:canvas-height "10px"}
+; {:canvas-height "5%"}
+;
+; @code Predefined values
+; :auto, :parent, :grow
+;
+;
+;
+; @title :canvas-width property
+;
+; @code Usage
+; {:canvas-width (keyword, px or string)}
+; {:canvas-width :parent}
+; {:canvas-width 10}
+; {:canvas-width "10px"}
+; {:canvas-width "5%"}
+;
+; @code Predefined values
+; :auto, :parent, :grow
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Flex properties
 ;
 ; @title :gap property
@@ -193,7 +227,7 @@
 ; @title :strength property
 ;
 ; @code Usage
-; {:strength (percent)}
+; {:strength (percentage)}
 ; {:strength 100}
 
 ;; ----------------------------------------------------------------------------
@@ -365,7 +399,7 @@
 ; {:height "5%"}
 ;
 ; @code Predefined values
-; :auto, :content, :parent,
+; :auto, :content, :parent, :grow,
 ; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
@@ -380,7 +414,7 @@
 ; {:width "5%"}
 ;
 ; @code Predefined values
-; :auto, :content, :parent,
+; :auto, :content, :parent, :grow,
 ; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 
 ;; ----------------------------------------------------------------------------

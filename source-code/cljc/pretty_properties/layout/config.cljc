@@ -23,6 +23,6 @@
 ; @note (pretty-properties.accessories.config#4011)
 ;
 ; @constant (map)
-; {:strength (percent)}
+; {:strength (percentage)}
 (def STANDARD-SHAPE-PROPERTIES
      {:strength 100})

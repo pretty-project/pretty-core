@@ -16,6 +16,7 @@
 [data-quarter-block-height="auto"]    { height: auto;                              }
 [data-quarter-block-height="content"] { height: fit-content;                       }
 [data-quarter-block-height="parent"]  { height: 100%;                              }
+[data-quarter-block-height="grow"]    { flex-grow: 1;                              }
 
 /*** Quarter block height ***/
 
@@ -35,6 +36,7 @@
 [data-quarter-block-width="auto"]    { width: auto;                             }
 [data-quarter-block-width="content"] { width: fit-content;                      }
 [data-quarter-block-width="parent"]  { width: 100%;                             }
+[data-quarter-block-width="grow"]    { flex-grow: 1;                            }
 
 /*** Quarter block width ***/
 
@@ -118,6 +120,7 @@
 [data-half-block-height="auto"]    { height: auto;                           }
 [data-half-block-height="content"] { height: fit-content;                    }
 [data-half-block-height="parent"]  { height: 100%;                           }
+[data-half-block-height="grow"]    { flex-grow: 1;                           }
 
 /*** Half block height ***/
 
@@ -137,6 +140,7 @@
 [data-half-block-width="auto"]    { width: auto;                          }
 [data-half-block-width="content"] { width: fit-content;                   }
 [data-half-block-width="parent"]  { width: 100%;                          }
+[data-half-block-width="grow"]    { flex-grow: 1;                         }
 
 /*** Half block width ***/
 
@@ -220,6 +224,7 @@
 [data-full-block-height="auto"]    { height: auto;                           }
 [data-full-block-height="content"] { height: fit-content;                    }
 [data-full-block-height="parent"]  { height: 100%;                           }
+[data-full-block-height="grow"]    { flex-grow: 1;                           }
 
 /*** Full block height ***/
 
@@ -239,6 +244,7 @@
 [data-full-block-width="auto"]    { width: auto;                          }
 [data-full-block-width="content"] { width: fit-content;                   }
 [data-full-block-width="parent"]  { width: 100%;                          }
+[data-full-block-width="grow"]    { flex-grow: 1;                         }
 
 /*** Full block width ***/
 
@@ -322,6 +328,7 @@
 [data-double-block-height="auto"]    { height: auto;                             }
 [data-double-block-height="content"] { height: fit-content;                      }
 [data-double-block-height="parent"]  { height: 100%;                             }
+[data-double-block-height="grow"]    { flex-grow: 1;                             }
 
 /*** Double block height ***/
 
@@ -341,6 +348,7 @@
 [data-double-block-width="auto"]    { width: auto;                            }
 [data-double-block-width="content"] { width: fit-content;                     }
 [data-double-block-width="parent"]  { width: 100%;                            }
+[data-double-block-width="grow"]    { flex-grow: 1;                           }
 
 /*** Double block width ***/
 
@@ -424,6 +432,7 @@
 [data-triple-block-height="auto"]    { height: auto;                             }
 [data-triple-block-height="content"] { height: fit-content;                      }
 [data-triple-block-height="parent"]  { height: 100%;                             }
+[data-triple-block-height="grow"]    { flex-grow: 1;                             }
 
 /*** Triple block height ***/
 
@@ -443,6 +452,7 @@
 [data-triple-block-width="auto"]    { width: auto;                            }
 [data-triple-block-width="content"] { width: fit-content;                     }
 [data-triple-block-width="parent"]  { width: 100%;                            }
+[data-triple-block-width="grow"]    { flex-grow: 1;                           }
 
 /*** Triple block width ***/
 
@@ -509,6 +519,24 @@
 [data-triple-block-min-width="5xl"] { min-width: var( --triple-block-width-5xl ); }
 
 /*** Triple block min height ***/
+
+/*** Canvas height ***/
+
+[data-canvas-height="var"]    { height: var( --canvas-height ); }
+[data-canvas-height="auto"]   { height: auto;                   }
+[data-canvas-height="parent"] { height: 100%;                   }
+[data-canvas-height="grow"]   { flex-grow: 1;                   }
+
+/*** Canvas height ***/
+
+/*** Canvas width ***/
+
+[data-canvas-width="var"]    { width: var( --canvas-width ); }
+[data-canvas-width="auto"]   { width: auto;                  }
+[data-canvas-width="parent"] { width: 100%;                  }
+[data-canvas-width="grow"]   { flex-grow: 1;                 }
+
+/*** Canvas width ***/
 
 /*** Content height ***/
 

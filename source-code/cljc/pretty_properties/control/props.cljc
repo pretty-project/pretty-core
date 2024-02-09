@@ -102,30 +102,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-focus-props
-  ; @description
-  ; Applies the given default focus properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:focus-id (keyword)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-focus-props {...} {:focus-id :my-element})
-  ; =>
-  ; {:focus-id :my-element
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:focus-id (keyword)(opt)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn default-mouse-event-props
   ; @description
   ; - Applies the given default mouse event properties on the given property map.

@@ -14,7 +14,8 @@
   ;
   ; @note
   ; - Automatically turns off the hover color and hover pattern on disabled elements.
-  ; - Automatically uses the hover color (if any) as fallback of highlight color (if not provided) on highlighted elements.
+  ; - Automatically uses the hover color (if any) and hover pattern (if any) as fallback value
+  ;   for highlight color (if not provided) and highlight pattern (if not provided) on highlighted elements.
   ; - Automatically applies the 'data-highlighted' attribute on highlighted elements.
   ; - Doesn't apply the highlight color and highlight pattern properties on non-highlighted elements.
   ;
@@ -66,6 +67,7 @@
         (-> attributes (map/assoc-some             :data-highlighted                      highlighted?)
                        (map/assoc-some             :data-fill-pattern                     fill-pattern)
                        (map/assoc-some             :data-highlight-pattern                hover-pattern)
+                       (map/assoc-some             :data-highlight-pattern                highlight-pattern)
                        (utils/apply-property-value :fill-color      :data-fill-color      fill-color)
                        (utils/apply-property-value :highlight-color :data-highlight-color hover-color)
                        (utils/apply-property-value :highlight-color :data-highlight-color highlight-color))
@@ -76,6 +78,7 @@
         (-> attributes (map/assoc-some             :data-highlighted                      highlighted?)
                        (map/assoc-some             :data-fill-pattern                     fill-pattern)
                        (map/assoc-some             :data-highlight-pattern                hover-pattern)
+                       (map/assoc-some             :data-highlight-pattern                highlight-pattern)
                        (map/assoc-some             :data-hover-pattern                    hover-pattern)
                        (utils/apply-property-value :fill-color      :data-fill-color      fill-color)
                        (utils/apply-property-value :highlight-color :data-highlight-color hover-color)

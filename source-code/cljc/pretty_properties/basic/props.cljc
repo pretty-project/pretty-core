@@ -29,6 +29,30 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-react-props
+  ; @description
+  ; Applies the given default React properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:set-reference-f (function)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-react-props {...} {:set-reference-f (fn [_] ...)})
+  ; =>
+  ; {:set-reference-f (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:set-reference-f (function)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-state-props
   ; @description
   ; Applies the given default state properties on the given property map.

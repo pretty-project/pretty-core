@@ -52,6 +52,33 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn react-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the given React related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:set-reference-f (function)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (react-attributes {...} {:set-reference-f (fn [_] ...)})
+  ; =>
+  ; {:ref (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:ref (function)
+  ;  ...}
+  [attributes {:keys [set-reference-f]}]
+  (-> attributes (map/merge-some {:ref set-reference-f})))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn state-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.

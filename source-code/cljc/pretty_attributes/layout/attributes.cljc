@@ -6,6 +6,41 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn canvas-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the canvas related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:canvas-height (keyword, px or string)(opt)
+  ;  :canvas-width (keyword, px or string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (canvas-attributes {...} {:canvas-height :xl, :canvas-width :xl})
+  ; =>
+  ; {:data-canvas-height :xl
+  ;  :data-canvas-width  :xl
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-canvas-height (keyword)
+  ;  :data-canvas-width (keyword)
+  ;  :style (map)
+  ;   {"--canvas-height" (string)
+  ;    "--canvas-width" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [canvas-height canvas-width]}]
+  (-> attributes (utils/apply-property-value :canvas-height :data-canvas-height canvas-height "px")
+                 (utils/apply-property-value :canvas-width  :data-canvas-width  canvas-width  "px")))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn quarter-block-size-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.

@@ -30,6 +30,7 @@
 
 ; @redirect (pretty-attributes.basic.attributes/*)
 (def class-attributes basic.attributes/class-attributes)
+(def react-attributes basic.attributes/react-attributes)
 (def state-attributes basic.attributes/state-attributes)
 (def style-attributes basic.attributes/style-attributes)
 
@@ -40,12 +41,12 @@
 (def cursor-attributes content.attributes/cursor-attributes)
 (def font-attributes   content.attributes/font-attributes)
 (def icon-attributes   content.attributes/icon-attributes)
+(def image-attributes  content.attributes/image-attributes)
 (def text-attributes   content.attributes/text-attributes)
 
 ; @redirect (pretty-attributes.control.attributes/*)
 (def anchor-attributes          control.attributes/anchor-attributes)
 (def clickable-state-attributes control.attributes/clickable-state-attributes)
-(def focus-attributes           control.attributes/focus-attributes)
 (def mouse-event-attributes     control.attributes/mouse-event-attributes)
 
 ; @redirect (pretty-attributes.input.attributes/*)
@@ -54,6 +55,7 @@
 (def input-state-attributes    input.attributes/input-state-attributes)
 
 ; @redirect (pretty-attributes.layout.attributes/*)
+(def canvas-attributes             layout.attributes/canvas-attributes)
 (def quarter-block-size-attributes layout.attributes/quarter-block-size-attributes)
 (def half-block-size-attributes    layout.attributes/half-block-size-attributes)
 (def full-block-size-attributes    layout.attributes/full-block-size-attributes)

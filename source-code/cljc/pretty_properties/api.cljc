@@ -46,6 +46,9 @@
 ; @tutorial Class properties
 ; @redirect (pretty-properties.basic.tutorials/class-properties)
 
+; @tutorial React properties
+; @redirect (pretty-properties.basic.tutorials/react-properties)
+
 ; @tutorial State properties
 ; @redirect (pretty-properties.basic.tutorials/state-properties)
 
@@ -54,6 +57,7 @@
 
 ; @redirect (pretty-properties.basic.props/*)
 (def default-class-props basic.props/default-class-props)
+(def default-react-props basic.props/default-react-props)
 (def default-state-props basic.props/default-state-props)
 (def default-style-props basic.props/default-style-props)
 
@@ -69,6 +73,9 @@
 ; @tutorial Icon properties
 ; @redirect (pretty-properties.content.tutorials/icon-properties)
 
+; @tutorial Image properties
+; @redirect (pretty-properties.content.tutorials/image-properties)
+
 ; @tutorial Text properties
 ; @redirect (pretty-properties.content.tutorials/text-properties)
 
@@ -83,6 +90,7 @@
 (def default-font-props    content.props/default-font-props)
 (def inherit-icon-props    content.props/inherit-icon-props)
 (def default-icon-props    content.props/default-icon-props)
+(def default-image-props   content.props/default-image-props)
 (def default-text-props    content.props/default-text-props)
 (def default-content-props content.props/default-content-props)
 (def default-label-props   content.props/default-label-props)
@@ -96,17 +104,13 @@
 ; @tutorial Clickable state properties
 ; @redirect (pretty-properties.control.tutorials/clickable-state-properties)
 
-; @tutorial Focus properties
-; @redirect (pretty-properties.control.tutorials/focus-properties)
-
 ; @tutorial Mouse event properties
 ; @redirect (pretty-properties.control.tutorials/mouse-event-properties)
 
 ; @redirect (pretty-properties.control.props/*)
 (def default-anchor-props          control.props/default-anchor-props)
 (def clickable-text-auto-props     control.props/clickable-text-auto-props)
-(def default-clickable-state-props control.props/default-focus-props)
-(def default-focus-props           control.props/default-focus-props)
+(def default-clickable-state-props control.props/default-clickable-state-props)
 (def default-mouse-event-props     control.props/default-mouse-event-props)
 
 ;; ----------------------------------------------------------------------------
@@ -142,6 +146,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Canvas properties
+; @redirect (pretty-properties.layout.tutorials/canvas-properties)
+
 ; @tutorial Flex properties
 ; @redirect (pretty-properties.layout.tutorials/flex-properties)
 
@@ -161,6 +168,7 @@
 ; @redirect (pretty-properties.layout.tutorials/space-properties)
 
 ; @redirect (pretty-properties.layout.props/*)
+(def default-canvas-props   layout.props/default-canvas-props)
 (def flex-scroll-auto-props layout.props/flex-scroll-auto-props)
 (def default-flex-props     layout.props/default-flex-props)
 (def default-grid-props     layout.props/default-grid-props)

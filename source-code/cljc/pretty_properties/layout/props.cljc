@@ -6,6 +6,33 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-canvas-props
+  ; @description
+  ; Applies the given default canvas properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:canvas-height (keyword, px or string)(opt)
+  ;  :canvas-width (keyword, px or string)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-canvas-props {...} {:canvas-height :parent :canvas-width :parent})
+  ; =>
+  ; {:canvas-height :parent
+  ;  :canvas-width  :parent
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:canvas-height (keyword, px or string)
+  ;  :canvas-width (keyword, px or string)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn flex-scroll-auto-props
   ; @description
   ; The standard ':horizontal-align' and ':vertical-align' properties are not suitable for scrollable elements.
@@ -158,7 +185,7 @@
   ; - Applies the standard shape properties on the given property map.
   ;
   ; @param (map) props
-  ; {:strength (percent)(opt)
+  ; {:strength (percentage)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -169,7 +196,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:strength (percent)
+  ; {:strength (percentage)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values layout.config/STANDARD-SHAPE-PROPERTIES default-props)))

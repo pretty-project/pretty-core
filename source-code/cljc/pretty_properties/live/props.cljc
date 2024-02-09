@@ -78,7 +78,7 @@
   ;   in case of any progress related value is provided.
   ;
   ; @param (map) props
-  ; {:progress (percent)(opt)
+  ; {:progress (percentage)(opt)
   ;  :progress-color (keyword or string)(opt)
   ;  :progress-direction (keyword)(opt)
   ;  :progress-duration (ms)(opt)
@@ -95,7 +95,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:progress (percent)
+  ; {:progress (percentage)
   ;  :progress-color (keyword or string)
   ;  :progress-direction (keyword)
   ;  :progress-duration (ms)

@@ -101,7 +101,7 @@
   ; @param (map) attributes
   ; {:style (map)(opt)}
   ; @param (map) props
-  ; {:progress (percent)(opt)
+  ; {:progress (percentage)(opt)
   ;  :progress-color (keyword or string)(opt)
   ;  :progress-direction (keyword)(opt)
   ;  :progress-duration (ms)(opt)

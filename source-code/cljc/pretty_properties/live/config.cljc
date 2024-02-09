@@ -22,7 +22,7 @@
 ; @note (pretty-properties.accessories.config#4012)
 ;
 ; @constant (map)
-; {:progress (percent)
+; {:progress (percentage)
 ;  :progress-color (keyword or string)
 ;  :progress-direction (keyword)
 ;  :progress-duration (ms)}

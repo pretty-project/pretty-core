@@ -128,6 +128,25 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Image properties
+;
+; @title :image-alt property
+;
+; @code Usage
+; {:image-alt (string)}
+; {:image-alt "My image"}
+;
+;
+;
+; @title :image-uri property
+;
+; @code Usage
+; {:image-uri (string)}
+; {:image-uri "/my-image.png"}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Text properties
 ;
 ; @title :text-align property
@@ -226,10 +245,18 @@
 ;
 ;
 ;
-; @title :placeholder property
+; @title :content-placeholder property
 ;
 ; @note
-; The ':placeholder' property is the fallback value of the ':content' property in case it has no value.
+; The ':content-placeholder' property is the fallback value of the ':content' property in case it has no value.
+;
+; @code Usage
+; {:content-placeholder (metamorphic-content)}
+; {:content-placeholder "My content placeholder"}
+; {:content-placeholder :my-dictionary-term}
+; {:content-placeholder [:div "My content placeholder"]}
+; {:content-placeholder [my-content-placeholder-component]}
+; {:content-placeholder 123456}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -251,7 +278,15 @@
 ;
 ;
 ;
-; @title :placeholder property
+; @title :label-placeholder property
 ;
 ; @note
-; The ':placeholder' property is the fallback value of the ':label' property in case it has no value.
+; The ':label-placeholder' property is the fallback value of the ':label' property in case it has no value.
+;
+; @code Usage
+; {:label-placeholder (metamorphic-label)}
+; {:label-placeholder "My label placeholder"}
+; {:label-placeholder :my-dictionary-term}
+; {:label-placeholder [:div "My label placeholder"]}
+; {:label-placeholder [my-label-placeholder-component]}
+; {:label-placeholder 123456}

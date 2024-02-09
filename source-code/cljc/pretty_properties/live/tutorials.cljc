@@ -86,7 +86,7 @@
 ; @title :progress property
 ;
 ; @code Usage
-; {:progress (percent)}
+; {:progress (percentage)}
 ; {:progress 42}
 ;
 ;

@@ -142,6 +142,39 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn image-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the image related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:image-alt (string)(opt)
+  ;  :image-uri (string)(opt)
+  ;  :on-error-f (function)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (image-attributes {...} {:image-alt "My image" :image-uri "/my-image.png"})
+  ; =>
+  ; {:alt "My image"
+  ;  :src "/my-image.png"
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:alt (string)
+  ;  :src (string)
+  ;  ...}
+  [attributes {:keys [image-alt image-uri on-error-f]}]
+  (-> attributes (map/merge-some {:alt      image-alt
+                                  :on-error on-error-f
+                                  :src      image-uri})))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn text-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.

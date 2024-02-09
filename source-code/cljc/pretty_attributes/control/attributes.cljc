@@ -1,7 +1,6 @@
 
 (ns pretty-attributes.control.attributes
-    (:require [fruits.hiccup.api       :as hiccup]
-              [fruits.map.api          :as map]
+    (:require [fruits.map.api          :as map]
               [pretty-attributes.utils :as utils]))
 
 ;; ----------------------------------------------------------------------------
@@ -67,38 +66,6 @@
   [attributes {:keys [disabled? tab-disabled?]}]
   (-> attributes (map/merge-some {:disabled  (-> disabled?)
                                   :tab-index (if tab-disabled? -1)})))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn focus-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @note
-  ; Automatically removes the focus ID from disabled elements.
-  ;
-  ; @description
-  ; Applies the focus related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:disabled? (boolean)(opt)
-  ;  :focus-id (keyword)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (focus-attributes {...} {:focus-id :my-target-element})
-  ; =>
-  ; {:data-focus-id :my-target-element
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-focus-id (keyword)
-  ;  ...}
-  [attributes {:keys [disabled? focus-id]}]
-  (if disabled? (-> attributes (map/merge-some {}))
-                (-> attributes (map/merge-some {:data-focus-id (hiccup/value focus-id)}))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
