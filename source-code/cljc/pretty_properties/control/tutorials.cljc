@@ -45,6 +45,20 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Keypress properties
+;
+; @title :keypress property
+;
+; @note
+; Check out the [cljs-keypress-handler](https://mt-app-kit.github.io/cljs-keypress-handler) library.
+;
+; @code Usage
+; {:keypress (map)}
+; {:keypress {:key-code 27}}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Mouse event properties
 ;
 ; @title :on-click-f property
@@ -52,6 +66,14 @@
 ; @code Usage
 ; {...} {:on-click-f (function)}
 ; {...} {:on-click-f (fn [_] ...)}
+;
+;
+;
+; @title :on-click-timeout property
+;
+; @code Usage
+; {...} {:on-click-timeout (ms)}
+; {...} {:on-click-timeout 5000}
 ;
 ;
 ;

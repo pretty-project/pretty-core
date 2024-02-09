@@ -46,6 +46,9 @@
 ; @tutorial Class properties
 ; @redirect (pretty-properties.basic.tutorials/class-properties)
 
+; @tutorial Preset properties
+; @redirect (pretty-properties.basic.tutorials/preset-properties)
+
 ; @tutorial React properties
 ; @redirect (pretty-properties.basic.tutorials/react-properties)
 
@@ -56,10 +59,11 @@
 ; @redirect (pretty-properties.basic.tutorials/style-properties)
 
 ; @redirect (pretty-properties.basic.props/*)
-(def default-class-props basic.props/default-class-props)
-(def default-react-props basic.props/default-react-props)
-(def default-state-props basic.props/default-state-props)
-(def default-style-props basic.props/default-style-props)
+(def default-class-props  basic.props/default-class-props)
+(def default-preset-props basic.props/default-preset-props)
+(def default-react-props  basic.props/default-react-props)
+(def default-state-props  basic.props/default-state-props)
+(def default-style-props  basic.props/default-style-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -104,6 +108,9 @@
 ; @tutorial Clickable state properties
 ; @redirect (pretty-properties.control.tutorials/clickable-state-properties)
 
+; @tutorial Keypress properties
+; @redirect (pretty-properties.control.tutorials/keypress-properties)
+
 ; @tutorial Mouse event properties
 ; @redirect (pretty-properties.control.tutorials/mouse-event-properties)
 
@@ -111,6 +118,7 @@
 (def default-anchor-props          control.props/default-anchor-props)
 (def clickable-text-auto-props     control.props/clickable-text-auto-props)
 (def default-clickable-state-props control.props/default-clickable-state-props)
+(def default-keypress-props        control.props/default-keypress-props)
 (def default-mouse-event-props     control.props/default-mouse-event-props)
 
 ;; ----------------------------------------------------------------------------
@@ -134,6 +142,9 @@
 ; @tutorial Input guide properties
 ; @redirect (pretty-properties.input.tutorials/input-guide-properties)
 
+; @tutorial Input option properties
+; @redirect (pretty-properties.input.tutorials/input-option-properties)
+
 ; @tutorial Input state properties
 ; @redirect (pretty-properties.input.tutorials/input-state-properties)
 
@@ -141,6 +152,7 @@
 (def default-input-autofill-props input.props/default-input-autofill-props)
 (def default-input-field-props    input.props/default-input-field-props)
 (def default-input-guide-props    input.props/default-input-guide-props)
+(def default-input-option-props   input.props/default-input-option-props)
 (def default-input-state-props    input.props/default-input-state-props)
 
 ;; ----------------------------------------------------------------------------
@@ -164,18 +176,25 @@
 ; @tutorial Size properties
 ; @redirect (pretty-properties.layout.tutorials/size-properties)
 
+; @tutorial Canvas size properties
+; @redirect (pretty-properties.layout.tutorials/canvas-size-properties)
+
+; @tutorial Wrapper size properties
+; @redirect (pretty-properties.layout.tutorials/wrapper-size-properties)
+
 ; @tutorial Space properties
 ; @redirect (pretty-properties.layout.tutorials/space-properties)
 
 ; @redirect (pretty-properties.layout.props/*)
-(def default-canvas-props   layout.props/default-canvas-props)
-(def flex-scroll-auto-props layout.props/flex-scroll-auto-props)
-(def default-flex-props     layout.props/default-flex-props)
-(def default-grid-props     layout.props/default-grid-props)
-(def default-position-props layout.props/default-position-props)
-(def default-shape-props    layout.props/default-shape-props)
-(def default-size-props     layout.props/default-size-props)
-(def default-space-props    layout.props/default-space-props)
+(def flex-scroll-auto-props     layout.props/flex-scroll-auto-props)
+(def default-flex-props         layout.props/default-flex-props)
+(def default-grid-props         layout.props/default-grid-props)
+(def default-position-props     layout.props/default-position-props)
+(def default-shape-props        layout.props/default-shape-props)
+(def default-size-props         layout.props/default-size-props)
+(def default-canvas-size-props  layout.props/default-canvas-size-props)
+(def default-wrapper-size-props layout.props/default-wrapper-size-props)
+(def default-space-props        layout.props/default-space-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

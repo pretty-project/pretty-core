@@ -1,0 +1,56 @@
+
+/***** Space profiles *****/
+/*** Space ***/
+
+body {
+  --space-micro:  3px;
+  --space-xxs:    6px;
+  --space-xs:    12px;
+  --space-s:     18px;
+  --space-m:     24px;
+  --space-l:     30px;
+  --space-xl:    36px;
+  --space-xxl:   42px;
+  --space-3xl:   48px;
+  --space-4xl:   54px;
+  --space-5xl:   60px;
+}
+
+/*** Gap ***/
+
+/*** Indent ***/
+
+body {
+  --indent-micro:  3px;
+  --indent-xxs:    6px;
+  --indent-xs:    12px;
+  --indent-s:     18px;
+  --indent-m:     24px;
+  --indent-l:     30px;
+  --indent-xl:    36px;
+  --indent-xxl:   42px;
+  --indent-3xl:   48px;
+  --indent-4xl:   54px;
+  --indent-5xl:   60px;
+}
+
+/*** Indent ***/
+
+/*** Outdent ***/
+
+body {
+  --outdent-micro:  3px;
+  --outdent-xxs:    6px;
+  --outdent-xs:    12px;
+  --outdent-s:     18px;
+  --outdent-m:     24px;
+  --outdent-l:     30px;
+  --outdent-xl:    36px;
+  --outdent-xxl:   42px;
+  --outdent-3xl:   48px;
+  --outdent-4xl:   54px;
+  --outdent-5xl:   60px;
+}
+
+/*** Outdent ***/
+/***** Space profiles *****/

@@ -6,380 +6,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn canvas-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the canvas related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:canvas-height (keyword, px or string)(opt)
-  ;  :canvas-width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (canvas-attributes {...} {:canvas-height :xl, :canvas-width :xl})
-  ; =>
-  ; {:data-canvas-height :xl
-  ;  :data-canvas-width  :xl
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-canvas-height (keyword)
-  ;  :data-canvas-width (keyword)
-  ;  :style (map)
-  ;   {"--canvas-height" (string)
-  ;    "--canvas-width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [canvas-height canvas-width]}]
-  (-> attributes (utils/apply-property-value :canvas-height :data-canvas-height canvas-height "px")
-                 (utils/apply-property-value :canvas-width  :data-canvas-width  canvas-width  "px")))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn quarter-block-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; - Applies the size related values on the given attribute map.
-  ; - Applies the size related values as quarter block size data attributes.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :max-height (keyword, px or string)(opt)
-  ;  :max-width (keyword, px or string)(opt)
-  ;  :min-height (keyword, px or string)(opt)
-  ;  :min-width (keyword, px or string)(opt)
-  ;  :width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (quarter-block-size-attributes {...} {:height :xl, :width :xl})
-  ; =>
-  ; {:data-quarter-block-height :xl
-  ;  :data-quarter-block-width  :xl
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-quarter-block-height (keyword)
-  ;  :data-quarter-block-max-height (keyword)
-  ;  :data-quarter-block-max-width (keyword)
-  ;  :data-quarter-block-min-height (keyword)
-  ;  :data-quarter-block-min-width (keyword)
-  ;  :data-quarter-block-width (keyword)
-  ;  :style (map)
-  ;   {"--quarter-block-height" (string)
-  ;    "--quarter-block-max-height" (string)
-  ;    "--quarter-block-max-width" (string)
-  ;    "--quarter-block-min-height" (string)
-  ;    "--quarter-block-min-width" (string)
-  ;    "--quarter-block-width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [height max-height max-width min-height min-width width]}]
-  (-> attributes (utils/apply-property-value :quarter-block-height     :data-quarter-block-height     height     "px")
-                 (utils/apply-property-value :quarter-block-width      :data-quarter-block-width      width      "px")
-                 (utils/apply-property-value :quarter-block-max-height :data-quarter-block-max-height max-height "px")
-                 (utils/apply-property-value :quarter-block-max-width  :data-quarter-block-max-width  max-width  "px")
-                 (utils/apply-property-value :quarter-block-min-height :data-quarter-block-min-height min-height "px")
-                 (utils/apply-property-value :quarter-block-min-width  :data-quarter-block-min-width  min-width  "px")))
-
-(defn half-block-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; - Applies the size related values on the given attribute map.
-  ; - Applies the size related values as half block size data attributes.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :max-height (keyword, px or string)(opt)
-  ;  :max-width (keyword, px or string)(opt)
-  ;  :min-height (keyword, px or string)(opt)
-  ;  :min-width (keyword, px or string)(opt)
-  ;  :width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (half-block-size-attributes {...} {:height :xl, :width :xl})
-  ; =>
-  ; {:data-half-block-height :xl
-  ;  :data-half-block-width  :xl
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-half-block-height (keyword)
-  ;  :data-half-block-max-height (keyword)
-  ;  :data-half-block-max-width (keyword)
-  ;  :data-half-block-min-height (keyword)
-  ;  :data-half-block-min-width (keyword)
-  ;  :data-half-block-width (keyword)
-  ;  :style (map)
-  ;   {"--half-block-height" (string)
-  ;    "--half-block-max-height" (string)
-  ;    "--half-block-max-width" (string)
-  ;    "--half-block-min-height" (string)
-  ;    "--half-block-min-width" (string)
-  ;    "--half-block-width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [height max-height max-width min-height min-width width]}]
-  (-> attributes (utils/apply-property-value :half-block-height     :data-half-block-height     height     "px")
-                 (utils/apply-property-value :half-block-width      :data-half-block-width      width      "px")
-                 (utils/apply-property-value :half-block-max-height :data-half-block-max-height max-height "px")
-                 (utils/apply-property-value :half-block-max-width  :data-half-block-max-width  max-width  "px")
-                 (utils/apply-property-value :half-block-min-height :data-half-block-min-height min-height "px")
-                 (utils/apply-property-value :half-block-min-width  :data-half-block-min-width  min-width  "px")))
-
-(defn full-block-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; - Applies the size related values on the given attribute map.
-  ; - Applies the size related values as full block size data attributes.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :max-height (keyword, px or string)(opt)
-  ;  :max-width (keyword, px or string)(opt)
-  ;  :min-height (keyword, px or string)(opt)
-  ;  :min-width (keyword, px or string)(opt)
-  ;  :width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (full-block-size-attributes {...} {:height :xl, :width :xl})
-  ; =>
-  ; {:data-full-block-height :xl
-  ;  :data-full-block-width  :xl
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-full-block-height (keyword)
-  ;  :data-full-block-max-height (keyword)
-  ;  :data-full-block-max-width (keyword)
-  ;  :data-full-block-min-height (keyword)
-  ;  :data-full-block-min-width (keyword)
-  ;  :data-full-block-width (keyword)
-  ;  :style (map)
-  ;   {"--full-block-height" (string)
-  ;    "--full-block-max-height" (string)
-  ;    "--full-block-max-width" (string)
-  ;    "--full-block-min-height" (string)
-  ;    "--full-block-min-width" (string)
-  ;    "--full-block-width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [height max-height max-width min-height min-width width]}]
-  (-> attributes (utils/apply-property-value :full-block-height     :data-full-block-height     height     "px")
-                 (utils/apply-property-value :full-block-width      :data-full-block-width      width      "px")
-                 (utils/apply-property-value :full-block-max-height :data-full-block-max-height max-height "px")
-                 (utils/apply-property-value :full-block-max-width  :data-full-block-max-width  max-width  "px")
-                 (utils/apply-property-value :full-block-min-height :data-full-block-min-height min-height "px")
-                 (utils/apply-property-value :full-block-min-width  :data-full-block-min-width  min-width  "px")))
-
-(defn double-block-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; - Applies the size related values on the given attribute map.
-  ; - Applies the size related values as double block size data attributes.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :max-height (keyword, px or string)(opt)
-  ;  :max-width (keyword, px or string)(opt)
-  ;  :min-height (keyword, px or string)(opt)
-  ;  :min-width (keyword, px or string)(opt)
-  ;  :width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (double-block-size-attributes {...} {:height :xl, :width :xl})
-  ; =>
-  ; {:data-double-block-height :xl
-  ;  :data-double-block-width  :xl
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-double-block-height (keyword)
-  ;  :data-double-block-max-height (keyword)
-  ;  :data-double-block-max-width (keyword)
-  ;  :data-double-block-min-height (keyword)
-  ;  :data-double-block-min-width (keyword)
-  ;  :data-double-block-width (keyword)
-  ;  :style (map)
-  ;   {"--double-block-height" (string)
-  ;    "--double-block-max-height" (string)
-  ;    "--double-block-max-width" (string)
-  ;    "--double-block-min-height" (string)
-  ;    "--double-block-min-width" (string)
-  ;    "--double-block-width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [height max-height max-width min-height min-width width]}]
-  (-> attributes (utils/apply-property-value :double-block-height     :data-double-block-height     height     "px")
-                 (utils/apply-property-value :double-block-width      :data-double-block-width      width      "px")
-                 (utils/apply-property-value :double-block-max-height :data-double-block-max-height max-height "px")
-                 (utils/apply-property-value :double-block-max-width  :data-double-block-max-width  max-width  "px")
-                 (utils/apply-property-value :double-block-min-height :data-double-block-min-height min-height "px")
-                 (utils/apply-property-value :double-block-min-width  :data-double-block-min-width  min-width  "px")))
-
-(defn triple-block-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; - Applies the size related values on the given attribute map.
-  ; - Applies the size related values as triple block size data attributes.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :max-height (keyword, px or string)(opt)
-  ;  :max-width (keyword, px or string)(opt)
-  ;  :min-height (keyword, px or string)(opt)
-  ;  :min-width (keyword, px or string)(opt)
-  ;  :width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (triple-block-size-attributes {...} {:height :xl, :width :xl})
-  ; =>
-  ; {:data-triple-block-height :xl
-  ;  :data-triple-block-width  :xl
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-triple-block-height (keyword)
-  ;  :data-triple-block-max-height (keyword)
-  ;  :data-triple-block-max-width (keyword)
-  ;  :data-triple-block-min-height (keyword)
-  ;  :data-triple-block-min-width (keyword)
-  ;  :data-triple-block-width (keyword)
-  ;  :style (map)
-  ;   {"--triple-block-height" (string)
-  ;    "--triple-block-max-height" (string)
-  ;    "--triple-block-max-width" (string)
-  ;    "--triple-block-min-height" (string)
-  ;    "--triple-block-min-width" (string)
-  ;    "--triple-block-width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [height max-height max-width min-height min-width width]}]
-  (-> attributes (utils/apply-property-value :triple-block-height     :data-triple-block-height     height     "px")
-                 (utils/apply-property-value :triple-block-width      :data-triple-block-width      width      "px")
-                 (utils/apply-property-value :triple-block-max-height :data-triple-block-max-height max-height "px")
-                 (utils/apply-property-value :triple-block-max-width  :data-triple-block-max-width  max-width  "px")
-                 (utils/apply-property-value :triple-block-min-height :data-triple-block-min-height min-height "px")
-                 (utils/apply-property-value :triple-block-min-width  :data-triple-block-min-width  min-width  "px")))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn content-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; - Applies the size related values on the given attribute map.
-  ; - Applies the size related values as content size data attributes.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :max-height (keyword, px or string)(opt)
-  ;  :max-width (keyword, px or string)(opt)
-  ;  :min-height (keyword, px or string)(opt)
-  ;  :min-width (keyword, px or string)(opt)
-  ;  :width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (content-size-attributes {...} {:height :xl, :width :xl})
-  ; =>
-  ; {:data-content-height :xl
-  ;  :data-content-width  :xl
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-content-height (keyword)
-  ;  :data-content-max-height (keyword)
-  ;  :data-content-max-width (keyword)
-  ;  :data-content-min-height (keyword)
-  ;  :data-content-min-width (keyword)
-  ;  :data-content-width (keyword)
-  ;  :style (map)
-  ;   {"--content-height" (string)
-  ;    "--content-max-height" (string)
-  ;    "--content-max-width" (string)
-  ;    "--content-min-height" (string)
-  ;    "--content-min-width" (string)
-  ;    "--content-width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [height max-height max-width min-height min-width width]}]
-  (-> attributes (utils/apply-property-value :content-height     :data-content-height     height     "px")
-                 (utils/apply-property-value :content-width      :data-content-width      width      "px")
-                 (utils/apply-property-value :content-max-height :data-content-max-height max-height "px")
-                 (utils/apply-property-value :content-max-width  :data-content-max-width  max-width  "px")
-                 (utils/apply-property-value :content-min-height :data-content-min-height min-height "px")
-                 (utils/apply-property-value :content-min-width  :data-content-min-width  min-width  "px")))
-
-(defn wrapper-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @note
-  ; Apply this function on wrapper elements of size-controlled elements to ensure
-  ; that the wrapper element doesn't prevent the expansion of the size-controlled element.
-  ;
-  ; @description
-  ; - Applies the size related values on the given attribute map.
-  ; - Applies the size related values as wrapper size data attributes.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (wrapper-size-attributes {...} {:height :auto, :width :parent})
-  ; =>
-  ; {:data-wrapper-height :auto
-  ;  :data-wrapper-width  :parent
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-wrapper-height (keyword)
-  ;  :data-wrapper-width (keyword)
-  ;  ...}
-  [attributes {:keys [height width]}]
-  ; In case the height or width of the element is ':auto' or ':parent', the height and width
-  ; of the wrapper element must be set also. Otherwise, the wrapper would prevent the expansion of the element.
-  (merge attributes (case height :auto   {:data-wrapper-height :auto}
-                                 :parent {:data-wrapper-height :parent}
-                                         {:data-wrapper-height :content})
-                    (case width  :auto   {:data-wrapper-width  :auto}
-                                 :parent {:data-wrapper-width  :parent}
-                                         {:data-wrapper-width  :content})))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn flex-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -621,3 +247,121 @@
                                   :data-position-base   position-base
                                   :data-position-method position-method})
                  (utils/apply-property-value :layer :data-layer layer)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn size-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the size related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:height (keyword, px or string)(opt)
+  ;  :max-height (keyword, px or string)(opt)
+  ;  :max-width (keyword, px or string)(opt)
+  ;  :min-height (keyword, px or string)(opt)
+  ;  :min-width (keyword, px or string)(opt)
+  ;  :size-unit (keyword)(opt)
+  ;  :width (keyword, px or string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (size-attributes {...} {:height :xl :size-unit :full-block :width :xl})
+  ; =>
+  ; {:data-height    :xl
+  ;  :data-size-unit :full-block
+  ;  :data-width     :xl
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-height (keyword)
+  ;  :data-max-height (keyword)
+  ;  :data-max-width (keyword)
+  ;  :data-min-height (keyword)
+  ;  :data-min-width (keyword)
+  ;  :data-size-unit (keyword)
+  ;  :data-width (keyword)
+  ;  :style (map)
+  ;   {"--height" (string)
+  ;    "--max-height" (string)
+  ;    "--max-width" (string)
+  ;    "--min-height" (string)
+  ;    "--min-width" (string)
+  ;    "--width" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [height max-height max-width min-height min-width width]}]
+  (-> attributes (utils/apply-property-value :height     :data-height     height     "px")
+                 (utils/apply-property-value :width      :data-width      width      "px")
+                 (utils/apply-property-value :max-height :data-max-height max-height "px")
+                 (utils/apply-property-value :max-width  :data-max-width  max-width  "px")
+                 (utils/apply-property-value :min-height :data-min-height min-height "px")
+                 (utils/apply-property-value :min-width  :data-min-width  min-width  "px")))
+
+(defn canvas-size-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the canvas size related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:canvas-height (keyword, px or string)(opt)
+  ;  :canvas-width (keyword, px or string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (canvas-size-attributes {...} {:canvas-height :parent :canvas-width :parent})
+  ; =>
+  ; {:data-canvas-height :parent
+  ;  :data-canvas-width  :parent
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-canvas-height (keyword)
+  ;  :data-canvas-width (keyword)
+  ;  :style (map)
+  ;   {"--canvas-height" (string)
+  ;    "--canvas-width" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [canvas-height canvas-width]}]
+  (-> attributes (utils/apply-property-value :canvas-height :data-canvas-height canvas-height "px")
+                 (utils/apply-property-value :canvas-width  :data-canvas-width  canvas-width  "px")))
+
+(defn wrapper-size-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the wrapper size related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:wrapper-height (keyword, px or string)(opt)
+  ;  :wrapper-width (keyword, px or string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (wrapper-size-attributes {...} {:wrapper-height :content :wrapper-width :content})
+  ; =>
+  ; {:data-wrapper-height :content
+  ;  :data-wrapper-width  :content
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-wrapper-height (keyword)
+  ;  :data-wrapper-width (keyword)
+  ;  :style (map)
+  ;   {"--wrapper-height" (string)
+  ;    "--wrapper-width" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [wrapper-height wrapper-width]}]
+  (-> attributes (utils/apply-property-value :wrapper-height :data-wrapper-height wrapper-height "px")
+                 (utils/apply-property-value :wrapper-width  :data-wrapper-width  wrapper-width  "px")))

@@ -108,6 +108,53 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Input option properties
+;
+; @title :get-options-f property
+;
+; @code Usage
+; {:get-options-f (function)}
+; {:get-options-f (fn [] ...)}
+;
+;
+;
+; @title :option-color-f property
+;
+; @code Usage
+; {:option-color-f (function)}
+; {:option-color-f (fn [option] ...)}
+; {:option-color-f :color}
+;
+;
+;
+; @title :option-helper-f property
+;
+; @code Usage
+; {:option-helper-f (function)}
+; {:option-helper-f (fn [option] ...)}
+; {:option-helper-f :helper}
+;
+;
+;
+; @title :option-label-f property
+;
+; @code Usage
+; {:option-label-f (function)}
+; {:option-label-f (fn [option] ...)}
+; {:option-label-f :label}
+;
+;
+;
+; @title :option-value-f property
+;
+; @code Usage
+; {:option-value-f (function)}
+; {:option-value-f (fn [option] ...)}
+; {:option-value-f :value}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Input state properties
 ;
 ; @title :disabled? property

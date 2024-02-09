@@ -4,40 +4,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Canvas properties
-;
-; @note
-; The canvas dimension properties control inner element size within the main element.
-;
-; @title :canvas-height property
-;
-; @code Usage
-; {:canvas-height (keyword, px or string)}
-; {:canvas-height :parent}
-; {:canvas-height 10}
-; {:canvas-height "10px"}
-; {:canvas-height "5%"}
-;
-; @code Predefined values
-; :auto, :parent, :grow
-;
-;
-;
-; @title :canvas-width property
-;
-; @code Usage
-; {:canvas-width (keyword, px or string)}
-; {:canvas-width :parent}
-; {:canvas-width 10}
-; {:canvas-width "10px"}
-; {:canvas-width "5%"}
-;
-; @code Predefined values
-; :auto, :parent, :grow
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 ; @tutorial Flex properties
 ;
 ; @title :gap property
@@ -51,7 +17,7 @@
 ;
 ; @code Predefined values
 ; :auto,
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -122,7 +88,7 @@
 ; {:column-gap "5%"}
 ;
 ; @code Predefined values
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -156,7 +122,7 @@
 ; {:row-gap "5%"}
 ;
 ; @code Predefined values
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -235,101 +201,123 @@
 
 ; @tutorial Size properties
 ;
-; @title Adaptive content width
+; @title :size-unit property
 ;
-; Content width profiles ...
-; ... adapt to the actual viewport width,
-; ... larger than the actual viewport width are ignored and replaced with '100%' values.
+; The ':size-unit' property controls the predefined size profiles (e.g., :xxs, :xs, ...) applied within which size system.
 ;
-; Viewport width profiles:
-; XXS:  320px -  359px
-; XS:   360px -  419px
-; S:    420px -  479px
-; M:    480px -  719px
-; L:    720px - 1279px
-; XL:  1280px - 1439px
-; XXL: 1440px - 1679px
-; 3XL: 1680px - 2159px
-; 4XL: 2160px - 3839px
-; 5XL: 3840px - 9999px
+; @code
+; Height/width profiles in ':quarter-block' size system:
 ;
-; E.g., if the actual viewport width is 1440px (i.e. XXL viewport width), 3XL, 4XL and 5XL
-; content width profiles are replaced with the '{width: 100%}' setting.
+; MICRO:  3px
+; XXS:    6px
+; XS:    12px
+; S:     18px
+; M:     24px
+; L:     30px
+; XL:    36px
+; XXL:   42px
+; 3XL:   48px
+; 4XL:   54px
+; 5XL:   60px
+; ---
 ;
+; @code
+; Height/width profiles in ':half-block' size system:
 ;
+; MICRO:  6px
+; XXS:   12px
+; XS:    24px
+; S:     36px
+; M:     48px
+; L:     60px
+; XL:    72px
+; XXL:   84px
+; 3XL:   96px
+; 4XL:  108px
+; 5XL:  120px
+; ---
 ;
-; @title Quarter block size profiles:
+; @code
+; Height/width profiles in ':full-block' size system:
 ;
-; XXS:  6px
-; XS:  12px
-; S:   18px
-; M:   24px
-; L:   30px
-; XL:  36px
-; XXL: 42px
-; 3XL: 48px
-; 4XL: 54px
-; 5XL: 60px
+; MICRO: 12px
+; XXS:   24px
+; XS:    48px
+; S:     72px
+; M:     96px
+; L:    120px
+; XL:   144px
+; XXL:  168px
+; 3XL:  192px
+; 4XL:  216px
+; 5XL:  240px
+; ---
 ;
+; @code
+; Height/width profiles in ':double-block' size system:
 ;
+; MICRO: 24px
+; XXS:   48px
+; XS:    96px
+; S:    144px
+; M:    192px
+; L:    240px
+; XL:   288px
+; XXL:  336px
+; 3XL:  384px
+; 4XL:  432px
+; 5XL:  480px
+; ---
 ;
-; @title Half block size profiles:
+; @code
+; Height/width profiles in ':triple-block' size system:
 ;
-; XXS:  12px
-; XS:   24px
-; S:    36px
-; M:    48px
-; L:    60px
-; XL:   72px
-; XXL:  84px
-; 3XL:  96px
-; 4XL: 108px
-; 5XL: 120px
+; MICRO: 36px
+; XXS:   72px
+; XS:   144px
+; S:    216px
+; M:    288px
+; L:    360px
+; XL:   432px
+; XXL:  504px
+; 3XL:  576px
+; 4XL:  648px
+; 5XL:  720px
+; ---
 ;
+; Height profiles in ':screen' size system:
 ;
+; MICRO:  5vh
+; XXS:   10vh
+; XS:    10vh
+; S:     10vh
+; M:     10vh
+; L:     10vh
+; XL:    10vh
+; XXL:   10vh
+; 3XL:   10vh
+; 4XL:   10vh
+; 5XL:   10vh
 ;
-; @title Full block size profiles:
+; Width profiles in ':screen' size system:
 ;
-; XXS:  24px
-; XS:   48px
-; S:    72px
-; M:    96px
-; L:   120px
-; XL:  144px
-; XXL: 168px
-; 3XL: 192px
-; 4XL: 216px
-; 5XL: 240px
+; MICRO:  160px
+; XXS:    320px
+; XS:     360px
+; S:      420px
+; M:      480px
+; L:      720px
+; XL:    1280px
+; XXL:   1440px
+; 3XL:   1680px
+; 4XL:   2160px
+; 5XL:   3840px
 ;
+; The '{:size-unit :screen}' setting implements an adaptive content width logic, where the width profiles
+; are adjusted to common screen resolutions; and in case the width profile is larger than the actual screen
+; size, it replaces the applied profile with the '{width: 100%}' setting.
 ;
-;
-; @title Double block size profiles:
-;
-; XXS:  48px
-; XS:   96px
-; S:   144px
-; M:   192px
-; L:   240px
-; XL:  288px
-; XXL: 336px
-; 3XL: 384px
-; 4XL: 432px
-; 5XL: 480px
-;
-;
-;
-; @title Triple block size profiles:
-;
-; XXS:  72px
-; XS:  144px
-; S:   216px
-; M:   288px
-; L:   360px
-; XL:  432px
-; XXL: 504px
-; 3XL: 576px
-; 4XL: 648px
-; 5XL: 720px
+; For example, if the actual viewport width is 1440px (i.e. XXL), the 3XL, 4XL and 5XL width profiles are replaced with the '{width: 100%}' setting.
 ;
 ;
 ;
@@ -343,7 +331,7 @@
 ; {:max-height "5%"}
 ;
 ; @code Predefined values
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -357,7 +345,7 @@
 ; {:max-width "5%"}
 ;
 ; @code Predefined values
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -371,7 +359,7 @@
 ; {:min-height "5%"}
 ;
 ; @code Predefined values
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -385,7 +373,7 @@
 ; {:min-width "5%"}
 ;
 ; @code Predefined values
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -400,7 +388,7 @@
 ;
 ; @code Predefined values
 ; :auto, :content, :parent, :grow,
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -415,7 +403,75 @@
 ;
 ; @code Predefined values
 ; :auto, :content, :parent, :grow,
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Canvas size properties
+;
+; @note
+; The canvas size properties control inner element dimensions within the main element.
+;
+; @title :canvas-height property
+;
+; @code Usage
+; {:canvas-height (keyword, px or string)}
+; {:canvas-height :parent}
+; {:canvas-height 10}
+; {:canvas-height "10px"}
+; {:canvas-height "5%"}
+;
+; @code Predefined values
+; :auto, :content, :parent, :grow
+;
+;
+;
+; @title :canvas-width property
+;
+; @code Usage
+; {:canvas-width (keyword, px or string)}
+; {:canvas-width :parent}
+; {:canvas-width 10}
+; {:canvas-width "10px"}
+; {:canvas-width "5%"}
+;
+; @code Predefined values
+; :auto, :content, :parent, :grow
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Wrapper size properties
+;
+; @note
+; The wrapper size properties control outer element dimensions outside the main element.
+;
+; @title :wrapper-height property
+;
+; @code Usage
+; {:wrapper-height (keyword, px or string)}
+; {:wrapper-height :content}
+; {:wrapper-height 10}
+; {:wrapper-height "10px"}
+; {:wrapper-height "5%"}
+;
+; @code Predefined values
+; :auto, :content, :parent, :grow
+;
+;
+;
+; @title :wrapper-width property
+;
+; @code Usage
+; {:wrapper-width (keyword, px or string)}
+; {:wrapper-width :content}
+; {:wrapper-width 10}
+; {:wrapper-width "10px"}
+; {:wrapper-width "5%"}
+;
+; @code Predefined values
+; :auto, :content, :parent, :grow
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -433,7 +489,7 @@
 ; {:indent {:all "5%"}}
 ;
 ; @code Predefined values
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
@@ -448,4 +504,4 @@
 ; {:outdent {:all "5%"}}
 ;
 ; @code Predefined values
-; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl

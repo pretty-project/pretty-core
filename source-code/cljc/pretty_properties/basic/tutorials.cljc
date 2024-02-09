@@ -16,6 +16,20 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Preset properties
+;
+; @title :preset property
+;
+; @note
+; Check out the [pretty-presets](https://mt-app-kit.github.io/pretty-ui/cljs/pretty-presets/api.html) library.
+;
+; @code Usage
+; {:preset (keyword)}
+; {:preset :my-preset}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial React properties
 ;
 ; @title :set-reference-f property
@@ -53,11 +67,3 @@
 ; @code Usage
 ; {:style (map)}
 ; {:style {:font-size :12px}}
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @redirect (pretty-attributes.basic.attributes/*)
-(def class-attributes attributes/class-attributes)
-(def state-attributes attributes/state-attributes)
-(def style-attributes attributes/style-attributes)

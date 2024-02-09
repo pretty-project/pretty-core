@@ -29,6 +29,30 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-preset-props
+  ; @description
+  ; Applies the given default preset properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:preset (keyword)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-preset-props {...} {:preset :my-preset})
+  ; =>
+  ; {:preset :my-preset
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:preset (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-react-props
   ; @description
   ; Applies the given default React properties on the given property map.

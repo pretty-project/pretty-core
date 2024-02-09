@@ -247,6 +247,9 @@
   ; {:content (metamorphic-content)
   ;  ...}
   [{:keys [content content-placeholder] :as props} & [default-props]]
+  ; @note (#4445)
+  ; Destructuring the 'props' argument requires merging the 'default-props' and 'props' maps,
+  ; to make the default properties available in the destructured 'props' map!
   (if (-> default-props (map?))
       (-> props (map/use-default-values default-props) default-content-props)
       (-> props (map/assoc-some :content (metamorphic-content/compose content content-placeholder)))))
@@ -273,6 +276,7 @@
   ; {:label (metamorphic-content)
   ;  ...}
   [{:keys [label label-placeholder] :as props} & [default-props]]
+  ; @note (#4445)
   (if (-> default-props (map?))
       (-> props (map/use-default-values default-props) default-label-props)
       (-> props (map/assoc-some :label (metamorphic-content/compose label label-placeholder)))))

@@ -6,33 +6,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-canvas-props
-  ; @description
-  ; Applies the given default canvas properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:canvas-height (keyword, px or string)(opt)
-  ;  :canvas-width (keyword, px or string)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-canvas-props {...} {:canvas-height :parent :canvas-width :parent})
-  ; =>
-  ; {:canvas-height :parent
-  ;  :canvas-width  :parent
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:canvas-height (keyword, px or string)
-  ;  :canvas-width (keyword, px or string)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn flex-scroll-auto-props
   ; @description
   ; The standard ':horizontal-align' and ':vertical-align' properties are not suitable for scrollable elements.
@@ -214,15 +187,17 @@
   ;  :max-width (keyword, px or string)(opt)
   ;  :min-height (keyword, px or string)(opt)
   ;  :min-width (keyword, px or string)(opt)
+  ;  :size-unit (keyword)(opt)
   ;  :width (keyword, px or string)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-size-props {...} {:height :content :width :content})
+  ; (default-size-props {...} {:height :xl :size-unit :full-block :width :xl})
   ; =>
-  ; {:height :content
-  ;  :width  :content
+  ; {:height    :xl
+  ;  :size-unit :full-block
+  ;  :width     :xl
   ;  ...}
   ;
   ; @return (map)
@@ -231,10 +206,66 @@
   ;  :max-width (keyword, px or string)
   ;  :min-height (keyword, px or string)
   ;  :min-width (keyword, px or string)
+  ;  :size-unit (keyword)
   ;  :width (keyword, px or string)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
+
+(defn default-canvas-size-props
+  ; @description
+  ; Applies the given default canvas size properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:canvas-height (keyword, px or string)(opt)
+  ;  :canvas-width (keyword, px or string)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-canvas-size-props {...} {:canvas-height :parent :canvas-width :parent})
+  ; =>
+  ; {:canvas-height :parent
+  ;  :canvas-width  :parent
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:canvas-height (keyword, px or string)
+  ;  :canvas-width (keyword, px or string)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+(defn default-wrapper-size-props
+  ; @description
+  ; - Applies the given default wrapper size properties on the given property map.
+  ; - If the ':height' or ':width' properties are provided as ':auto' or ':parent',
+  ;   it uses ':auto' or ':parent' as default value for the ':wrapper-height' and ':wrapper-width' properties,
+  ;   to make the wrapper element let its inner element expand.
+  ;
+  ; @param (map) props
+  ; {:wrapper-height (keyword, px or string)(opt)
+  ;  :wrapper-width (keyword, px or string)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-wrapper-size-props {...} {:wrapper-height :content :wrapper-width :content})
+  ; =>
+  ; {:wrapper-height :content
+  ;  :wrapper-width  :content
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:wrapper-height (keyword, px or string)
+  ;  :wrapper-width (keyword, px or string)
+  ;  ...}
+  [{:keys [height width] :as props} & [default-props]]
+  ; @note (pretty-properties.content.props#4445)
+  (if (-> default-props (map?))
+      (-> props (map/use-default-values default-props) default-wrapper-size-props)
+      (-> props (map/use-default-values {:wrapper-height (case height :auto :auto :parent :parent :content)
+                                         :wrapper-width  (case width  :auto :auto :parent :parent :content)}))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

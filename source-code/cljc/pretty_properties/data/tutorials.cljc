@@ -11,6 +11,7 @@
 ; @code Usage
 ; {:datum-color-f (function)}
 ; {:datum-color-f (fn [datum] ...)}
+; {:datum-color-f :color}
 ;
 ;
 ;
@@ -19,6 +20,7 @@
 ; @code Usage
 ; {:datum-label-f (function)}
 ; {:datum-label-f (fn [datum] ...)}
+; {:datum-label-f :label}
 ;
 ;
 ;
@@ -27,6 +29,7 @@
 ; @code Usage
 ; {:datum-value-f (function)}
 ; {:datum-value-f (fn [datum] ...)}
+; {:datum-value-f :value}
 ;
 ;
 ;

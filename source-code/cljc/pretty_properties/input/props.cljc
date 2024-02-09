@@ -2,7 +2,8 @@
 (ns pretty-properties.input.props
     (:require [fruits.map.api          :as map]
               [fruits.random.api       :as random]
-              [metamorphic-content.api :as metamorphic-content]))
+              [metamorphic-content.api :as metamorphic-content]
+              [pretty-properties.input.config :as input.config]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -106,11 +107,48 @@
   ;  :info-text (metamorphic-content)
   ;  ...}
   [props & [default-props]]
+  ; @note (pretty-properties.content.props#4445)
   (if (-> default-props (map?))
       (-> props (map/use-default-values default-props) default-input-guide-props)
       (-> props (map/update-some :error-text  metamorphic-content/compose)
                 (map/update-some :helper-text metamorphic-content/compose)
                 (map/update-some :info-text   metamorphic-content/compose))))
+
+(defn default-input-option-props
+  ; @description
+  ; - Applies the given default input option properties on the given property map.
+  ; - Applies the standard input option properties on the given property map;
+  ;   in case of any input option related value is provided.
+  ;
+  ; @param (map) props
+  ; {:get-options-f (function)(opt)
+  ;  :option-color-f (function)(opt)
+  ;  :option-helper-f (function)(opt)
+  ;  :option-label-f (function)(opt)
+  ;  :option-value-f (function)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-input-option-props {...} {:get-options-f (fn [_] ...)})
+  ; =>
+  ; {:get-options-f    (fn [_] ...)
+  ;  :option-color-f fruits.noop.api/none
+  ;  :option-helper-f fruits.noop.api/none
+  ;  :option-label-f fruits.noop.api/none
+  ;  :option-value-f fruits.noop.api/return
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:get-options-f (function)
+  ;  :option-color-f (function)
+  ;  :option-helper-f (function)
+  ;  :option-label-f (function)
+  ;  :option-value-f (function)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)
+            (map/use-default-value-group input.config/STANDARD-INPUT-OPTION-PROPERTIES)))
 
 (defn default-input-state-props
   ; @description
