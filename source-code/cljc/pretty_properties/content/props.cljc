@@ -79,7 +79,7 @@
 
 (defn inherit-icon-props
   ; @note
-  ; Inheriting font/text related values as default values for icon related properties
+  ; Inheriting font/text related values (as default values for icon related properties)
   ; is recommended for icons that are attached to labels.
   ;
   ; @description
