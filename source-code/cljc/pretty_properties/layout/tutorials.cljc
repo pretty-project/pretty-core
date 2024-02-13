@@ -6,62 +6,72 @@
 
 ; @tutorial Flex properties
 ;
-; @title :gap property
+; @title gap property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:gap (keyword, px or string)}
+;
+; @--- Examples
 ; {:gap :xs}
 ; {:gap 10}
 ; {:gap "10px"}
 ; {:gap "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :horizontal-align property
+; @title horizontal-align property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:horizontal-align (keyword)}
+;
+; @--- Examples
 ; {:horizontal-align :center}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :space-around, :space-between, :space-evenly,
 ; :left, :center, :right
 ;
 ;
 ;
-; @title :orientation property
+; @title orientation property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:orientation (keyword)}
+;
+; @--- Examples
 ; {:orientation :vertical}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :horizontal, :vertical
 ;
 ;
 ;
-; @title :overflow property
+; @title overflow property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:overflow (keyword)}
+;
+; @--- Examples
 ; {:overflow :visible}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :hidden, :scroll, :visible, :wrap
 ;
 ;
 ;
-; @title :vertical-align property
+; @title vertical-align property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:vertical-align (keyword)}
+;
+; @--- Examples
 ; {:vertical-align :center}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :space-around, :space-between, :space-evenly,
 ; :bottom, :center, :top
 
@@ -70,70 +80,82 @@
 
 ; @tutorial Grid properties
 ;
-; @title :column-count property
+; @title column-count property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:column-count (integer)}
+;
+; @--- Examples
 ; {:column-count 10}
 ;
 ;
 ;
-; @title :column-gap property
+; @title column-gap property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:column-gap (keyword, px or string)}
+;
+; @--- Examples
 ; {:column-gap :xs}
 ; {:column-gap 10}
 ; {:column-gap "10px"}
 ; {:column-gap "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :column-template property
+; @title column-template property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:column-template (keyword or string)}
+;
+; @--- Examples
 ; {:column-template :even}
 ; {:column-template "repeat(5, 1fr)"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :even
 ;
 ;
 ;
-; @title :row-count property
+; @title row-count property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:row-count (integer)}
+;
+; @--- Examples
 ; {:row-count 10}
 ;
 ;
 ;
-; @title :row-gap property
+; @title row-gap property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:row-gap (keyword, px or string)}
+;
+; @--- Examples
 ; {:row-gap :xs}
 ; {:row-gap 10}
 ; {:row-gap "10px"}
 ; {:row-gap "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :row-template property
+; @title row-template property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:row-template (keyword or string)}
+;
+; @--- Examples
 ; {:row-template :even}
 ; {:row-template "repeat(5, 1fr)"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :even
 
 ;; ----------------------------------------------------------------------------
@@ -141,48 +163,56 @@
 
 ; @tutorial Position properties
 ;
-; @title :layer property
+; @title layer property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:layer (keyword or integer)}
+;
+; @--- Examples
 ; {:layer :uppermost}
 ; {:layer 25}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :lowermost, :uppermost
 ;
 ;
 ;
-; @title :position property
+; @title position property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:position (keyword)}
+;
+; @--- Examples
 ; {:position :tr}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :tr, :br, :bl, :tl,
 ; :left, :right, :bottom, :top, :center
 ;
 ;
 ;
-; @title :position-base property
+; @title position-base property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:position-base (keyword)}
+;
+; @--- Examples
 ; {:position-base :inner}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :inner, :outer
 ;
 ;
 ;
-; @title :position-method property
+; @title position-method property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:position-method (keyword)}
+;
+; @--- Examples
 ; {:position-method :absolute}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :absolute, :fixed, :relative, :static, :sticky
 
 ;; ----------------------------------------------------------------------------
@@ -190,10 +220,12 @@
 
 ; @tutorial Shape properties
 ;
-; @title :strength property
+; @title strength property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:strength (percentage)}
+;
+; @--- Examples
 ; {:strength 100}
 
 ;; ----------------------------------------------------------------------------
@@ -201,7 +233,7 @@
 
 ; @tutorial Size properties
 ;
-; @title :size-unit property
+; @title size-unit property
 ;
 ; The ':size-unit' property controls the predefined size profiles (e.g., :xxs, :xs, ...) applied within which size system.
 ;
@@ -325,87 +357,99 @@
 ;
 ;
 ;
-; @title :max-height property
+; @title max-height property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:max-height (keyword, px or string)}
+;
+; @--- Examples
 ; {:max-height :xs}
 ; {:max-height 10}
 ; {:max-height "10px"}
 ; {:max-height "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :max-width property
+; @title max-width property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:max-width (keyword, px or string)}
+;
+; @--- Examples
 ; {:max-width :xs}
 ; {:max-width 10}
 ; {:max-width "10px"}
 ; {:max-width "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :min-height property
+; @title min-height property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:min-height (keyword, px or string)}
+;
+; @--- Examples
 ; {:min-height :xs}
 ; {:min-height 10}
 ; {:min-height "10px"}
 ; {:min-height "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :min-width property
+; @title min-width property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:min-width (keyword, px or string)}
+;
+; @--- Examples
 ; {:min-width :xs}
 ; {:min-width 10}
 ; {:min-width "10px"}
 ; {:min-width "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :height property
+; @title height property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:height (keyword, px or string)}
+;
+; @--- Examples
 ; {:height :xs}
 ; {:height 10}
 ; {:height "10px"}
 ; {:height "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto, :content, :parent, :grow,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :width property
+; @title width property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:width (keyword, px or string)}
+;
+; @--- Examples
 ; {:width :xs}
 ; {:width 10}
 ; {:width "10px"}
 ; {:width "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto, :content, :parent, :grow,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 
@@ -417,30 +461,34 @@
 ; @note
 ; The canvas size properties control inner element dimensions within the main element.
 ;
-; @title :canvas-height property
+; @title canvas-height property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:canvas-height (keyword, px or string)}
+;
+; @--- Examples
 ; {:canvas-height :parent}
 ; {:canvas-height 10}
 ; {:canvas-height "10px"}
 ; {:canvas-height "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto, :content, :parent, :grow
 ;
 ;
 ;
-; @title :canvas-width property
+; @title canvas-width property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:canvas-width (keyword, px or string)}
+;
+; @--- Examples
 ; {:canvas-width :parent}
 ; {:canvas-width 10}
 ; {:canvas-width "10px"}
 ; {:canvas-width "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto, :content, :parent, :grow
 
 ;; ----------------------------------------------------------------------------
@@ -451,30 +499,34 @@
 ; @note
 ; The wrapper size properties control outer element dimensions outside the main element.
 ;
-; @title :wrapper-height property
+; @title wrapper-height property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:wrapper-height (keyword, px or string)}
+;
+; @--- Examples
 ; {:wrapper-height :content}
 ; {:wrapper-height 10}
 ; {:wrapper-height "10px"}
 ; {:wrapper-height "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto, :content, :parent, :grow
 ;
 ;
 ;
-; @title :wrapper-width property
+; @title wrapper-width property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:wrapper-width (keyword, px or string)}
+;
+; @--- Examples
 ; {:wrapper-width :content}
 ; {:wrapper-width 10}
 ; {:wrapper-width "10px"}
 ; {:wrapper-width "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto, :content, :parent, :grow
 
 ;; ----------------------------------------------------------------------------
@@ -482,30 +534,34 @@
 
 ; @tutorial Space properties
 ;
-; @title :indent property
+; @title indent property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:indent {:all, :bottom, :left, :right, :top, :horizontal, :vertical (keyword, px or string)}}
+;
+; @--- Examples
 ; {:indent {:all :xs}}
 ; {:indent {:all :xs :tr :xxl}}
 ; {:indent {:all 10}}
 ; {:indent {:all "10px"}}
 ; {:indent {:all "5%"}}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :outdent property
+; @title outdent property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:outdent {:all, :bottom, :left, :right, :top, :horizontal, :vertical (keyword, px or string)}}
+;
+; @--- Examples
 ; {:outdent {:all :xs}}
 ; {:outdent {:all :xs :tr :xxl}}
 ; {:outdent {:all 10}}
 ; {:outdent {:all "10px"}}
 ; {:outdent {:all "5%"}}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl

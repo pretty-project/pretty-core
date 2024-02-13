@@ -6,56 +6,61 @@
 
 ; @tutorial Background color properties
 ;
-; @title :fill-color property
-;
 ; @note
 ; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @code Usage
+; @title fill-color property
+;
+; @--- Accepted types
 ; {:fill-color (keyword or string)}
+;
+; @--- Examples
 ; {:fill-color :primary}
 ; {:fill-color "#888"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :transparent,
 ; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;
-; @title :fill-pattern property
+; @title fill-pattern property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:fill-pattern (keyword)}
+;
+; @--- Examples
 ; {:fill-pattern :striped}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :cover, :striped
 ;
 ;
 ;
-; @title :hover-color property
+; @title hover-color property
 ;
-; @note
-; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
-;
-; @code Usage
+; @--- Accepted types
 ; {:hover-color (keyword or string)}
+;
+; @--- Examples
 ; {:hover-color :primary}
 ; {:hover-color "#888"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :transparent,
 ; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;
-; @title :hover-pattern property
+; @title hover-pattern property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:hover-pattern (keyword)}
+;
+; @--- Examples
 ; {:hover-pattern :striped}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :cover, :striped
 
 ;; ----------------------------------------------------------------------------
@@ -63,40 +68,48 @@
 
 ; @tutorial Background image properties
 ;
-; @title :background-position property
+; @title background-position property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:background-position (keyword)}
+;
+; @--- Examples
 ; {:background-position :center}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :top, :right, :bottom, :left, :center
 ;
 ;
 ;
-; @title :background-repeat? property
+; @title background-repeat? property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:background-repeat? (keyword)}
+;
+; @--- Examples
 ; {:background-repeat? true}
 ;
 ;
 ;
-; @title :background-size property
+; @title background-size property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:background-size (keyword)}
+;
+; @--- Examples
 ; {:background-size :cover}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :cover, :contain
 ;
 ;
 ;
-; @title :background-uri property
+; @title background-uri property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:background-uri (string)}
+;
+; @--- Examples
 ; {:background-uri "/my-image.png"}
 
 ;; ----------------------------------------------------------------------------
@@ -104,60 +117,68 @@
 
 ; @tutorial Border properties
 ;
-; @title :border-color property
-;
 ; @note
 ; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @code Usage
+; @title border-color property
+;
+; @--- Accepted types
 ; {:border-color (keyword or string)}
+;
+; @--- Examples
 ; {:border-color :primary}
 ; {:border-color "#888"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :transparent,
 ; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;
-; @title :border-position property
+; @title border-position property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:border-position (keyword)}
+;
+; @--- Examples
 ; {:border-position :top}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :all,
 ; :bottom, :left, :right, :top,
 ; :horizontal, :vertical
 ;
 ;
 ;
-; @title :border-radius property
+; @title border-radius property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:border-radius (map) {:all, :tl, :tr, :br, :bl (keyword, px or string)}}
+;
+; @--- Examples
 ; {:border-radius {:all :xs}}
 ; {:border-radius {:all :xs :tr :xxl}}
 ; {:border-radius {:all 10}}
 ; {:border-radius {:all "10px"}}
 ; {:border-radius {:all "5%"}}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :border-width property
+; @title border-width property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:border-width (keyword, px or string)}
+;
+; @--- Examples
 ; {:border-width :xs}
 ; {:border-width 10}
 ; {:border-width "10px"}
 ; {:border-width "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 
 ;; ----------------------------------------------------------------------------
@@ -165,43 +186,49 @@
 
 ; @tutorial Line properties
 ;
-; @title :line-color property
-;
 ; @note
 ; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @code Usage
+; @title line-color property
+;
+; @--- Accepted types
 ; {:line-color (keyword or string)}
+;
+; @--- Examples
 ; {:line-color :primary}
 ; {:line-color "#888"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :transparent,
 ; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;
-; @title :line-orientation property
+; @title line-orientation property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:line-orientation (keyword)}
+;
+; @--- Examples
 ; {:line-orientation :horizontal}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :horizontal, :vertical
 ;
 ;
 ;
-; @title :line-strength property
+; @title line-strength property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:line-strength (keyword, px or string)}
+;
+; @--- Examples
 ; {:line-strength :xs}
 ; {:line-strength 10}
 ; {:line-strength "10px"}
 ; {:line-strength "5%"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 
 ;; ----------------------------------------------------------------------------
@@ -209,17 +236,19 @@
 
 ; @tutorial Shadow properties
 ;
-; @title :shadow-color property
-;
 ; @note
 ; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @code Usage
+; @title shadow-color property
+;
+; @--- Accepted types
 ; {:shadow-color (keyword or string)}
+;
+; @--- Examples
 ; {:shadow-color :primary}
 ; {:shadow-color "#888"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :transparent,
 ; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
 
@@ -228,13 +257,15 @@
 
 ; @tutorial Theme properties
 ;
-; @title :theme property
+; @title theme property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:theme (keyword)}
+;
+; @--- Examples
 ; {:theme :my-theme}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :hard-light, :soft-light, :hard-dark, :soft-dark
 
 ;; ----------------------------------------------------------------------------
@@ -242,12 +273,14 @@
 
 ; @tutorial Visibility properties
 ;
-; @title :opacity property
+; @title opacity property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:opacity (keyword or number)}
+;
+; @--- Examples
 ; {:opacity :soft}
 ; {:opacity 0.5}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :soft, :medium, :hard, :full

@@ -120,6 +120,7 @@
   ; {:icon (keyword)(opt)
   ;  :icon-color (keyword or string)(opt)
   ;  :icon-family (keyword)(opt)
+  ;  :icon-position (keyword)(opt)
   ;  :icon-size (keyword, px or string)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -137,6 +138,7 @@
   ; {:icon (keyword)
   ;  :icon-color (keyword or string)
   ;  :icon-family (keyword)
+  ;  :icon-position (keyword)
   ;  :icon-size (keyword, px or string)
   ;  ...}
   [props & [default-props]]

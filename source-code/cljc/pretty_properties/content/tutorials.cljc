@@ -6,14 +6,16 @@
 
 ; @tutorial Cursor properties
 ;
-; @title :cursor property
+; @title cursor property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:cursor (keyword or string)}
+;
+; @--- Examples
 ; {:cursor :pointer}
 ; {:cursor "my-cursor"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :default, :disabled, :grab, :grabbing, :move, :pointer, :progress
 
 ;; ----------------------------------------------------------------------------
@@ -29,56 +31,64 @@
 ; @code
 ; html { font-size: 10px }
 ;
-; @title :font-size property
+; @title font-size property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:font-size (keyword, px or string)}
+;
+; @--- Examples
 ; {:font-size :xs}
 ; {:font-size 10}
 ; {:font-size "10px"}
 ; {:font-size "0.5rem"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :font-weight property
+; @title font-weight property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:font-weight (keyword)}
+;
+; @--- Examples
 ; {:font-weight :medium}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :thin, :extra-light, :light, :normal , :medium, :semi-bold, :bold, :extra-bold, :black, :extra-black
 ;
 ;
 ;
-; @title :letter-spacing property
+; @title letter-spacing property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:letter-spacing (keyword, px or string)}
+;
+; @--- Examples
 ; {:letter-spacing :xs}
 ; {:letter-spacing 1}
 ; {:letter-spacing "1px"}
 ; {:letter-spacing "0.1rem"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
 ;
-; @title :line-height property
+; @title line-height property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:line-height (keyword, px or string)}
+;
+; @--- Examples
 ; {:line-height :xs}
 ; {:line-height 20}
 ; {:line-height "20px"}
 ; {:line-height "2rem"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :auto, :text-block,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 
@@ -87,42 +97,77 @@
 
 ; @tutorial Icon properties
 ;
-; @title :icon-color property
+; @links
+; [fonts.google.com/icons](https://fonts.google.com/icons)
 ;
 ; @note
 ; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @code Usage
+; @title icon property
+;
+; @--- Accepted types
+; {:icon (keyword)}
+;
+; @--- Examples
+; {:icon :material_icon_name}
+; {:icon :material_symbol_name}
+;
+;
+;
+; @title icon-color property
+;
+; @--- Accepted types
 ; {:icon-color (keyword or string)}
+;
+; @--- Examples
 ; {:icon-color :primary}
 ; {:icon-color "#888"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;
-; @title :icon-family property
+; @title icon-family property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:icon-family (keyword)}
+;
+; @--- Examples
 ; {:icon-family :material-symbols-outlined}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :material-icons-filled, :material-icons-outlined, :material-symbols-filled, :material-symbols-outlined
 ;
 ;
 ;
-; @title :icon-size property
+; @title icon-position property
 ;
-; @code Usage
+; Works only for icons attached to labels.
+;
+; @--- Accepted types
+; {:icon-position (keyword)}
+;
+; @--- Examples
+; {:icon-position :left}
+;
+; @--- Predefined values
+; :left, :right
+;
+;
+;
+; @title icon-size property
+;
+; @--- Accepted types
 ; {:icon-size (keyword, px or string)}
+;
+; @--- Examples
 ; {:icon-size :xs}
 ; {:icon-size 20}
 ; {:icon-size "20px"}
 ; {:icon-size "2rem"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 
 ;; ----------------------------------------------------------------------------
@@ -130,18 +175,22 @@
 
 ; @tutorial Image properties
 ;
-; @title :image-alt property
+; @title image-alt property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:image-alt (string)}
+;
+; @--- Examples
 ; {:image-alt "My image"}
 ;
 ;
 ;
-; @title :image-uri property
+; @title image-uri property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:image-uri (string)}
+;
+; @--- Examples
 ; {:image-uri "/my-image.png"}
 
 ;; ----------------------------------------------------------------------------
@@ -149,80 +198,94 @@
 
 ; @tutorial Text properties
 ;
-; @title :text-align property
+; @note
+; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @code Usage
+; @title text-align property
+;
+; @--- Accepted types
 ; {:text-align (keyword)}
+;
+; @--- Examples
 ; {:text-align :left}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :left, :center, :right
 ;
 ;
 ;
-; @title :text-caret property
+; @title text-caret property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:text-caret (keyword)}
+;
+; @--- Examples
 ; {:text-caret :hidden}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :default, :hidden
 ;
 ;
 ;
-; @title :text-color property
+; @title text-color property
 ;
-; @note
-; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
-;
-; @code Usage
+; @--- Accepted types
 ; {:text-color (keyword or string)}
+;
+; @--- Examples
 ; {:text-color :primary}
 ; {:text-color "#888"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;
-; @title :text-direction property
+; @title text-direction property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:text-direction (keyword)}
+;
+; @--- Examples
 ; {:text-direction :xs}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :normal, :reversed
 ;
 ;
 ;
-; @title :text-overflow property
+; @title text-overflow property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:text-overflow (keyword)}
+;
+; @--- Examples
 ; {:text-overflow :ellipsis}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :ellipsis, :hidden, :visible, :wrap
 ;
 ;
 ;
-; @title :text-selectable? property
+; @title text-selectable? property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:text-selectable? (boolean)}
+;
+; @--- Examples
 ; {:text-selectable? true}
 ;
 ;
 ;
-; @title :text-transform property
+; @title text-transform property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:text-transform (keyword)}
+;
+; @--- Examples
 ; {:text-transform :uppercase}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :capitalize, :lowercase, :uppercase
 
 ;; ----------------------------------------------------------------------------
@@ -230,13 +293,18 @@
 
 ; @tutorial Content properties
 ;
-; @title :content property
-;
-; @note
+; @links
 ; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
 ;
-; @code Usage
+; @note
+; The ':content-placeholder' property provides fallback value for the ':content' property in case it has no value.
+;
+; @title content property
+;
+; @--- Accepted types
 ; {:content (metamorphic-content)}
+;
+; @--- Examples
 ; {:content "My content"}
 ; {:content :my-dictionary-term}
 ; {:content [:div "My content"]}
@@ -245,13 +313,12 @@
 ;
 ;
 ;
-; @title :content-placeholder property
+; @title content-placeholder property
 ;
-; @note
-; The ':content-placeholder' property is the fallback value of the ':content' property in case it has no value.
-;
-; @code Usage
+; @--- Accepted types
 ; {:content-placeholder (metamorphic-content)}
+;
+; @--- Examples
 ; {:content-placeholder "My content placeholder"}
 ; {:content-placeholder :my-dictionary-term}
 ; {:content-placeholder [:div "My content placeholder"]}
@@ -263,13 +330,18 @@
 
 ; @tutorial Label properties
 ;
-; @title :label property
-;
-; @note
+; @links
 ; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
 ;
-; @code Usage
+; @note
+; The ':label-placeholder' property provides fallback value for the ':label' property in case it has no value.
+;
+; @title label property
+;
+; @--- Accepted types
 ; {:label (metamorphic-content)}
+;
+; @--- Examples
 ; {:label "My label"}
 ; {:label :my-dictionary-term}
 ; {:label [:div "My label"]}
@@ -278,13 +350,12 @@
 ;
 ;
 ;
-; @title :label-placeholder property
+; @title label-placeholder property
 ;
-; @note
-; The ':label-placeholder' property is the fallback value of the ':label' property in case it has no value.
-;
-; @code Usage
+; @--- Accepted types
 ; {:label-placeholder (metamorphic-label)}
+;
+; @--- Examples
 ; {:label-placeholder "My label placeholder"}
 ; {:label-placeholder :my-dictionary-term}
 ; {:label-placeholder [:div "My label placeholder"]}

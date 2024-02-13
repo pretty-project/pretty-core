@@ -109,7 +109,6 @@
   ;
   ; @param (map) props
   ; {:disabled? (boolean)(opt)
-  ;  :highlighted? (boolean)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -121,7 +120,6 @@
   ;
   ; @return (map)
   ; {:disabled? (boolean)
-  ;  :highlighted? (boolean)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

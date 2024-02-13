@@ -6,35 +6,43 @@
 
 ; @tutorial Data properties
 ;
-; @title :datum-color-f property
+; @title datum-color-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:datum-color-f (function)}
+;
+; @--- Examples
 ; {:datum-color-f (fn [datum] ...)}
 ; {:datum-color-f :color}
 ;
 ;
 ;
-; @title :datum-label-f property
+; @title datum-label-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:datum-label-f (function)}
+;
+; @--- Examples
 ; {:datum-label-f (fn [datum] ...)}
 ; {:datum-label-f :label}
 ;
 ;
 ;
-; @title :datum-value-f property
+; @title datum-value-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:datum-value-f (function)}
+;
+; @--- Examples
 ; {:datum-value-f (fn [datum] ...)}
 ; {:datum-value-f :value}
 ;
 ;
 ;
-; @title :get-data-f property
+; @title get-data-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:get-data-f (function)}
+;
+; @--- Examples
 ; {:get-data-f (fn [] ...)}

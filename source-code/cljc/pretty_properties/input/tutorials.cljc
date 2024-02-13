@@ -6,10 +6,12 @@
 
 ; @tutorial Input autofill properties
 ;
-; @title :autofill-name property
+; @title autofill-name property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:autofill-name (keyword)}
+;
+; @--- Examples
 ; {:autofill-name :password}
 
 ;; ----------------------------------------------------------------------------
@@ -17,50 +19,62 @@
 
 ; @tutorial Input field properties
 ;
-; @title :date-from property
+; @title date-from property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:date-from (string)}
+;
+; @--- Examples
 ; {:date-from "2020-04-20"}
 ;
 ;
 ;
-; @title :date-to property
+; @title date-to property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:date-to (string)}
+;
+; @--- Examples
 ; {:date-to "2020-05-01"}
 ;
 ;
 ;
-; @title :field-from property
+; @title field-from property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:field-from (number)}
+;
+; @--- Examples
 ; {:field-from 16}
 ;
 ;
 ;
-; @title :field-to property
+; @title field-to property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:field-to (number)}
+;
+; @--- Examples
 ; {:field-to 32}
 ;
 ;
 ;
-; @title :field-type property
+; @title field-type property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:field-type (keyword)}
+;
+; @--- Examples
 ; {:field-type :password}
 ;
 ;
 ;
-; @title :max-length property
+; @title max-length property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:max-length (integer)}
+;
+; @--- Examples
 ; {:max-length 69}
 
 ;; ----------------------------------------------------------------------------
@@ -68,13 +82,15 @@
 
 ; @tutorial Input guide properties
 ;
-; @title :error-text property
-;
-; @note
+; @links
 ; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
 ;
-; @code Usage
+; @title error-text property
+;
+; @--- Accepted types
 ; {:error-text (metamorphic-content)}
+;
+; @--- Examples
 ; {:error-text "My error text"}
 ; {:error-text :my-dictionary-term}
 ; {:error-text [:div "My error text"]}
@@ -83,10 +99,12 @@
 ;
 ;
 ;
-; @title :helper-text property
+; @title helper-text property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:helper-text (metamorphic-content)}
+;
+; @--- Examples
 ; {:helper-text "My helper text"}
 ; {:helper-text :my-dictionary-term}
 ; {:helper-text [:div "My helper text"]}
@@ -95,10 +113,12 @@
 ;
 ;
 ;
-; @title :info-text property
+; @title info-text property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:info-text (metamorphic-content)}
+;
+; @--- Examples
 ; {:info-text "My info text"}
 ; {:info-text :my-dictionary-term}
 ; {:info-text [:div "My info text"]}
@@ -110,45 +130,55 @@
 
 ; @tutorial Input option properties
 ;
-; @title :get-options-f property
+; @title get-options-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:get-options-f (function)}
+;
+; @--- Examples
 ; {:get-options-f (fn [] ...)}
 ;
 ;
 ;
-; @title :option-color-f property
+; @title option-color-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:option-color-f (function)}
+;
+; @--- Examples
 ; {:option-color-f (fn [option] ...)}
 ; {:option-color-f :color}
 ;
 ;
 ;
-; @title :option-helper-f property
+; @title option-helper-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:option-helper-f (function)}
+;
+; @--- Examples
 ; {:option-helper-f (fn [option] ...)}
 ; {:option-helper-f :helper}
 ;
 ;
 ;
-; @title :option-label-f property
+; @title option-label-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:option-label-f (function)}
+;
+; @--- Examples
 ; {:option-label-f (fn [option] ...)}
 ; {:option-label-f :label}
 ;
 ;
 ;
-; @title :option-value-f property
+; @title option-value-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:option-value-f (function)}
+;
+; @--- Examples
 ; {:option-value-f (fn [option] ...)}
 ; {:option-value-f :value}
 
@@ -157,8 +187,10 @@
 
 ; @tutorial Input state properties
 ;
-; @title :disabled? property
+; @title disabled? property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:disabled? (boolean)}
+;
+; @--- Examples
 ; {:disabled? true}

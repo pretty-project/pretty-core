@@ -6,10 +6,12 @@
 
 ; @tutorial Class properties
 ;
-; @title :class property
+; @title class property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:class (keywords, or keywords in vector)}
+;
+; @--- Examples
 ; {:class :my-class}
 ; {:class [:another-class :my-class]}
 
@@ -18,18 +20,22 @@
 
 ; @tutorial Lifecycle properties
 ;
-; @title :on-mount-f property
+; @title on-mount-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:on-mount-f (function)}
+;
+; @--- Examples
 ; {:on-mount-f (fn [_] ...)}
 ;
 ;
 ;
-; @title :on-unmount-f property
+; @title on-unmount-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:on-unmount-f (function)}
+;
+; @--- Examples
 ; {:on-unmount-f (fn [_] ...)}
 
 ;; ----------------------------------------------------------------------------
@@ -37,13 +43,15 @@
 
 ; @tutorial Preset properties
 ;
-; @title :preset property
-;
-; @note
+; @links
 ; Check out the [pretty-presets](https://mt-app-kit.github.io/pretty-ui/cljs/pretty-presets/api.html) library.
 ;
-; @code Usage
+; @title preset property
+;
+; @--- Accepted types
 ; {:preset (keyword)}
+;
+; @--- Examples
 ; {:preset :my-preset}
 
 ;; ----------------------------------------------------------------------------
@@ -51,10 +59,12 @@
 
 ; @tutorial React properties
 ;
-; @title :set-reference-f property
+; @title set-reference-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:set-reference-f (function)}
+;
+; @--- Examples
 ; {:set-reference-f (fn [ref] ...)}
 
 ;; ----------------------------------------------------------------------------
@@ -62,27 +72,23 @@
 
 ; @tutorial State properties
 ;
-; @title :disabled? property
+; @title disabled? property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:disabled? (boolean)}
+;
+; @--- Examples
 ; {:disabled? true}
-;
-;
-;
-; @title :highlighted? property
-;
-; @code Usage
-; {:highlighted? (boolean)}
-; {:highlighted? true}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 ; @tutorial Style properties
 ;
-; @title :style property
+; @title style property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:style (map)}
+;
+; @--- Examples
 ; {:style {:font-size :12px}}

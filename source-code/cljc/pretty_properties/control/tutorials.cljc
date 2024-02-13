@@ -6,21 +6,25 @@
 
 ; @tutorial Anchor properties
 ;
-; @title :href-target property
+; @title href-target property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:href-target (keyword)}
+;
+; @--- Examples
 ; {:href-target :blank}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :blank, :self
 ;
 ;
 ;
-; @title :href-uri property
+; @title href-uri property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:href-uri (string)}
+;
+; @--- Examples
 ; {:href-uri "/my-uri"}
 
 ;; ----------------------------------------------------------------------------
@@ -28,18 +32,32 @@
 
 ; @tutorial Clickable state properties
 ;
-; @title :disabled? property
+; @title disabled? property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:disabled? (boolean)}
+;
+; @--- Examples
 ; {:disabled? true}
 ;
 ;
 ;
-; @title :tab-disabled? property
+; @title highlighted? property
 ;
-; @code Usage
+; @--- Accepted types
+; {:highlighted? (boolean)}
+;
+; @--- Examples
+; {:highlighted? true}
+;
+;
+;
+; @title tab-disabled? property
+;
+; @--- Accepted types
 ; {:tab-disabled? (boolean)}
+;
+; @--- Examples
 ; {:tab-disabled? true}
 
 ;; ----------------------------------------------------------------------------
@@ -47,13 +65,15 @@
 
 ; @tutorial Keypress properties
 ;
-; @title :keypress property
-;
-; @note
+; @links
 ; Check out the [cljs-keypress-handler](https://mt-app-kit.github.io/cljs-keypress-handler) library.
 ;
-; @code Usage
+; @title keypress property
+;
+; @--- Accepted types
 ; {:keypress (map)}
+;
+; @--- Examples
 ; {:keypress {:key-code 27}}
 
 ;; ----------------------------------------------------------------------------
@@ -61,48 +81,60 @@
 
 ; @tutorial Mouse event properties
 ;
-; @title :on-click-f property
+; @title on-click-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {...} {:on-click-f (function)}
+;
+; @--- Examples
 ; {...} {:on-click-f (fn [_] ...)}
 ;
 ;
 ;
-; @title :on-click-timeout property
+; @title on-click-timeout property
 ;
-; @code Usage
+; @--- Accepted types
 ; {...} {:on-click-timeout (ms)}
+;
+; @--- Examples
 ; {...} {:on-click-timeout 5000}
 ;
 ;
 ;
-; @title :on-mouse-down-f property
+; @title on-mouse-down-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {...} {:on-mouse-down-f (function)}
+;
+; @--- Examples
 ; {...} {:on-mouse-down-f (fn [_] ...)}
 ;
 ;
 ;
-; @title :on-mouse-over-f property
+; @title on-mouse-over-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {...} {:on-mouse-over-f (function)}
+;
+; @--- Examples
 ; {...} {:on-mouse-over-f (fn [_] ...)}
 ;
 ;
 ;
-; @title :on-mouse-up-f property
+; @title on-mouse-up-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {...} {:on-mouse-up-f (function)}
+;
+; @--- Examples
 ; {...} {:on-mouse-up-f (fn [_] ...)}
 ;
 ;
 ;
-; @title :on-right-click-f property
+; @title on-right-click-f property
 ;
-; @code Usage
+; @--- Accepted types
 ; {...} {:on-right-click-f (function)}
+;
+; @--- Examples
 ; {...} {:on-right-click-f (fn [_] ...)}

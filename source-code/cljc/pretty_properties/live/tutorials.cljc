@@ -6,45 +6,53 @@
 
 ; @tutorial Animation properties
 ;
-; @title :animation-direction property
+; @title animation-direction property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:animation-direction (keyword)}
+;
+; @--- Examples
 ; {:animation-direction :ltr}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :ltr, :rtl, :ttb, :btt,
 ; :cw, :ccw
 ;
 ;
 ;
-; @title :animation-duration property
+; @title animation-duration property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:animation-duration (ms)}
+;
+; @--- Examples
 ; {:animation-duration 250}
 ;
 ;
 ;
-; @title :animation-mode property
+; @title animation-mode property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:animation-mode (keyword)}
+;
+; @--- Examples
 ; {:animation-mode :repeat}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :repeat, :single
 ;
 ;
 ;
-; @title :animation-name property
+; @title animation-name property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:animation-name (keyword or string)}
+;
+; @--- Examples
 ; {:animation-name :fade-in}
 ; {:animation-name "my-animation"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :rotate-90, :rotate-180, :rotate-270, :rotate-360,
 ; :fade-in,   :fade-out,
 ; :slide-in,  :slide-out,
@@ -58,24 +66,28 @@
 
 ; @tutorial Effect properties
 ;
-; @title :click-effect property
+; @title click-effect property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:click-effect (keyword)}
+;
+; @--- Examples
 ; {:click-effect :opacity}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :none, :opacity
 ;
 ;
 ;
-; @title :hover-effect property
+; @title hover-effect property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:hover-effect (keyword)}
+;
+; @--- Examples
 ; {:hover-effect :opacity}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :none, :opacity
 
 ;; ----------------------------------------------------------------------------
@@ -83,44 +95,52 @@
 
 ; @tutorial Progress properties
 ;
-; @title :progress property
+; @note
+; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @code Usage
+; @title progress property
+;
+; @--- Accepted types
 ; {:progress (percentage)}
+;
+; @--- Examples
 ; {:progress 42}
 ;
 ;
 ;
-; @title :progress-color property
+; @title progress-color property
 ;
-; @note
-; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
-;
-; @code Usage
+; @--- Accepted types
 ; {:progress-color (keyword or string)}
+;
+; @--- Examples
 ; {:progress-color :primary}
 ; {:progress-color "#888"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;
-; @title :progress-direction property
+; @title progress-direction property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:progress-direction (keyword)}
+;
+; @--- Examples
 ; {:progress-direction :ltr}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :ltr, :rtl
 ;
 ;
 ;
-; @title :progress-duration property
+; @title progress-duration property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:progress-duration (ms)}
+;
+; @--- Examples
 ; {:progress-duration 250}
 
 ;; ----------------------------------------------------------------------------
@@ -128,13 +148,15 @@
 
 ; @tutorial Transform properties
 ;
-; @title :transform property
+; @title transform property
 ;
-; @code Usage
+; @--- Accepted types
 ; {:transform (keyword or string)}
+;
+; @--- Examples
 ; {:transform :rotate-90}
 ; {:transform "rotateZ(90deg)"}
 ;
-; @code Predefined values
+; @--- Predefined values
 ; :rotate-90,  :rotate-180,  :rotate-270,  :rotate-360,
 ; :rotate--90, :rotate--180, :rotate--270, :rotate--360
