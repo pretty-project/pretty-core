@@ -1,16 +1,13 @@
 
 (ns pretty-properties.data.props
-    (:require [fruits.map.api                :as map]
-              [pretty-properties.data.config :as data.config]))
+    (:require [fruits.map.api :as map]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 (defn default-data-props
   ; @description
-  ; - Applies the given default data properties on the given property map.
-  ; - Applies the standard data properties on the given property map;
-  ;   in case of any data related value is provided.
+  ; Applies the given default data properties on the given property map.
   ;
   ; @param (map) props
   ; {:datum-color-f (function)(opt)
@@ -23,10 +20,7 @@
   ; @usage
   ; (default-data-props {...} {:get-data-f (fn [_] ...)})
   ; =>
-  ; {:datum-color-f fruits.noop.api/none
-  ;  :datum-label-f fruits.noop.api/none
-  ;  :datum-value-f fruits.noop.api/return
-  ;  :get-data-f    (fn [_] ...)
+  ; {:get-data-f (fn [_] ...)
   ;  ...}
   ;
   ; @return (map)
@@ -36,5 +30,4 @@
   ;  :get-data-f    (function)
   ;  ...}
   [props & [default-props]]
-  (-> props (map/use-default-values default-props)
-            (map/use-default-value-group data.config/STANDARD-DATA-PROPERTIES)))
+  (-> props (map/use-default-values default-props)))

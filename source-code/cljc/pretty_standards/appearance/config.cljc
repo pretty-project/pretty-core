@@ -1,11 +1,14 @@
 
-(ns pretty-properties.appearance.config)
+(ns pretty-standards.appearance.config)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @note (pretty-properties.accessories.config#4011)
-; @note (pretty-properties.accessories.config#4012)
+; @note (#4011)
+; Property groups are applied if at least one property of the group is also present in the provided property map.
+;
+; @note (#4012)
+; The '{:badge-content nil}' property is part of the group to ensure that the group is applied even if only the ':badge-content' property is provided.
 ;
 ; @constant (map)
 ; {:background-position (keyword)
@@ -18,7 +21,7 @@
       :background-size     :cover
       :background-uri      nil})
 
-; @note (pretty-properties.accessories.config#4011)
+; @note (#4011)
 ;
 ; @constant (map)
 ; {:border-color (keyword or string)
@@ -29,7 +32,7 @@
       :border-position :all
       :border-width    :xxs})
 
-; @note (pretty-properties.accessories.config#4011)
+; @note (#4011)
 ;
 ; @constant (map)
 ; {:line-color (keyword or string)

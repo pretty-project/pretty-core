@@ -1,11 +1,11 @@
 
-(ns pretty-properties.content.config)
+(ns pretty-standards.content.config)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @note (pretty-properties.accessories.config#4011)
-; @note (pretty-properties.accessories.config#4012)
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
 ; {:icon (keyword)
@@ -18,7 +18,8 @@
       :icon-family :material-symbols-outlined
       :icon-size   :s})
 
-; @note (pretty-properties.accessories.config#4011)
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
 ; {:font-size (keyword, px or string)
@@ -29,10 +30,15 @@
      {:font-size      :s
       :font-weight    :normal
       :letter-spacing :auto
-      :line-height    :text-block})
+      :line-height    :text-block
+      ; Additional trigger properties:
+      :content             nil
+      :content-placeholder nil
+      :label               nil
+      :label-placeholder   nil})
 
-; @note (pretty-properties.accessories.config#4011)
-; @note (pretty-properties.accessories.config#4012)
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
 ; {:text-align (keyword)
@@ -49,4 +55,9 @@
       :text-direction   nil
       :text-overflow    :visible
       :text-selectable? nil
-      :text-transform   nil})
+      :text-transform   nil
+      ; Additional trigger properties:
+      :content             nil
+      :content-placeholder nil
+      :label               nil
+      :label-placeholder   nil})

@@ -11,16 +11,12 @@
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
-  ; @note
-  ; Automatically ignores the autofill attributes of disabled elements.
-  ;
   ; @description
   ; Applies the input autofill related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
   ; {:autofill-name (keyword)(opt)
-  ;  :disabled? (boolean)(opt)
   ;  ...}
   ;
   ; @usage
@@ -35,9 +31,8 @@
   ;  :name (keyword)
   ;  ...}
   [attributes {:keys [autofill-name disabled?]}]
-  (if disabled? (-> attributes (map/merge-some {}))
-                (-> attributes (map/merge-some {:auto-complete autofill-name
-                                                :name          autofill-name}))))
+  (-> attributes (map/merge-some {:auto-complete autofill-name
+                                  :name          autofill-name})))
 
 (defn input-field-attributes
   ; @note

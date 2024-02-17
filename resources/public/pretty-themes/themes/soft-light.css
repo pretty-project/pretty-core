@@ -106,14 +106,14 @@
 /*** Progress color ***/
 
 [data-theme="soft-light"] {
-  --progress-color-default:   var( --fill-color-default   );
-  --progress-color-muted:     var( --fill-color-muted     );
-  --progress-color-highlight: var( --fill-color-highlight );
-  --progress-color-invert:    var( --fill-color-invert    );
-  --progress-color-primary:   var( --fill-color-primary   );
-  --progress-color-secondary: var( --fill-color-secondary );
-  --progress-color-success:   var( --fill-color-success   );
-  --progress-color-warning:   var( --fill-color-warning   );
+  --progress-color-default:   var( --hover-color-default   );
+  --progress-color-muted:     var( --hover-color-muted     );
+  --progress-color-highlight: var( --hover-color-highlight );
+  --progress-color-invert:    var( --hover-color-invert    );
+  --progress-color-primary:   var( --hover-color-primary   );
+  --progress-color-secondary: var( --hover-color-secondary );
+  --progress-color-success:   var( --hover-color-success   );
+  --progress-color-warning:   var( --hover-color-warning   );
 }
 
 /*** Progress color ***/

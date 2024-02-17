@@ -15,6 +15,12 @@
 
 /*** Border color ***/
 
+/*** Border crop ***/
+
+[data-border-crop="crop"] { overflow: hidden; }
+
+/*** Border crop ***/
+
 /*** Border position ***/
 
 [data-border-position="all"]        { border-style: solid;                   }

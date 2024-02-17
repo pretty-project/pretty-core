@@ -1,7 +1,6 @@
 
 (ns pretty-properties.svg.props
-    (:require [fruits.map.api               :as map]
-              [pretty-properties.svg.config :as svg.config]))
+    (:require [fruits.map.api :as map]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -27,11 +26,12 @@
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
 
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-svg-stroke-props
   ; @description
-  ; - Applies the given default SVG stroke properties on the given property map.
-  ; - Applies the standard SVG stroke properties on the given property map;
-  ;   in case of any SVG stroke related value is provided.
+  ; Applies the given default SVG stroke properties on the given property map.
   ;
   ; @param (map) props
   ; {:stroke-color (keyword or string)(opt)
@@ -44,7 +44,6 @@
   ; (default-svg-stroke-props {...} {:stroke-color :primary})
   ; =>
   ; {:stroke-color :primary
-  ;  :stroke-width 1
   ;  ...}
   ;
   ; @return (map)
@@ -53,5 +52,4 @@
   ;  :stroke-width (keyword, px or string)
   ;  ...}
   [props & [default-props]]
-  (-> props (map/use-default-values default-props)
-            (map/use-default-value-group svg.config/STANDARD-SVG-STROKE-PROPERTIES)))
+  (-> props (map/use-default-values default-props)))

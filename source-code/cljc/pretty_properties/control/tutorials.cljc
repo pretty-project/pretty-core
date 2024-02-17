@@ -93,6 +93,9 @@
 ;
 ; @title on-click-timeout property
 ;
+; @note
+; The ':on-click-timeout' property is not necessarily supported by elements that implement the mouse event properties!
+;
 ; @--- Accepted types
 ; {...} {:on-click-timeout (ms)}
 ;

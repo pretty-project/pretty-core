@@ -5,7 +5,7 @@
               [pretty-properties.content.props     :as content.props]
               [pretty-properties.control.props     :as control.props]
               [pretty-properties.data.props        :as data.props]
-              [pretty-properties.input.props        :as input.props]
+              [pretty-properties.input.props :as input.props]
               [pretty-properties.layout.props      :as layout.props]
               [pretty-properties.live.props        :as live.props]
               [pretty-properties.svg.props         :as svg.props]))
@@ -96,7 +96,6 @@
 ; @redirect (pretty-properties.content.props/*)
 (def default-cursor-props  content.props/default-cursor-props)
 (def default-font-props    content.props/default-font-props)
-(def inherit-icon-props    content.props/inherit-icon-props)
 (def default-icon-props    content.props/default-icon-props)
 (def default-image-props   content.props/default-image-props)
 (def default-text-props    content.props/default-text-props)
@@ -120,7 +119,6 @@
 
 ; @redirect (pretty-properties.control.props/*)
 (def default-anchor-props          control.props/default-anchor-props)
-(def clickable-text-auto-props     control.props/clickable-text-auto-props)
 (def default-clickable-state-props control.props/default-clickable-state-props)
 (def default-keypress-props        control.props/default-keypress-props)
 (def default-mouse-event-props     control.props/default-mouse-event-props)
@@ -187,7 +185,6 @@
 ; @redirect (pretty-properties.layout.tutorials/space-properties)
 
 ; @redirect (pretty-properties.layout.props/*)
-(def flex-scroll-auto-props     layout.props/flex-scroll-auto-props)
 (def default-flex-props         layout.props/default-flex-props)
 (def default-grid-props         layout.props/default-grid-props)
 (def default-position-props     layout.props/default-position-props)

@@ -74,16 +74,12 @@
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
-  ; @note
-  ; Automatically ignores mouse events on disabled elements.
-  ;
   ; @description
   ; Applies the mouse event related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:disabled? (boolean)(opt)
-  ;  :on-click-f (function)(opt)
+  ; {:on-click-f (function)(opt)
   ;  :on-mouse-down-f (function)(opt)
   ;  :on-mouse-leave-f (function)(opt)
   ;  :on-mouse-over-f (function)(opt)
@@ -105,11 +101,10 @@
   ;  :on-mouse-over (function)
   ;  :on-mouse-up (function)
   ;  ...}
-  [attributes {:keys [disabled? on-click-f on-mouse-down-f on-mouse-leave-f on-mouse-over-f on-mouse-up-f on-right-click-f]}]
-  (if disabled? (-> attributes)
-                (-> attributes (utils/apply-event-function :on-click        on-click-f)
-                               (utils/apply-event-function :on-context-menu on-right-click-f) ; <- Test it!
-                               (utils/apply-event-function :on-mouse-down   on-mouse-down-f)
-                               (utils/apply-event-function :on-mouse-leave  on-mouse-leave-f)
-                               (utils/apply-event-function :on-mouse-over   on-mouse-over-f)
-                               (utils/apply-event-function :on-mouse-up     on-mouse-up-f))))
+  [attributes {:keys [on-click-f on-mouse-down-f on-mouse-leave-f on-mouse-over-f on-mouse-up-f on-right-click-f]}]
+  (-> attributes (utils/apply-event-function :on-click        on-click-f)
+                 (utils/apply-event-function :on-context-menu on-right-click-f) ; <- Test it!
+                 (utils/apply-event-function :on-mouse-down   on-mouse-down-f)
+                 (utils/apply-event-function :on-mouse-leave  on-mouse-leave-f)
+                 (utils/apply-event-function :on-mouse-over   on-mouse-over-f)
+                 (utils/apply-event-function :on-mouse-up     on-mouse-up-f)))

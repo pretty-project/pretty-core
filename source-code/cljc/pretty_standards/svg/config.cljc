@@ -1,11 +1,11 @@
 
-(ns pretty-properties.svg.config)
+(ns pretty-standards.svg.config)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @note (pretty-properties.accessories.config#4011)
-; @note (pretty-properties.accessories.config#4012)
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
 ; {:stroke-color (keyword or string)

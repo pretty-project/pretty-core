@@ -53,16 +53,12 @@
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
-  ; @note
-  ; Automatically turns off the hover and click effects on disabled elements.
-  ;
   ; @description
   ; Applies the effect related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
   ; {:click-effect (keyword)(opt)
-  ;  :disabled? (boolean)(opt)
   ;  :hover-effect (keyword)(opt)
   ;  ...}
   ;
@@ -73,20 +69,13 @@
   ;  :data-hover-effect :opacity
   ;  ...}
   ;
-  ; @usage
-  ; (effect-attributes {...} {:click-effect :opacity :hover-effect :opacity
-  ;                           :disabled? true})
-  ; =>
-  ; {...}
-  ;
   ; @return (map)
   ; {:data-click-effect (keyword)
   ;  :data-hover-effect (keyword)
   ;  ...}
   [attributes {:keys [click-effect disabled? hover-effect]}]
-  (if disabled? (-> attributes (map/merge-some {}))
-                (-> attributes (map/merge-some {:data-click-effect click-effect
-                                                :data-hover-effect hover-effect}))))
+  (-> attributes (map/merge-some {:data-click-effect click-effect
+                                  :data-hover-effect hover-effect})))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

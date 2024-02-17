@@ -12,20 +12,12 @@
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
-  ; @note
-  ; - Automatically turns off the hover color and hover pattern on disabled elements.
-  ; - Automatically uses the hover color (if any) and hover pattern (if any) as fallback value
-  ;   for highlight color (if not provided) and highlight pattern (if not provided) on highlighted elements.
-  ; - Automatically applies the 'data-highlighted' attribute on highlighted elements.
-  ; - Doesn't apply the highlight color and highlight pattern properties on non-highlighted elements.
-  ;
   ; @description
   ; Applies the background color related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:disabled? (boolean)(opt)
-  ;  :fill-color (keyword or string)(opt)
+  ; {:fill-color (keyword or string)(opt)
   ;  :fill-pattern (keyword)(opt)
   ;  :highlighted? (boolean)(opt)
   ;  :highlight-color (keyword or string)(opt)
@@ -39,13 +31,6 @@
   ; =>
   ; {:data-fill-color  :highlight
   ;  :data-hover-color :highlight
-  ;  ...}
-  ;
-  ; @usage
-  ; (background-color-attributes {...} {:fill-color :highlight :hover-color :highlight
-  ;                               :disabled? true})
-  ; =>
-  ; {:data-fill-color :highlight
   ;  ...}
   ;
   ; @return (map)
@@ -62,33 +47,14 @@
   ;    "--hover-color" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [disabled? fill-color fill-pattern highlight-color highlight-pattern highlighted? hover-color hover-pattern]}]
-  (cond (and disabled? highlighted?)
-        (-> attributes (map/assoc-some             :data-highlighted                      highlighted?)
-                       (map/assoc-some             :data-fill-pattern                     fill-pattern)
-                       (map/assoc-some             :data-highlight-pattern                hover-pattern)
-                       (map/assoc-some             :data-highlight-pattern                highlight-pattern)
-                       (utils/apply-property-value :fill-color      :data-fill-color      fill-color)
-                       (utils/apply-property-value :highlight-color :data-highlight-color hover-color)
-                       (utils/apply-property-value :highlight-color :data-highlight-color highlight-color))
-        (-> disabled?)
-        (-> attributes (map/assoc-some             :data-fill-pattern           fill-pattern)
-                       (utils/apply-property-value :fill-color :data-fill-color fill-color))
-        (-> highlighted?)
-        (-> attributes (map/assoc-some             :data-highlighted                      highlighted?)
-                       (map/assoc-some             :data-fill-pattern                     fill-pattern)
-                       (map/assoc-some             :data-highlight-pattern                hover-pattern)
-                       (map/assoc-some             :data-highlight-pattern                highlight-pattern)
-                       (map/assoc-some             :data-hover-pattern                    hover-pattern)
-                       (utils/apply-property-value :fill-color      :data-fill-color      fill-color)
-                       (utils/apply-property-value :highlight-color :data-highlight-color hover-color)
-                       (utils/apply-property-value :highlight-color :data-highlight-color highlight-color)
-                       (utils/apply-property-value :hover-color     :data-hover-color     hover-color))
-        :default
-        (-> attributes (map/assoc-some             :data-fill-pattern             fill-pattern)
-                       (map/assoc-some             :data-hover-pattern            hover-pattern)
-                       (utils/apply-property-value :fill-color  :data-fill-color  fill-color)
-                       (utils/apply-property-value :hover-color :data-hover-color hover-color))))
+  [attributes {:keys [fill-color fill-pattern highlight-color highlight-pattern highlighted? hover-color hover-pattern]}]
+  (-> attributes (map/assoc-some             :data-highlighted                      highlighted?)
+                 (map/assoc-some             :data-fill-pattern                     fill-pattern)
+                 (map/assoc-some             :data-highlight-pattern                highlight-pattern)
+                 (map/assoc-some             :data-hover-pattern                    hover-pattern)
+                 (utils/apply-property-value :fill-color      :data-fill-color      fill-color)
+                 (utils/apply-property-value :highlight-color :data-highlight-color highlight-color)
+                 (utils/apply-property-value :hover-color     :data-hover-color     hover-color)))
 
 (defn background-image-attributes
   ; @note
@@ -185,6 +151,7 @@
   ; @param (map) attributes
   ; @param (map) props
   ; {:border-color (keyword or string)(opt)
+  ;  :border-crop (keyword)(opt)
   ;  :border-radius (map)(opt)
   ;   {:tl (keyword, px or string)(opt)
   ;    :tr (keyword, px or string)(opt)
@@ -204,6 +171,7 @@
   ;
   ; @return (map)
   ; {:data-border-color (keyword)
+  ;  :data-border-crop (keyword)
   ;  :data-border-position (keyword)
   ;  :data-border-width (keyword)
   ;  :style (map)
@@ -211,8 +179,9 @@
   ;    "--border-width" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [border-color border-position border-width] :as props}]
-  (-> attributes (map/merge-some {:data-border-position border-position})
+  [attributes {:keys [border-color border-crop border-position border-width] :as props}]
+  (-> attributes (map/merge-some {:data-border-crop     border-crop
+                                  :data-border-position border-position})
                  (border-radius-attributes props)
                  (utils/apply-property-value :border-color :data-border-color border-color)
                  (utils/apply-property-value :border-width :data-border-width border-width "px")))
@@ -228,7 +197,8 @@
   ; @param (map) attributes
   ; @param (map) props
   ; {:border-radius (map)
-  ;   {:all (keyword)(opt)}
+  ;   {:all (keyword)(opt)
+  ;    ...}
   ;  ...}
   ; @param (number) ratio
   ;
@@ -265,6 +235,7 @@
   ; @param (map) props
   ; {:line-color (keyword or string)(opt)
   ;  :line-orientation (keyword)(opt)
+  ;  :line-size (keyword, px or string)(opt)
   ;  :line-strength (keyword, px or string)(opt)
   ;  ...}
   ;
@@ -279,15 +250,18 @@
   ; @return (map)
   ; {:data-line-color (keyword)
   ;  :data-line-orientation (keyword)
+  ;  :data-line-size (keyword)
   ;  :data-line-strength (keyword)
   ;  :style (map)
   ;   {"--line-color" (string)
+  ;    "--line-size" (string)
   ;    "--line-strength" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [line-color line-orientation line-strength] :as props}]
+  [attributes {:keys [line-color line-orientation line-size line-strength] :as props}]
   (-> attributes (map/merge-some {:data-line-orientation line-orientation})
                  (utils/apply-property-value :line-color    :data-line-color    line-color)
+                 (utils/apply-property-value :line-size     :data-line-size     line-size     "px")
                  (utils/apply-property-value :line-strength :data-line-strength line-strength "px")))
 
 ;; ----------------------------------------------------------------------------

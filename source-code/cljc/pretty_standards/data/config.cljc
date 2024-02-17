@@ -1,12 +1,12 @@
 
-(ns pretty-properties.data.config
+(ns pretty-standards.data.config
     (:require [fruits.noop.api :refer [none return]]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @note (pretty-properties.accessories.config#4011)
-; @note (pretty-properties.accessories.config#4012)
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
 ; {:datum-color-f (function)

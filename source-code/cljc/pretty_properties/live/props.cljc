@@ -1,16 +1,13 @@
 
 (ns pretty-properties.live.props
-    (:require [fruits.map.api                :as map]
-              [pretty-properties.live.config :as live.config]))
+    (:require [fruits.map.api :as map]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 (defn default-animation-props
   ; @description
-  ; - Applies the given default animation properties on the given property map.
-  ; - Applies the standard animation properties on the given property map;
-  ;   in case of any animation related value is provided.
+  ; Applies the given default animation properties on the given property map.
   ;
   ; @param (map) props
   ; {:animation-direction (keyword)(opt)
@@ -23,9 +20,7 @@
   ; @usage
   ; (default-animation-props {...} {:animation-name :my-animation})
   ; =>
-  ; {:animation-duration 350
-  ;  :animation-mode     :single
-  ;  :animation-name     :my-animation
+  ; {:animation-name :my-animation
   ;  ...}
   ;
   ; @return (map)
@@ -35,47 +30,40 @@
   ;  :animation-name (keyword or string)
   ;  ...}
   [props & [default-props]]
-  (-> props (map/use-default-values default-props)
-            (map/use-default-value-group live.config/STANDARD-ANIMATION-PROPERTIES)))
+  (-> props (map/use-default-values default-props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 (defn default-effect-props
   ; @description
-  ; - Applies the given default effect properties on the given property map.
-  ; - In case the ':href-uri' or ':on-click-f' property is provided, it uses
-  ;   the ':opacity' as default value for the ':click-effect' property in the given property map.
+  ; Applies the given default effect properties on the given property map.
   ;
   ; @param (map) props
-  ; {:href-uri (string)(opt)
-  ;  :on-click-f (string)(opt)
+  ; {:click-effect (keyword)(opt)
+  ;  :hover-effect (keyword)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-effect-props {...} {:href-uri "/my-uri"})
+  ; (default-effect-props {...} {:click-effect :opacity})
   ; =>
   ; {:click-effect :opacity
-  ;  :href-uri     "/my-uri"
   ;  ...}
   ;
   ; @return (map)
   ; {:click-effect (keyword)
+  ;  :hover-effect (keyword)
   ;  ...}
-  [{:keys [href-uri on-click-f] :as props} & [default-props]]
-  (cond on-click-f (map/use-default-values props {:click-effect :opacity} default-props)
-        href-uri   (map/use-default-values props {:click-effect :opacity} default-props)
-        :static    (map/use-default-values props {}                       default-props)))
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 (defn default-progress-props
   ; @description
-  ; - Applies the given default progress properties on the given property map.
-  ; - Applies the standard progress properties on the given property map;
-  ;   in case of any progress related value is provided.
+  ; Applies the given default progress properties on the given property map.
   ;
   ; @param (map) props
   ; {:progress (percentage)(opt)
@@ -86,12 +74,9 @@
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-progress-props {...} {:progress 42})
+  ; (default-progress-props {...} {:progress-color :primary})
   ; =>
-  ; {:progress           42
-  ;  :progress-color     :default
-  ;  :progress-direction :ltr
-  ;  :progress-duration  350
+  ; {:progress-color :primary
   ;  ...}
   ;
   ; @return (map)
@@ -101,8 +86,7 @@
   ;  :progress-duration (ms)
   ;  ...}
   [props & [default-props]]
-  (-> props (map/use-default-values default-props)
-            (map/use-default-value-group live.config/STANDARD-PROGRESS-PROPERTIES)))
+  (-> props (map/use-default-values default-props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

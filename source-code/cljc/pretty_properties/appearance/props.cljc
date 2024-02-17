@@ -1,7 +1,6 @@
 
 (ns pretty-properties.appearance.props
-    (:require [fruits.map.api                      :as map]
-              [pretty-properties.appearance.config :as appearance.config]))
+    (:require [fruits.map.api :as map]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -39,9 +38,7 @@
 
 (defn default-background-image-props
   ; @description
-  ; - Applies the given default background image properties on the given property map.
-  ; - Applies the standard background image properties on the given property map;
-  ;   in case of any background image related value is provided.
+  ; Applies the given default background image properties on the given property map.
   ;
   ; @param (map) props
   ; {:background-position (keyword)(opt)
@@ -54,10 +51,7 @@
   ; @usage
   ; (default-background-image-props {...} {:background-uri "/my-image.png"})
   ; =>
-  ; {:background-position :center
-  ;  :background-repeat?  false
-  ;  :background-size     :cover
-  ;  :background-uri      "/my-image.png"
+  ; {:background-uri "/my-image.png"
   ;  ...}
   ;
   ; @return (map)
@@ -67,20 +61,18 @@
   ;  :background-uri (string)
   ;  ...}
   [props & [default-props]]
-  (-> props (map/use-default-values default-props)
-            (map/use-default-value-group appearance.config/STANDARD-BACKGROUND-IMAGE-PROPERTIES)))
+  (-> props (map/use-default-values default-props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 (defn default-border-props
   ; @description
-  ; - Applies the given default border properties on the given property map.
-  ; - Applies the standard border properties on the given property map;
-  ;   in case of any border related value is provided.
+  ; Applies the given default border properties on the given property map.
   ;
   ; @param (map) props
   ; {:border-color (keyword or string)(opt)
+  ;  :border-crop (keyword)(opt)
   ;  :border-radius (map)(opt)
   ;   {:tl (keyword, px or string)(opt)
   ;    :tr (keyword, px or string)(opt)
@@ -95,13 +87,12 @@
   ; @usage
   ; (default-border-props {...} {:border-color :primary})
   ; =>
-  ; {:border-color    :primary
-  ;  :border-position :all
-  ;  :border-width    :xxs
+  ; {:border-color :primary
   ;  ...}
   ;
   ; @return (map)
   ; {:border-color (keyword or string)
+  ;  :border-crop (keyword)
   ;  :border-radius (map)
   ;   {:tl (keyword, px or string)
   ;    :tr (keyword, px or string)
@@ -112,21 +103,19 @@
   ;  :border-width (keyword, px or string)
   ;  ...}
   [props & [default-props]]
-  (-> props (map/use-default-values default-props)
-            (map/use-default-value-group appearance.config/STANDARD-BORDER-PROPERTIES)))
+  (-> props (map/use-default-values default-props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 (defn default-line-props
   ; @description
-  ; - Applies the given default line properties on the given property map.
-  ; - Applies the standard line properties on the given property map;
-  ;   in case of any line related value is provided.
+  ; Applies the given default line properties on the given property map.
   ;
   ; @param (map) props
   ; {:line-color (keyword or string)(opt)
   ;  :line-orientation (keyword)(opt)
+  ;  :line-size (keyword, px or string)(opt)
   ;  :line-strength (keyword, px or string)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -134,19 +123,17 @@
   ; @usage
   ; (default-line-props {...} {:line-color :primary})
   ; =>
-  ; {:line-color       :primary
-  ;  :line-orientation :horizontal
-  ;  :line-strength    :xxs
+  ; {:line-color :primary
   ;  ...}
   ;
   ; @return (map)
   ; {:line-color (keyword or string)
   ;  :line-orientation (keyword)
+  ;  :line-size (keyword, px or string)
   ;  :line-strength (keyword, px or string)
   ;  ...}
   [props & [default-props]]
-  (-> props (map/use-default-values default-props)
-            (map/use-default-value-group appearance.config/STANDARD-LINE-PROPERTIES)))
+  (-> props (map/use-default-values default-props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

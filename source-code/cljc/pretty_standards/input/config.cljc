@@ -1,12 +1,12 @@
 
-(ns pretty-properties.input.config
+(ns pretty-standards.input.config
     (:require [fruits.noop.api :refer [none return]]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @note (pretty-properties.accessories.config#4011)
-; @note (pretty-properties.accessories.config#4012)
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
 ; {:get-options-f (function)

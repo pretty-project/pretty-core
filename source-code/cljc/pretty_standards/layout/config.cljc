@@ -1,11 +1,11 @@
 
-(ns pretty-properties.layout.config)
+(ns pretty-standards.layout.config)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @note (pretty-properties.accessories.config#4011)
-; @note (pretty-properties.accessories.config#4012)
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
 ; {:gap (keyword, px or string)
@@ -20,9 +20,14 @@
       :overflow         nil
       :vertical-align   :center})
 
-; @note (pretty-properties.accessories.config#4011)
-;
 ; @constant (map)
 ; {:strength (percentage)}
 (def STANDARD-SHAPE-PROPERTIES
      {:strength 100})
+
+; @constant (map)
+; {:wrapper-height (keyword, px or string)
+;  :wrapper-width (keyword, px or string)}
+(def STANDARD-WRAPPER-SIZE-PROPERTIES
+     {:wrapper-height :content
+      :wrapper-width  :content})

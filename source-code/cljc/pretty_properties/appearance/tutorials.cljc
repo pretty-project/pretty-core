@@ -135,6 +135,26 @@
 ;
 ;
 ;
+; @title border-crop property
+;
+; @note
+; Border cropping is hiding overflow content of an element to force descendant elements to use
+; the same border radius as the element (without inheriting the 'border-radius' css property).
+;
+; @note
+; The '{:border-crop :auto}' setting ensures that the cropping is only applied when the ':border-radius' property is also provided.
+;
+; @--- Accepted types
+; {:border-crop (keyword)}
+;
+; @--- Examples
+; {:border-crop :auto}
+;
+; @--- Predefined values
+; :auto, :crop
+;
+;
+;
 ; @title border-position property
 ;
 ; @--- Accepted types
@@ -217,7 +237,23 @@
 ;
 ;
 ;
-; @title line-strength property
+; @title line-size property
+;
+; @--- Accepted types
+; {:line-size (keyword, px or string)}
+;
+; @--- Examples
+; {:line-size :auto}
+; {:line-size 10}
+; {:line-size "10px"}
+; {:line-size "5%"}
+;
+; @--- Predefined values
+; :auto, :parent, :grow
+;
+;
+;
+; @title line-size property
 ;
 ; @--- Accepted types
 ; {:line-strength (keyword, px or string)}

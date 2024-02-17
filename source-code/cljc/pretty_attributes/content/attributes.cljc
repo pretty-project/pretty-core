@@ -10,32 +10,16 @@
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
-  ; @note
-  ; Automatically applies the default cursor on disabled elements unless a specific cursor value is provided.
-  ;
   ; @description
   ; Applies the cursor related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
   ; {:cursor (keyword or string)(opt)
-  ;  :disabled? (boolean)(opt)
   ;  ...}
   ;
   ; @usage
   ; (cursor-attributes {...} {:cursor :pointer})
-  ; =>
-  ; {:data-cursor :pointer
-  ;  ...}
-  ;
-  ; @usage
-  ; (cursor-attributes {...} {:disabled? true})
-  ; =>
-  ; {:data-cursor :default
-  ;  ...}
-  ;
-  ; @usage
-  ; (cursor-attributes {...} {:cursor :pointer :disabled? true})
   ; =>
   ; {:data-cursor :pointer
   ;  ...}
@@ -46,9 +30,8 @@
   ;   {"--cursor" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [cursor disabled?]}]
-  (if disabled? (-> attributes (utils/apply-property-value :cursor :data-cursor (or cursor :default)))
-                (-> attributes (utils/apply-property-value :cursor :data-cursor (-> cursor)))))
+  [attributes {:keys [cursor]}]
+  (-> attributes (utils/apply-property-value :cursor :data-cursor (-> cursor))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
