@@ -80,6 +80,35 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn standard-multiline-props
+  ; @description
+  ; Applies the standard multiline properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:line-count (integer)(opt)
+  ;  :max-lines (integer)(opt)
+  ;  :min-lines (integer)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (standard-multiline-props {...})
+  ; =>
+  ; {:line-count  1
+  ;  :max-lines  32
+  ;  :min-lines   1
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:line-count (integer)
+  ;  :max-lines (integer)
+  ;  :min-lines (integer)
+  ;  ...}
+  [props]
+  (-> props (map/use-default-value-group content.config/STANDARD-ICON-PROPERTIES)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn standard-text-props
   ; @description
   ; - Applies the standard text properties on the given property map; in case of any text related value is provided.

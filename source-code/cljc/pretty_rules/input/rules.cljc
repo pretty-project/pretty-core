@@ -28,10 +28,12 @@
 
 (defn generate-input-autofill
   ; @description
-  ; - Dissociates the ':autofill-name' property of disabled elements.
-  ; - Provides a randomly generated value as default ':autofill-name' value in the given property map.
+  ; Provides a randomly generated value as default ':autofill-name' value in the given property map;
+  ; only in case the element is not disabled.
   ;
   ; @param (map) props
+  ; {:disabled? (boolean)(opt)
+  ;  ...}
   ;
   ; @usage
   ; (generate-input-autofill {...})
@@ -40,7 +42,7 @@
   ;  ...}
   ;
   ; @return (map)
-  [props]
+  [{:keys [disabled?] :as props}]
   ; @bug (#6782)
   ; - https://stackoverflow.com/questions/12374442/chrome-ignores-autocomplete-off
   ; - The "ignore autocomplete='off' (Autofill)" flag is set to enabled by default in chrome.

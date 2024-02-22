@@ -110,25 +110,25 @@
 
 /*** Min height ***/
 
-/*** Canvas height ***/
+/*** Content height ***/
 
-[data-canvas-height="var"]     { height: var( --canvas-height ); }
-[data-canvas-height="auto"]    { height: auto;                   }
-[data-canvas-height="content"] { height: fit-content;            }
-[data-canvas-height="parent"]  { height: 100%;                   }
-[data-canvas-height="grow"]    { flex-grow: 1;                   }
+[data-content-height="var"]     { height: var( --content-height ); }
+[data-content-height="auto"]    { height: auto;                    }
+[data-content-height="content"] { height: fit-content;             }
+[data-content-height="parent"]  { height: 100%;                    }
+[data-content-height="grow"]    { flex-grow: 1;                    }
 
-/*** Canvas height ***/
+/*** Content height ***/
 
-/*** Canvas width ***/
+/*** Content width ***/
 
-[data-canvas-width="var"]     { width: var( --canvas-width ); }
-[data-canvas-width="auto"]    { width: auto;                  }
-[data-canvas-width="content"] { width: fit-content;           }
-[data-canvas-width="parent"]  { width: 100%;                  }
-[data-canvas-width="grow"]    { flex-grow: 1;                 }
+[data-content-width="var"]     { width: var( --content-width ); }
+[data-content-width="auto"]    { width: auto;                   }
+[data-content-width="content"] { width: fit-content;            }
+[data-content-width="parent"]  { width: 100%;                   }
+[data-content-width="grow"]    { flex-grow: 1;                  }
 
-/*** Canvas width ***/
+/*** Content width ***/
 
 /*** Wrapper height ***/
 
@@ -136,7 +136,7 @@
 [data-wrapper-height="auto"]    { height: auto;                    }
 [data-wrapper-height="content"] { height: fit-content;             }
 [data-wrapper-height="parent"]  { height: 100%;                    }
-[data-wrapper-width="grow"]     { flex-grow: 1;                    }
+[data-wrapper-height="grow"]    { flex-grow: 1;                    }
 
 /*** Wrapper height ***/
 

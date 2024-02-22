@@ -5,15 +5,43 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-expandable-props
+  ; @description
+  ; Applies the given default expandable properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:expandable? (boolean)(opt)
+  ;  :expanded? (boolean)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-expandable-props {...} {:expanded? true})
+  ; =>
+  ; {:expanded? true
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:expandable? (boolean)
+  ;  :expanded? (boolean)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-flex-props
   ; @description
   ; Applies the given default flex properties on the given property map.
   ;
   ; @param (map) props
   ; {:gap (keyword, px or string)(opt)
+  ;  :grow (integer)(opt)
   ;  :horizontal-align (keyword)(opt)
   ;  :orientation (keyword)(opt)
   ;  :overflow (keyword)(opt)
+  ;  :shrink (integer)(opt)
   ;  :vertical-align (keyword)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -26,9 +54,11 @@
   ;
   ; @return (map)
   ; {:gap (keyword, px or string)
+  ;  :grow (integer)
   ;  :horizontal-align (keyword)
   ;  :orientation (keyword)
   ;  :overflow (keyword)
+  ;  :shrink (integer)
   ;  :vertical-align (keyword)
   ;  ...}
   [props & [default-props]]
@@ -61,6 +91,32 @@
   ;  :row-count (integer)
   ;  :row-gap (keyword, px or string)
   ;  :row-template (keyword or string)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn default-fullscreen-props
+  ; @description
+  ; Applies the given default fullscreen properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:lock-scroll? (boolean)(opt)
+  ;  :stretch-orientation (keyword)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-fullscreen-props {...} {:stretch-orientation :horizontal})
+  ; =>
+  ; {:stretch-orientation :horizontal
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:lock-scroll? (boolean)
+  ;  :stretch-orientation (keyword)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -159,26 +215,26 @@
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
 
-(defn default-canvas-size-props
+(defn default-content-size-props
   ; @description
-  ; Applies the given default canvas size properties on the given property map.
+  ; Applies the given default content size properties on the given property map.
   ;
   ; @param (map) props
-  ; {:canvas-height (keyword, px or string)(opt)
-  ;  :canvas-width (keyword, px or string)(opt)
+  ; {:content-height (keyword, px or string)(opt)
+  ;  :content-width (keyword, px or string)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-canvas-size-props {...} {:canvas-height :parent :canvas-width :parent})
+  ; (default-content-size-props {...} {:content-height :parent :content-width :parent})
   ; =>
-  ; {:canvas-height :parent
-  ;  :canvas-width  :parent
+  ; {:content-height :parent
+  ;  :content-width  :parent
   ;  ...}
   ;
   ; @return (map)
-  ; {:canvas-height (keyword, px or string)
-  ;  :canvas-width (keyword, px or string)
+  ; {:content-height (keyword, px or string)
+  ;  :content-width (keyword, px or string)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

@@ -4,6 +4,29 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Expandable properties
+;
+; @title expandable? property
+;
+; @--- Accepted types
+; {:expandable? (boolean)}
+;
+; @--- Examples
+; {:expandable? true}
+;
+;
+;
+; @title expanded? property
+;
+; @--- Accepted types
+; {:expanded? (boolean)}
+;
+; @--- Examples
+; {:expanded? true}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Flex properties
 ;
 ; @title gap property
@@ -20,6 +43,16 @@
 ; @--- Predefined values
 ; :auto,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title grow property
+;
+; @--- Accepted types
+; {:grow (integer)}
+;
+; @--- Examples
+; {:grow 1}
 ;
 ;
 ;
@@ -60,6 +93,16 @@
 ;
 ; @--- Predefined values
 ; :hidden, :scroll, :visible, :wrap
+;
+;
+;
+; @title shrink property
+;
+; @--- Accepted types
+; {:shrink (integer)}
+;
+; @--- Examples
+; {:shrink 0}
 ;
 ;
 ;
@@ -161,6 +204,32 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Fullscreen properties
+;
+; @title lock-scroll? property
+;
+; @--- Accepted types
+; {:lock-scroll? (boolean)}
+;
+; @--- Examples
+; {:lock-scroll? true}
+;
+;
+;
+; @title stretch-orientation property
+;
+; @--- Accepted types
+; {:stretch-orientation (keyword)}
+;
+; @--- Examples
+; {:stretch-orientation :horizontal}
+;
+; @--- Predefined values
+; :none, :both, :horizontal, :vertical
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Position properties
 ;
 ; @title layer property
@@ -237,7 +306,7 @@
 ;
 ; The ':size-unit' property controls the predefined size profiles (e.g., :xxs, :xs, ...) applied within which size system.
 ;
-; @code
+; @---
 ; Height/width profiles in ':quarter-block' size system:
 ;
 ; MICRO:  3px
@@ -251,9 +320,8 @@
 ; 3XL:   48px
 ; 4XL:   54px
 ; 5XL:   60px
-; @---
 ;
-; @code
+; @---
 ; Height/width profiles in ':half-block' size system:
 ;
 ; MICRO:  6px
@@ -267,9 +335,8 @@
 ; 3XL:   96px
 ; 4XL:  108px
 ; 5XL:  120px
-; @---
 ;
-; @code
+; @---
 ; Height/width profiles in ':full-block' size system:
 ;
 ; MICRO: 12px
@@ -283,9 +350,8 @@
 ; 3XL:  192px
 ; 4XL:  216px
 ; 5XL:  240px
-; @---
 ;
-; @code
+; @---
 ; Height/width profiles in ':double-block' size system:
 ;
 ; MICRO: 24px
@@ -299,9 +365,8 @@
 ; 3XL:  384px
 ; 4XL:  432px
 ; 5XL:  480px
-; @---
 ;
-; @code
+; @---
 ; Height/width profiles in ':triple-block' size system:
 ;
 ; MICRO: 36px
@@ -315,9 +380,8 @@
 ; 3XL:  576px
 ; 4XL:  648px
 ; 5XL:  720px
-; @---
 ;
-; @code
+; @---
 ; Height profiles in ':screen' size system:
 ;
 ; MICRO:  5vh
@@ -331,9 +395,8 @@
 ; 3XL:   10vh
 ; 4XL:   10vh
 ; 5XL:   10vh
-; @---
 ;
-; @code
+; @---
 ; Width profiles in ':screen' size system:
 ;
 ; MICRO:  160px
@@ -347,7 +410,6 @@
 ; 3XL:   1680px
 ; 4XL:   2160px
 ; 5XL:   3840px
-; @---
 ;
 ; The '{:size-unit :screen}' setting implements an adaptive content width logic, where the width profiles
 ; are adjusted to common screen resolutions; and in case the width profile is larger than the actual screen
@@ -456,37 +518,37 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Canvas size properties
+; @tutorial Content size properties
 ;
 ; @note
-; The canvas size properties control inner element dimensions within the main element.
+; The content size properties describe inner element dimensions within the main element.
 ;
-; @title canvas-height property
+; @title content-height property
 ;
 ; @--- Accepted types
-; {:canvas-height (keyword, px or string)}
+; {:content-height (keyword, px or string)}
 ;
 ; @--- Examples
-; {:canvas-height :parent}
-; {:canvas-height 10}
-; {:canvas-height "10px"}
-; {:canvas-height "5%"}
+; {:content-height :parent}
+; {:content-height 10}
+; {:content-height "10px"}
+; {:content-height "5%"}
 ;
 ; @--- Predefined values
 ; :auto, :content, :parent, :grow
 ;
 ;
 ;
-; @title canvas-width property
+; @title content-width property
 ;
 ; @--- Accepted types
-; {:canvas-width (keyword, px or string)}
+; {:content-width (keyword, px or string)}
 ;
 ; @--- Examples
-; {:canvas-width :parent}
-; {:canvas-width 10}
-; {:canvas-width "10px"}
-; {:canvas-width "5%"}
+; {:content-width :parent}
+; {:content-width 10}
+; {:content-width "10px"}
+; {:content-width "5%"}
 ;
 ; @--- Predefined values
 ; :auto, :content, :parent, :grow
@@ -497,7 +559,7 @@
 ; @tutorial Wrapper size properties
 ;
 ; @note
-; The wrapper size properties control outer element dimensions outside the main element.
+; The wrapper size properties describe outer element dimensions outside the main element.
 ;
 ; @title wrapper-height property
 ;

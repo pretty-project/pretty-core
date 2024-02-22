@@ -62,7 +62,7 @@
   ;  ...}
   ;
   ; @return (map)
-  [{:keys [disabled?]}]
+  [{:keys [disabled?] :as props}]
   (if disabled? (-> props (dissoc :on-click-f :on-mouse-down-f :on-mouse-leave-f :on-mouse-over-f :on-mouse-up-f :on-right-click-f))
                 (-> props)))
 

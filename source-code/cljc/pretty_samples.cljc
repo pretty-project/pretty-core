@@ -6,16 +6,15 @@
 
 ; @tutorial xxx
 ;
-; @code xxx
+; @--- xxx
 ; (ns my-namespace
 ;     (:require [pretty-properties.api :as pretty-properties]))
 ;
 ; (defn my-button-props-prototype
 ;   [props]
 ;   (-> props (pretty-properties/default-background-props props))
-; @---
 ;
-; @code xxx
+; @--- xxx
 ; (ns my-namespace
 ;     (:require [pretty-attributes.api :as pretty-attributes]))
 ;
@@ -23,17 +22,15 @@
 ;   [props]
 ;   (-> {:class :my-button}
 ;       (pretty-attributes/background-attributes props))
-; @---
 ;
-; @code xxx
+; @--- xxx
 ; (defn my-button
 ;   [props]
 ;   (let [props (my-button-props-prototype props)]
 ;        [:button (my-button-attributes props)
 ;                 (:label props)]))
-; @----
 ;
-; @code xxx
+; @--- xxx
 ; (my-button {:fill-color :highlight :label "My button"})
 ; =>
 ; [:button {:data-fill-color :highlight} "My button"]

@@ -38,6 +38,13 @@
 /* Vertical */
 /*** Flex gap ***/
 
+/*** Flex grow / shrink ***/
+
+[data-flex-grow="var"]   { flex-grow:   var( --flex-grow   ); }
+[data-flex-shrink="var"] { flex-shrink: var( --flex-shrink ); }
+
+/*** Flex grow / shrink ***/
+
 /*** Flex horizontal align ***/
 /* Horizontal */
 

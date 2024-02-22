@@ -10,10 +10,10 @@
   ; @description
   ; Applies the given default input autofill properties on the given property map.
   ;
-  ; @param (map) attributes
   ; @param (map) props
   ; {:autofill-name (keyword)(opt)
   ;  ...}
+  ; @param (map)(opt) default-props
   ;
   ; @usage
   ; (default-input-autofill-props {...} {:autofill-name :phone-number})
@@ -23,6 +23,36 @@
   ;
   ; @return (map)
   ; {:autofill-name (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn default-input-event-props
+  ; @description
+  ; Applies the given default input event properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:on-changed-f (function)(opt)
+  ;  :on-empty-f (function)(opt)
+  ;  :on-selected-f (function)(opt)
+  ;  :on-unselected-f (function)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-input-event-props {...} {:on-empty-f (fn [_] ...)})
+  ; =>
+  ; {:on-empty-f (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:on-changed-f (function)
+  ;  :on-empty-f (function)
+  ;  :on-selected-f (function)
+  ;  :on-unselected-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -150,6 +180,45 @@
   ;
   ; @return (map)
   ; {:disabled? (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn default-input-validation-props
+  ; @description
+  ; Applies the given default input validation properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:on-invalid-f (function)(opt)
+  ;  :on-valid-f (function)(opt)
+  ;  :validate-when-change? (boolean)(opt)
+  ;  :validate-when-leave? (boolean)(opt)
+  ;  :validators (maps in vector)(opt)
+  ;   [(map) validator
+  ;     {:error-text (metamorphic-content)(opt)
+  ;      :f (function)}]
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-input-validation-props {...} {:on-valid-f (fn [_] ...) :validators [{:f some? :error-text "Please fill out this field!"}]})
+  ; =>
+  ; {:on-valid-f (fn [_] ...)
+  ;  :validators [{:f some? :error-text "Please fill out this field!"}]
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:on-invalid-f (function)
+  ;  :on-valid-f (function)
+  ;  :validate-when-change? (boolean)
+  ;  :validate-when-leave? (boolean)
+  ;  :validators (maps in vector)
+  ;   [(map) validator
+  ;     {:error-text (metamorphic-content)
+  ;      :f (function)}]
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

@@ -19,9 +19,10 @@
 (def standard-line-props             appearance.standards/standard-line-props)
 
 ; @redirect (pretty-properties.content.standards/*)
-(def standard-font-props content.standards/standard-font-props)
-(def standard-icon-props content.standards/standard-icon-props)
-(def standard-text-props content.standards/standard-text-props)
+(def standard-font-props      content.standards/standard-font-props)
+(def standard-icon-props      content.standards/standard-icon-props)
+(def standard-multiline-props content.standards/standard-multiline-props)
+(def standard-text-props      content.standards/standard-text-props)
 
 ; @redirect (pretty-properties.control.standards/*)
 (def standard-anchor-props control.standards/standard-anchor-props)

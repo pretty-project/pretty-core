@@ -84,6 +84,9 @@
 ; @tutorial Image properties
 ; @redirect (pretty-properties.content.tutorials/image-properties)
 
+; @tutorial Multiline properties
+; @redirect (pretty-properties.content.tutorials/multiline-properties)
+
 ; @tutorial Text properties
 ; @redirect (pretty-properties.content.tutorials/text-properties)
 
@@ -93,14 +96,19 @@
 ; @tutorial Label properties
 ; @redirect (pretty-properties.content.tutorials/label-properties)
 
+; @tutorial Structure properties
+; @redirect (pretty-properties.content.tutorials/structure-properties)
+
 ; @redirect (pretty-properties.content.props/*)
-(def default-cursor-props  content.props/default-cursor-props)
-(def default-font-props    content.props/default-font-props)
-(def default-icon-props    content.props/default-icon-props)
-(def default-image-props   content.props/default-image-props)
-(def default-text-props    content.props/default-text-props)
-(def default-content-props content.props/default-content-props)
-(def default-label-props   content.props/default-label-props)
+(def default-cursor-props    content.props/default-cursor-props)
+(def default-font-props      content.props/default-font-props)
+(def default-icon-props      content.props/default-icon-props)
+(def default-image-props     content.props/default-image-props)
+(def default-multiline-props content.props/default-multiline-props)
+(def default-text-props      content.props/default-text-props)
+(def default-content-props   content.props/default-content-props)
+(def default-label-props     content.props/default-label-props)
+(def default-structure-props content.props/default-structure-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -138,6 +146,9 @@
 ; @tutorial Input autofill properties
 ; @redirect (pretty-properties.input.tutorials/input-autofill-properties)
 
+; @tutorial Input event properties
+; @redirect (pretty-properties.input.tutorials/input-event-properties)
+
 ; @tutorial Input field properties
 ; @redirect (pretty-properties.input.tutorials/input-field-properties)
 
@@ -150,21 +161,32 @@
 ; @tutorial Input state properties
 ; @redirect (pretty-properties.input.tutorials/input-state-properties)
 
+; @tutorial Input validation properties
+; @redirect (pretty-properties.input.tutorials/input-validation-properties)
+
 ; @redirect (pretty-properties.input.props/*)
-(def default-input-autofill-props input.props/default-input-autofill-props)
-(def default-input-field-props    input.props/default-input-field-props)
-(def default-input-guide-props    input.props/default-input-guide-props)
-(def default-input-option-props   input.props/default-input-option-props)
-(def default-input-state-props    input.props/default-input-state-props)
+(def default-input-autofill-props   input.props/default-input-autofill-props)
+(def default-input-event-props      input.props/default-input-event-props)
+(def default-input-field-props      input.props/default-input-field-props)
+(def default-input-guide-props      input.props/default-input-guide-props)
+(def default-input-option-props     input.props/default-input-option-props)
+(def default-input-state-props      input.props/default-input-state-props)
+(def default-input-validation-props input.props/default-input-validation-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
+
+; @tutorial Expandable properties
+; @redirect (pretty-properties.layout.tutorials/expandable-properties)
 
 ; @tutorial Flex properties
 ; @redirect (pretty-properties.layout.tutorials/flex-properties)
 
 ; @tutorial Grid properties
 ; @redirect (pretty-properties.layout.tutorials/grid-properties)
+
+; @tutorial Fullscreen properties
+; @redirect (pretty-properties.layout.tutorials/fullscreen-properties)
 
 ; @tutorial Position properties
 ; @redirect (pretty-properties.layout.tutorials/position-properties)
@@ -175,8 +197,8 @@
 ; @tutorial Size properties
 ; @redirect (pretty-properties.layout.tutorials/size-properties)
 
-; @tutorial Canvas size properties
-; @redirect (pretty-properties.layout.tutorials/canvas-size-properties)
+; @tutorial Content size properties
+; @redirect (pretty-properties.layout.tutorials/content-size-properties)
 
 ; @tutorial Wrapper size properties
 ; @redirect (pretty-properties.layout.tutorials/wrapper-size-properties)
@@ -185,12 +207,14 @@
 ; @redirect (pretty-properties.layout.tutorials/space-properties)
 
 ; @redirect (pretty-properties.layout.props/*)
+(def default-expandable-props   layout.props/default-expandable-props)
 (def default-flex-props         layout.props/default-flex-props)
 (def default-grid-props         layout.props/default-grid-props)
+(def default-fullscreen-props   layout.props/default-fullscreen-props)
 (def default-position-props     layout.props/default-position-props)
 (def default-shape-props        layout.props/default-shape-props)
 (def default-size-props         layout.props/default-size-props)
-(def default-canvas-size-props  layout.props/default-canvas-size-props)
+(def default-content-size-props layout.props/default-content-size-props)
 (def default-wrapper-size-props layout.props/default-wrapper-size-props)
 (def default-space-props        layout.props/default-space-props)
 

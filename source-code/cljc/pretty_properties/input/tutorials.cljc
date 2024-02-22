@@ -17,6 +17,49 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Input event properties
+;
+; @title on-changed-f property
+;
+; @--- Accepted types
+; {:on-changed-f (function)}
+;
+; @--- Examples
+; {:on-changed-f (fn [value] ...)}
+;
+;
+;
+; @title on-empty-f property
+;
+; @--- Accepted types
+; {:on-empty-f (function)}
+;
+; @--- Examples
+; {:on-empty-f (fn [value] ...)}
+;
+;
+;
+; @title on-selected-f property
+;
+; @--- Accepted types
+; {:on-selected-f (function)}
+;
+; @--- Examples
+; {:on-selected-f (fn [selected-options] ...)}
+;
+;
+;
+; @title on-unselected-f property
+;
+; @--- Accepted types
+; {:on-unselected-f (function)}
+;
+; @--- Examples
+; {:on-unselected-f (fn [selected-options] ...)}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Input field properties
 ;
 ; @title date-from property
@@ -194,3 +237,59 @@
 ;
 ; @--- Examples
 ; {:disabled? true}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Input validation properties
+;
+; @title on-invalid-f property
+;
+; @--- Accepted types
+; {:on-invalid-f (function)}
+;
+; @--- Examples
+; {:on-invalid-f (fn [value error-text])}
+;
+;
+;
+; @title on-valid-f property
+;
+; @--- Accepted types
+; {:on-valid-f (function)}
+;
+; @--- Examples
+; {:on-valid-f (fn [value])}
+;
+;
+;
+; @title validate-when-change? property
+;
+; @--- Accepted types
+; {:validate-when-change? (boolean)}
+;
+; @--- Examples
+; {:validate-when-change? true}
+;
+;
+;
+; @title validate-when-leave? property
+;
+; @--- Accepted types
+; {:validate-when-leave? (boolean)}
+;
+; @--- Examples
+; {:validate-when-leave? true}
+;
+;
+;
+; @title validators property
+;
+; @--- Accepted types
+; {:validators (maps in vector)
+;   [(map) validator
+;     {:error-text (metamorphic-content)
+;      :f (function)}]}
+;
+; @--- Examples
+; {:validators [{:f some? :error-text "Please fill out this field!"}]}

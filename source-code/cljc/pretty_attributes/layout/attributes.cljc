@@ -16,9 +16,11 @@
   ; @param (map) attributes
   ; @param (map) props
   ; {:gap (keyword, px or string)(opt)
+  ;  :grow (integer)(opt)
   ;  :horizontal-align (keyword)(opt)
   ;  :orientation (keyword)(opt)
   ;  :overflow (keyword)(opt)
+  ;  :shrink (integer)(opt)
   ;  :vertical-align (keyword)(opt)
   ;  ...}
   ;
@@ -32,20 +34,26 @@
   ;
   ; @return (map)
   ; {:data-flex-gap (keyword)
+  ;  :data-flex-grow (integer)
   ;  :data-flex-horizontal-align (keyword)
   ;  :data-flex-orientation (keyword)
   ;  :data-flex-overflow (keyword)
+  ;  :data-flex-shrink (integer)
   ;  :data-flex-vertical-align (keyword)
   ;  :style (map)
   ;   {"--flex-gap" (string)
+  ;    "--flex-grow" (string)
+  ;    "--flex-shrink" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [gap horizontal-align orientation overflow vertical-align]}]
+  [attributes {:keys [gap grow horizontal-align orientation overflow shrink vertical-align]}]
   (-> attributes (map/merge-some {:data-flex-horizontal-align horizontal-align
                                   :data-flex-orientation      orientation
                                   :data-flex-overflow         overflow
                                   :data-flex-vertical-align   vertical-align})
-                 (utils/apply-property-value :flex-gap :data-flex-gap gap "px")))
+                 (utils/apply-property-value :flex-gap    :data-flex-gap    gap "px")
+                 (utils/apply-property-value :flex-grow   :data-flex-grow   grow)
+                 (utils/apply-property-value :flex-shrink :data-flex-shrink shrink)))
 
 (defn grid-attributes
   ; @note
@@ -95,6 +103,33 @@
                  (utils/apply-property-value :grid-row-template    :data-grid-row-template    row-template)
                  (utils/apply-property-value :grid-column-gap      :data-grid-column-gap      column-gap)
                  (utils/apply-property-value :grid-row-gap         :data-grid-row-gap         row-gap)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn fullscreen-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the fullscreen related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:stretch-orientation (keyword)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (fullscreen-attributes {...} {:stretch-orientation :horizontal})
+  ; =>
+  ; {:data-stretch-orientation :horizontal
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-stretch-orientation (keyword)
+  ;  ...}
+  [attributes {:keys [stretch-orientation]}]
+  (-> attributes (map/merge-some {:data-stretch-orientation stretch-orientation})))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -303,37 +338,37 @@
                  (utils/apply-property-value :min-height :data-min-height min-height "px")
                  (utils/apply-property-value :min-width  :data-min-width  min-width  "px")))
 
-(defn canvas-size-attributes
+(defn content-size-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @description
-  ; Applies the canvas size related values on the given attribute map.
+  ; Applies the content size related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:canvas-height (keyword, px or string)(opt)
-  ;  :canvas-width (keyword, px or string)(opt)
+  ; {:content-height (keyword, px or string)(opt)
+  ;  :content-width (keyword, px or string)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (canvas-size-attributes {...} {:canvas-height :parent :canvas-width :parent})
+  ; (content-size-attributes {...} {:content-height :parent :content-width :parent})
   ; =>
-  ; {:data-canvas-height :parent
-  ;  :data-canvas-width  :parent
+  ; {:data-content-height :parent
+  ;  :data-content-width  :parent
   ;  ...}
   ;
   ; @return (map)
-  ; {:data-canvas-height (keyword)
-  ;  :data-canvas-width (keyword)
+  ; {:data-content-height (keyword)
+  ;  :data-content-width (keyword)
   ;  :style (map)
-  ;   {"--canvas-height" (string)
-  ;    "--canvas-width" (string)
+  ;   {"--content-height" (string)
+  ;    "--content-width" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [canvas-height canvas-width]}]
-  (-> attributes (utils/apply-property-value :canvas-height :data-canvas-height canvas-height "px")
-                 (utils/apply-property-value :canvas-width  :data-canvas-width  canvas-width  "px")))
+  [attributes {:keys [content-height content-width]}]
+  (-> attributes (utils/apply-property-value :content-height :data-content-height content-height "px")
+                 (utils/apply-property-value :content-width  :data-content-width  content-width  "px")))
 
 (defn wrapper-size-attributes
   ; @note

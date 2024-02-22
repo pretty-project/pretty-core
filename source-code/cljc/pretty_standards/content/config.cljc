@@ -37,6 +37,15 @@
       :label               nil
       :label-placeholder   nil})
 
+; @constant (map)
+; {:line-count (integer)
+;  :max-lines (integer)
+;  :min-lines (integer)}
+(def STANDARD-MULTILINE-PROPERTIES
+     {:line-count  1
+      :max-lines  32
+      :min-lines   1})
+
 ; @note (pretty-standards.appearance.config#4011)
 ; @note (pretty-standards.appearance.config#4012)
 ;

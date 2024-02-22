@@ -18,10 +18,14 @@
 (def apply-auto-border-crop       appearance.rules/apply-auto-border-crop)
 
 ; @redirect (pretty-rules.content.rules/*)
-(def auto-disable-cursor content.rules/auto-disable-cursor)
-(def inherit-icon-props  content.rules/inherit-icon-props)
-(def compose-content     content.rules/compose-content)
-(def compose-label       content.rules/compose-label)
+(def auto-disable-cursor        content.rules/auto-disable-cursor)
+(def inherit-icon-props         content.rules/inherit-icon-props)
+(def compose-content            content.rules/compose-content)
+(def compose-label              content.rules/compose-label)
+(def compose-structure          content.rules/compose-structure)
+(def auto-count-content-lines   content.rules/auto-count-content-lines)
+(def auto-limit-multiline-count content.rules/auto-limit-multiline-count)
+(def auto-set-multiline-height  content.rules/auto-set-multiline-height)
 
 ; @redirect (pretty-rules.control.rules/*)
 (def auto-color-clickable-text control.rules/auto-color-clickable-text)

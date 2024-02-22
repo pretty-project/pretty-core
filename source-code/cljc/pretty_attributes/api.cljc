@@ -57,11 +57,12 @@
 ; @redirect (pretty-attributes.layout.attributes/*)
 (def flex-attributes         layout.attributes/flex-attributes)
 (def grid-attributes         layout.attributes/grid-attributes)
+(def fullscreen-attributes   layout.attributes/fullscreen-attributes)
 (def indent-attributes       layout.attributes/indent-attributes)
 (def outdent-attributes      layout.attributes/outdent-attributes)
 (def position-attributes     layout.attributes/position-attributes)
 (def size-attributes         layout.attributes/size-attributes)
-(def canvas-size-attributes  layout.attributes/canvas-size-attributes)
+(def content-size-attributes layout.attributes/content-size-attributes)
 (def wrapper-size-attributes layout.attributes/wrapper-size-attributes)
 
 ; @redirect (pretty-attributes.live.attributes/*)

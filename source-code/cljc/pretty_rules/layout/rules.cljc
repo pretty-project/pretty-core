@@ -33,19 +33,20 @@
   ;  :vertical-align (keyword)
   ;  ...}
   [{:keys [horizontal-align orientation overflow vertical-align] :as props}]
-  (or (case overflow :scroll (case orientation :horizontal (-> props (assoc :horizontal-align (case horizontal-align :center :left nil :left horizontal-align)))
-                                               :vertical   (-> props (assoc :vertical-align   (case vertical-align   :center :top  nil :top  vertical-align)))))
-      (-> props)))
+  (case overflow :scroll (case orientation :horizontal (-> props (assoc :horizontal-align (case horizontal-align :center :left nil :left horizontal-align)))
+                                           :vertical   (-> props (assoc :vertical-align   (case vertical-align   :center :top  nil :top  vertical-align)))
+                                                       (-> props))
+                         (-> props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 (defn auto-adapt-wrapper-size
   ; @description
-  ; If the ':height' or ':width' properties are provided as ':auto' or ':parent',
-  ; it uses ':auto' or ':parent' as default value for the ':wrapper-height' and ':wrapper-width' properties,
-  ; to make the wrapper element let its inner element expand.
-  ; Otherwise, it uses
+  ; - The ':wrapper-height' and ':wrapper-width' properties inherit ':auto', ':grow' or ':parent' values
+  ;   from the ':height' and ':width' properties to make the wrapper element let its inner element expand.
+  ; - Replaces ':grow' values with ':parent' value of ':height' and ':width' properties, to make inner elements
+  ;   fill their flex grown wrapper elements.
   ;
   ; @param (map) props
   ; {:height (keyword, px or string)(opt)
@@ -63,10 +64,21 @@
   ;  :wrapper-width  :parent
   ;  ...}
   ;
+  ; @usage
+  ; (auto-adapt-wrapper-size {:width :grow ...})
+  ; =>
+  ; {:width         :parent
+  ;  :wrapper-width :grow
+  ;  ...}
+  ;
   ; @return (map)
-  ; {:wrapper-height (keyword, px or string)
+  ; {:height (keyword, px or string)
+  ;  :width (keyword, px or string)
+  ;  :wrapper-height (keyword, px or string)
   ;  :wrapper-width (keyword, px or string)
   ;  ...}
   [{:keys [height width] :as props}]
-  (-> props (map/merge-some {:wrapper-height (case height :auto :auto :parent :parent)
-                             :wrapper-width  (case width  :auto :auto :parent :parent)})))
+  (-> props (map/merge-some {:wrapper-height (case height :auto :auto :parent :parent :grow :grow nil)
+                             :wrapper-width  (case width  :auto :auto :parent :parent :grow :grow nil)
+                             :height         (case height :grow :parent nil)
+                             :width          (case width  :grow :parent nil)})))

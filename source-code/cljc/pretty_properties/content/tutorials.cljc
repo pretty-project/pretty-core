@@ -28,7 +28,7 @@
 ; - Pretty font attributes use the page REM value to scale font profiles.
 ; - Changing the REM value scales up/down font sizes and other corresponding values.
 ;
-; @code
+; @---
 ; html { font-size: 10px }
 ;
 ; @title font-size property
@@ -192,6 +192,39 @@
 ;
 ; @--- Examples
 ; {:image-uri "/my-image.png"}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Multiline properties
+;
+; @title line-count property
+;
+; @--- Accepted types
+; {:line-count (integer)}
+;
+; @--- Examples
+; {:line-count 10}
+;
+;
+;
+; @title max-lines property
+;
+; @--- Accepted types
+; {:max-lines (integer)}
+;
+; @--- Examples
+; {:max-lines 15}
+;
+;
+;
+; @title min-lines property
+;
+; @--- Accepted types
+; {:min-lines (integer)}
+;
+; @--- Examples
+; {:min-lines 5}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -361,3 +394,51 @@
 ; {:label-placeholder [:div "My label placeholder"]}
 ; {:label-placeholder [my-label-placeholder-component]}
 ; {:label-placeholder 123456}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Structure properties
+;
+; @links
+; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+;
+; @title body property
+;
+; @--- Accepted types
+; {:body (metamorphic-content)}
+;
+; @--- Examples
+; {:body "My body"}
+; {:body :my-dictionary-term}
+; {:body [:div "My body"]}
+; {:body [my-body-component]}
+; {:body 123456}
+;
+;
+;
+; @title footer property
+;
+; @--- Accepted types
+; {:footer (metamorphic-content)}
+;
+; @--- Examples
+; {:footer "My footer"}
+; {:footer :my-dictionary-term}
+; {:footer [:div "My footer"]}
+; {:footer [my-footer-component]}
+; {:footer 123456}
+;
+;
+;
+; @title header property
+;
+; @--- Accepted types
+; {:header (metamorphic-content)}
+;
+; @--- Examples
+; {:header "My header"}
+; {:header :my-dictionary-term}
+; {:header [:div "My header"]}
+; {:header [my-header-component]}
+; {:header 123456}

@@ -120,6 +120,35 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-multiline-props
+  ; @description
+  ; Applies the given default multiline properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:line-count (integer)(opt)
+  ;  :max-lines (integer)(opt)
+  ;  :min-lines (integer)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-multiline-props {...} {:max-lines 15 :line-count 10})
+  ; =>
+  ; {:max-lines  15
+  ;  :line-count 10
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:line-count (integer)
+  ;  :max-lines (integer)
+  ;  :min-lines (integer)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-text-props
   ; @description
   ; Applies the given default text properties on the given property map.
@@ -198,6 +227,31 @@
   ; @return (map)
   ; {:label (metamorphic-content)
   ;  :label-placeholder (metamorphic-content)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+(defn default-structure-props
+  ; @description
+  ; Applies the given default structure properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:body (metamorphic-content)(opt)
+  ;  :footer (metamorphic-content)(opt)
+  ;  :header (metamorphic-content)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-structure-props {...} {:body "My body"})
+  ; =>
+  ; {:body "My body"
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:body (metamorphic-content)
+  ;  :footer (metamorphic-content)
+  ;  :header (metamorphic-content)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
