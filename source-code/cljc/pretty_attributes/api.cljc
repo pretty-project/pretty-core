@@ -5,6 +5,7 @@
               [pretty-attributes.basic.attributes       :as basic.attributes]
               [pretty-attributes.content.adaptive       :as content.adaptive]
               [pretty-attributes.content.attributes     :as content.attributes]
+              [pretty-attributes.accessories.attributes :as accessories.attributes]
               [pretty-attributes.control.attributes     :as control.attributes]
               [pretty-attributes.input.attributes       :as input.attributes]
               [pretty-attributes.layout.attributes      :as layout.attributes]
@@ -13,6 +14,9 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
+
+; @redirect (pretty-attributes.accessories.attributes/*)
+(def overlay-attributes accessories.attributes/overlay-attributes)
 
 ; @redirect (pretty-attributes.appearance.attributes/*)
 (def background-color-attributes appearance.attributes/background-color-attributes)
@@ -62,8 +66,8 @@
 (def outdent-attributes      layout.attributes/outdent-attributes)
 (def position-attributes     layout.attributes/position-attributes)
 (def size-attributes         layout.attributes/size-attributes)
+(def body-size-attributes    layout.attributes/body-size-attributes)
 (def content-size-attributes layout.attributes/content-size-attributes)
-(def wrapper-size-attributes layout.attributes/wrapper-size-attributes)
 
 ; @redirect (pretty-attributes.live.attributes/*)
 (def animation-attributes live.attributes/animation-attributes)

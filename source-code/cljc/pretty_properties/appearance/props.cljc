@@ -42,7 +42,6 @@
   ;
   ; @param (map) props
   ; {:background-position (keyword)(opt)
-  ;  :background-repeat? (boolean)(opt)
   ;  :background-size (keyword)(opt)
   ;  :background-uri (string)(opt)
   ;  ...}
@@ -56,7 +55,6 @@
   ;
   ; @return (map)
   ; {:background-position (keyword)
-  ;  :background-repeat? (boolean)
   ;  :background-size (keyword)
   ;  :background-uri (string)
   ;  ...}

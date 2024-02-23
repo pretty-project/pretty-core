@@ -8,10 +8,14 @@
               [pretty-standards.input.standards :as input.standards]
               [pretty-standards.layout.standards      :as layout.standards]
               [pretty-standards.live.standards        :as live.standards]
-              [pretty-standards.svg.standards         :as svg.standards]))
+              [pretty-standards.svg.standards         :as svg.standards]
+              [pretty-standards.accessories.standards         :as accessories.standards]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
+
+; @redirect (pretty-properties.accessories.standards/*)
+(def standard-overlay-props accessories.standards/standard-overlay-props)
 
 ; @redirect (pretty-properties.appearance.standards/*)
 (def standard-background-image-props appearance.standards/standard-background-image-props)
@@ -34,9 +38,10 @@
 (def standard-input-option-props input.standards/standard-input-option-props)
 
 ; @redirect (pretty-properties.layout.standards/*)
-(def standard-flex-props         layout.standards/standard-flex-props)
-(def standard-shape-props        layout.standards/standard-shape-props)
-(def standard-wrapper-size-props layout.standards/standard-wrapper-size-props)
+(def standard-flex-props      layout.standards/standard-flex-props)
+(def standard-shape-props     layout.standards/standard-shape-props)
+(def standard-size-props      layout.standards/standard-size-props)
+(def standard-body-size-props layout.standards/standard-body-size-props)
 
 ; @redirect (pretty-properties.live.standards/*)
 (def standard-animation-props live.standards/standard-animation-props)

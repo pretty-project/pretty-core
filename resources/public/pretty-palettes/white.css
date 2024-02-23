@@ -1,0 +1,46 @@
+
+/* TODO: split into soft white & hard white! */
+
+/***** White palette *****/
+/*** White ***/
+
+:root {
+  --white-xx-dark:  rgb( 225, 225, 225 );
+  --white-x-dark:   rgb( 230, 230, 230 );
+  --white-dark:     rgb( 235, 235, 235 );
+  --white:          rgb( 240, 240, 240 );
+  --white-light:    rgb( 245, 245, 245 );
+  --white-x-light:  rgb( 250, 250, 250 );
+  --white-xx-light: rgb( 255, 255, 255 );
+}
+
+/*** White ***/
+
+/*** Hard white ***/
+
+:root {
+  --hard-white-xx-dark:  rgb( 190, 190, 190 );
+  --hard-white-x-dark:   rgb( 195, 195, 195 );
+  --hard-white-dark:     rgb( 200, 200, 200 );
+  --hard-white:          rgb( 205, 205, 205 );
+  --hard-white-light:    rgb( 210, 210, 210 );
+  --hard-white-x-light:  rgb( 215, 215, 215 );
+  --hard-white-xx-light: rgb( 220, 220, 220 );
+}
+
+/*** Hard white ***/
+
+/*** Soft white ***/
+
+:root {
+  --soft-white-xx-dark:  rgb( 225, 225, 225 );
+  --soft-white-x-dark:   rgb( 230, 230, 230 );
+  --soft-white-dark:     rgb( 235, 235, 235 );
+  --soft-white:          rgb( 240, 240, 240 );
+  --soft-white-light:    rgb( 245, 245, 245 );
+  --soft-white-x-light:  rgb( 250, 250, 250 );
+  --soft-white-xx-light: rgb( 255, 255, 255 );
+}
+
+/*** Soft white ***/
+/***** White palette *****/

@@ -1,0 +1,604 @@
+
+/***** Size profiles *****/
+/*** Quarter block height ***/
+
+[data-size-unit="quarter-block"] {
+  --height-micro:  3px;
+  --height-xxs:    6px;
+  --height-xs:    12px;
+  --height-s:     18px;
+  --height-m:     24px;
+  --height-l:     30px;
+  --height-xl:    36px;
+  --height-xxl:   42px;
+  --height-3xl:   48px;
+  --height-4xl:   54px;
+  --height-5xl:   60px;
+}
+
+/*** Quarter block height ***/
+
+/*** Quarter block width ***/
+
+[data-size-unit="quarter-block"] {
+  --width-micro: var( --height-micro );
+  --width-xxs:   var( --height-xxs   );
+  --width-xs:    var( --height-xs    );
+  --width-s:     var( --height-s     );
+  --width-m:     var( --height-m     );
+  --width-l:     var( --height-l     );
+  --width-xl:    var( --height-xl    );
+  --width-xxl:   var( --height-xxl   );
+  --width-3xl:   var( --height-3xl   );
+  --width-4xl:   var( --height-4xl   );
+  --width-5xl:   var( --height-5xl   );
+}
+
+/*** Quarter block width ***/
+
+/*** Half block height ***/
+
+[data-size-unit="half-block"] {
+  --height-micro:   6px;
+  --height-xxs:    12px;
+  --height-xs:     24px;
+  --height-s:      36px;
+  --height-m:      48px;
+  --height-l:      60px;
+  --height-xl:     72px;
+  --height-xxl:    84px;
+  --height-3xl:    96px;
+  --height-4xl:   108px;
+  --height-5xl:   120px;
+}
+
+/*** Half block height ***/
+
+/*** Half block width ***/
+
+[data-size-unit="half-block"] {
+  --width-micro: var( --height-micro );
+  --width-xxs:   var( --height-xxs   );
+  --width-xs:    var( --height-xs    );
+  --width-s:     var( --height-s     );
+  --width-m:     var( --height-m     );
+  --width-l:     var( --height-l     );
+  --width-xl:    var( --height-xl    );
+  --width-xxl:   var( --height-xxl   );
+  --width-3xl:   var( --height-3xl   );
+  --width-4xl:   var( --height-4xl   );
+  --width-5xl:   var( --height-5xl   );
+}
+
+/*** Half block width ***/
+
+/*** Full block height ***/
+
+[data-size-unit="full-block"] {
+  --height-micro:  12px;
+  --height-xxs:    24px;
+  --height-xs:     48px;
+  --height-s:      72px;
+  --height-m:      96px;
+  --height-l:     120px;
+  --height-xl:    144px;
+  --height-xxl:   168px;
+  --height-3xl:   192px;
+  --height-4xl:   216px;
+  --height-5xl:   240px;
+}
+
+/*** Full block height ***/
+
+/*** Full block width ***/
+
+[data-size-unit="full-block"] {
+  --width-micro: var( --height-micro );
+  --width-xxs:   var( --height-xxs   );
+  --width-xs:    var( --height-xs    );
+  --width-s:     var( --height-s     );
+  --width-m:     var( --height-m     );
+  --width-l:     var( --height-l     );
+  --width-xl:    var( --height-xl    );
+  --width-xxl:   var( --height-xxl   );
+  --width-3xl:   var( --height-3xl   );
+  --width-4xl:   var( --height-4xl   );
+  --width-5xl:   var( --height-5xl   );
+}
+
+/*** Full block width ***/
+
+/*** Double block height ***/
+
+[data-size-unit="double-block"] {
+  --height-micro:  24px;
+  --height-xxs:    48px;
+  --height-xs:     96px;
+  --height-s:     144px;
+  --height-m:     192px;
+  --height-l:     240px;
+  --height-xl:    288px;
+  --height-xxl:   336px;
+  --height-3xl:   384px;
+  --height-4xl:   432px;
+  --height-5xl:   480px;
+}
+
+/*** Double block height ***/
+
+/*** Double block width ***/
+
+[data-size-unit="double-block"] {
+  --width-micro: var( --height-micro );
+  --width-xxs:   var( --height-xxs   );
+  --width-xs:    var( --height-xs    );
+  --width-s:     var( --height-s     );
+  --width-m:     var( --height-m     );
+  --width-l:     var( --height-l     );
+  --width-xl:    var( --height-xl    );
+  --width-xxl:   var( --height-xxl   );
+  --width-3xl:   var( --height-3xl   );
+  --width-4xl:   var( --height-4xl   );
+  --width-5xl:   var( --height-5xl   );
+}
+
+/*** Double block width ***/
+
+/*** Triple block height ***/
+
+[data-size-unit="triple-block"] {
+  --height-micro:  36px;
+  --height-xxs:    72px;
+  --height-xs:    144px;
+  --height-s:     216px;
+  --height-m:     288px;
+  --height-l:     360px;
+  --height-xl:    432px;
+  --height-xxl:   504px;
+  --height-3xl:   576px;
+  --height-4xl:   648px;
+  --height-5xl:   720px;
+}
+
+/*** Triple block height ***/
+
+/*** Triple block width ***/
+
+[data-size-unit="triple-block"] {
+  --width-micro: var( --height-micro );
+  --width-xxs:   var( --height-xxs   );
+  --width-xs:    var( --height-xs    );
+  --width-s:     var( --height-s     );
+  --width-m:     var( --height-m     );
+  --width-l:     var( --height-l     );
+  --width-xl:    var( --height-xl    );
+  --width-xxl:   var( --height-xxl   );
+  --width-3xl:   var( --height-3xl   );
+  --width-4xl:   var( --height-4xl   );
+  --width-5xl:   var( --height-5xl   );
+}
+
+/*** Triple block width ***/
+
+/*** Content height ***/
+/* MICRO */
+
+@media only screen and (min-height: 160px) and (max-height: 239px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:    100%;
+  --height-xs:     100%;
+  --height-s:      100%;
+  --height-m:      100%;
+  --height-l:      100%;
+  --height-xl:     100%;
+  --height-xxl:    100%;
+  --height-3xl:    100%;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* MICRO */
+
+/* XXS */
+
+@media only screen and (min-height: 240px) and (max-height: 319px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:     100%;
+  --height-s:      100%;
+  --height-m:      100%;
+  --height-l:      100%;
+  --height-xl:     100%;
+  --height-xxl:    100%;
+  --height-3xl:    100%;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* XXS */
+
+/* XS */
+
+@media only screen and (min-height: 320px) and (max-height: 399px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:      100%;
+  --height-m:      100%;
+  --height-l:      100%;
+  --height-xl:     100%;
+  --height-xxl:    100%;
+  --height-3xl:    100%;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* XS */
+
+/* S */
+
+@media only screen and (min-height: 400px) and (max-height: 479px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:     400px;
+  --height-m:      100%;
+  --height-l:      100%;
+  --height-xl:     100%;
+  --height-xxl:    100%;
+  --height-3xl:    100%;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* S */
+
+/* M */
+
+@media only screen and (min-height: 480px) and (max-height: 559px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:     400px;
+  --height-m:     480px;
+  --height-l:      100%;
+  --height-xl:     100%;
+  --height-xxl:    100%;
+  --height-3xl:    100%;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* M */
+
+/* L */
+
+@media only screen and (min-height: 560px) and (max-height: 639px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:     400px;
+  --height-m:     480px;
+  --height-l:     560px;
+  --height-xl:     100%;
+  --height-xxl:    100%;
+  --height-3xl:    100%;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* L */
+
+/* XL */
+
+@media only screen and (min-height: 640px) and (max-height: 719px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:     400px;
+  --height-m:     480px;
+  --height-l:     560px;
+  --height-xl:    640px;
+  --height-xxl:    100%;
+  --height-3xl:    100%;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* XL */
+
+/* XXL */
+
+@media only screen and (min-height: 720px) and (max-height: 799px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:     400px;
+  --height-m:     480px;
+  --height-l:     560px;
+  --height-xl:    640px;
+  --height-xxl:   720px;
+  --height-3xl:    100%;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* XXL */
+
+/* 3XL */
+
+@media only screen and (min-height: 800px) and (max-height: 879px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:     400px;
+  --height-m:     480px;
+  --height-l:     560px;
+  --height-xl:    640px;
+  --height-xxl:   720px;
+  --height-3xl:   800px;
+  --height-4xl:    100%;
+  --height-5xl:    100%;
+}}
+
+/* 3XL */
+
+/* 4XL */
+
+@media only screen and (min-height: 880px) and (max-height: 959px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:     400px;
+  --height-m:     480px;
+  --height-l:     560px;
+  --height-xl:    640px;
+  --height-xxl:   720px;
+  --height-3xl:   800px;
+  --height-4xl:   880px;
+  --height-5xl:    100%;
+}}
+
+/* 4XL */
+
+/* 5XL */
+
+@media only screen and (min-height: 960px) and (max-height: 9999px) {
+[data-size-unit="screen"] {
+  --height-micro: 160px;
+  --height-xxs:   240px;
+  --height-xs:    320px;
+  --height-s:     400px;
+  --height-m:     480px;
+  --height-l:     560px;
+  --height-xl:    640px;
+  --height-xxl:   720px;
+  --height-3xl:   800px;
+  --height-4xl:   880px;
+  --height-5xl:   960px;
+}}
+
+/* 5XL */
+/*** Content height ***/
+
+/*** Content width ***/
+/* MICRO */
+
+@media only screen and (min-width: 160px) and (max-width: 319px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:    100%;
+  --width-xs:     100%;
+  --width-s:      100%;
+  --width-m:      100%;
+  --width-l:      100%;
+  --width-xl:     100%;
+  --width-xxl:    100%;
+  --width-3xl:    100%;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* MICRO */
+
+/* XXS */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:     100%;
+  --width-s:      100%;
+  --width-m:      100%;
+  --width-l:      100%;
+  --width-xl:     100%;
+  --width-xxl:    100%;
+  --width-3xl:    100%;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* XXS */
+
+/* XS */
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:      100%;
+  --width-m:      100%;
+  --width-l:      100%;
+  --width-xl:     100%;
+  --width-xxl:    100%;
+  --width-3xl:    100%;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* XS */
+
+/* S */
+
+@media only screen and (min-width: 640px) and (max-width: 799px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:     640px;
+  --width-m:      100%;
+  --width-l:      100%;
+  --width-xl:     100%;
+  --width-xxl:    100%;
+  --width-3xl:    100%;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* S */
+
+/* M */
+
+@media only screen and (min-width: 800px) and (max-width: 959px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:     640px;
+  --width-m:     800px;
+  --width-l:      100%;
+  --width-xl:     100%;
+  --width-xxl:    100%;
+  --width-3xl:    100%;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* M */
+
+/* L */
+
+@media only screen and (min-width: 960px) and (max-width: 1119px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:     640px;
+  --width-m:     800px;
+  --width-l:     960px;
+  --width-xl:     100%;
+  --width-xxl:    100%;
+  --width-3xl:    100%;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* L */
+
+/* XL */
+
+@media only screen and (min-width: 1120px) and (max-width: 1279px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:     640px;
+  --width-m:     800px;
+  --width-l:     960px;
+  --width-xl:   1120px;
+  --width-xxl:    100%;
+  --width-3xl:    100%;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* XL */
+
+/* XXL */
+
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:     640px;
+  --width-m:     800px;
+  --width-l:     960px;
+  --width-xl:   1120px;
+  --width-xxl:  1280px;
+  --width-3xl:    100%;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* XXL */
+
+/* 3XL */
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:     640px;
+  --width-m:     800px;
+  --width-l:     960px;
+  --width-xl:   1120px;
+  --width-xxl:  1280px;
+  --width-3xl:  1440px;
+  --width-4xl:    100%;
+  --width-5xl:    100%;
+}}
+
+/* 3XL */
+
+/* 4XL */
+
+@media only screen and (min-width: 1600px) and (max-width: 1759px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:     640px;
+  --width-m:     800px;
+  --width-l:     960px;
+  --width-xl:   1120px;
+  --width-xxl:  1280px;
+  --width-3xl:  1440px;
+  --width-4xl:  1600px;
+  --width-5xl:    100%;
+}}
+
+/* 4XL */
+
+/* 5XL */
+
+@media only screen and (min-width: 1760px) and (max-width: 9999px) {
+[data-size-unit="screen"] {
+  --width-micro: 160px;
+  --width-xxs:   320px;
+  --width-xs:    480px;
+  --width-s:     640px;
+  --width-m:     800px;
+  --width-l:     960px;
+  --width-xl:   1120px;
+  --width-xxl:  1280px;
+  --width-3xl:  1440px;
+  --width-4xl:  1600px;
+  --width-5xl:  1760px;
+}}
+
+/* 5XL */
+/*** Content width ***/
+/***** Size profiles *****/

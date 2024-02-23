@@ -8,16 +8,14 @@
 ; Property groups are applied if at least one property of the group is also present in the provided property map.
 ;
 ; @note (#4012)
-; The '{:badge-content nil}' property is part of the group to ensure that the group is applied even if only the ':badge-content' property is provided.
+; The '{:background-uri nil}' property is part of the group to ensure that the group is applied even if only the ':background-uri' property is provided.
 ;
 ; @constant (map)
 ; {:background-position (keyword)
-;  :background-repeat? (boolean)
 ;  :background-size (keyword)
 ;  :background-uri (string)}
 (def STANDARD-BACKGROUND-IMAGE-PROPERTIES
      {:background-position :center
-      :background-repeat?  false
       :background-size     :cover
       :background-uri      nil})
 

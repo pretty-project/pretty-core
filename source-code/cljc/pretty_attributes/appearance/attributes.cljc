@@ -66,7 +66,6 @@
   ; @param (map) attributes
   ; @param (map) props
   ; {:background-position (keyword)(opt)
-  ;  :background-repeat? (boolean)(opt)
   ;  :background-size (keyword)(opt)
   ;  :background-uri (string)(opt)
   ;  ...}
@@ -80,15 +79,13 @@
   ; @return (map)
   ; {:data-background-image (keyword)
   ;  :data-background-position (keyword)
-  ;  :data-background-repeat (boolean)
   ;  :data-background-size (keyword)
   ;  :style (map)
   ;   {"--background-uri" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [background-position background-repeat? background-size background-uri]}]
+  [attributes {:keys [background-position background-size background-uri]}]
   (-> attributes (map/merge-some {:data-background-position background-position
-                                  :data-background-repeat   background-repeat?
                                   :data-background-size     background-size})
                  (utils/apply-property-value :background-uri :data-background-uri (css/url background-uri))))
 

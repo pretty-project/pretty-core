@@ -22,7 +22,6 @@
 (def inherit-icon-props         content.rules/inherit-icon-props)
 (def compose-content            content.rules/compose-content)
 (def compose-label              content.rules/compose-label)
-(def compose-structure          content.rules/compose-structure)
 (def auto-count-content-lines   content.rules/auto-count-content-lines)
 (def auto-limit-multiline-count content.rules/auto-limit-multiline-count)
 (def auto-set-multiline-height  content.rules/auto-set-multiline-height)
@@ -39,7 +38,6 @@
 
 ; @redirect (pretty-rules.layout.rules/*)
 (def auto-align-scrollable-flex layout.rules/auto-align-scrollable-flex)
-(def auto-adapt-wrapper-size    layout.rules/auto-adapt-wrapper-size)
 
 ; @redirect (pretty-rules.live.rules/*)
 (def auto-disable-effects  live.rules/auto-disable-effects)

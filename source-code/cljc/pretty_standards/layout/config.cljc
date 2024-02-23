@@ -26,8 +26,15 @@
      {:strength 100})
 
 ; @constant (map)
-; {:wrapper-height (keyword, px or string)
-;  :wrapper-width (keyword, px or string)}
-(def STANDARD-WRAPPER-SIZE-PROPERTIES
-     {:wrapper-height :content
-      :wrapper-width  :content})
+; {:height (keyword, px or string)
+;  :width (keyword, px or string)}
+(def STANDARD-SIZE-PROPERTIES
+     {:height :content
+      :width  :content})
+
+; @constant (map)
+; {:body-height (keyword, px or string)
+;  :body-width (keyword, px or string)}
+(def STANDARD-BODY-SIZE-PROPERTIES
+     {:body-height :parent
+      :body-width  :parent})

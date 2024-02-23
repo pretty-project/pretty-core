@@ -230,28 +230,3 @@
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
-
-(defn default-structure-props
-  ; @description
-  ; Applies the given default structure properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:body (metamorphic-content)(opt)
-  ;  :footer (metamorphic-content)(opt)
-  ;  :header (metamorphic-content)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-structure-props {...} {:body "My body"})
-  ; =>
-  ; {:body "My body"
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:body (metamorphic-content)
-  ;  :footer (metamorphic-content)
-  ;  :header (metamorphic-content)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))

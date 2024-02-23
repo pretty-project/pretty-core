@@ -81,16 +81,6 @@
 ;
 ;
 ;
-; @title background-repeat? property
-;
-; @--- Accepted types
-; {:background-repeat? (keyword)}
-;
-; @--- Examples
-; {:background-repeat? true}
-;
-;
-;
 ; @title background-size property
 ;
 ; @--- Accepted types

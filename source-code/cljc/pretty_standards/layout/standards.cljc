@@ -62,25 +62,48 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn standard-wrapper-size-props
+(defn standard-size-props
   ; @description
-  ; Applies the standard wrapper size properties on the given property map.
+  ; Applies the standard size properties on the given property map.
   ;
   ; @param (map) props
-  ; {:wrapper-height (keyword, px or string)(opt)
-  ;  :wrapper-width (keyword, px or string)(opt)
+  ; {:height (keyword, px or string)(opt)
+  ;  :width (keyword, px or string)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (standard-wrapper-size-props {...})
+  ; (standard-size-props {...})
   ; =>
-  ; {:wrapper-height :content
-  ;  :wrapper-width :content
+  ; {:height :content
+  ;  :width  :content
   ;  ...}
   ;
   ; @return (map)
-  ; {:wrapper-height (keyword, px or string)
-  ;  :wrapper-width (keyword, px or string)
+  ; {:height (keyword, px or string)
+  ;  :width (keyword, px or string)
   ;  ...}
   [props]
-  (-> props (map/use-default-values layout.config/STANDARD-WRAPPER-SIZE-PROPERTIES)))
+  (-> props (map/use-default-values layout.config/STANDARD-SIZE-PROPERTIES)))
+
+(defn standard-body-size-props
+  ; @description
+  ; Applies the standard body size properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:body-height (keyword, px or string)(opt)
+  ;  :body-width (keyword, px or string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (standard-body-size-props {...})
+  ; =>
+  ; {:body-height :parent
+  ;  :body-width  :parent
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:body-height (keyword, px or string)
+  ;  :body-width (keyword, px or string)
+  ;  ...}
+  [props]
+  (-> props (map/use-default-values layout.config/STANDARD-BODY-SIZE-PROPERTIES)))

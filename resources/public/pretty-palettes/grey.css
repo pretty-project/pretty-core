@@ -1,0 +1,46 @@
+
+/* TODO: split into soft grey & hard grey! */
+
+/***** Grey palette *****/
+/*** Grey ***/
+
+:root {
+  --grey-xx-dark:  rgb( 080, 080, 080 );
+  --grey-x-dark:   rgb( 100, 100, 100 );
+  --grey-dark:     rgb( 120, 120, 120 );
+  --grey:          rgb( 140, 140, 140 );
+  --grey-light:    rgb( 160, 160, 160 );
+  --grey-x-light:  rgb( 180, 180, 180 );
+  --grey-xx-light: rgb( 200, 200, 200 );
+}
+
+/*** Grey ***/
+
+/*** Hard grey ***/
+
+:root {
+  --hard-grey-xx-dark:  rgb( 120, 120, 120 );
+  --hard-grey-x-dark:   rgb( 125, 125, 125 );
+  --hard-grey-dark:     rgb( 130, 130, 130 );
+  --hard-grey:          rgb( 135, 135, 135 );
+  --hard-grey-light:    rgb( 140, 140, 140 );
+  --hard-grey-x-light:  rgb( 145, 145, 145 );
+  --hard-grey-xx-light: rgb( 150, 150, 150 );
+}
+
+/*** Hard grey ***/
+
+/*** Soft grey ***/
+
+:root {
+  --soft-grey-xx-dark:  rgb( 155, 155, 155 );
+  --soft-grey-x-dark:   rgb( 160, 160, 160 );
+  --soft-grey-dark:     rgb( 165, 165, 165 );
+  --soft-grey:          rgb( 170, 170, 170 );
+  --soft-grey-light:    rgb( 175, 175, 175 );
+  --soft-grey-x-light:  rgb( 180, 180, 180 );
+  --soft-grey-xx-light: rgb( 185, 185, 185 );
+}
+
+/*** Soft grey ***/
+/***** Grey palette *****/

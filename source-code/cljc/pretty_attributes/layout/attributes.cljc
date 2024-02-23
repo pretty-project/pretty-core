@@ -338,6 +338,54 @@
                  (utils/apply-property-value :min-height :data-min-height min-height "px")
                  (utils/apply-property-value :min-width  :data-min-width  min-width  "px")))
 
+(defn body-size-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the body size related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:body-height (keyword, px or string)(opt)
+  ;  :body-width (keyword, px or string)(opt)
+  ;  :max-body-height (keyword, px or string)(opt)
+  ;  :max-body-width (keyword, px or string)(opt)
+  ;  :min-body-height (keyword, px or string)(opt)
+  ;  :min-body-width (keyword, px or string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (body-size-attributes {...} {:body-height :parent :body-width :parent})
+  ; =>
+  ; {:data-height :parent
+  ;  :data-width  :parent
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-height (keyword)
+  ;  :data-max-height (keyword)
+  ;  :data-max-width (keyword)
+  ;  :data-min-height (keyword)
+  ;  :data-min-width (keyword)
+  ;  :data-width (keyword)
+  ;  :style (map)
+  ;   {"--height" (string)
+  ;    "--max-height" (string)
+  ;    "--max-width" (string)
+  ;    "--min-height" (string)
+  ;    "--min-width" (string)
+  ;    "--width" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [body-height body-width max-body-height max-body-width min-body-height min-body-width]}]
+  (-> attributes (utils/apply-property-value :height     :data-height     body-height     "px")
+                 (utils/apply-property-value :width      :data-width      body-width      "px")
+                 (utils/apply-property-value :max-height :data-max-height max-body-height "px")
+                 (utils/apply-property-value :max-width  :data-max-width  max-body-width  "px")
+                 (utils/apply-property-value :min-height :data-min-height min-body-height "px")
+                 (utils/apply-property-value :min-width  :data-min-width  min-body-width  "px")))
+
 (defn content-size-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -349,55 +397,39 @@
   ; @param (map) props
   ; {:content-height (keyword, px or string)(opt)
   ;  :content-width (keyword, px or string)(opt)
+  ;  :max-content-height (keyword, px or string)(opt)
+  ;  :max-content-width (keyword, px or string)(opt)
+  ;  :min-content-height (keyword, px or string)(opt)
+  ;  :min-content-width (keyword, px or string)(opt)
   ;  ...}
   ;
   ; @usage
   ; (content-size-attributes {...} {:content-height :parent :content-width :parent})
   ; =>
-  ; {:data-content-height :parent
-  ;  :data-content-width  :parent
+  ; {:data-height :parent
+  ;  :data-width  :parent
   ;  ...}
   ;
   ; @return (map)
-  ; {:data-content-height (keyword)
-  ;  :data-content-width (keyword)
+  ; {:data-height (keyword)
+  ;  :data-max-height (keyword)
+  ;  :data-max-width (keyword)
+  ;  :data-min-height (keyword)
+  ;  :data-min-width (keyword)
+  ;  :data-width (keyword)
   ;  :style (map)
-  ;   {"--content-height" (string)
-  ;    "--content-width" (string)
+  ;   {"--height" (string)
+  ;    "--max-height" (string)
+  ;    "--max-width" (string)
+  ;    "--min-height" (string)
+  ;    "--min-width" (string)
+  ;    "--width" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [content-height content-width]}]
-  (-> attributes (utils/apply-property-value :content-height :data-content-height content-height "px")
-                 (utils/apply-property-value :content-width  :data-content-width  content-width  "px")))
-
-(defn wrapper-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the wrapper size related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:wrapper-height (keyword, px or string)(opt)
-  ;  :wrapper-width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (wrapper-size-attributes {...} {:wrapper-height :content :wrapper-width :content})
-  ; =>
-  ; {:data-wrapper-height :content
-  ;  :data-wrapper-width  :content
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-wrapper-height (keyword)
-  ;  :data-wrapper-width (keyword)
-  ;  :style (map)
-  ;   {"--wrapper-height" (string)
-  ;    "--wrapper-width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [wrapper-height wrapper-width]}]
-  (-> attributes (utils/apply-property-value :wrapper-height :data-wrapper-height wrapper-height "px")
-                 (utils/apply-property-value :wrapper-width  :data-wrapper-width  wrapper-width  "px")))
+  [attributes {:keys [content-height content-width max-content-height max-content-width min-content-height min-content-width]}]
+  (-> attributes (utils/apply-property-value :height     :data-height     content-height     "px")
+                 (utils/apply-property-value :width      :data-width      content-width      "px")
+                 (utils/apply-property-value :max-height :data-max-height max-content-height "px")
+                 (utils/apply-property-value :max-width  :data-max-width  max-content-width  "px")
+                 (utils/apply-property-value :min-height :data-min-height min-content-height "px")
+                 (utils/apply-property-value :min-width  :data-min-width  min-content-width  "px")))

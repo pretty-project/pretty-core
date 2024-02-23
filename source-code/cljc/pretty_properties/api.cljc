@@ -8,7 +8,17 @@
               [pretty-properties.input.props :as input.props]
               [pretty-properties.layout.props      :as layout.props]
               [pretty-properties.live.props        :as live.props]
-              [pretty-properties.svg.props         :as svg.props]))
+              [pretty-properties.svg.props         :as svg.props]
+              [pretty-properties.accessories.props :as accessories.props]))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Overlay properties
+; @redirect (pretty-properties.accessories.tutorials/overlay-properties)
+
+; @redirect (pretty-properties.accessories.props/*)
+(def default-overlay-props accessories.props/default-overlay-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -96,9 +106,6 @@
 ; @tutorial Label properties
 ; @redirect (pretty-properties.content.tutorials/label-properties)
 
-; @tutorial Structure properties
-; @redirect (pretty-properties.content.tutorials/structure-properties)
-
 ; @redirect (pretty-properties.content.props/*)
 (def default-cursor-props    content.props/default-cursor-props)
 (def default-font-props      content.props/default-font-props)
@@ -108,7 +115,6 @@
 (def default-text-props      content.props/default-text-props)
 (def default-content-props   content.props/default-content-props)
 (def default-label-props     content.props/default-label-props)
-(def default-structure-props content.props/default-structure-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -197,11 +203,11 @@
 ; @tutorial Size properties
 ; @redirect (pretty-properties.layout.tutorials/size-properties)
 
+; @tutorial Body size properties
+; @redirect (pretty-properties.layout.tutorials/body-size-properties)
+
 ; @tutorial Content size properties
 ; @redirect (pretty-properties.layout.tutorials/content-size-properties)
-
-; @tutorial Wrapper size properties
-; @redirect (pretty-properties.layout.tutorials/wrapper-size-properties)
 
 ; @tutorial Space properties
 ; @redirect (pretty-properties.layout.tutorials/space-properties)
@@ -214,8 +220,8 @@
 (def default-position-props     layout.props/default-position-props)
 (def default-shape-props        layout.props/default-shape-props)
 (def default-size-props         layout.props/default-size-props)
+(def default-body-size-props    layout.props/default-body-size-props)
 (def default-content-size-props layout.props/default-content-size-props)
-(def default-wrapper-size-props layout.props/default-wrapper-size-props)
 (def default-space-props        layout.props/default-space-props)
 
 ;; ----------------------------------------------------------------------------

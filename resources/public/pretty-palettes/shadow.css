@@ -1,0 +1,30 @@
+
+/***** Shadow palette *****/
+/*** Black shadow ***/
+
+:root {
+  --black-shadow-xx-thin:  rgba( 0, 0, 0, 0.2 );
+  --black-shadow-x-thin:   rgba( 0, 0, 0, 0.3 );
+  --black-shadow-thin:     rgba( 0, 0, 0, 0.4 );
+  --black-shadow:          rgba( 0, 0, 0, 0.5 );
+  --black-shadow-thick:    rgba( 0, 0, 0, 0.6 );
+  --black-shadow-x-thick:  rgba( 0, 0, 0, 0.7 );
+  --black-shadow-xx-thick: rgba( 0, 0, 0, 0.8 );
+}
+
+/*** Black shadow ***/
+
+/*** White shadow ***/
+
+:root {
+  --white-shadow-xx-thin:  rgba( 255, 255, 255, 0.2 );
+  --white-shadow-x-thin:   rgba( 255, 255, 255, 0.3 );
+  --white-shadow-thin:     rgba( 255, 255, 255, 0.4 );
+  --white-shadow:          rgba( 255, 255, 255, 0.5 );
+  --white-shadow-thick:    rgba( 255, 255, 255, 0.6 );
+  --white-shadow-x-thick:  rgba( 255, 255, 255, 0.7 );
+  --white-shadow-xx-thick: rgba( 255, 255, 255, 0.8 );
+}
+
+/*** White shadow ***/
+/***** Shadow palette *****/

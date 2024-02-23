@@ -111,32 +111,6 @@
   [{:keys [label label-placeholder] :as props}]
   (-> props (map/assoc-some :label (metamorphic-content/compose label label-placeholder))))
 
-(defn compose-structure
-  ; @description
-  ; Composes the ':body', the ':footer' and the ':header' metamorphic content values (if any) in the given property map.
-  ;
-  ; @param (map) props
-  ; {:body (metamorphic-content)(opt)
-  ;  :footer (metamorphic-content)(opt)
-  ;  :header (metamorphic-content)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (compose-structure {:body "My body" ...})
-  ; =>
-  ; {:body "My body"
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:body (metamorphic-content)
-  ;  :footer (metamorphic-content)
-  ;  :header (metamorphic-content)
-  ;  ...}
-  [{:keys [body footer header] :as props}]
-  (-> props (map/update-some :body   metamorphic-content/compose)
-            (map/update-some :footer metamorphic-content/compose)
-            (map/update-some :header metamorphic-content/compose)))
-
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 

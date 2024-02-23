@@ -12,7 +12,6 @@
   ;
   ; @param (map) props
   ; {:background-position (keyword)(opt)
-  ;  :background-repeat? (boolean)(opt)
   ;  :background-size (keyword)(opt)
   ;  :background-uri (string)(opt)
   ;  ...}
@@ -21,14 +20,12 @@
   ; (standard-background-image-props {:background-uri "/my-image.png" ...})
   ; =>
   ; {:background-position :center
-  ;  :background-repeat?  false
   ;  :background-size     :cover
   ;  :background-uri      "/my-image.png"
   ;  ...}
   ;
   ; @return (map)
   ; {:background-position (keyword)
-  ;  :background-repeat? (boolean)
   ;  :background-size (keyword)
   ;  :background-uri (string)
   ;  ...}
