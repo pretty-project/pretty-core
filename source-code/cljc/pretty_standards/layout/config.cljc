@@ -26,15 +26,15 @@
      {:strength 100})
 
 ; @constant (map)
-; {:height (keyword, px or string)
-;  :width (keyword, px or string)}
-(def STANDARD-SIZE-PROPERTIES
-     {:height :content
-      :width  :content})
+; {:inner-height (keyword, px or string)
+;  :inner-width (keyword, px or string)}
+(def STANDARD-INNER-SIZE-PROPERTIES
+     {:inner-height :parent
+      :inner-width  :parent})
 
 ; @constant (map)
-; {:body-height (keyword, px or string)
-;  :body-width (keyword, px or string)}
-(def STANDARD-BODY-SIZE-PROPERTIES
-     {:body-height :parent
-      :body-width  :parent})
+; {:outer-height (keyword, px or string)
+;  :outer-width (keyword, px or string)}
+(def STANDARD-OUTER-SIZE-PROPERTIES
+     {:outer-height :content
+      :outer-width  :content})

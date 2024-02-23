@@ -300,14 +300,258 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Size properties
+; @tutorial Inner size properties
 ;
-; @title size-unit property
+; @title inner-height property
 ;
-; The ':size-unit' property controls the predefined size profiles (e.g., :xxs, :xs, ...) applied within which size system.
+; @--- Accepted types
+; {:inner-height (keyword, px or string)}
+;
+; @--- Examples
+; {:inner-height :xs}
+; {:inner-height 10}
+; {:inner-height "10px"}
+; {:inner-height "5%"}
+;
+; @--- Predefined values
+; :auto, :content, :parent, :grow,
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title inner-width property
+;
+; @--- Accepted types
+; {:inner-width (keyword, px or string)}
+;
+; @--- Examples
+; {:inner-width :xs}
+; {:inner-width 10}
+; {:inner-width "10px"}
+; {:inner-width "5%"}
+;
+; @--- Predefined values
+; :auto, :content, :parent, :grow,
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title max-inner-height property
+;
+; @--- Accepted types
+; {:max-inner-height (keyword, px or string)}
+;
+; @--- Examples
+; {:max-inner-height :xs}
+; {:max-inner-height 10}
+; {:max-inner-height "10px"}
+; {:max-inner-height "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title max-inner-width property
+;
+; @--- Accepted types
+; {:max-inner-width (keyword, px or string)}
+;
+; @--- Examples
+; {:max-inner-width :xs}
+; {:max-inner-width 10}
+; {:max-inner-width "10px"}
+; {:max-inner-width "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title min-inner-height property
+;
+; @--- Accepted types
+; {:min-inner-height (keyword, px or string)}
+;
+; @--- Examples
+; {:min-inner-height :xs}
+; {:min-inner-height 10}
+; {:min-inner-height "10px"}
+; {:min-inner-height "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title min-inner-width property
+;
+; @--- Accepted types
+; {:min-inner-width (keyword, px or string)}
+;
+; @--- Examples
+; {:min-inner-width :xs}
+; {:min-inner-width 10}
+; {:min-inner-width "10px"}
+; {:min-inner-width "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title inner-size-unit property
+;
+; Check out the [size unit systems](#size-unit-systems) section.
+;
+; @--- Accepted types
+; {:inner-size-unit (keyword)}
+;
+; @--- Examples
+; {:inner-size-unit :full-block}
+;
+; @--- Predefined values
+; :quarter-block, :half-block, :full-block, :double-block, :triple-block, :screen
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Outer size properties
+;
+; @title outer-height property
+;
+; @--- Accepted types
+; {:outer-height (keyword, px or string)}
+;
+; @--- Examples
+; {:outer-height :xs}
+; {:outer-height 10}
+; {:outer-height "10px"}
+; {:outer-height "5%"}
+;
+; @--- Predefined values
+; :auto, :content, :parent, :grow,
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title outer-width property
+;
+; @--- Accepted types
+; {:outer-width (keyword, px or string)}
+;
+; @--- Examples
+; {:outer-width :xs}
+; {:outer-width 10}
+; {:outer-width "10px"}
+; {:outer-width "5%"}
+;
+; @--- Predefined values
+; :auto, :content, :parent, :grow,
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title max-outer-height property
+;
+; @--- Accepted types
+; {:max-outer-height (keyword, px or string)}
+;
+; @--- Examples
+; {:max-outer-height :xs}
+; {:max-outer-height 10}
+; {:max-outer-height "10px"}
+; {:max-outer-height "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title max-outer-width property
+;
+; @--- Accepted types
+; {:max-outer-width (keyword, px or string)}
+;
+; @--- Examples
+; {:max-outer-width :xs}
+; {:max-outer-width 10}
+; {:max-outer-width "10px"}
+; {:max-outer-width "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title min-outer-height property
+;
+; @--- Accepted types
+; {:min-outer-height (keyword, px or string)}
+;
+; @--- Examples
+; {:min-outer-height :xs}
+; {:min-outer-height 10}
+; {:min-outer-height "10px"}
+; {:min-outer-height "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title min-outer-width property
+;
+; @--- Accepted types
+; {:min-outer-width (keyword, px or string)}
+;
+; @--- Examples
+; {:min-outer-width :xs}
+; {:min-outer-width 10}
+; {:min-outer-width "10px"}
+; {:min-outer-width "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title outer-size-unit property
+;
+; Check out the [size unit systems](#size-unit-systems) section.
+;
+; @--- Accepted types
+; {:outer-size-unit (keyword)}
+;
+; @--- Examples
+; {:outer-size-unit :full-block}
+;
+; @--- Predefined values
+; :quarter-block, :half-block, :full-block, :double-block, :triple-block, :screen
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Size unit systems
 ;
 ; @---
-; Height/width profiles in ':quarter-block' size system:
+; The ':inner-size-unit' and ':outer-size-unit' properties determine that the predefined size profiles (e.g., :xxs, :xs, ...) applied within which size system.
+;
+; @---
+; The ':quarter-block', ':half-block', ':full-block', ':double-block' and ':triple-block' size systems are static px based units in different size categories.
+;
+; @---
+; The ':screen' size system implements an adaptive content size logic, where the height and width profiles are adjusted
+; to common screen resolutions; and in case the selected profile is larger than the actual screen size, it replaces the applied value with '100%'.
+;
+; For example, if the actual viewport width is 1280px (i.e. XXL), the 3XL, 4XL and 5XL width profiles are replaced with the '{width: 100%}' setting.
+;
+; @---
+; The selected size unit system is inherited from ascendent elements.
+; If the outer element has a selected size unit, the inner element inherits its value as default.
+;
+; @---
+; inner-height / inner-width profiles in ':quarter-block' size system:
 ;
 ; MICRO:  3px -  3px
 ; XXS:    6px -  6px
@@ -322,7 +566,7 @@
 ; 5XL:   60px - 60px
 ;
 ; @---
-; Height/width profiles in ':half-block' size system:
+; inner-height / inner-width profiles in ':half-block' size system:
 ;
 ; MICRO:  6px -   6px
 ; XXS:   12px -  12px
@@ -337,7 +581,7 @@
 ; 5XL:  120px - 120px
 ;
 ; @---
-; Height/width profiles in ':full-block' size system:
+; inner-height / inner-width profiles in ':full-block' size system:
 ;
 ; MICRO: 12px -  12px
 ; XXS:   24px -  24px
@@ -352,7 +596,7 @@
 ; 5XL:  240px - 240px
 ;
 ; @---
-; Height/width profiles in ':double-block' size system:
+; inner-height / inner-width profiles in ':double-block' size system:
 ;
 ; MICRO: 24px -  24px
 ; XXS:   48px -  48px
@@ -367,7 +611,7 @@
 ; 5XL:  480px - 480px
 ;
 ; @---
-; Height/width profiles in ':triple-block' size system:
+; inner-height / inner-width profiles in ':triple-block' size system:
 ;
 ; MICRO: 36px -  36px
 ; XXS:   72px -  72px
@@ -382,7 +626,7 @@
 ; 5XL:  720px - 720px
 ;
 ; @---
-; Height/width profiles in ':screen' size system:
+; inner-height / inner-width profiles in ':screen' size system:
 ;
 ; MICRO:  160px - 160px
 ; XXS:    320px - 240px
@@ -395,214 +639,6 @@
 ; 3XL:   1440px - 800px
 ; 4XL:   1600px - 880px
 ; 5XL:   1760px - 960px
-;
-; The '{:size-unit :screen}' setting implements an adaptive content size logic, where the height and width profiles
-; are adjusted to common screen resolutions; and in case the selected profile is larger than the actual screen
-; size, it replaces the applied value with '100%'.
-;
-; For example, if the actual viewport width is 1280px (i.e. XXL), the 3XL, 4XL and 5XL width profiles are replaced with the '{width: 100%}' setting.
-;
-;
-;
-; @title height property
-;
-; @--- Accepted types
-; {:height (keyword, px or string)}
-;
-; @--- Examples
-; {:height :xs}
-; {:height 10}
-; {:height "10px"}
-; {:height "5%"}
-;
-; @--- Predefined values
-; :auto, :content, :parent, :grow,
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title width property
-;
-; @--- Accepted types
-; {:width (keyword, px or string)}
-;
-; @--- Examples
-; {:width :xs}
-; {:width 10}
-; {:width "10px"}
-; {:width "5%"}
-;
-; @--- Predefined values
-; :auto, :content, :parent, :grow,
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title max-height property
-;
-; @--- Accepted types
-; {:max-height (keyword, px or string)}
-;
-; @--- Examples
-; {:max-height :xs}
-; {:max-height 10}
-; {:max-height "10px"}
-; {:max-height "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title max-width property
-;
-; @--- Accepted types
-; {:max-width (keyword, px or string)}
-;
-; @--- Examples
-; {:max-width :xs}
-; {:max-width 10}
-; {:max-width "10px"}
-; {:max-width "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title min-height property
-;
-; @--- Accepted types
-; {:min-height (keyword, px or string)}
-;
-; @--- Examples
-; {:min-height :xs}
-; {:min-height 10}
-; {:min-height "10px"}
-; {:min-height "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title min-width property
-;
-; @--- Accepted types
-; {:min-width (keyword, px or string)}
-;
-; @--- Examples
-; {:min-width :xs}
-; {:min-width 10}
-; {:min-width "10px"}
-; {:min-width "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Body size properties
-;
-; @note
-; The body size properties describe inner element dimensions within the main element.
-;
-; @title body-height property
-;
-; @--- Accepted types
-; {:body-height (keyword, px or string)}
-;
-; @--- Examples
-; {:body-height :xs}
-; {:body-height 10}
-; {:body-height "10px"}
-; {:body-height "5%"}
-;
-; @--- Predefined values
-; :auto, :content, :parent, :grow,
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title body-width property
-;
-; @--- Accepted types
-; {:body-width (keyword, px or string)}
-;
-; @--- Examples
-; {:body-width :xs}
-; {:body-width 10}
-; {:body-width "10px"}
-; {:body-width "5%"}
-;
-; @--- Predefined values
-; :auto, :content, :parent, :grow,
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title max-body-height property
-;
-; @--- Accepted types
-; {:max-body-height (keyword, px or string)}
-;
-; @--- Examples
-; {:max-body-height :xs}
-; {:max-body-height 10}
-; {:max-body-height "10px"}
-; {:max-body-height "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title max-body-width property
-;
-; @--- Accepted types
-; {:max-body-width (keyword, px or string)}
-;
-; @--- Examples
-; {:max-body-width :xs}
-; {:max-body-width 10}
-; {:max-body-width "10px"}
-; {:max-body-width "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title min-body-height property
-;
-; @--- Accepted types
-; {:min-body-height (keyword, px or string)}
-;
-; @--- Examples
-; {:min-body-height :xs}
-; {:min-body-height 10}
-; {:min-body-height "10px"}
-; {:min-body-height "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title min-body-width property
-;
-; @--- Accepted types
-; {:min-body-width (keyword, px or string)}
-;
-; @--- Examples
-; {:min-body-width :xs}
-; {:min-body-width 10}
-; {:min-body-width "10px"}
-; {:min-body-width "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

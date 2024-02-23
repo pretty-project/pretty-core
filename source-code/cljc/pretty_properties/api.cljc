@@ -200,11 +200,14 @@
 ; @tutorial Shape properties
 ; @redirect (pretty-properties.layout.tutorials/shape-properties)
 
-; @tutorial Size properties
-; @redirect (pretty-properties.layout.tutorials/size-properties)
+; @tutorial Inner size properties
+; @redirect (pretty-properties.layout.tutorials/inner-size-properties)
 
-; @tutorial Body size properties
-; @redirect (pretty-properties.layout.tutorials/body-size-properties)
+; @tutorial Outer size properties
+; @redirect (pretty-properties.layout.tutorials/outer-size-properties)
+
+; @tutorial Size unit systems properties
+; @redirect (pretty-properties.layout.tutorials/size-unit-systems-properties)
 
 ; @tutorial Content size properties
 ; @redirect (pretty-properties.layout.tutorials/content-size-properties)
@@ -219,8 +222,8 @@
 (def default-fullscreen-props   layout.props/default-fullscreen-props)
 (def default-position-props     layout.props/default-position-props)
 (def default-shape-props        layout.props/default-shape-props)
-(def default-size-props         layout.props/default-size-props)
-(def default-body-size-props    layout.props/default-body-size-props)
+(def default-inner-size-props   layout.props/default-inner-size-props)
+(def default-outer-size-props   layout.props/default-outer-size-props)
 (def default-content-size-props layout.props/default-content-size-props)
 (def default-space-props        layout.props/default-space-props)
 

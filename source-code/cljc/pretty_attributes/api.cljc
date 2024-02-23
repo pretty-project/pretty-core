@@ -65,8 +65,8 @@
 (def indent-attributes       layout.attributes/indent-attributes)
 (def outdent-attributes      layout.attributes/outdent-attributes)
 (def position-attributes     layout.attributes/position-attributes)
-(def size-attributes         layout.attributes/size-attributes)
-(def body-size-attributes    layout.attributes/body-size-attributes)
+(def inner-size-attributes   layout.attributes/inner-size-attributes)
+(def outer-size-attributes   layout.attributes/outer-size-attributes)
 (def content-size-attributes layout.attributes/content-size-attributes)
 
 ; @redirect (pretty-attributes.live.attributes/*)

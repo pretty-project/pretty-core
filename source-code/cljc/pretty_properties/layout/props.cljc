@@ -180,61 +180,72 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-size-props
+(defn default-inner-size-props
   ; @description
-  ; Applies the given default size properties on the given property map.
+  ; Applies the given default inner size properties on the given property map.
   ;
   ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :max-height (keyword, px or string)(opt)
-  ;  :max-width (keyword, px or string)(opt)
-  ;  :min-height (keyword, px or string)(opt)
-  ;  :min-width (keyword, px or string)(opt)
-  ;  :size-unit (keyword)(opt)
-  ;  :width (keyword, px or string)(opt)
+  ; {:inner-height (keyword, px or string)(opt)
+  ;  :inner-size-unit (keyword)(opt)
+  ;  :inner-width (keyword, px or string)(opt)
+  ;  :max-inner-height (keyword, px or string)(opt)
+  ;  :max-inner-width (keyword, px or string)(opt)
+  ;  :min-inner-height (keyword, px or string)(opt)
+  ;  :min-inner-width (keyword, px or string)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-size-props {...} {:height :xl :size-unit :full-block :width :xl})
+  ; (default-inner-size-props {...} {:inner-height :xl :inner-size-unit :full-block :inner-width :xl})
   ; =>
-  ; {:height    :xl
-  ;  :size-unit :full-block
-  ;  :width     :xl
+  ; {:inner-height    :xl
+  ;  :inner-size-unit :full-block
+  ;  :inner-width     :xl
   ;  ...}
   ;
   ; @return (map)
-  ; {:height (keyword, px or string)
-  ;  :max-height (keyword, px or string)
-  ;  :max-width (keyword, px or string)
-  ;  :min-height (keyword, px or string)
-  ;  :min-width (keyword, px or string)
-  ;  :size-unit (keyword)
-  ;  :width (keyword, px or string)
+  ; {:inner-height (keyword, px or string)
+  ;  :inner-size-unit (keyword)
+  ;  :inner-width (keyword, px or string)
+  ;  :max-inner-height (keyword, px or string)
+  ;  :max-inner-width (keyword, px or string)
+  ;  :min-inner-height (keyword, px or string)
+  ;  :min-inner-width (keyword, px or string)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
 
-(defn default-body-size-props
+(defn default-outer-size-props
   ; @description
-  ; Applies the given default body size properties on the given property map.
+  ; Applies the given default outer size properties on the given property map.
   ;
   ; @param (map) props
-  ; {:body-height (keyword, px or string)(opt)
-  ;  :body-width (keyword, px or string)(opt)
+  ; {:outer-height (keyword, px or string)(opt)
+  ;  :outer-size-unit (keyword)(opt)
+  ;  :outer-width (keyword, px or string)(opt)
+  ;  :max-outer-height (keyword, px or string)(opt)
+  ;  :max-outer-width (keyword, px or string)(opt)
+  ;  :min-outer-height (keyword, px or string)(opt)
+  ;  :min-outer-width (keyword, px or string)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-body-size-props {...} {:body-height :parent :body-width :parent})
+  ; (default-outer-size-props {...} {:outer-height :xl :outer-size-unit :full-block :outer-width :xl})
   ; =>
-  ; {:body-height :parent
-  ;  :body-width  :parent
+  ; {:outer-height    :xl
+  ;  :outer-size-unit :full-block
+  ;  :outer-width     :xl
   ;  ...}
   ;
   ; @return (map)
-  ; {:body-height (keyword, px or string)
-  ;  :body-width (keyword, px or string)
+  ; {:max-outer-height (keyword, px or string)
+  ;  :max-outer-width (keyword, px or string)
+  ;  :min-outer-height (keyword, px or string)
+  ;  :min-outer-width (keyword, px or string)
+  ;  :outer-height (keyword, px or string)
+  ;  :outer-size-unit (keyword)
+  ;  :outer-width (keyword, px or string)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

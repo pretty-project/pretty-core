@@ -62,48 +62,48 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn standard-size-props
+(defn standard-inner-size-props
   ; @description
-  ; Applies the standard size properties on the given property map.
+  ; Applies the standard inner size properties on the given property map.
   ;
   ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :width (keyword, px or string)(opt)
+  ; {:inner-height (keyword, px or string)(opt)
+  ;  :inner-width (keyword, px or string)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (standard-size-props {...})
+  ; (standard-inner-size-props {...})
   ; =>
-  ; {:height :content
-  ;  :width  :content
+  ; {:inner-height :parent
+  ;  :inner-width  :parent
   ;  ...}
   ;
   ; @return (map)
-  ; {:height (keyword, px or string)
-  ;  :width (keyword, px or string)
+  ; {:inner-height (keyword, px or string)
+  ;  :inner-width (keyword, px or string)
   ;  ...}
   [props]
-  (-> props (map/use-default-values layout.config/STANDARD-SIZE-PROPERTIES)))
+  (-> props (map/use-default-values layout.config/STANDARD-INNER-SIZE-PROPERTIES)))
 
-(defn standard-body-size-props
+(defn standard-outer-size-props
   ; @description
-  ; Applies the standard body size properties on the given property map.
+  ; Applies the standard outer size properties on the given property map.
   ;
   ; @param (map) props
-  ; {:body-height (keyword, px or string)(opt)
-  ;  :body-width (keyword, px or string)(opt)
+  ; {:outer-height (keyword, px or string)(opt)
+  ;  :outer-width (keyword, px or string)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (standard-body-size-props {...})
+  ; (standard-outer-size-props {...})
   ; =>
-  ; {:body-height :parent
-  ;  :body-width  :parent
+  ; {:outer-height :content
+  ;  :outer-width  :content
   ;  ...}
   ;
   ; @return (map)
-  ; {:body-height (keyword, px or string)
-  ;  :body-width (keyword, px or string)
+  ; {:outer-height (keyword, px or string)
+  ;  :outer-width (keyword, px or string)
   ;  ...}
   [props]
-  (-> props (map/use-default-values layout.config/STANDARD-BODY-SIZE-PROPERTIES)))
+  (-> props (map/use-default-values layout.config/STANDARD-OUTER-SIZE-PROPERTIES)))

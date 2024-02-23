@@ -38,10 +38,10 @@
 (def standard-input-option-props input.standards/standard-input-option-props)
 
 ; @redirect (pretty-properties.layout.standards/*)
-(def standard-flex-props      layout.standards/standard-flex-props)
-(def standard-shape-props     layout.standards/standard-shape-props)
-(def standard-size-props      layout.standards/standard-size-props)
-(def standard-body-size-props layout.standards/standard-body-size-props)
+(def standard-flex-props       layout.standards/standard-flex-props)
+(def standard-shape-props      layout.standards/standard-shape-props)
+(def standard-inner-size-props layout.standards/standard-inner-size-props)
+(def standard-outer-size-props layout.standards/standard-outer-size-props)
 
 ; @redirect (pretty-properties.live.standards/*)
 (def standard-animation-props live.standards/standard-animation-props)

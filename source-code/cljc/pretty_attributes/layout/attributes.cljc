@@ -286,26 +286,26 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn size-attributes
+(defn inner-size-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @description
-  ; Applies the size related values on the given attribute map.
+  ; Applies the inner size related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:height (keyword, px or string)(opt)
-  ;  :max-height (keyword, px or string)(opt)
-  ;  :max-width (keyword, px or string)(opt)
-  ;  :min-height (keyword, px or string)(opt)
-  ;  :min-width (keyword, px or string)(opt)
-  ;  :size-unit (keyword)(opt)
-  ;  :width (keyword, px or string)(opt)
+  ; {:inner-height (keyword, px or string)(opt)
+  ;  :inner-size-unit (keyword)(opt)
+  ;  :inner-width (keyword, px or string)(opt)
+  ;  :max-inner-height (keyword, px or string)(opt)
+  ;  :max-inner-width (keyword, px or string)(opt)
+  ;  :min-inner-height (keyword, px or string)(opt)
+  ;  :min-inner-width (keyword, px or string)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (size-attributes {...} {:height :xl :size-unit :full-block :width :xl})
+  ; (inner-size-attributes {...} {:inner-height :xl :inner-size-unit :full-block :inner-width :xl})
   ; =>
   ; {:data-height    :xl
   ;  :data-size-unit :full-block
@@ -329,37 +329,39 @@
   ;    "--width" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [height max-height max-width min-height min-width size-unit width]}]
-  (-> attributes (map/merge-some {:data-size-unit size-unit})
-                 (utils/apply-property-value :height     :data-height     height     "px")
-                 (utils/apply-property-value :width      :data-width      width      "px")
-                 (utils/apply-property-value :max-height :data-max-height max-height "px")
-                 (utils/apply-property-value :max-width  :data-max-width  max-width  "px")
-                 (utils/apply-property-value :min-height :data-min-height min-height "px")
-                 (utils/apply-property-value :min-width  :data-min-width  min-width  "px")))
+  [attributes {:keys [inner-height inner-size-unit inner-width max-inner-height max-inner-width min-inner-height min-inner-width]}]
+  (-> attributes (map/merge-some {:data-size-unit inner-size-unit})
+                 (utils/apply-property-value :height     :data-height     inner-height     "px")
+                 (utils/apply-property-value :width      :data-width      inner-width      "px")
+                 (utils/apply-property-value :max-height :data-max-height max-inner-height "px")
+                 (utils/apply-property-value :max-width  :data-max-width  max-inner-width  "px")
+                 (utils/apply-property-value :min-height :data-min-height min-inner-height "px")
+                 (utils/apply-property-value :min-width  :data-min-width  min-inner-width  "px")))
 
-(defn body-size-attributes
+(defn outer-size-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @description
-  ; Applies the body size related values on the given attribute map.
+  ; Applies the outer size related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:body-height (keyword, px or string)(opt)
-  ;  :body-width (keyword, px or string)(opt)
-  ;  :max-body-height (keyword, px or string)(opt)
-  ;  :max-body-width (keyword, px or string)(opt)
-  ;  :min-body-height (keyword, px or string)(opt)
-  ;  :min-body-width (keyword, px or string)(opt)
+  ; {:max-outer-height (keyword, px or string)(opt)
+  ;  :max-outer-width (keyword, px or string)(opt)
+  ;  :min-outer-height (keyword, px or string)(opt)
+  ;  :min-outer-width (keyword, px or string)(opt)
+  ;  :outer-height (keyword, px or string)(opt)
+  ;  :outer-size-unit (keyword)(opt)
+  ;  :outer-width (keyword, px or string)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (body-size-attributes {...} {:body-height :parent :body-width :parent})
+  ; (outer-size-attributes {...} {:outer-height :xl :outer-size-unit :full-block :outer-width :xl})
   ; =>
-  ; {:data-height :parent
-  ;  :data-width  :parent
+  ; {:data-height    :xl
+  ;  :data-size-unit :full-block
+  ;  :data-width     :xl
   ;  ...}
   ;
   ; @return (map)
@@ -368,6 +370,7 @@
   ;  :data-max-width (keyword)
   ;  :data-min-height (keyword)
   ;  :data-min-width (keyword)
+  ;  :data-size-unit (keyword)
   ;  :data-width (keyword)
   ;  :style (map)
   ;   {"--height" (string)
@@ -378,13 +381,14 @@
   ;    "--width" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [body-height body-width max-body-height max-body-width min-body-height min-body-width]}]
-  (-> attributes (utils/apply-property-value :height     :data-height     body-height     "px")
-                 (utils/apply-property-value :width      :data-width      body-width      "px")
-                 (utils/apply-property-value :max-height :data-max-height max-body-height "px")
-                 (utils/apply-property-value :max-width  :data-max-width  max-body-width  "px")
-                 (utils/apply-property-value :min-height :data-min-height min-body-height "px")
-                 (utils/apply-property-value :min-width  :data-min-width  min-body-width  "px")))
+  [attributes {:keys [max-outer-height max-outer-width min-outer-height min-outer-width outer-height outer-size-unit outer-width]}]
+  (-> attributes (map/merge-some {:data-size-unit outer-size-unit})
+                 (utils/apply-property-value :height     :data-height     outer-height     "px")
+                 (utils/apply-property-value :width      :data-width      outer-width      "px")
+                 (utils/apply-property-value :max-height :data-max-height max-outer-height "px")
+                 (utils/apply-property-value :max-width  :data-max-width  max-outer-width  "px")
+                 (utils/apply-property-value :min-height :data-min-height min-outer-height "px")
+                 (utils/apply-property-value :min-width  :data-min-width  min-outer-width  "px")))
 
 (defn content-size-attributes
   ; @note
