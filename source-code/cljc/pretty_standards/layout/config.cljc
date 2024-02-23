@@ -25,6 +25,26 @@
 (def STANDARD-SHAPE-PROPERTIES
      {:strength 100})
 
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
+;
+; @constant (map)
+; {:inner-position (keyword)
+;  :inner-position-method (keyword)}
+(def STANDARD-INNER-POSITION-PROPERTIES
+     {:inner-position        nil
+      :inner-position-method :flex})
+
+; @note (pretty-standards.appearance.config#4011)
+; @note (pretty-standards.appearance.config#4012)
+;
+; @constant (map)
+; {:outer-position (keyword)
+;  :outer-position-method (keyword)}
+(def STANDARD-OUTER-POSITION-PROPERTIES
+     {:outer-position        nil
+      :outer-position-method :absolute})
+
 ; @constant (map)
 ; {:inner-height (keyword, px or string)
 ;  :inner-width (keyword, px or string)}

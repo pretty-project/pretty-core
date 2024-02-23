@@ -230,29 +230,17 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Position properties
+; @tutorial Inner position properties
 ;
-; @title layer property
+; Inner position properties are applied on the [inner element](#xxx).
 ;
-; @--- Accepted types
-; {:layer (keyword or integer)}
-;
-; @--- Examples
-; {:layer :uppermost}
-; {:layer 25}
-;
-; @--- Predefined values
-; :lowermost, :uppermost
-;
-;
-;
-; @title position property
+; @title inner-position property
 ;
 ; @--- Accepted types
-; {:position (keyword)}
+; {:inner-position (keyword)}
 ;
 ; @--- Examples
-; {:position :tr}
+; {:inner-position :tr}
 ;
 ; @--- Predefined values
 ; :tr, :br, :bl, :tl,
@@ -260,26 +248,72 @@
 ;
 ;
 ;
-; @title position-base property
+; @title inner-position-method property
 ;
 ; @--- Accepted types
-; {:position-base (keyword)}
+; {:inner-position-method (keyword)}
 ;
 ; @--- Examples
-; {:position-base :inner}
+; {:inner-position-method :flex}
 ;
 ; @--- Predefined values
-; :inner, :outer
+; :flex
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Outer position properties
 ;
+; Outer position properties are applied on the [outer element](#xxx).
 ;
-;
-; @title position-method property
+; @title outer-layer property
 ;
 ; @--- Accepted types
-; {:position-method (keyword)}
+; {:outer-layer (keyword or integer)}
 ;
 ; @--- Examples
-; {:position-method :absolute}
+; {:outer-layer :uppermost}
+; {:outer-layer 25}
+;
+; @--- Predefined values
+; :lowermost, :uppermost
+;
+;
+;
+; @title outer-position property
+;
+; @--- Accepted types
+; {:outer-position (keyword)}
+;
+; @--- Examples
+; {:outer-position :tr}
+;
+; @--- Predefined values
+; :tr, :br, :bl, :tl,
+; :left, :right, :bottom, :top, :center
+;
+;
+;
+; @title outer-position-base property
+;
+; @--- Accepted types
+; {:outer-position-base (keyword)}
+;
+; @--- Examples
+; {:outer-position-base :internal}
+;
+; @--- Predefined values
+; :internal, :external
+;
+;
+;
+; @title outer-position-method property
+;
+; @--- Accepted types
+; {:outer-position-method (keyword)}
+;
+; @--- Examples
+; {:outer-position-method :absolute}
 ;
 ; @--- Predefined values
 ; :absolute, :fixed, :relative, :static, :sticky
@@ -301,6 +335,8 @@
 ;; ----------------------------------------------------------------------------
 
 ; @tutorial Inner size properties
+;
+; Inner size properties are applied on the [inner element](#xxx).
 ;
 ; @title inner-height property
 ;
@@ -417,6 +453,8 @@
 ;; ----------------------------------------------------------------------------
 
 ; @tutorial Outer size properties
+;
+; Outer size properties are applied on the [outer element](#xxx).
 ;
 ; @title outer-height property
 ;
@@ -548,7 +586,7 @@
 ;
 ; @---
 ; The selected size unit system is inherited from ascendent elements.
-; If the outer element has a selected size unit, the inner element inherits its value as default.
+; If the [outer element](#xxx) has a selected size unit, the [inner element](#xxx) inherits its value as default.
 ;
 ; @---
 ; inner-height / inner-width profiles in ':quarter-block' size system:

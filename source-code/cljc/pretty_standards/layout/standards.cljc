@@ -39,6 +39,55 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn standard-inner-position-props
+  ; @description
+  ; Applies the standard inner position properties on the given property map; in case of any inner position related value is provided.
+  ;
+  ; @param (map) props
+  ; {:inner-position (keyword)(opt)
+  ;  :inner-position-method (keyword)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (standard-inner-position-props {:inner-position :tr ...})
+  ; =>
+  ; {:inner-position        :tr
+  ;  :inner-position-method :flex
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:inner-position (keyword)
+  ;  :inner-position-method (keyword)
+  ;  ...}
+  [props]
+  (-> props (map/use-default-value-group layout.config/STANDARD-INNER-POSITION-PROPERTIES)))
+
+(defn standard-outer-position-props
+  ; @description
+  ; Applies the standard outer position properties on the given property map; in case of any outer position related value is provided.
+  ;
+  ; @param (map) props
+  ; {:outer-position (keyword)(opt)
+  ;  :outer-position-method (keyword)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (standard-outer-position-props {:outer-position :tr ...})
+  ; =>
+  ; {:outer-position        :tr
+  ;  :outer-position-method :absolute
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:outer-position (keyword)
+  ;  :outer-position-method (keyword)
+  ;  ...}
+  [props]
+  (-> props (map/use-default-value-group layout.config/STANDARD-OUTER-POSITION-PROPERTIES)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn standard-shape-props
   ; @description
   ; Applies the standard shape properties on the given property map.

@@ -140,7 +140,7 @@
   ;
   ; @note
   ; The 'indent' and 'outdent' attributes cannot be applied on the same element.
-  ; Apply the outdent attributes on an outer element and the indent attributes on an inner element.
+  ; Apply the outdent attributes on the [outer element](#xxx) and the indent attributes on the [inner element](#xxx).
   ;
   ; @description
   ; Applies the indent related values on the given attribute map.
@@ -194,7 +194,7 @@
   ;
   ; @note
   ; The 'indent' and 'outdent' attributes cannot be applied on the same element.
-  ; Apply the outdent attributes on an outer element and the indent attributes on an inner element.
+  ; Apply the outdent attributes on the [outer element](#xxx) and the indent attributes on the [inner element](#xxx).
   ;
   ; @description
   ; Applies the outdent related values on the given attribute map.
@@ -245,43 +245,77 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn position-attributes
+(defn inner-position-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
+  ; @note
+  ; Apply both the inner position and outer position attributes on the [outer element](#xxx).
+  ;
   ; @description
-  ; Applies the position related values on the given attribute map.
+  ; Applies the inner position related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:layer (keyword or integer)(opt)
-  ;  :position (keyword)(opt)
-  ;  :position-base (keyword)(opt)
-  ;  :position-method (keyword)(opt)
+  ; {:inner-position (keyword)(opt)
+  ;  :inner-position-method (keyword)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (position-attributes {...} {:layer :uppermost :position :tr :position-method :absolute})
+  ; (inner-position-attributes {...} {:inner-position :tr :inner-position-method :flex})
   ; =>
-  ; {:data-layer           :uppermost
-  ;  :data-position        :tr
-  ;  :data-position-method :absolute
+  ; {:data-inner-position        :tr
+  ;  :data-inner-position-method :flex
   ;  ...}
   ;
   ; @return (map)
-  ; {:data-layer (keyword)
-  ;  :data-position (keyword)
-  ;  :position-base (keyword)
-  ;  :position-method (keyword)
+  ; {:data-inner-position (keyword)
+  ;  :inner-position-method (keyword)
+  ;  ...}
+  [attributes {:keys [inner-position inner-position-base inner-position-method]}]
+  (-> attributes (map/merge-some {:data-inner-position        inner-position
+                                  :data-inner-position-method inner-position-method})))
+
+(defn outer-position-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @note
+  ; Apply both the inner position and outer position attributes on the [outer element](#xxx).
+  ;
+  ; @description
+  ; Applies the outer position related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:outer-layer (keyword or integer)(opt)
+  ;  :outer-position (keyword)(opt)
+  ;  :outer-position-base (keyword)(opt)
+  ;  :outer-position-method (keyword)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (outer-position-attributes {...} {:outer-layer :uppermost :outer-position :tr :outer-position-method :absolute})
+  ; =>
+  ; {:data-outer-layer           :uppermost
+  ;  :data-outer-position        :tr
+  ;  :data-outer-position-method :absolute
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-outer-layer (keyword)
+  ;  :data-outer-position (keyword)
+  ;  :outer-position-base (keyword)
+  ;  :outer-position-method (keyword)
   ;  :style (map)
-  ;   {"--layer" (string)
+  ;   {"--outer-layer" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [layer position position-base position-method]}]
-  (-> attributes (map/merge-some {:data-position        position
-                                  :data-position-base   position-base
-                                  :data-position-method position-method})
-                 (utils/apply-property-value :layer :data-layer layer)))
+  [attributes {:keys [outer-layer outer-position outer-position-base outer-position-method]}]
+  (-> attributes (map/merge-some {:data-outer-position        outer-position
+                                  :data-outer-position-base   outer-position-base
+                                  :data-outer-position-method outer-position-method})
+                 (utils/apply-property-value :outer-layer :data-outer-layer outer-layer)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

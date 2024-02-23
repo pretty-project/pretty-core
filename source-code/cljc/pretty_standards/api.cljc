@@ -14,6 +14,12 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Pretty standards
+; ...
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @redirect (pretty-properties.accessories.standards/*)
 (def standard-overlay-props accessories.standards/standard-overlay-props)
 
@@ -38,10 +44,12 @@
 (def standard-input-option-props input.standards/standard-input-option-props)
 
 ; @redirect (pretty-properties.layout.standards/*)
-(def standard-flex-props       layout.standards/standard-flex-props)
-(def standard-shape-props      layout.standards/standard-shape-props)
-(def standard-inner-size-props layout.standards/standard-inner-size-props)
-(def standard-outer-size-props layout.standards/standard-outer-size-props)
+(def standard-flex-props           layout.standards/standard-flex-props)
+(def standard-inner-position-props layout.standards/standard-inner-position-props)
+(def standard-outer-position-props layout.standards/standard-outer-position-props)
+(def standard-shape-props          layout.standards/standard-shape-props)
+(def standard-inner-size-props     layout.standards/standard-inner-size-props)
+(def standard-outer-size-props     layout.standards/standard-outer-size-props)
 
 ; @redirect (pretty-properties.live.standards/*)
 (def standard-animation-props live.standards/standard-animation-props)

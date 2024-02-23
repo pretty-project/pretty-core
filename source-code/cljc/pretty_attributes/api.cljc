@@ -15,6 +15,12 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Pretty attributes
+; ...
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @redirect (pretty-attributes.accessories.attributes/*)
 (def overlay-attributes accessories.attributes/overlay-attributes)
 
@@ -59,15 +65,16 @@
 (def input-state-attributes    input.attributes/input-state-attributes)
 
 ; @redirect (pretty-attributes.layout.attributes/*)
-(def flex-attributes         layout.attributes/flex-attributes)
-(def grid-attributes         layout.attributes/grid-attributes)
-(def fullscreen-attributes   layout.attributes/fullscreen-attributes)
-(def indent-attributes       layout.attributes/indent-attributes)
-(def outdent-attributes      layout.attributes/outdent-attributes)
-(def position-attributes     layout.attributes/position-attributes)
-(def inner-size-attributes   layout.attributes/inner-size-attributes)
-(def outer-size-attributes   layout.attributes/outer-size-attributes)
-(def content-size-attributes layout.attributes/content-size-attributes)
+(def flex-attributes           layout.attributes/flex-attributes)
+(def grid-attributes           layout.attributes/grid-attributes)
+(def fullscreen-attributes     layout.attributes/fullscreen-attributes)
+(def indent-attributes         layout.attributes/indent-attributes)
+(def outdent-attributes        layout.attributes/outdent-attributes)
+(def inner-position-attributes layout.attributes/inner-position-attributes)
+(def outer-position-attributes layout.attributes/outer-position-attributes)
+(def inner-size-attributes     layout.attributes/inner-size-attributes)
+(def outer-size-attributes     layout.attributes/outer-size-attributes)
+(def content-size-attributes   layout.attributes/content-size-attributes)
 
 ; @redirect (pretty-attributes.live.attributes/*)
 (def animation-attributes live.attributes/animation-attributes)

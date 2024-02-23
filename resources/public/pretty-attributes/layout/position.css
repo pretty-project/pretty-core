@@ -1,43 +1,63 @@
 
 /***** Position presets *****/
-/*** Position ***/
+/*** Inner position ***/
 
-                            [data-position="tl"]     { left:     0; top:      0; }
-                            [data-position="tr"]     { right:    0; top:      0; }
-                            [data-position="br"]     { right:    0; bottom:   0; }
-                            [data-position="bl"]     { left:     0; bottom:   0; }
-                            [data-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%,    0% ); }
-                            [data-position="right"]  { right:   0%; top:    50%; transform: translate(    0%,  -50% ); }
-                            [data-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%,    0% ); }
-                            [data-position="left"]   { left:    0%; top:    50%; transform: translate(    0%,  -50% ); }
-                            [data-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
-[data-position-base="outer"][data-position="tl"]     { left:     0; top:      0; transform: translate( -100%, -100% ); }
-[data-position-base="outer"][data-position="tr"]     { right:    0; top:      0; transform: translate( +100%, -100% ); }
-[data-position-base="outer"][data-position="br"]     { right:    0; bottom:   0; transform: translate( +100%, +100% ); }
-[data-position-base="outer"][data-position="bl"]     { left:     0; bottom:   0; transform: translate( -100%, +100% ); }
-[data-position-base="outer"][data-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%, -100% ); }
-[data-position-base="outer"][data-position="right"]  { right:   0%; top:    50%; transform: translate( +100%,  -50% ); }
-[data-position-base="outer"][data-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%, +100% ); }
-[data-position-base="outer"][data-position="left"]   { left:    0%; top:    50%; transform: translate( -100%,  -50% ); }
-[data-position-base="outer"][data-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
+[data-inner-position="tl"]     { align-items: flex-start; justify-content: flex-start; }
+[data-inner-position="tr"]     { align-items: flex-start; justify-content: flex-end;   }
+[data-inner-position="br"]     { align-items: flex-end;   justify-content: flex-end;   }
+[data-inner-position="bl"]     { align-items: flex-end;   justify-content: flex-start; }
+[data-inner-position="top"]    { align-items: flex-start; justify-content: center;     }
+[data-inner-position="right"]  { align-items: center;     justify-content: flex-end;   }
+[data-inner-position="bottom"] { align-items: flex-end;   justify-content: center;     }
+[data-inner-position="left"]   { align-items: center;     justify-content: flex-start; }
+[data-inner-position="center"] { align-items: center;     justify-content: center;     }
 
-/*** Position ***/
+/*** Inner position ***/
 
-/*** Position method ***/
+/*** Inner position method ***/
 
-[data-position-method="absolute"] { position: absolute; }
-[data-position-method="fixed"]    { position: fixed;    }
-[data-position-method="relative"] { position: relative; }
-[data-position-method="static"]   { position: static;   }
-[data-position-method="sticky"]   { position: sticky;   }
+[data-inner-position-method="flex"] { display: flex; }
 
-/*** Position method ***/
+/*** Inner position method ***/
 
-/*** Layer ***/
+/*** Outer layer ***/
 
-[data-layer="var"]       { z-index: var( --layer ); }
-[data-layer="lowermost"] { z-index: -9999;          }
-[data-layer="uppermost"] { z-index:  9999;          }
+[data-outer-layer="var"]       { z-index: var( --outer-layer ); }
+[data-outer-layer="lowermost"] { z-index: -9999; }
+[data-outer-layer="uppermost"] { z-index:  9999; }
 
-/*** Layer ***/
+/*** Outer layer ***/
+
+/*** Outer position ***/
+
+                                     [data-outer-position="tl"]     { left:     0; top:      0; }
+                                     [data-outer-position="tr"]     { right:    0; top:      0; }
+                                     [data-outer-position="br"]     { right:    0; bottom:   0; }
+                                     [data-outer-position="bl"]     { left:     0; bottom:   0; }
+                                     [data-outer-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%,    0% ); }
+                                     [data-outer-position="right"]  { right:   0%; top:    50%; transform: translate(    0%,  -50% ); }
+                                     [data-outer-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%,    0% ); }
+                                     [data-outer-position="left"]   { left:    0%; top:    50%; transform: translate(    0%,  -50% ); }
+                                     [data-outer-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
+[data-outer-position-base="external"][data-outer-position="tl"]     { left:     0; top:      0; transform: translate( -100%, -100% ); }
+[data-outer-position-base="external"][data-outer-position="tr"]     { right:    0; top:      0; transform: translate( +100%, -100% ); }
+[data-outer-position-base="external"][data-outer-position="br"]     { right:    0; bottom:   0; transform: translate( +100%, +100% ); }
+[data-outer-position-base="external"][data-outer-position="bl"]     { left:     0; bottom:   0; transform: translate( -100%, +100% ); }
+[data-outer-position-base="external"][data-outer-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%, -100% ); }
+[data-outer-position-base="external"][data-outer-position="right"]  { right:   0%; top:    50%; transform: translate( +100%,  -50% ); }
+[data-outer-position-base="external"][data-outer-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%, +100% ); }
+[data-outer-position-base="external"][data-outer-position="left"]   { left:    0%; top:    50%; transform: translate( -100%,  -50% ); }
+[data-outer-position-base="external"][data-outer-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
+
+/*** Outer position ***/
+
+/*** Outer position method ***/
+
+[data-outer-position-method="absolute"] { position: absolute; }
+[data-outer-position-method="fixed"]    { position: fixed;    }
+[data-outer-position-method="relative"] { position: relative; }
+[data-outer-position-method="static"]   { position: static;   }
+[data-outer-position-method="sticky"]   { position: sticky;   }
+
+/*** Outer position method ***/
 /***** Position presets *****/

@@ -124,31 +124,56 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-position-props
+(defn default-inner-position-props
   ; @description
-  ; Applies the given default position properties on the given property map.
+  ; Applies the given default inner position properties on the given property map.
   ;
   ; @param (map) props
-  ; {:layer (keyword or integer)(opt)
-  ;  :position (keyword)(opt)
-  ;  :position-base (keyword)(opt)
-  ;  :position-method (keyword)(opt)
+  ; {:inner-position (keyword)(opt)
+  ;  :inner-position-method (keyword)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-position-props {...} {:layer :uppermost :position :tr :position-method :absolute})
+  ; (default-inner-position-props {...} {:inner-position :tr :inner-position-method :flex-absolute})
   ; =>
-  ; {:layer           :uppermost
-  ;  :position        :tr
-  ;  :position-method :absolute
+  ; {:inner-position        :tr
+  ;  :inner-position-method :flex
   ;  ...}
   ;
   ; @return (map)
-  ; {:layer (keyword or integer)
-  ;  :position (keyword)
-  ;  :position-base (keyword)
-  ;  :position-method (keyword)
+  ; {:inner-position (keyword)
+  ;  :inner-position-base (keyword)
+  ;  :inner-position-method (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+(defn default-outer-position-props
+  ; @description
+  ; Applies the given default outer position properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:outer-layer (keyword or integer)(opt)
+  ;  :outer-position (keyword)(opt)
+  ;  :outer-position-base (keyword)(opt)
+  ;  :outer-position-method (keyword)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-outer-position-props {...} {:outer-layer :uppermost :outer-position :tr :outer-position-method :absolute})
+  ; =>
+  ; {:outer-layer           :uppermost
+  ;  :outer-position        :tr
+  ;  :outer-position-method :absolute
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:outer-layer (keyword or integer)
+  ;  :outer-position (keyword)
+  ;  :outer-position-base (keyword)
+  ;  :outer-position-method (keyword)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

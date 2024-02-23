@@ -12,6 +12,12 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Pretty rules
+; ...
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @redirect (pretty-rules.appearance.rules/*)
 (def auto-disable-hover-color     appearance.rules/auto-disable-hover-color)
 (def auto-disable-highlight-color appearance.rules/auto-disable-highlight-color)
