@@ -338,20 +338,12 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-space-props
+(defn default-inner-space-props
   ; @description
-  ; Applies the given default space properties (indent, outdent) on the given property map.
+  ; Applies the given default inner space properties (indent, outdent) on the given property map.
   ;
   ; @param (map) props
   ; {:indent (map)(opt)
-  ;   {:bottom (keyword, px or string)(opt)
-  ;    :left (keyword, px or string)(opt)
-  ;    :right (keyword, px or string)(opt)
-  ;    :top (keyword, px or string)(opt)
-  ;    :horizontal (keyword, px or string)(opt)
-  ;    :vertical (keyword, px or string)(opt)
-  ;    :all (keyword, px or string)(opt)}
-  ;  :outdent (map)(opt)
   ;   {:bottom (keyword, px or string)(opt)
   ;    :left (keyword, px or string)(opt)
   ;    :right (keyword, px or string)(opt)
@@ -363,7 +355,7 @@
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-space-props {...} {:indent {:all :s}})
+  ; (default-inner-space-props {...} {:indent {:all :s}})
   ; =>
   ; {:indent {:all :s}
   ;  ...}
@@ -377,7 +369,34 @@
   ;    :horizontal (keyword, px or string)
   ;    :vertical (keyword, px or string)
   ;    :all (keyword, px or string)}
-  ;  :outdent (map)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+(defn default-outer-space-props
+  ; @description
+  ; Applies the given default outer space properties (indent, outdent) on the given property map.
+  ;
+  ; @param (map) props
+  ; {:outdent (map)(opt)
+  ;   {:bottom (keyword, px or string)(opt)
+  ;    :left (keyword, px or string)(opt)
+  ;    :right (keyword, px or string)(opt)
+  ;    :top (keyword, px or string)(opt)
+  ;    :horizontal (keyword, px or string)(opt)
+  ;    :vertical (keyword, px or string)(opt)
+  ;    :all (keyword, px or string)(opt)}
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-outer-space-props {...} {:outdent {:all :s}})
+  ; =>
+  ; {:outdent {:all :s}
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:outdent (map)
   ;   {:bottom (keyword, px or string)
   ;    :left (keyword, px or string)
   ;    :right (keyword, px or string)

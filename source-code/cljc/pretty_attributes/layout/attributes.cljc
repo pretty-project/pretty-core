@@ -107,117 +107,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn indent-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @note
-  ; The 'indent' and 'outdent' attributes cannot be applied on the same element.
-  ; Apply the outdent attributes on the [outer element](#xxx) and the indent attributes on the [inner element](#xxx).
-  ;
-  ; @description
-  ; Applies the indent related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:indent (map)(opt)
-  ;   {:bottom (keyword, px or string)(opt)
-  ;    :left (keyword, px or string)(opt)
-  ;    :right (keyword, px or string)(opt)
-  ;    :top (keyword, px or string)(opt)
-  ;    :horizontal (keyword, px or string)(opt)
-  ;    :vertical (keyword, px or string)(opt)
-  ;    :all (keyword, px or string)(opt)}
-  ;  ...}
-  ;
-  ; @usage
-  ; (indent-attributes {...} {:indent {:horizontal :xxl :left :xs}})
-  ; =>
-  ; {:data-indent-horizontal :xxl
-  ;  :data-indent-left       :xs
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-indent-bottom (keyword)
-  ;  :data-indent-horizontal (keyword)
-  ;  :data-indent-left (keyword)
-  ;  :data-indent-right (keyword)
-  ;  :data-indent-top (keyword)
-  ;  :data-indent-vertical (keyword)
-  ;  :style (map)
-  ;   {"--indent-bottom" (string)
-  ;    "--indent-horizontal" (string)
-  ;    "--indent-left" (string)
-  ;    "--indent-right" (string)
-  ;    "--indent-top" (string)
-  ;    "--indent-vertical" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [indent]}]
-  (letfn [(f0 [result k v]
-              (let [css-var-name        (keyword (str      "indent-" (name k)))
-                    data-attribute-name (keyword (str "data-indent-" (name k)))]
-                   (utils/apply-property-value result css-var-name data-attribute-name v "px")))]
-         (-> attributes (merge (if (map?            indent)
-                                   (reduce-kv f0 {} indent))))))
-
-(defn outdent-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @note
-  ; The 'indent' and 'outdent' attributes cannot be applied on the same element.
-  ; Apply the outdent attributes on the [outer element](#xxx) and the indent attributes on the [inner element](#xxx).
-  ;
-  ; @description
-  ; Applies the outdent related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:outdent (map)(opt)
-  ;   {:bottom (keyword, px or string)(opt)
-  ;    :left (keyword, px or string)(opt)
-  ;    :right (keyword, px or string)(opt)
-  ;    :top (keyword, px or string)(opt)
-  ;    :horizontal (keyword, px or string)(opt)
-  ;    :vertical (keyword, px or string)(opt)
-  ;    :all (keyword, px or string)(opt)}
-  ;  ...}
-  ;
-  ; @usage
-  ; (outdent-attributes {...} {:outdent {:horizontal :xxl :left :xs}})
-  ; =>
-  ; {:data-outdent-horizontal :xxl
-  ;  :data-outdent-left       :xs
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-outdent-bottom (keyword)
-  ;  :data-outdent-horizontal (keyword)
-  ;  :data-outdent-left (keyword)
-  ;  :data-outdent-right (keyword)
-  ;  :data-outdent-top (keyword)
-  ;  :data-outdent-vertical (keyword)
-  ;  :style (map)
-  ;   {"--outdent-bottom" (string)
-  ;    "--outdent-horizontal" (string)
-  ;    "--outdent-left" (string)
-  ;    "--outdent-right" (string)
-  ;    "--outdent-top" (string)
-  ;    "--outdent-vertical" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [outdent]}]
-  (letfn [(f0 [result k v]
-              (let [css-var-name        (keyword (str      "outdent-" (name k)))
-                    data-attribute-name (keyword (str "data-outdent-" (name k)))]
-                   (utils/apply-property-value result css-var-name data-attribute-name v "px")))]
-         (-> attributes (merge (if (map?            outdent)
-                                   (reduce-kv f0 {} outdent))))))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn overflow-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -479,3 +368,106 @@
                  (utils/apply-property-value :max-width  :data-max-width  max-outer-width  "px")
                  (utils/apply-property-value :min-height :data-min-height min-outer-height "px")
                  (utils/apply-property-value :min-width  :data-min-width  min-outer-width  "px")))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn inner-space-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the inner space related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:indent (map)(opt)
+  ;   {:bottom (keyword, px or string)(opt)
+  ;    :left (keyword, px or string)(opt)
+  ;    :right (keyword, px or string)(opt)
+  ;    :top (keyword, px or string)(opt)
+  ;    :horizontal (keyword, px or string)(opt)
+  ;    :vertical (keyword, px or string)(opt)
+  ;    :all (keyword, px or string)(opt)}
+  ;  ...}
+  ;
+  ; @usage
+  ; (inner-space-attributes {...} {:indent {:horizontal :xxl :left :xs}})
+  ; =>
+  ; {:data-indent-horizontal :xxl
+  ;  :data-indent-left       :xs
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-indent-bottom (keyword)
+  ;  :data-indent-horizontal (keyword)
+  ;  :data-indent-left (keyword)
+  ;  :data-indent-right (keyword)
+  ;  :data-indent-top (keyword)
+  ;  :data-indent-vertical (keyword)
+  ;  :style (map)
+  ;   {"--indent-bottom" (string)
+  ;    "--indent-horizontal" (string)
+  ;    "--indent-left" (string)
+  ;    "--indent-right" (string)
+  ;    "--indent-top" (string)
+  ;    "--indent-vertical" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [indent]}]
+  (letfn [(f0 [result k v]
+              (let [css-var-name        (keyword (str      "indent-" (name k)))
+                    data-attribute-name (keyword (str "data-indent-" (name k)))]
+                   (utils/apply-property-value result css-var-name data-attribute-name v "px")))]
+         (-> attributes (merge (if (map?            indent)
+                                   (reduce-kv f0 {} indent))))))
+
+(defn outer-space-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the outer space related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:outdent (map)(opt)
+  ;   {:bottom (keyword, px or string)(opt)
+  ;    :left (keyword, px or string)(opt)
+  ;    :right (keyword, px or string)(opt)
+  ;    :top (keyword, px or string)(opt)
+  ;    :horizontal (keyword, px or string)(opt)
+  ;    :vertical (keyword, px or string)(opt)
+  ;    :all (keyword, px or string)(opt)}
+  ;  ...}
+  ;
+  ; @usage
+  ; (outer-space-attributes {...} {:outdent {:horizontal :xxl :left :xs}})
+  ; =>
+  ; {:data-outdent-horizontal :xxl
+  ;  :data-outdent-left       :xs
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-outdent-bottom (keyword)
+  ;  :data-outdent-horizontal (keyword)
+  ;  :data-outdent-left (keyword)
+  ;  :data-outdent-right (keyword)
+  ;  :data-outdent-top (keyword)
+  ;  :data-outdent-vertical (keyword)
+  ;  :style (map)
+  ;   {"--outdent-bottom" (string)
+  ;    "--outdent-horizontal" (string)
+  ;    "--outdent-left" (string)
+  ;    "--outdent-right" (string)
+  ;    "--outdent-top" (string)
+  ;    "--outdent-vertical" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [outdent]}]
+  (letfn [(f0 [result k v]
+              (let [css-var-name        (keyword (str      "outdent-" (name k)))
+                    data-attribute-name (keyword (str "data-outdent-" (name k)))]
+                   (utils/apply-property-value result css-var-name data-attribute-name v "px")))]
+         (-> attributes (merge (if (map?            outdent)
+                                   (reduce-kv f0 {} outdent))))))

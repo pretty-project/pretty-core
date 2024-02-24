@@ -224,8 +224,11 @@
 ; @tutorial Size unit systems
 ; @redirect (pretty-properties.layout.tutorials/size-unit-systems)
 
-; @tutorial Space properties
-; @redirect (pretty-properties.layout.tutorials/space-properties)
+; @tutorial Inner space properties
+; @redirect (pretty-properties.layout.tutorials/inner-space-properties)
+
+; @tutorial Outer space properties
+; @redirect (pretty-properties.layout.tutorials/outer-space-properties)
 
 ; @redirect (pretty-properties.layout.props/*)
 (def default-expandable-props     layout.props/default-expandable-props)
@@ -239,7 +242,8 @@
 (def default-content-size-props   layout.props/default-content-size-props)
 (def default-inner-size-props     layout.props/default-inner-size-props)
 (def default-outer-size-props     layout.props/default-outer-size-props)
-(def default-space-props          layout.props/default-space-props)
+(def default-inner-space-props    layout.props/default-inner-space-props)
+(def default-outer-space-props    layout.props/default-outer-space-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
