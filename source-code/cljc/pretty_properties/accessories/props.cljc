@@ -10,7 +10,8 @@
   ; Applies the given default overlay properties on the given property map.
   ;
   ; @param (map) props
-  ; {:overlay (keyword)(opt)
+  ; {:on-overlay-f (function)(opt)
+  ;  :overlay (keyword)(opt)
   ;  :overlay-color (keyword or string)(opt)
   ;  :overlay-opacity (keyword or number)(opt)
   ;  ...}
@@ -23,7 +24,8 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:overlay (keyword)
+  ; {:on-overlay-f (function)
+  ;  :overlay (keyword)
   ;  :overlay-color (keyword or string)
   ;  :overlay-opacity (keyword or number)
   ;  ...}

@@ -84,10 +84,10 @@
 ; @title on-click-f property
 ;
 ; @--- Accepted types
-; {...} {:on-click-f (function)}
+; {:on-click-f (function)}
 ;
 ; @--- Examples
-; {...} {:on-click-f (fn [_] ...)}
+; {:on-click-f (fn [_] ...)}
 ;
 ;
 ;
@@ -97,47 +97,47 @@
 ; The ':on-click-timeout' property is not necessarily supported by elements that implement the mouse event properties!
 ;
 ; @--- Accepted types
-; {...} {:on-click-timeout (ms)}
+; {:on-click-timeout (ms)}
 ;
 ; @--- Examples
-; {...} {:on-click-timeout 5000}
+; {:on-click-timeout 5000}
 ;
 ;
 ;
 ; @title on-mouse-down-f property
 ;
 ; @--- Accepted types
-; {...} {:on-mouse-down-f (function)}
+; {:on-mouse-down-f (function)}
 ;
 ; @--- Examples
-; {...} {:on-mouse-down-f (fn [_] ...)}
+; {:on-mouse-down-f (fn [_] ...)}
 ;
 ;
 ;
 ; @title on-mouse-over-f property
 ;
 ; @--- Accepted types
-; {...} {:on-mouse-over-f (function)}
+; {:on-mouse-over-f (function)}
 ;
 ; @--- Examples
-; {...} {:on-mouse-over-f (fn [_] ...)}
+; {:on-mouse-over-f (fn [_] ...)}
 ;
 ;
 ;
 ; @title on-mouse-up-f property
 ;
 ; @--- Accepted types
-; {...} {:on-mouse-up-f (function)}
+; {:on-mouse-up-f (function)}
 ;
 ; @--- Examples
-; {...} {:on-mouse-up-f (fn [_] ...)}
+; {:on-mouse-up-f (fn [_] ...)}
 ;
 ;
 ;
 ; @title on-right-click-f property
 ;
 ; @--- Accepted types
-; {...} {:on-right-click-f (function)}
+; {:on-right-click-f (function)}
 ;
 ; @--- Examples
-; {...} {:on-right-click-f (fn [_] ...)}
+; {:on-right-click-f (fn [_] ...)}

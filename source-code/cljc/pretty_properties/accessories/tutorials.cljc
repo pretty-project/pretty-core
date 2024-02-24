@@ -9,6 +9,19 @@
 ; @note
 ; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
+; @title on-overlay-f property
+;
+; @--- Accepted types
+; {:on-overlay-f (function)}
+;
+; @--- Accepted types
+; {:on-overlay-f (function)}
+;
+; @--- Examples
+; {:on-overlay-f (fn [_] ...)}
+;
+;
+;
 ; @title overlay property
 ;
 ; @--- Accepted types

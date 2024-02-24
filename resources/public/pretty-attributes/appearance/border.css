@@ -12,6 +12,8 @@
 [data-border-color="tertiary"]  { border-color: var( --border-color-tertiary  ); }
 [data-border-color="success"]   { border-color: var( --border-color-success   ); }
 [data-border-color="warning"]   { border-color: var( --border-color-warning   ); }
+/* Unlike background color, border color does have a default value that must be prevented when 'transparent' value provided. */
+[data-border-color="transparent"] { border-color: transparent; }
 
 /*** Border color ***/
 

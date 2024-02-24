@@ -213,19 +213,35 @@
 ;
 ; @--- Examples
 ; {:lock-scroll? true}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Overflow properties
 ;
-;
-;
-; @title stretch-orientation property
+; @title horizontal-overflow property
 ;
 ; @--- Accepted types
-; {:stretch-orientation (keyword)}
+; {:horizontal-overflow (keyword)}
 ;
 ; @--- Examples
-; {:stretch-orientation :horizontal}
+; {:horizontal-overflow :scroll}
 ;
 ; @--- Predefined values
-; :none, :both, :horizontal, :vertical
+; :auto, :hidden, :scroll
+;
+;
+;
+; @title vertical-overflow property
+;
+; @--- Accepted types
+; {:vertical-overflow (keyword)}
+;
+; @--- Examples
+; {:vertical-overflow :scroll}
+;
+; @--- Predefined values
+; :auto, :hidden, :scroll
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -330,6 +346,125 @@
 ;
 ; @--- Examples
 ; {:strength 100}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Content size properties
+;
+; @note
+; Content size properties are applied on the [content element](#xxx).
+;
+; @title content-height property
+;
+; @--- Accepted types
+; {:content-height (keyword, px or string)}
+;
+; @--- Examples
+; {:content-height :xs}
+; {:content-height 10}
+; {:content-height "10px"}
+; {:content-height "5%"}
+;
+; @--- Predefined values
+; :auto, :content, :parent, :grow,
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title content-width property
+;
+; @--- Accepted types
+; {:content-width (keyword, px or string)}
+;
+; @--- Examples
+; {:content-width :xs}
+; {:content-width 10}
+; {:content-width "10px"}
+; {:content-width "5%"}
+;
+; @--- Predefined values
+; :auto, :content, :parent, :grow,
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title max-content-height property
+;
+; @--- Accepted types
+; {:max-content-height (keyword, px or string)}
+;
+; @--- Examples
+; {:max-content-height :xs}
+; {:max-content-height 10}
+; {:max-content-height "10px"}
+; {:max-content-height "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title max-content-width property
+;
+; @--- Accepted types
+; {:max-content-width (keyword, px or string)}
+;
+; @--- Examples
+; {:max-content-width :xs}
+; {:max-content-width 10}
+; {:max-content-width "10px"}
+; {:max-content-width "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title min-content-height property
+;
+; @--- Accepted types
+; {:min-content-height (keyword, px or string)}
+;
+; @--- Examples
+; {:min-content-height :xs}
+; {:min-content-height 10}
+; {:min-content-height "10px"}
+; {:min-content-height "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title min-content-width property
+;
+; @--- Accepted types
+; {:min-content-width (keyword, px or string)}
+;
+; @--- Examples
+; {:min-content-width :xs}
+; {:min-content-width 10}
+; {:min-content-width "10px"}
+; {:min-content-width "5%"}
+;
+; @--- Predefined values
+; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
+;
+;
+;
+; @title content-size-unit property
+;
+; Check out the [size unit systems](#size-unit-systems) section.
+;
+; @--- Accepted types
+; {:content-size-unit (keyword)}
+;
+; @--- Examples
+; {:content-size-unit :full-block}
+;
+; @--- Predefined values
+; :quarter-block, :half-block, :full-block, :double-block, :triple-block, :screen
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -576,7 +711,7 @@
 ; The ':inner-size-unit' and ':outer-size-unit' properties determine that the predefined size profiles (e.g., :xxs, :xs, ...) applied within which size system.
 ;
 ; @---
-; The ':quarter-block', ':half-block', ':full-block', ':double-block' and ':triple-block' size systems are static px based units in different size categories.
+; The ':quarter-block', ':half-block', ':full-block', ':double-block' and ':triple-block' size systems are static px based units for different size categories.
 ;
 ; @---
 ; The ':screen' size system implements an adaptive content size logic, where the height and width profiles are adjusted
@@ -586,7 +721,7 @@
 ;
 ; @---
 ; The selected size unit system is inherited from ascendent elements.
-; If the [outer element](#xxx) has a selected size unit, the [inner element](#xxx) inherits its value as default.
+; E.g., if the [outer element](#xxx) has a selected size unit, the [inner element](#xxx) inherits its value as default.
 ;
 ; @---
 ; inner-height / inner-width profiles in ':quarter-block' size system:
@@ -677,110 +812,6 @@
 ; 3XL:   1440px - 800px
 ; 4XL:   1600px - 880px
 ; 5XL:   1760px - 960px
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Content size properties
-;
-; @note
-; The content size properties describe dedicated content element dimensions within the inner element.
-;
-; @title content-height property
-;
-; @--- Accepted types
-; {:content-height (keyword, px or string)}
-;
-; @--- Examples
-; {:content-height :xs}
-; {:content-height 10}
-; {:content-height "10px"}
-; {:content-height "5%"}
-;
-; @--- Predefined values
-; :auto, :content, :parent, :grow,
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title content-width property
-;
-; @--- Accepted types
-; {:content-width (keyword, px or string)}
-;
-; @--- Examples
-; {:content-width :xs}
-; {:content-width 10}
-; {:content-width "10px"}
-; {:content-width "5%"}
-;
-; @--- Predefined values
-; :auto, :content, :parent, :grow,
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title max-content-height property
-;
-; @--- Accepted types
-; {:max-content-height (keyword, px or string)}
-;
-; @--- Examples
-; {:max-content-height :xs}
-; {:max-content-height 10}
-; {:max-content-height "10px"}
-; {:max-content-height "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title max-content-width property
-;
-; @--- Accepted types
-; {:max-content-width (keyword, px or string)}
-;
-; @--- Examples
-; {:max-content-width :xs}
-; {:max-content-width 10}
-; {:max-content-width "10px"}
-; {:max-content-width "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title min-content-height property
-;
-; @--- Accepted types
-; {:min-content-height (keyword, px or string)}
-;
-; @--- Examples
-; {:min-content-height :xs}
-; {:min-content-height 10}
-; {:min-content-height "10px"}
-; {:min-content-height "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
-;
-;
-;
-; @title min-content-width property
-;
-; @--- Accepted types
-; {:min-content-width (keyword, px or string)}
-;
-; @--- Examples
-; {:min-content-width :xs}
-; {:min-content-width 10}
-; {:min-content-width "10px"}
-; {:min-content-width "5%"}
-;
-; @--- Predefined values
-; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

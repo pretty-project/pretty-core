@@ -1,0 +1,36 @@
+
+/***** Overflow presets *****/
+/*** Hide scrollbar ***/
+
+[data-horizontal-overflow],
+[data-vertical-overflow] {
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+[data-horizontal-overflow]::-webkit-scrollbar,
+[data-vertical-overflow]::-webkit-scrollbar {
+  /* Chrome, Safari and Opera */
+  display: none;
+}
+
+/*** Hide scrollbar ***/
+
+/*** Horizontal overflow ***/
+
+[data-horizontal-overflow="auto"]   { overflow-x: auto;   }
+[data-horizontal-overflow="scroll"] { overflow-x: scroll; }
+[data-horizontal-overflow="hidden"] { overflow-x: hidden; }
+
+/*** Horizontal overflow ***/
+
+/*** Vertical overflow ***/
+
+[data-vertical-overflow="auto"]   { overflow-y: auto;   }
+[data-vertical-overflow="scroll"] { overflow-y: scroll; }
+[data-vertical-overflow="hidden"] { overflow-y: hidden; }
+
+/*** Vertical overflow ***/
+/***** Overflow presets *****/

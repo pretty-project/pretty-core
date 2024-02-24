@@ -107,33 +107,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn fullscreen-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the fullscreen related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:stretch-orientation (keyword)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (fullscreen-attributes {...} {:stretch-orientation :horizontal})
-  ; =>
-  ; {:data-stretch-orientation :horizontal
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-stretch-orientation (keyword)
-  ;  ...}
-  [attributes {:keys [stretch-orientation]}]
-  (-> attributes (map/merge-some {:data-stretch-orientation stretch-orientation})))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn indent-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -245,6 +218,37 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn overflow-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the overflow related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:horizontal-overflow (keyword)(opt)
+  ;  :vertical-overflow (keyword)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (overflow-attributes {...} {:horizontal-overflow :scroll :vertical-overflow :hidden})
+  ; =>
+  ; {:data-horizontal-overflow :scroll
+  ;  :data-horizontal-overflow :hidden
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:horizontal-overflow (keyword)
+  ;  :vertical-overflow (keyword)
+  ;  ...}
+  [attributes {:keys [horizontal-overflow vertical-overflow]}]
+  (-> attributes (map/merge-some {:data-horizontal-overflow horizontal-overflow
+                                  :data-vertical-overflow   vertical-overflow})))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn inner-position-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -319,6 +323,58 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
+
+(defn content-size-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the content size related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:content-height (keyword, px or string)(opt)
+  ;  :content-size-unit (keyword)(opt)
+  ;  :content-width (keyword, px or string)(opt)
+  ;  :max-content-height (keyword, px or string)(opt)
+  ;  :max-content-width (keyword, px or string)(opt)
+  ;  :min-content-height (keyword, px or string)(opt)
+  ;  :min-content-width (keyword, px or string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (content-size-attributes {...} {:content-height :parent :content-size-unit :full-block :content-width :parent})
+  ; =>
+  ; {:data-height    :parent
+  ;  :data-size-unit :full-block
+  ;  :data-width     :parent
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:data-height (keyword)
+  ;  :data-max-height (keyword)
+  ;  :data-max-width (keyword)
+  ;  :data-min-height (keyword)
+  ;  :data-min-width (keyword)
+  ;  :data-size-unit (keyword)
+  ;  :data-width (keyword)
+  ;  :style (map)
+  ;   {"--height" (string)
+  ;    "--max-height" (string)
+  ;    "--max-width" (string)
+  ;    "--min-height" (string)
+  ;    "--min-width" (string)
+  ;    "--width" (string)
+  ;    ...}
+  ;  ...}
+  [attributes {:keys [content-height content-size-unit content-width max-content-height max-content-width min-content-height min-content-width]}]
+  (-> attributes (map/merge-some {:data-size-unit content-size-unit})
+                 (utils/apply-property-value :height     :data-height     content-height     "px")
+                 (utils/apply-property-value :width      :data-width      content-width      "px")
+                 (utils/apply-property-value :max-height :data-max-height max-content-height "px")
+                 (utils/apply-property-value :max-width  :data-max-width  max-content-width  "px")
+                 (utils/apply-property-value :min-height :data-min-height min-content-height "px")
+                 (utils/apply-property-value :min-width  :data-min-width  min-content-width  "px")))
 
 (defn inner-size-attributes
   ; @note
@@ -423,51 +479,3 @@
                  (utils/apply-property-value :max-width  :data-max-width  max-outer-width  "px")
                  (utils/apply-property-value :min-height :data-min-height min-outer-height "px")
                  (utils/apply-property-value :min-width  :data-min-width  min-outer-width  "px")))
-
-(defn content-size-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the content size related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:content-height (keyword, px or string)(opt)
-  ;  :content-width (keyword, px or string)(opt)
-  ;  :max-content-height (keyword, px or string)(opt)
-  ;  :max-content-width (keyword, px or string)(opt)
-  ;  :min-content-height (keyword, px or string)(opt)
-  ;  :min-content-width (keyword, px or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (content-size-attributes {...} {:content-height :parent :content-width :parent})
-  ; =>
-  ; {:data-height :parent
-  ;  :data-width  :parent
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-height (keyword)
-  ;  :data-max-height (keyword)
-  ;  :data-max-width (keyword)
-  ;  :data-min-height (keyword)
-  ;  :data-min-width (keyword)
-  ;  :data-width (keyword)
-  ;  :style (map)
-  ;   {"--height" (string)
-  ;    "--max-height" (string)
-  ;    "--max-width" (string)
-  ;    "--min-height" (string)
-  ;    "--min-width" (string)
-  ;    "--width" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [content-height content-width max-content-height max-content-width min-content-height min-content-width]}]
-  (-> attributes (utils/apply-property-value :height     :data-height     content-height     "px")
-                 (utils/apply-property-value :width      :data-width      content-width      "px")
-                 (utils/apply-property-value :max-height :data-max-height max-content-height "px")
-                 (utils/apply-property-value :max-width  :data-max-width  max-content-width  "px")
-                 (utils/apply-property-value :min-height :data-min-height min-content-height "px")
-                 (utils/apply-property-value :min-width  :data-min-width  min-content-width  "px")))

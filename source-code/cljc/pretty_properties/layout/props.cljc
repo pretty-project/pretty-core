@@ -104,19 +104,44 @@
   ;
   ; @param (map) props
   ; {:lock-scroll? (boolean)(opt)
-  ;  :stretch-orientation (keyword)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-fullscreen-props {...} {:stretch-orientation :horizontal})
+  ; (default-fullscreen-props {...} {:lock-scroll? true})
   ; =>
-  ; {:stretch-orientation :horizontal
+  ; {:lock-scroll? true
   ;  ...}
   ;
   ; @return (map)
   ; {:lock-scroll? (boolean)
-  ;  :stretch-orientation (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn default-overflow-props
+  ; @description
+  ; Applies the given default overflow properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:horizontal-overflow (keyword)(opt)
+  ;  :vertical-overflow (keyword)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-overflow-props {...} {:horizontal-overflow :scroll :vertical-overflow :hidden})
+  ; =>
+  ; {:horizontal-overflow :scroll
+  ;  :vertical-overflow :hidden
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:horizontal-overflow (keyword)
+  ;  :vertical-overflow (keyword)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -205,6 +230,41 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-content-size-props
+  ; @description
+  ; Applies the given default content size properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:content-height (keyword, px or string)(opt)
+  ;  :content-size-unit (keyword)(opt)
+  ;  :content-width (keyword, px or string)(opt)
+  ;  :max-content-height (keyword, px or string)(opt)
+  ;  :max-content-width (keyword, px or string)(opt)
+  ;  :min-content-height (keyword, px or string)(opt)
+  ;  :min-content-width (keyword, px or string)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-content-size-props {...} {:content-height :xl :content-size-unit :full-block :content-width :xl})
+  ; =>
+  ; {:content-height    :xl
+  ;  :content-size-unit :full-block
+  ;  :content-width     :xl
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:content-height (keyword, px or string)
+  ;  :content-size-unit (keyword)
+  ;  :content-width (keyword, px or string)
+  ;  :max-content-height (keyword, px or string)
+  ;  :max-content-width (keyword, px or string)
+  ;  :min-content-height (keyword, px or string)
+  ;  :min-content-width (keyword, px or string)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
 (defn default-inner-size-props
   ; @description
   ; Applies the given default inner size properties on the given property map.
@@ -271,30 +331,6 @@
   ;  :outer-height (keyword, px or string)
   ;  :outer-size-unit (keyword)
   ;  :outer-width (keyword, px or string)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-(defn default-content-size-props
-  ; @description
-  ; Applies the given default content size properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:content-height (keyword, px or string)(opt)
-  ;  :content-width (keyword, px or string)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-content-size-props {...} {:content-height :parent :content-width :parent})
-  ; =>
-  ; {:content-height :parent
-  ;  :content-width  :parent
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:content-height (keyword, px or string)
-  ;  :content-width (keyword, px or string)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

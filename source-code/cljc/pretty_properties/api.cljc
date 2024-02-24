@@ -200,6 +200,9 @@
 ; @tutorial Fullscreen properties
 ; @redirect (pretty-properties.layout.tutorials/fullscreen-properties)
 
+; @tutorial Overflow properties
+; @redirect (pretty-properties.layout.tutorials/overflow-properties)
+
 ; @tutorial Inner position properties
 ; @redirect (pretty-properties.layout.tutorials/inner-position-properties)
 
@@ -209,17 +212,17 @@
 ; @tutorial Shape properties
 ; @redirect (pretty-properties.layout.tutorials/shape-properties)
 
+; @tutorial Content size properties
+; @redirect (pretty-properties.layout.tutorials/content-size-properties)
+
 ; @tutorial Inner size properties
 ; @redirect (pretty-properties.layout.tutorials/inner-size-properties)
 
 ; @tutorial Outer size properties
 ; @redirect (pretty-properties.layout.tutorials/outer-size-properties)
 
-; @tutorial Size unit systems properties
-; @redirect (pretty-properties.layout.tutorials/size-unit-systems-properties)
-
-; @tutorial Content size properties
-; @redirect (pretty-properties.layout.tutorials/content-size-properties)
+; @tutorial Size unit systems
+; @redirect (pretty-properties.layout.tutorials/size-unit-systems)
 
 ; @tutorial Space properties
 ; @redirect (pretty-properties.layout.tutorials/space-properties)
@@ -229,12 +232,13 @@
 (def default-flex-props           layout.props/default-flex-props)
 (def default-grid-props           layout.props/default-grid-props)
 (def default-fullscreen-props     layout.props/default-fullscreen-props)
+(def default-overflow-props       layout.props/default-overflow-props)
 (def default-inner-position-props layout.props/default-inner-position-props)
 (def default-outer-position-props layout.props/default-outer-position-props)
 (def default-shape-props          layout.props/default-shape-props)
+(def default-content-size-props   layout.props/default-content-size-props)
 (def default-inner-size-props     layout.props/default-inner-size-props)
 (def default-outer-size-props     layout.props/default-outer-size-props)
-(def default-content-size-props   layout.props/default-content-size-props)
 (def default-space-props          layout.props/default-space-props)
 
 ;; ----------------------------------------------------------------------------
