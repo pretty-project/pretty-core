@@ -21,11 +21,11 @@
   ; @usage
   ; (standard-input-option-props {:get-options-f (fn [_] ...) ...})
   ; =>
-  ; {:get-options-f    (fn [_] ...)
-  ;  :option-color-f fruits.noop.api/none
+  ; {:get-options-f   (fn [_] ...)
+  ;  :option-color-f  fruits.noop.api/none
   ;  :option-helper-f fruits.noop.api/none
-  ;  :option-label-f fruits.noop.api/none
-  ;  :option-value-f fruits.noop.api/return
+  ;  :option-label-f  fruits.noop.api/none
+  ;  :option-value-f  fruits.noop.api/return
   ;  ...}
   ;
   ; @return (map)

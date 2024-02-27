@@ -15,7 +15,8 @@
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:gap (keyword, px or string)(opt)
+  ; {:direction (keyword)(opt)
+  ;  :gap (keyword, px or string)(opt)
   ;  :grow (integer)(opt)
   ;  :horizontal-align (keyword)(opt)
   ;  :orientation (keyword)(opt)
@@ -33,7 +34,8 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:data-flex-gap (keyword)
+  ; {:data-flex-direction (keyword)
+  ;  :data-flex-gap (keyword)
   ;  :data-flex-grow (integer)
   ;  :data-flex-horizontal-align (keyword)
   ;  :data-flex-orientation (keyword)
@@ -46,8 +48,9 @@
   ;    "--flex-shrink" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [gap grow horizontal-align orientation overflow shrink vertical-align]}]
-  (-> attributes (map/merge-some {:data-flex-horizontal-align horizontal-align
+  [attributes {:keys [direction gap grow horizontal-align orientation overflow shrink vertical-align]}]
+  (-> attributes (map/merge-some {:data-flex-direction        direction
+                                  :data-flex-horizontal-align horizontal-align
                                   :data-flex-orientation      orientation
                                   :data-flex-overflow         overflow
                                   :data-flex-vertical-align   vertical-align})
@@ -143,7 +146,7 @@
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @note
-  ; Apply both the inner position and outer position attributes on the [outer element](#xxx).
+  ; Apply both the inner and the outer position attributes on the [outer element](#xxx).
   ;
   ; @description
   ; Applies the inner position related values on the given attribute map.
@@ -166,6 +169,8 @@
   ;  :inner-position-method (keyword)
   ;  ...}
   [attributes {:keys [inner-position inner-position-base inner-position-method]}]
+  ; Inner position (position of the inner element) is controlled via flex attributes.
+  ; Therefore, inner position attributes must be applied on the outer element.
   (-> attributes (map/merge-some {:data-inner-position        inner-position
                                   :data-inner-position-method inner-position-method})))
 
@@ -174,7 +179,7 @@
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @note
-  ; Apply both the inner position and outer position attributes on the [outer element](#xxx).
+  ; Apply both the inner and the outer position attributes on the [outer element](#xxx).
   ;
   ; @description
   ; Applies the outer position related values on the given attribute map.

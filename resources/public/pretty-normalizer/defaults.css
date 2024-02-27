@@ -164,14 +164,6 @@ a:active {
 	text-decoration: none;
 }
 
-a:not([data-color]),
-a:not([data-color]):link,
-a:not([data-color]):hover,
-a:not([data-color]):visited,
-a:not([data-color]):active {
-	color: inherit;
-}
-
 /*** A ***/
 
 /*** INPUT ***/

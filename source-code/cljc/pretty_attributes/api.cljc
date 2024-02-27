@@ -5,7 +5,6 @@
               [pretty-attributes.basic.attributes       :as basic.attributes]
               [pretty-attributes.content.adaptive       :as content.adaptive]
               [pretty-attributes.content.attributes     :as content.attributes]
-              [pretty-attributes.accessories.attributes :as accessories.attributes]
               [pretty-attributes.control.attributes     :as control.attributes]
               [pretty-attributes.input.attributes       :as input.attributes]
               [pretty-attributes.layout.attributes      :as layout.attributes]
@@ -20,9 +19,6 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
-
-; @redirect (pretty-attributes.accessories.attributes/*)
-(def overlay-attributes accessories.attributes/overlay-attributes)
 
 ; @redirect (pretty-attributes.appearance.attributes/*)
 (def background-color-attributes appearance.attributes/background-color-attributes)
@@ -57,12 +53,12 @@
 ; @redirect (pretty-attributes.control.attributes/*)
 (def anchor-attributes          control.attributes/anchor-attributes)
 (def clickable-state-attributes control.attributes/clickable-state-attributes)
+(def focus-event-attributes     control.attributes/focus-event-attributes)
 (def mouse-event-attributes     control.attributes/mouse-event-attributes)
 
 ; @redirect (pretty-attributes.input.attributes/*)
-(def input-autofill-attributes input.attributes/input-autofill-attributes)
-(def input-field-attributes    input.attributes/input-field-attributes)
-(def input-state-attributes    input.attributes/input-state-attributes)
+(def input-field-attributes input.attributes/input-field-attributes)
+(def input-state-attributes input.attributes/input-state-attributes)
 
 ; @redirect (pretty-attributes.layout.attributes/*)
 (def flex-attributes           layout.attributes/flex-attributes)

@@ -7,46 +7,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn auto-color-clickable-text
-  ; @description
-  ; Selects default text color for clickable elements based on the given properties.
-  ;
-  ; @param (map) props
-  ; {:href-uri (string)(opt)
-  ;  :on-click-f (string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (auto-color-clickable-text {:href-uri "/my-uri" ...})
-  ; =>
-  ; {:href-uri   "/my-uri"
-  ;  :text-color :default
-  ;  ...}
-  ;
-  ; @usage
-  ; (auto-color-clickable-text {:on-click-f (fn [_] ...) ...})
-  ; =>
-  ; {:on-click-f (fn [_] ...)
-  ;  :text-color :default
-  ;  ...}
-  ;
-  ; @usage
-  ; (auto-color-clickable-text {...})
-  ; =>
-  ; {:text-color :muted
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:text-color (keyword or string)
-  ;  ...}
-  [{:keys [href-uri on-click-f] :as props}]
-  (cond on-click-f (map/use-default-values props {:text-color :default})
-        href-uri   (map/use-default-values props {:text-color :default})
-        :static    (map/use-default-values props {:text-color :muted})))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn auto-disable-mouse-events
   ; @description
   ; Dissociates the mouse event properties of disabled elements.

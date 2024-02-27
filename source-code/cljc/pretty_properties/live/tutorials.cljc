@@ -6,6 +6,9 @@
 
 ; @tutorial Animation properties
 ;
+; @note
+; Using moving animations requires the animation direction to be set.
+;
 ; @title animation-direction property
 ;
 ; @--- Accepted types

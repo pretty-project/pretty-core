@@ -19,7 +19,8 @@
 
 /*** Background uri ***/
 
-[data-background-uri="var"] { background-image: var( --background-uri ); }
+[data-background-uri]       { background-repeat: no-repeat;               }
+[data-background-uri="var"] { background-image:  var( --background-uri ); }
 
 /*** Background uri ***/
 /***** Background image presets *****/

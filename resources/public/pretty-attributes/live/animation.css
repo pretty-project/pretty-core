@@ -17,6 +17,8 @@
 
 [data-animation-name]       { animation-fill-mode: both; }
 [data-animation-name="var"] { animation-name: var( --animation-name ); }
+[data-animation-name="appear-in"]                                  { animation-name: appear-in;      }
+[data-animation-name="appear-out"]                                 { animation-name: appear-out;     }
 [data-animation-name="fade-in"][data-animation-direction="ltr"]    { animation-name: fade-in-ltr;    }
 [data-animation-name="fade-in"][data-animation-direction="rtl"]    { animation-name: fade-in-rtl;    }
 [data-animation-name="fade-in"][data-animation-direction="ttb"]    { animation-name: fade-in-ttb;    }

@@ -70,6 +70,37 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn focus-event-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the focus event related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:on-blur-f (function)(opt)
+  ;  :on-focus-f (function)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (focus-event-attributes {...} {:on-blur-f (fn [_] ...) :on-focus-f (fn [_] ...)})
+  ; =>
+  ; {:on-blur  (fn [_] ...)
+  ;  :on-focus (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:on-blur (function)
+  ;  :on-focus (function)
+  ;  ...}
+  [attributes {:keys [on-blur-f on-focus-f]}]
+  (-> attributes (utils/apply-event-function :on-blur  on-blur-f)
+                 (utils/apply-event-function :on-focus on-focus-f)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn mouse-event-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -95,7 +126,7 @@
   ;
   ; @return (map)
   ; {:on-click (function)
-  ;  :on-context-menu (function)}
+  ;  :on-context-menu (function)
   ;  :on-mouse-down (function)
   ;  :on-mouse-leave (function)
   ;  :on-mouse-over (function)

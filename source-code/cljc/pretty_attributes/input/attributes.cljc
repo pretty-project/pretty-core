@@ -7,33 +7,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn input-autofill-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the input autofill related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:autofill-name (keyword)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (input-autofill-attributes {...} {:autofill-name :phone-number})
-  ; =>
-  ; {:auto-complete :phone-number
-  ;  :name          :phone-number
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:auto-complete (keyword)
-  ;  :name (keyword)
-  ;  ...}
-  [attributes {:keys [autofill-name disabled?]}]
-  (-> attributes (map/merge-some {:auto-complete autofill-name
-                                  :name          autofill-name})))
-
 (defn input-field-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -43,7 +16,8 @@
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:date-from (string)(opt)
+  ; {:autofill-name (keyword)(opt)
+  ;  :date-from (string)(opt)
   ;  :date-to (string)(opt)
   ;  :field-from (number)(opt)
   ;  :field-to (number)(opt)
@@ -74,18 +48,29 @@
   ;  :type :date
   ;  ...}
   ;
+  ; @usage
+  ; (input-field-attributes {...} {:autofill-name :phone-number})
+  ; =>
+  ; {:auto-complete :phone-number
+  ;  :name          :phone-number
+  ;  ...}
+  ;
   ; @return (map)
-  ; {:max (number or string)
+  ; {:auto-complete (keyword)
+  ;  :max (number or string)
   ;  :max-length (integer)
   ;  :min (number or string)
+  ;  :name (keyword)
   ;  :type (keyword)
   ;  ...}
-  [attributes {:keys [date-from date-to field-from field-to field-type max-length]}]
+  [attributes {:keys [autofill-name date-from date-to field-from field-to field-type max-length]}]
   ; The range of '{:type :date}' fields is controlled by the ':min' and ':max' properties.
-  (-> attributes (map/merge-some {:max-length (-> max-length)
-                                  :min        (or date-from field-from)
-                                  :max        (or date-to   field-to)
-                                  :type       (-> field-type)})))
+  (-> attributes (map/merge-some {:max-length    (-> max-length)
+                                  :min           (or date-from field-from)
+                                  :max           (or date-to   field-to)
+                                  :type          (-> field-type)
+                                  :auto-complete (-> autofill-name)
+                                  :name          (-> autofill-name)})))
 
 (defn input-state-attributes
   ; @note

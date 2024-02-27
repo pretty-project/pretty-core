@@ -1,7 +1,6 @@
 
 (ns pretty-rules.input.rules
-    (:require [metamorphic-content.api :as metamorphic-content]
-              [fruits.map.api :as map]
+    (:require [fruits.map.api :as map]
               [fruits.random.api :as random]))
 
 ;; ----------------------------------------------------------------------------
@@ -56,32 +55,3 @@
   ;   E.g., {:autofill-name :phone-number}
   (if-not disabled? (-> props (map/use-default-values {:autofill-name (random/generate-keyword)}))
                     (-> props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn compose-input-guides
-  ; @description
-  ; Composes the ':error-text', the ':helper-text' and the ':info-text' metamorphic content values (if any) in the given property map.
-  ;
-  ; @param (map) props
-  ; {:error-text (metamorphic-content)(opt)
-  ;  :helper-text (metamorphic-content)(opt)
-  ;  :info-text (metamorphic-content)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (compose-input-guides {:error-text "My error text" ...})
-  ; =>
-  ; {:error-text "My error text"
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:error-text (metamorphic-content)
-  ;  :helper-text (metamorphic-content)
-  ;  :info-text (metamorphic-content)
-  ;  ...}
-  [props]
-  (-> props (map/update-some :error-text  metamorphic-content/compose)
-            (map/update-some :helper-text metamorphic-content/compose)
-            (map/update-some :info-text   metamorphic-content/compose)))

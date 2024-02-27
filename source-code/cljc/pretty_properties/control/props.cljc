@@ -59,6 +59,35 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-focus-event-props
+  ; @description
+  ; Applies the given default focus event properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:autofocus? (boolean)(opt)
+  ;  :on-blur-f (function)(opt)
+  ;  :on-focus-f (function)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-focus-event-props {:on-blur-f (fn [_] ...) :on-focus-f (fn [_] ...) ...})
+  ; =>
+  ; {:on-blur-f  (fn [_] ...)
+  ;  :on-focus-f (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:autofocus? (boolean)
+  ;  :on-blur-f (function)
+  ;  :on-focus-f (function)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-keypress-props
   ; @description
   ; Applies the given default keypress properties on the given property map.
@@ -113,5 +142,5 @@
   ;  :on-mouse-up-f (function)(opt)
   ;  :on-right-click-f (function)(opt)
   ;  ...}
-  [{:keys [on-click-f on-mouse-down-f on-mouse-up-f] :as props} & [default-props]]
+  [props & [default-props]]
   (-> props (map/use-default-values default-props)))

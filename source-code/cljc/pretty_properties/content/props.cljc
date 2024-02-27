@@ -64,24 +64,24 @@
   ; Applies the given default icon properties on the given property map.
   ;
   ; @param (map) props
-  ; {:icon (keyword)(opt)
-  ;  :icon-color (keyword or string)(opt)
+  ; {:icon-color (keyword or string)(opt)
   ;  :icon-family (keyword)(opt)
+  ;  :icon-name (keyword)(opt)
   ;  :icon-position (keyword)(opt)
   ;  :icon-size (keyword, px or string)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-icon-props {...} {:icon :my_icon})
+  ; (default-icon-props {...} {:icon-name :my_icon})
   ; =>
-  ; {:icon :my_icon
+  ; {:icon-name :my_icon
   ;  ...}
   ;
   ; @return (map)
-  ; {:icon (keyword)
-  ;  :icon-color (keyword or string)
+  ; {:icon-color (keyword or string)
   ;  :icon-family (keyword)
+  ;  :icon-name (keyword)
   ;  :icon-position (keyword)
   ;  :icon-size (keyword, px or string)
   ;  ...}

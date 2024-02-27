@@ -1,0 +1,20 @@
+
+/***** Appear keyframes *****/
+/*** Appear in ***/
+
+@keyframes appear-in {
+    0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+/*** Appear in ***/
+
+/*** Appear out ***/
+
+@keyframes appear-out {
+    0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+/*** Appear out ***/
+/***** Appear keyframes *****/

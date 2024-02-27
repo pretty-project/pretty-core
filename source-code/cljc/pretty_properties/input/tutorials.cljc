@@ -4,19 +4,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Input autofill properties
-;
-; @title autofill-name property
-;
-; @--- Accepted types
-; {:autofill-name (keyword)}
-;
-; @--- Examples
-; {:autofill-name :password}
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 ; @tutorial Input event properties
 ;
 ; @title on-changed-f property
@@ -62,6 +49,19 @@
 
 ; @tutorial Input field properties
 ;
+; @links
+; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+;
+; @title autofill-name property
+;
+; @--- Accepted types
+; {:autofill-name (keyword)}
+;
+; @--- Examples
+; {:autofill-name :password}
+;
+;
+;
 ; @title date-from property
 ;
 ; @--- Accepted types
@@ -92,6 +92,20 @@
 ;
 ;
 ;
+; @title field-placeholder property
+;
+; @--- Accepted types
+; {:field-placeholder (metamorphic-content)}
+;
+; @--- Examples
+; {:field-placeholder "My field placeholder"}
+; {:field-placeholder :my-dictionary-term}
+; {:field-placeholder [:div "My field placeholder"]}
+; {:field-placeholder [my-field-placeholder-component]}
+; {:field-placeholder 123456}
+;
+;
+;
 ; @title field-to property
 ;
 ; @--- Accepted types
@@ -119,54 +133,6 @@
 ;
 ; @--- Examples
 ; {:max-length 69}
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Input guide properties
-;
-; @links
-; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
-;
-; @title error-text property
-;
-; @--- Accepted types
-; {:error-text (metamorphic-content)}
-;
-; @--- Examples
-; {:error-text "My error text"}
-; {:error-text :my-dictionary-term}
-; {:error-text [:div "My error text"]}
-; {:error-text [my-error-text-component]}
-; {:error-text 123456}
-;
-;
-;
-; @title helper-text property
-;
-; @--- Accepted types
-; {:helper-text (metamorphic-content)}
-;
-; @--- Examples
-; {:helper-text "My helper text"}
-; {:helper-text :my-dictionary-term}
-; {:helper-text [:div "My helper text"]}
-; {:helper-text [my-helper-text-component]}
-; {:helper-text 123456}
-;
-;
-;
-; @title info-text property
-;
-; @--- Accepted types
-; {:info-text (metamorphic-content)}
-;
-; @--- Examples
-; {:info-text "My info text"}
-; {:info-text :my-dictionary-term}
-; {:info-text [:div "My info text"]}
-; {:info-text [my-info-text-component]}
-; {:info-text 123456}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -243,6 +209,9 @@
 
 ; @tutorial Input validation properties
 ;
+; @links
+; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+;
 ; @title on-invalid-f property
 ;
 ; @--- Accepted types
@@ -289,7 +258,60 @@
 ; {:validators (maps in vector)
 ;   [(map) validator
 ;     {:error-text (metamorphic-content)
-;      :f (function)}]}
+;      :test-f (function)}]}
 ;
 ; @--- Examples
-; {:validators [{:f some? :error-text "Please fill out this field!"}]}
+; {:validators [{:error-text "Please fill out this field!" :test-f #(-> % empty? not)}]}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Input value properties
+;
+; @title get-value-f property
+;
+; @--- Accepted types
+; {:get-value-f (function)}
+;
+; @--- Examples
+; {:get-value-f (fn [] ...)}
+;
+;
+;
+; @title initial-value property
+;
+; @--- Accepted types
+; {:initial-value (*)}
+;
+; @--- Examples
+; {:initial-value "My initial value"}
+;
+;
+;
+; @title modify-value-f property
+;
+; @--- Accepted types
+; {:modify-value-f (function)}
+;
+; @--- Examples
+; {:modify-value-f (fn [value] ...)}
+;
+;
+;
+; @title projected-value property
+;
+; @--- Accepted types
+; {:projected-value (*)}
+;
+; @--- Examples
+; {:projected-value "My projected value"}
+;
+;
+;
+; @title set-value-f property
+;
+; @--- Accepted types
+; {:set-value-f (function)}
+;
+; @--- Examples
+; {:set-value-f (fn [value] ...)}

@@ -30,24 +30,24 @@
 
 /*** Outer position ***/
 
-                                     [data-outer-position="tl"]     { left:     0; top:      0; }
-                                     [data-outer-position="tr"]     { right:    0; top:      0; }
-                                     [data-outer-position="br"]     { right:    0; bottom:   0; }
-                                     [data-outer-position="bl"]     { left:     0; bottom:   0; }
-                                     [data-outer-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%,    0% ); }
-                                     [data-outer-position="right"]  { right:   0%; top:    50%; transform: translate(    0%,  -50% ); }
-                                     [data-outer-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%,    0% ); }
-                                     [data-outer-position="left"]   { left:    0%; top:    50%; transform: translate(    0%,  -50% ); }
-                                     [data-outer-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
-[data-outer-position-base="external"][data-outer-position="tl"]     { left:     0; top:      0; transform: translate( -100%, -100% ); }
-[data-outer-position-base="external"][data-outer-position="tr"]     { right:    0; top:      0; transform: translate( +100%, -100% ); }
-[data-outer-position-base="external"][data-outer-position="br"]     { right:    0; bottom:   0; transform: translate( +100%, +100% ); }
-[data-outer-position-base="external"][data-outer-position="bl"]     { left:     0; bottom:   0; transform: translate( -100%, +100% ); }
-[data-outer-position-base="external"][data-outer-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%, -100% ); }
-[data-outer-position-base="external"][data-outer-position="right"]  { right:   0%; top:    50%; transform: translate( +100%,  -50% ); }
-[data-outer-position-base="external"][data-outer-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%, +100% ); }
-[data-outer-position-base="external"][data-outer-position="left"]   { left:    0%; top:    50%; transform: translate( -100%,  -50% ); }
-[data-outer-position-base="external"][data-outer-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
+:not([data-outer-position-base="external"])[data-outer-position="tl"]     { left:     0; top:      0; }
+:not([data-outer-position-base="external"])[data-outer-position="tr"]     { right:    0; top:      0; }
+:not([data-outer-position-base="external"])[data-outer-position="br"]     { right:    0; bottom:   0; }
+:not([data-outer-position-base="external"])[data-outer-position="bl"]     { left:     0; bottom:   0; }
+:not([data-outer-position-base="external"])[data-outer-position="top"]    { left:   50%; top:     0%; transform: translate(  -50%,    0% ); }
+:not([data-outer-position-base="external"])[data-outer-position="right"]  { right:   0%; top:    50%; transform: translate(    0%,  -50% ); }
+:not([data-outer-position-base="external"])[data-outer-position="bottom"] { left:   50%; bottom:  0%; transform: translate(  -50%,    0% ); }
+:not([data-outer-position-base="external"])[data-outer-position="left"]   { left:    0%; top:    50%; transform: translate(    0%,  -50% ); }
+:not([data-outer-position-base="external"])[data-outer-position="center"] { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
+[data-outer-position-base="external"][data-outer-position="tl"]           { left:     0; top:      0; transform: translate( -100%, -100% ); }
+[data-outer-position-base="external"][data-outer-position="tr"]           { right:    0; top:      0; transform: translate( +100%, -100% ); }
+[data-outer-position-base="external"][data-outer-position="br"]           { right:    0; bottom:   0; transform: translate( +100%, +100% ); }
+[data-outer-position-base="external"][data-outer-position="bl"]           { left:     0; bottom:   0; transform: translate( -100%, +100% ); }
+[data-outer-position-base="external"][data-outer-position="top"]          { left:   50%; top:     0%; transform: translate(  -50%, -100% ); }
+[data-outer-position-base="external"][data-outer-position="right"]        { right:   0%; top:    50%; transform: translate( +100%,  -50% ); }
+[data-outer-position-base="external"][data-outer-position="bottom"]       { left:   50%; bottom:  0%; transform: translate(  -50%, +100% ); }
+[data-outer-position-base="external"][data-outer-position="left"]         { left:    0%; top:    50%; transform: translate( -100%,  -50% ); }
+[data-outer-position-base="external"][data-outer-position="center"]       { left:   50%; top:    50%; transform: translate(  -50%,  -50% ); }
 
 /*** Outer position ***/
 

@@ -103,17 +103,6 @@
 ; @note
 ; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @title icon property
-;
-; @--- Accepted types
-; {:icon (keyword)}
-;
-; @--- Examples
-; {:icon :material_icon_name}
-; {:icon :material_symbol_name}
-;
-;
-;
 ; @title icon-color property
 ;
 ; @--- Accepted types
@@ -138,6 +127,17 @@
 ;
 ; @--- Predefined values
 ; :material-icons-filled, :material-icons-outlined, :material-symbols-filled, :material-symbols-outlined
+;
+;
+;
+; @title icon-name property
+;
+; @--- Accepted types
+; {:icon-name (keyword)}
+;
+; @--- Examples
+; {:icon-name :material_icon_name}
+; {:icon-name :material_symbol_name}
 ;
 ;
 ;

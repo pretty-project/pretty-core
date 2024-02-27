@@ -63,6 +63,42 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Focus event properties
+;
+; @title autofocus? property
+;
+; @note
+; The ':autofocus?' property is not necessarily supported by elements that implement the focus event properties!
+;
+; @--- Accepted types
+; {:autofocus? (boolean)}
+;
+; @--- Examples
+; {:autofocus? true}
+;
+;
+;
+; @title on-blur-f property
+;
+; @--- Accepted types
+; {:on-blur-f (function)}
+;
+; @--- Examples
+; {:on-blur-f (fn [_] ...)}
+;
+;
+;
+; @title on-focus-f property
+;
+; @--- Accepted types
+; {:on-focus-f (function)}
+;
+; @--- Examples
+; {:on-focus-f (fn [_] ...)}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Keypress properties
 ;
 ; @links

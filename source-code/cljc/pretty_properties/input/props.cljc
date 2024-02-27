@@ -1,31 +1,7 @@
 
 (ns pretty-properties.input.props
-    (:require [fruits.map.api          :as map]
-              [fruits.random.api       :as random]))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn default-input-autofill-props
-  ; @description
-  ; Applies the given default input autofill properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:autofill-name (keyword)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-input-autofill-props {...} {:autofill-name :phone-number})
-  ; =>
-  ; {:autofill-name :phone-number
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:autofill-name (keyword)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
+    (:require [fruits.map.api :as map]
+              [fruits.random.api :as random]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -65,9 +41,11 @@
   ; Applies the given default input field properties on the given property map.
   ;
   ; @param (map) props
-  ; {:date-from (string)(opt)
+  ; {:autofill-name (keyword)(opt)
+  ;  :date-from (string)(opt)
   ;  :date-to (string)(opt)
   ;  :field-from (number)(opt)
+  ;  :field-placeholder (metamorphic-content)(opt)
   ;  :field-to (number)(opt)
   ;  :field-type (keyword)(opt)
   ;  :max-length (integer)(opt)
@@ -75,10 +53,11 @@
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-input-field-props {...} {:field-type :password :max-length 8})
+  ; (default-input-field-props {...} {:autofill-name :password :field-type :password :max-length 8})
   ; =>
-  ; {:field-type :password
-  ;  :max-length 8
+  ; {:autofill-name :password
+  ;  :field-type    :password
+  ;  :max-length    8
   ;  ...}
   ;
   ; @usage
@@ -90,40 +69,14 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:date-from (string)
+  ; {:autofill-name (keyword)
+  ;  :date-from (string)
   ;  :date-to (string)
   ;  :field-from (number)
+  ;  :field-placeholder (metamorphic-content)
   ;  :field-to (number)
   ;  :field-type (keyword)
   ;  :max-length (integer)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn default-input-guide-props
-  ; @description
-  ; Applies the given default input guide properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:error-text (metamorphic-content)(opt)
-  ;  :helper-text (metamorphic-content)(opt)
-  ;  :info-text (metamorphic-content)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-input-guide-props {...} {:error-text "My error text"})
-  ; =>
-  ; {:error-text "My error text"
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:error-text (metamorphic-content)
-  ;  :helper-text (metamorphic-content)
-  ;  :info-text (metamorphic-content)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -219,6 +172,38 @@
   ;   [(map) validator
   ;     {:error-text (metamorphic-content)
   ;      :f (function)}]
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn default-input-value-props
+  ; @description
+  ; Applies the given default input value properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:get-value-f (function)(opt)
+  ;  :initial-value (*)(opt)
+  ;  :modify-value-f (function)(opt)
+  ;  :projected-value (*)(opt)
+  ;  :set-value-f (function)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-input-value-props {...} {:get-value-f (fn [_] ...)})
+  ; =>
+  ; {:get-value-f (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:get-value-f (function)
+  ;  :initial-value (*)
+  ;  :modify-value-f (function)
+  ;  :projected-value (*)
+  ;  :set-value-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

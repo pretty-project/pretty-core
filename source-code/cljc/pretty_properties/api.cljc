@@ -8,23 +8,13 @@
               [pretty-properties.input.props :as input.props]
               [pretty-properties.layout.props      :as layout.props]
               [pretty-properties.live.props        :as live.props]
-              [pretty-properties.svg.props         :as svg.props]
-              [pretty-properties.accessories.props :as accessories.props]))
+              [pretty-properties.svg.props         :as svg.props]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 ; @tutorial Pretty properties
 ; ...
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Overlay properties
-; @redirect (pretty-properties.accessories.tutorials/overlay-properties)
-
-; @redirect (pretty-properties.accessories.props/*)
-(def default-overlay-props accessories.props/default-overlay-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -46,6 +36,9 @@
 
 ; @tutorial Theme properties
 ; @redirect (pretty-properties.appearance.tutorials/theme-properties)
+
+; @tutorial Visibility properties
+; @redirect (pretty-properties.appearance.tutorials/visibility-properties)
 
 ; @redirect (pretty-properties.appearance.props/*)
 (def default-background-color-props appearance.props/default-background-color-props)
@@ -131,6 +124,9 @@
 ; @tutorial Clickable state properties
 ; @redirect (pretty-properties.control.tutorials/clickable-state-properties)
 
+; @tutorial Focus event properties
+; @redirect (pretty-properties.control.tutorials/focus-event-properties)
+
 ; @tutorial Keypress properties
 ; @redirect (pretty-properties.control.tutorials/keypress-properties)
 
@@ -140,6 +136,7 @@
 ; @redirect (pretty-properties.control.props/*)
 (def default-anchor-props          control.props/default-anchor-props)
 (def default-clickable-state-props control.props/default-clickable-state-props)
+(def default-focus-event-props     control.props/default-focus-event-props)
 (def default-keypress-props        control.props/default-keypress-props)
 (def default-mouse-event-props     control.props/default-mouse-event-props)
 
@@ -155,17 +152,11 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Input autofill properties
-; @redirect (pretty-properties.input.tutorials/input-autofill-properties)
-
 ; @tutorial Input event properties
 ; @redirect (pretty-properties.input.tutorials/input-event-properties)
 
 ; @tutorial Input field properties
 ; @redirect (pretty-properties.input.tutorials/input-field-properties)
-
-; @tutorial Input guide properties
-; @redirect (pretty-properties.input.tutorials/input-guide-properties)
 
 ; @tutorial Input option properties
 ; @redirect (pretty-properties.input.tutorials/input-option-properties)
@@ -176,14 +167,16 @@
 ; @tutorial Input validation properties
 ; @redirect (pretty-properties.input.tutorials/input-validation-properties)
 
+; @tutorial Input value properties
+; @redirect (pretty-properties.input.tutorials/input-value-properties)
+
 ; @redirect (pretty-properties.input.props/*)
-(def default-input-autofill-props   input.props/default-input-autofill-props)
 (def default-input-event-props      input.props/default-input-event-props)
 (def default-input-field-props      input.props/default-input-field-props)
-(def default-input-guide-props      input.props/default-input-guide-props)
 (def default-input-option-props     input.props/default-input-option-props)
 (def default-input-state-props      input.props/default-input-state-props)
 (def default-input-validation-props input.props/default-input-validation-props)
+(def default-input-value-props      input.props/default-input-value-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

@@ -29,6 +29,19 @@
 
 ; @tutorial Flex properties
 ;
+; @title direction property
+;
+; @--- Accepted types
+; {:direction (keyword)}
+;
+; @--- Examples
+; {:direction :reversed}
+;
+; @--- Predefined values
+; :normal, :reversed
+;
+;
+;
 ; @title gap property
 ;
 ; @--- Accepted types

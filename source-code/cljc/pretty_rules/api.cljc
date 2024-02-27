@@ -33,14 +33,12 @@
 (def auto-set-multiline-height  content.rules/auto-set-multiline-height)
 
 ; @redirect (pretty-rules.control.rules/*)
-(def auto-color-clickable-text control.rules/auto-color-clickable-text)
 (def auto-disable-mouse-events control.rules/auto-disable-mouse-events)
 (def auto-blur-click-events    control.rules/auto-blur-click-events)
 
 ; @redirect (pretty-rules.input.rules/*)
 (def auto-disable-input-autofill input.rules/auto-disable-input-autofill)
 (def generate-input-autofill     input.rules/generate-input-autofill)
-(def compose-input-guides        input.rules/compose-input-guides)
 
 ; @redirect (pretty-rules.layout.rules/*)
 (def auto-align-scrollable-flex layout.rules/auto-align-scrollable-flex)

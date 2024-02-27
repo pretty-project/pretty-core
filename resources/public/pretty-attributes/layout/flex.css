@@ -66,12 +66,14 @@
 /* Vertical */
 /*** Flex horizontal align ***/
 
-/*** Flex orientation ***/
+/*** Flex direction and orientation ***/
 
-[data-flex-orientation="horizontal"] { display: flex; flex-direction: row;    }
-[data-flex-orientation="vertical"]   { display: flex; flex-direction: column; }
+:not([data-flex-direction="reversed"])[data-flex-orientation="horizontal"] { display: flex; flex-direction: row;            }
+:not([data-flex-direction="reversed"])[data-flex-orientation="vertical"]   { display: flex; flex-direction: column;         }
+[data-flex-direction="reversed"][data-flex-orientation="horizontal"]       { display: flex; flex-direction: row-reverse;    }
+[data-flex-direction="reversed"][data-flex-orientation="vertical"]         { display: flex; flex-direction: column-reverse; }
 
-/*** Flex orientation ***/
+/*** Flex direction and orientation ***/
 
 /*** Flex overflow ***/
 /* Horizontal */

@@ -326,6 +326,9 @@
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
+  ; @note
+  ; Do not apply animation and visibility attributes on the same element, in order to avoid concurent opacity values!
+  ;
   ; @description
   ; Applies the visibility related values on the given attribute map.
   ;

@@ -40,19 +40,19 @@
   ;
   ; @description
   ; Uses the ':text-color' and ':font-size' properties (if any) as default values
-  ; for the ':icon-color' and ':icon-size' properties; in case the ':icon' property is provided.
+  ; for the ':icon-color' and ':icon-size' properties; in case the ':icon-name' property is provided.
   ;
   ; @param (map) props
   ; {:font-size (keyword, px or string)(opt)
-  ;  :icon (keyword)(opt)
+  ;  :icon-name (keyword)(opt)
   ;  :text-color (keyword or string)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (inherit-icon-props {:icon :my_icon :text-color :primary ...})
+  ; (inherit-icon-props {:icon-name :my_icon :text-color :primary ...})
   ; =>
-  ; {:icon       :my_icon
-  ;  :icon-color :primary
+  ; {:icon-color :primary
+  ;  :icon-name  :my_icon
   ;  :text-color :primary
   ;  ...}
   ;
@@ -60,9 +60,9 @@
   ; {:icon-color (keyword or string)
   ;  :icon-size (keyword, px or string)
   ;  ...}
-  [{:keys [font-size icon text-color] :as props}]
-  (if icon (-> props (map/use-default-values {:icon-color text-color :icon-size font-size}))
-           (-> props)))
+  [{:keys [font-size icon-name text-color] :as props}]
+  (if icon-name (-> props (map/use-default-values {:icon-color text-color :icon-size font-size}))
+                (-> props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

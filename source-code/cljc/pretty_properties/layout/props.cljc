@@ -36,7 +36,8 @@
   ; Applies the given default flex properties on the given property map.
   ;
   ; @param (map) props
-  ; {:gap (keyword, px or string)(opt)
+  ; {:direction (keyword)(opt)
+  ;  :gap (keyword, px or string)(opt)
   ;  :grow (integer)(opt)
   ;  :horizontal-align (keyword)(opt)
   ;  :orientation (keyword)(opt)
@@ -53,7 +54,8 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:gap (keyword, px or string)
+  ; {:direction (keyword)
+  ;  :gap (keyword, px or string)
   ;  :grow (integer)
   ;  :horizontal-align (keyword)
   ;  :orientation (keyword)

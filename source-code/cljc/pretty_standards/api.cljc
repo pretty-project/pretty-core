@@ -8,8 +8,7 @@
               [pretty-standards.input.standards :as input.standards]
               [pretty-standards.layout.standards      :as layout.standards]
               [pretty-standards.live.standards        :as live.standards]
-              [pretty-standards.svg.standards         :as svg.standards]
-              [pretty-standards.accessories.standards         :as accessories.standards]))
+              [pretty-standards.svg.standards         :as svg.standards]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -19,9 +18,6 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
-
-; @redirect (pretty-properties.accessories.standards/*)
-(def standard-overlay-props accessories.standards/standard-overlay-props)
 
 ; @redirect (pretty-properties.appearance.standards/*)
 (def standard-background-image-props appearance.standards/standard-background-image-props)

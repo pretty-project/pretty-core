@@ -8,14 +8,14 @@
 ; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
-; {:icon (keyword)
-;  :icon-color (keyword or string)
+; {:icon-color (keyword or string)
 ;  :icon-family (keyword)
+;  :icon-name (keyword)
 ;  :icon-size (keyword, px or string)}
 (def STANDARD-ICON-PROPERTIES
-     {:icon        nil
-      :icon-color  :default
+     {:icon-color  :default
       :icon-family :material-symbols-outlined
+      :icon-name   nil
       :icon-size   :s})
 
 ; @note (pretty-standards.appearance.config#4011)
