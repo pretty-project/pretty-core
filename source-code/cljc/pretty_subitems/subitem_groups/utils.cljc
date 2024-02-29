@@ -34,7 +34,9 @@
   ; @param (function) prototype-f
   ;
   ; @usage
-  ; (apply-group-item-prototype {:my-subitems [{...}] ...} :my-subitems (fn [_] ...))
+  ; (apply-group-item-prototype {:my-subitems [{...}] ...}
+  ;                             :my-subitems
+  ;                             (fn [subitem-dex subitem-props] ...))
   ; =>
   ; {:my-subitems [{...}] ...}
   ;
@@ -114,7 +116,7 @@
   [props subitem-group-key]
   (let [subitem-default-key (subitem-default-key subitem-group-key)]
        (if-let [subitem-default (get props subitem-default-key)]
-               (-> props (update subitem-group-key vector/update-all-item map/reversed-merge subitem-default))
+               (-> props (update subitem-group-key vector/update-all-item map/reversed-deep-merge subitem-default))
                (-> props))))
 
 (defn subitem-groups<-subitem-default

@@ -21,6 +21,36 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Dropdown properties
+;
+; @links
+; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+;
+; @title dropdown-content property
+;
+; @--- Accepted types
+; {:dropdown-content (metamorphic-content)}
+;
+; @--- Examples
+; {:dropdown-content "My dropdown content"}
+; {:dropdown-content :my-dictionary-term}
+; {:dropdown-content [:div "My dropdown content"]}
+; {:dropdown-content [my-dropdown-content-component]}
+; {:dropdown-content 123456}
+;
+;
+;
+; @title dropdown-menu-id property
+;
+; @--- Accepted types
+; {:dropdown-menu-id (keyword)}
+;
+; @--- Examples
+; {:dropdown-menu-id :my-dropdown-menu}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Font properties
 ;
 ; @note

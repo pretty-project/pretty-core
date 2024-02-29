@@ -84,6 +84,9 @@
 ; @tutorial Cursor properties
 ; @redirect (pretty-properties.content.tutorials/cursor-properties)
 
+; @tutorial Dropdown properties
+; @redirect (pretty-properties.content.tutorials/dropdown-properties)
+
 ; @tutorial Font properties
 ; @redirect (pretty-properties.content.tutorials/font-properties)
 

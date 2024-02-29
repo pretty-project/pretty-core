@@ -45,6 +45,22 @@
   [props subitem-key]
   (map/use-default-values props {subitem-key {}}))
 
+(defn ensure-subitems
+  ; @description
+  ; Ensures that specific subitems are present in the given property map, by associating empty maps under the keys of subitems (if NIL).
+  ;
+  ; @param (map) props
+  ; @param (list of keywords)(opt) subitem-keys
+  ;
+  ; @usage
+  ; (ensure-subitems {...} :my-subitem :another-subitem)
+  ; =>
+  ; {:my-subitem {} :another-subitem {} ...}
+  ;
+  ; @return (map)
+  [props & subitem-keys]
+  (reduce ensure-subitem props subitem-keys))
+
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
@@ -58,7 +74,9 @@
   ; @param (function) prototype-f
   ;
   ; @usage
-  ; (apply-subitem-prototype {:my-subitem {...} ...} :my-subitem (fn [_] ...))
+  ; (apply-subitem-prototype {:my-subitem {...} ...}
+  ;                          :my-subitem
+  ;                          (fn [subitem-props] ...))
   ; =>
   ; {:my-subitem {...} ...}
   ;

@@ -52,6 +52,7 @@
 ; @redirect (pretty-subitems.subitems.utils/*)
 (def subitem-id               subitems.utils/subitem-id)
 (def ensure-subitem           subitems.utils/ensure-subitem)
+(def ensure-subitems          subitems.utils/ensure-subitems)
 (def apply-subitem-prototype  subitems.utils/apply-subitem-prototype)
 (def subitem<-disabled-state  subitems.utils/subitem<-disabled-state)
 (def subitems<-disabled-state subitems.utils/subitems<-disabled-state)

@@ -29,6 +29,33 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-dropdown-props
+  ; @description
+  ; Applies the given default dropdown properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:dropdown-content (metamorphic-content)(opt)
+  ;  :dropdown-menu-id (keyword)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-dropdown-props {...} {:dropdown-content "My dropdown content" :dropdown-menu-id :my-dropdown-menu})
+  ; =>
+  ; {:dropdown-content "My dropdown content"
+  ;  :dropdown-menu-id :my-dropdown-menu
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:dropdown-content (metamorphic-content)
+  ;  :dropdown-menu-id (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-font-props
   ; @description
   ; Applies the given default font properties on the given property map.
