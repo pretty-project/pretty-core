@@ -31,3 +31,4 @@
 
 ; @redirect (pretty-models.utils/*)
 (def clickable-auto-tag utils/clickable-auto-tag)
+(def use-shorthand      utils/use-shorthand)

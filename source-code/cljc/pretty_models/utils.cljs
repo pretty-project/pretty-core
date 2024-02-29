@@ -34,3 +34,30 @@
   (cond href-uri   :a
         on-click-f :button
         :static    :div))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn use-shorthand
+  ; @description
+  ; Convets the given property map to longhand from in case it is provided in shorthand form.
+  ;
+  ; @param (keyword) id
+  ; @param (* or map) props
+  ; @param (keyword) shorthand-key
+  ;
+  ; @usage
+  ; (use-shorthand :my-element {:label "My label"} :label)
+  ; =>
+  ; {:label "My label"}
+  ;
+  ; @usage
+  ; (use-shorthand :my-element "My label" :label)
+  ; =>
+  ; {:label "My label"}
+  ;
+  ; @return (map)
+  [_ props shorthand-key]
+  (if (-> props map?)
+      (-> props)
+      (-> {shorthand-key props})))
