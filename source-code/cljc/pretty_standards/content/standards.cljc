@@ -14,12 +14,12 @@
   ;   ':content', ':content-placeholder', ':label', ':label-placeholder'
   ;
   ; @param (map) props
-  ; {:content (metamorphic-content)(opt)
-  ;  :content-placeholder (metamorphic-content)(opt)
+  ; {:content (multitype-content)(opt)
+  ;  :content-placeholder (multitype-content)(opt)
   ;  :font-size (keyword, px or string)(opt)
   ;  :font-weight (keyword)(opt)
-  ;  :label (metamorphic-content)(opt)
-  ;  :label-placeholder (metamorphic-content)(opt)
+  ;  :label (multitype-content)(opt)
+  ;  :label-placeholder (multitype-content)(opt)
   ;  :letter-spacing (keyword, px or string)(opt)
   ;  :line-height (keyword, px or string)(opt)
   ;  ...}
@@ -117,10 +117,10 @@
   ;   ':content', ':content-placeholder', ':label', ':label-placeholder'
   ;
   ; @param (map) props
-  ; {:content (metamorphic-content)(opt)
-  ;  :content-placeholder (metamorphic-content)(opt)
-  ;  :label (metamorphic-content)(opt)
-  ;  :label-placeholder (metamorphic-content)(opt)
+  ; {:content (multitype-content)(opt)
+  ;  :content-placeholder (multitype-content)(opt)
+  ;  :label (multitype-content)(opt)
+  ;  :label-placeholder (multitype-content)(opt)
   ;  :text-align (keyword)(opt)
   ;  :text-caret (keyword)(opt)
   ;  :text-color (keyword or string)(opt)

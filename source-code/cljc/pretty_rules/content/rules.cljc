@@ -2,7 +2,7 @@
 (ns pretty-rules.content.rules
     (:require [fruits.map.api :as map]
               [fruits.string.api :as string]
-              [metamorphic-content.api :as metamorphic-content]
+              [multitype-content.api :as multitype-content]
               [pretty-attributes.api :as pretty-attributes]))
 
 ;; ----------------------------------------------------------------------------
@@ -73,8 +73,8 @@
   ; and associates the composed result as ':content' property to the given property map.
   ;
   ; @param (map) props
-  ; {:content (metamorphic-content)(opt)
-  ;  :content-placeholder (metamorphic-content)(opt)
+  ; {:content (multitype-content)(opt)
+  ;  :content-placeholder (multitype-content)(opt)
   ;  ...}
   ;
   ; @usage
@@ -84,10 +84,10 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:content (metamorphic-content)
+  ; {:content (multitype-content)
   ;  ...}
   [{:keys [content content-placeholder] :as props}]
-  (-> props (map/assoc-some :content (metamorphic-content/compose content content-placeholder))))
+  (-> props (map/assoc-some :content (multitype-content/compose content content-placeholder))))
 
 (defn compose-label
   ; @description
@@ -95,8 +95,8 @@
   ; and associates the composed result as ':label' property to the given property map.
   ;
   ; @param (map) props
-  ; {:label (metamorphic-content)(opt)
-  ;  :label-placeholder (metamorphic-content)(opt)
+  ; {:label (multitype-content)(opt)
+  ;  :label-placeholder (multitype-content)(opt)
   ;  ...}
   ;
   ; @usage
@@ -106,10 +106,10 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:label (metamorphic-content)
+  ; {:label (multitype-content)
   ;  ...}
   [{:keys [label label-placeholder] :as props}]
-  (-> props (map/assoc-some :label (metamorphic-content/compose label label-placeholder))))
+  (-> props (map/assoc-some :label (multitype-content/compose label label-placeholder))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -119,7 +119,7 @@
   ; Counts newlines in the value of ':content' property and associates the result as ':line-count' property.
   ;
   ; @param (map) props
-  ; {:content (metamorphic-content)(opt)
+  ; {:content (multitype-content)(opt)
   ;  ...}
   ;
   ; @usage

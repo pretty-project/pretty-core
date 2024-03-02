@@ -50,7 +50,7 @@
 ; @tutorial Input field properties
 ;
 ; @links
-; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
 ;
 ; @title autofill-name property
 ;
@@ -95,7 +95,7 @@
 ; @title field-placeholder property
 ;
 ; @--- Accepted types
-; {:field-placeholder (metamorphic-content)}
+; {:field-placeholder (multitype-content)}
 ;
 ; @--- Examples
 ; {:field-placeholder "My field placeholder"}
@@ -210,7 +210,7 @@
 ; @tutorial Input validation properties
 ;
 ; @links
-; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
 ;
 ; @title on-invalid-f property
 ;
@@ -257,7 +257,7 @@
 ; @--- Accepted types
 ; {:validators (maps in vector)
 ;   [(map) validator
-;     {:error-text (metamorphic-content)
+;     {:error-text (multitype-content)
 ;      :test-f (function)}]}
 ;
 ; @--- Examples

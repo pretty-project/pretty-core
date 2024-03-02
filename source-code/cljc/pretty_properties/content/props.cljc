@@ -34,7 +34,7 @@
   ; Applies the given default dropdown properties on the given property map.
   ;
   ; @param (map) props
-  ; {:dropdown-content (metamorphic-content)(opt)
+  ; {:dropdown-content (multitype-content)(opt)
   ;  :dropdown-menu-id (keyword)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -47,7 +47,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:dropdown-content (metamorphic-content)
+  ; {:dropdown-content (multitype-content)
   ;  :dropdown-menu-id (keyword)
   ;  ...}
   [props & [default-props]]
@@ -217,8 +217,8 @@
   ; Applies the given default content properties on the given property map.
   ;
   ; @param (map) props
-  ; {:content (metamorphic-content)(opt)
-  ;  :content-placeholder (metamorphic-content)(opt)
+  ; {:content (multitype-content)(opt)
+  ;  :content-placeholder (multitype-content)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -229,8 +229,8 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:content (metamorphic-content)
-  ;  :content-placeholder (metamorphic-content)
+  ; {:content (multitype-content)
+  ;  :content-placeholder (multitype-content)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -240,8 +240,8 @@
   ; Applies the given default label properties on the given property map.
   ;
   ; @param (map) props
-  ; {:label (metamorphic-content)(opt)
-  ;  :label-placeholder (metamorphic-content)(opt)
+  ; {:label (multitype-content)(opt)
+  ;  :label-placeholder (multitype-content)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -252,8 +252,8 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:label (metamorphic-content)
-  ;  :label-placeholder (metamorphic-content)
+  ; {:label (multitype-content)
+  ;  :label-placeholder (multitype-content)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

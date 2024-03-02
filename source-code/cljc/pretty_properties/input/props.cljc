@@ -45,7 +45,7 @@
   ;  :date-from (string)(opt)
   ;  :date-to (string)(opt)
   ;  :field-from (number)(opt)
-  ;  :field-placeholder (metamorphic-content)(opt)
+  ;  :field-placeholder (multitype-content)(opt)
   ;  :field-to (number)(opt)
   ;  :field-type (keyword)(opt)
   ;  :max-length (integer)(opt)
@@ -73,7 +73,7 @@
   ;  :date-from (string)
   ;  :date-to (string)
   ;  :field-from (number)
-  ;  :field-placeholder (metamorphic-content)
+  ;  :field-placeholder (multitype-content)
   ;  :field-to (number)
   ;  :field-type (keyword)
   ;  :max-length (integer)
@@ -151,7 +151,7 @@
   ;  :validate-when-leave? (boolean)(opt)
   ;  :validators (maps in vector)(opt)
   ;   [(map) validator
-  ;     {:error-text (metamorphic-content)(opt)
+  ;     {:error-text (multitype-content)(opt)
   ;      :f (function)}]
   ;  ...}
   ; @param (map)(opt) default-props
@@ -170,7 +170,7 @@
   ;  :validate-when-leave? (boolean)
   ;  :validators (maps in vector)
   ;   [(map) validator
-  ;     {:error-text (metamorphic-content)
+  ;     {:error-text (multitype-content)
   ;      :f (function)}]
   ;  ...}
   [props & [default-props]]

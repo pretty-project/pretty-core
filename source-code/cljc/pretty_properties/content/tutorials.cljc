@@ -24,12 +24,12 @@
 ; @tutorial Dropdown properties
 ;
 ; @links
-; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
 ;
 ; @title dropdown-content property
 ;
 ; @--- Accepted types
-; {:dropdown-content (metamorphic-content)}
+; {:dropdown-content (multitype-content)}
 ;
 ; @--- Examples
 ; {:dropdown-content "My dropdown content"}
@@ -357,7 +357,7 @@
 ; @tutorial Content properties
 ;
 ; @links
-; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
 ;
 ; @note
 ; The ':content-placeholder' property provides fallback value for the ':content' property in case it has no value.
@@ -365,7 +365,7 @@
 ; @title content property
 ;
 ; @--- Accepted types
-; {:content (metamorphic-content)}
+; {:content (multitype-content)}
 ;
 ; @--- Examples
 ; {:content "My content"}
@@ -379,7 +379,7 @@
 ; @title content-placeholder property
 ;
 ; @--- Accepted types
-; {:content-placeholder (metamorphic-content)}
+; {:content-placeholder (multitype-content)}
 ;
 ; @--- Examples
 ; {:content-placeholder "My content placeholder"}
@@ -394,7 +394,7 @@
 ; @tutorial Label properties
 ;
 ; @links
-; Check out the [cljc-metamorphic-content](https://mt-app-kit.github.io/cljc-metamorphic-content) library.
+; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
 ;
 ; @note
 ; The ':label-placeholder' property provides fallback value for the ':label' property in case it has no value.
@@ -402,7 +402,7 @@
 ; @title label property
 ;
 ; @--- Accepted types
-; {:label (metamorphic-content)}
+; {:label (multitype-content)}
 ;
 ; @--- Examples
 ; {:label "My label"}
