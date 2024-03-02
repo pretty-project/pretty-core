@@ -19,4 +19,6 @@
       :option-color-f  none
       :option-helper-f none
       :option-label-f  return
-      :option-value-f  return})
+      :option-value-f  return
+
+      :options nil})
