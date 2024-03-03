@@ -1,6 +1,5 @@
 
-(ns pretty-standards.input.config
-    (:require [fruits.noop.api :refer [none return]]))
+(ns pretty-standards.input.config)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -9,16 +8,12 @@
 ; @note (pretty-standards.appearance.config#4012)
 ;
 ; @constant (map)
-; {:get-options-f (function)
-;  :option-color-f (function)
-;  :option-helper-f (function)
-;  :option-label-f (function)
-;  :option-value-f (function)}
+; {:option-highlighted (map)
+;  :option-selected (map)
+;  :option-value-f (function)
+;  :options (maps in vector)}
 (def STANDARD-INPUT-OPTION-PROPERTIES
-     {:get-options-f   nil
-      :option-color-f  none
-      :option-helper-f none
-      :option-label-f  return
-      :option-value-f  return
-
-      :options nil})
+     {:option-highlighted {}
+      :option-selected    {}
+      :option-value-f     #(-> % :label :content)
+      :options            nil})

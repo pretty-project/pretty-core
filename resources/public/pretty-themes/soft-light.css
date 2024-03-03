@@ -1,26 +1,17 @@
 
-
-
-
-/* + tertiary (khaki-green) */
-
-
-
-
-
-
 /***** Theme variables *****/
 /*** Border color ***/
 
 [data-theme="soft-light"] {
-  --border-color-default:   var( --grey-x-light  );
-  --border-color-muted:     var( --grey-xx-light );
-  --border-color-highlight: var( --white-x-dark  );
-  --border-color-invert:    var( --black-x-light );
-  --border-color-primary:   var( --hard-blue     );
-  --border-color-secondary: var( --hard-purple   );
-  --border-color-success:   var( --soft-green    );
-  --border-color-warning:   var( --soft-red      );
+  --border-color-default:   var( --hard-grey-xx-dark   ); /* 120 */
+  --border-color-muted:     var( --soft-grey-x-light   ); /* 180 */
+  --border-color-highlight: var( --hard-white-dark     ); /* 235 */
+  --border-color-invert:    var( --hard-grey           ); /* 135 */
+  --border-color-primary:   var( --soft-blue-xx-dark   );
+  --border-color-secondary: var( --soft-purple-xx-dark );
+  --border-color-tertiary:  var( --soft-khaki-xx-dark  );
+  --border-color-success:   var( --soft-green-xx-dark  );
+  --border-color-warning:   var( --soft-red-xx-dark    );
 }
 
 /*** Border color ***/
@@ -28,14 +19,15 @@
 /*** Fill color ***/
 
 [data-theme="soft-light"] {
-  --fill-color-default:   var( --white-xx-light );
-  --fill-color-muted:     var( --white-xx-dark  );
-  --fill-color-highlight: var( --white-light    );
-  --fill-color-invert:    var( --black-x-light  );
-  --fill-color-primary:   var( --soft-blue      );
-  --fill-color-secondary: var( --soft-purple    );
-  --fill-color-success:   var( --soft-green     );
-  --fill-color-warning:   var( --soft-red       );
+  --fill-color-default:   var( --hard-white-xx-light ); /* 255 */
+  --fill-color-muted:     var( --hard-white-xx-dark  ); /* 225 */
+  --fill-color-highlight: var( --hard-white-light    ); /* 245 */
+  --fill-color-invert:    var( --soft-black          ); /* 050 */
+  --fill-color-primary:   var( --soft-blue           );
+  --fill-color-secondary: var( --soft-purple         );
+  --fill-color-tertiary:  var( --soft-khaki          );
+  --fill-color-success:   var( --soft-green          );
+  --fill-color-warning:   var( --soft-red            );
 }
 
 /*** Fill color ***/
@@ -43,16 +35,13 @@
 /*** Highlight color ***/
 
 [data-theme="soft-light"] {
-  /* XXX#5011
-   * Using fill colors (rather than using hover colors) as highlight colors
-   * ensures that elements are distinguishable when both highlighted and hovered,
-   * compared to elements that are only hovered or only highlighted. */
   --highlight-color-default:   var( --fill-color-default   );
   --highlight-color-muted:     var( --fill-color-muted     );
   --highlight-color-highlight: var( --fill-color-highlight );
   --highlight-color-invert:    var( --fill-color-invert    );
   --highlight-color-primary:   var( --fill-color-primary   );
   --highlight-color-secondary: var( --fill-color-secondary );
+  --highlight-color-tertiary:  var( --fill-color-tertiary  );
   --highlight-color-success:   var( --fill-color-success   );
   --highlight-color-warning:   var( --fill-color-warning   );
 }
@@ -62,14 +51,15 @@
 /*** Hover color ***/
 
 [data-theme="soft-light"] {
-  --hover-color-default:   var( --white-xx-light    );
-  --hover-color-muted:     var( --white-x-dark      );
-  --hover-color-highlight: var( --white             );
-  --hover-color-invert:    var( --black-xx-light    );
-  --hover-color-primary:   var( --soft-blue-light   );
-  --hover-color-secondary: var( --soft-purple-light );
-  --hover-color-success:   var( --soft-green-light  );
-  --hover-color-warning:   var( --soft-red-light    );
+  --hover-color-default:   var( --hard-white-light    ); /* 245 */
+  --hover-color-muted:     var( --hard-white-dark     ); /* 235 */
+  --hover-color-highlight: var( --hard-white-xx-light ); /* 255 */
+  --hover-color-invert:    var( --soft-black-x-light  ); /* 060 */
+  --hover-color-primary:   var( --soft-blue-x-light   );
+  --hover-color-secondary: var( --soft-purple-x-light );
+  --hover-color-tertiary:  var( --soft-khaki-x-light  );
+  --hover-color-success:   var( --soft-green-x-light  );
+  --hover-color-warning:   var( --soft-red-x-light    );
 }
 
 /*** Hover color ***/
@@ -83,6 +73,7 @@
   --icon-color-invert:    var( --text-color-invert    );
   --icon-color-primary:   var( --text-color-primary   );
   --icon-color-secondary: var( --text-color-secondary );
+  --icon-color-tertiary:  var( --text-color-tertiary  );
   --icon-color-success:   var( --text-color-success   );
   --icon-color-warning:   var( --text-color-warning   );
 }
@@ -98,6 +89,7 @@
   --line-color-invert:    var( --border-color-invert    );
   --line-color-primary:   var( --border-color-primary   );
   --line-color-secondary: var( --border-color-secondary );
+  --line-color-tertiary:  var( --border-color-tertiary  );
   --line-color-success:   var( --border-color-success   );
   --line-color-warning:   var( --border-color-warning   );
 }
@@ -113,6 +105,7 @@
   --overlay-color-invert:    var( --fill-color-invert    );
   --overlay-color-primary:   var( --fill-color-primary   );
   --overlay-color-secondary: var( --fill-color-secondary );
+  --overlay-color-tertiary:  var( --fill-color-tertiary  );
   --overlay-color-success:   var( --fill-color-success   );
   --overlay-color-warning:   var( --fill-color-warning   );
 }
@@ -128,6 +121,7 @@
   --progress-color-invert:    var( --hover-color-invert    );
   --progress-color-primary:   var( --hover-color-primary   );
   --progress-color-secondary: var( --hover-color-secondary );
+  --progress-color-tertiary:  var( --hover-color-tertiary  );
   --progress-color-success:   var( --hover-color-success   );
   --progress-color-warning:   var( --hover-color-warning   );
 }
@@ -143,6 +137,7 @@
   --shadow-color-invert:    var( --black-shadow-thin );
   --shadow-color-primary:   var( --black-shadow-thin );
   --shadow-color-secondary: var( --black-shadow-thin );
+  --shadow-color-tertiary:  var( --black-shadow-thin );
   --shadow-color-success:   var( --black-shadow-thin );
   --shadow-color-warning:   var( --black-shadow-thin );
 }
@@ -158,6 +153,7 @@
   --stroke-color-invert:    var( --border-color-invert    );
   --stroke-color-primary:   var( --border-color-primary   );
   --stroke-color-secondary: var( --border-color-secondary );
+  --stroke-color-tertiary:  var( --border-color-tertiary  );
   --stroke-color-success:   var( --border-color-success   );
   --stroke-color-warning:   var( --border-color-warning   );
 }
@@ -167,14 +163,15 @@
 /*** Text color ***/
 
 [data-theme="soft-light"] {
-  --text-color-default:   var( --black-xx-light      );
-  --text-color-muted:     var( --grey-dark           );
-  --text-color-highlight: var( --grey-x-light        );
-  --text-color-invert:    var( --white-dark          );
-  --text-color-primary:   var( --hard-blue-xx-dark   );
-  --text-color-secondary: var( --hard-purple-xx-dark );
-  --text-color-success:   var( --hard-green-xx-dark  );
-  --text-color-warning:   var( --hard-red-xx-dark    );
+  --text-color-default:   var( --soft-black-x-light  ); /* 060 */
+  --text-color-muted:     var( --hard-grey-xx-dark   ); /* 120 */
+  --text-color-highlight: var( --soft-grey-x-light   ); /* 180 */
+  --text-color-invert:    var( --hard-white          ); /* 240 */
+  --text-color-primary:   var( --soft-blue-xx-dark   );
+  --text-color-secondary: var( --soft-purple-xx-dark );
+  --text-color-tertiary:  var( --soft-khaki-xx-dark  );
+  --text-color-success:   var( --soft-green-xx-dark  );
+  --text-color-warning:   var( --soft-red-xx-dark    );
 }
 
 /*** Text color ***/

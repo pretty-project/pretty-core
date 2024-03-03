@@ -1,0 +1,30 @@
+
+/***** Khaki palette *****/
+/*** Hard khaki ***/
+
+:root {
+  --hard-khaki-xx-dark:  rgb( 130, 170, 060 );
+  --hard-khaki-x-dark:   rgb( 140, 180, 070 );
+  --hard-khaki-dark:     rgb( 150, 190, 080 );
+  --hard-khaki:          rgb( 160, 200, 090 );
+  --hard-khaki-light:    rgb( 170, 210, 100 );
+  --hard-khaki-x-light:  rgb( 180, 220, 110 );
+  --hard-khaki-xx-light: rgb( 190, 230, 120 );
+}
+
+/*** Hard khaki ***/
+
+/*** Soft khaki ***/
+
+:root {
+  --soft-khaki-xx-dark:  rgb( 130, 170, 150 );
+  --soft-khaki-x-dark:   rgb( 140, 180, 160 );
+  --soft-khaki-dark:     rgb( 150, 190, 170 );
+  --soft-khaki:          rgb( 160, 200, 180 );
+  --soft-khaki-light:    rgb( 170, 210, 190 );
+  --soft-khaki-x-light:  rgb( 180, 220, 200 );
+  --soft-khaki-xx-light: rgb( 190, 230, 210 );
+}
+
+/*** Soft khaki ***/
+/***** Khaki palette *****/

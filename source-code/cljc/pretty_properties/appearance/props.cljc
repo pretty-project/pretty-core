@@ -5,13 +5,12 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-background-color-props
+(defn default-background-action-props
   ; @description
-  ; Applies the given default background color properties on the given property map.
+  ; Applies the given default background action properties on the given property map.
   ;
   ; @param (map) props
-  ; {:fill-color (keyword or string)(opt)
-  ;  :fill-pattern (keyword)(opt)
+  ; {:highlighted? (boolean)(opt)
   ;  :highlight-color (keyword or string)(opt)
   ;  :highlight-pattern (keyword)(opt)
   ;  :hover-color (keyword or string)(opt)
@@ -20,18 +19,40 @@
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-background-color-props {...} {:fill-color :primary})
+  ; (default-background-action-props {...} {:hover-color :highlight})
   ; =>
-  ; {:fill-color :primary
+  ; {:hover-color :highlight
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:highlighted? (boolean)
+  ;  :highlight-color (keyword or string)
+  ;  :highlight-pattern (keyword)
+  ;  :hover-color (keyword or string)
+  ;  :hover-pattern (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+(defn default-background-color-props
+  ; @description
+  ; Applies the given default background color properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:fill-color (keyword or string)(opt)
+  ;  :fill-pattern (keyword)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-background-color-props {...} {:fill-color :highlight})
+  ; =>
+  ; {:fill-color :highlight
   ;  ...}
   ;
   ; @return (map)
   ; {:fill-color (keyword or string)
   ;  :fill-pattern (keyword)
-  ;  :highlight-color (keyword or string)
-  ;  :highlight-pattern (keyword)
-  ;  :hover-color (keyword or string)
-  ;  :hover-pattern (keyword)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

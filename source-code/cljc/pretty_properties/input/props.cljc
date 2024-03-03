@@ -89,25 +89,21 @@
   ; Applies the given default input option properties on the given property map.
   ;
   ; @param (map) props
-  ; {:get-options-f (function)(opt)
-  ;  :option-color-f (function)(opt)
-  ;  :option-helper-f (function)(opt)
-  ;  :option-label-f (function)(opt)
+  ; {:option-highlighted (map)(opt)
+  ;  :option-selected (map)(opt)
   ;  :option-value-f (function)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-input-option-props {...} {:get-options-f (fn [_] ...)})
+  ; (default-input-option-props {...} {:option-value-f :value})
   ; =>
-  ; {:get-options-f (fn [_] ...)
+  ; {:option-value-f :value
   ;  ...}
   ;
   ; @return (map)
-  ; {:get-options-f (function)
-  ;  :option-color-f (function)
-  ;  :option-helper-f (function)
-  ;  :option-label-f (function)
+  ; {:option-highlighted (map)
+  ;  :option-selected (map)
   ;  :option-value-f (function)
   ;  ...}
   [props & [default-props]]

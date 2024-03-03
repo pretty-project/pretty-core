@@ -139,46 +139,23 @@
 
 ; @tutorial Input option properties
 ;
-; @title get-options-f property
+; @title option-highlighted property
 ;
 ; @--- Accepted types
-; {:get-options-f (function)}
+; {:option-highlighted (map)}
 ;
 ; @--- Examples
-; {:get-options-f (fn [] ...)}
+; {:option-highlighted {:fill-color :highlight}}
 ;
 ;
 ;
-; @title option-color-f property
+; @title option-selected property
 ;
 ; @--- Accepted types
-; {:option-color-f (function)}
+; {:option-selected (map)}
 ;
 ; @--- Examples
-; {:option-color-f (fn [option] ...)}
-; {:option-color-f :color}
-;
-;
-;
-; @title option-helper-f property
-;
-; @--- Accepted types
-; {:option-helper-f (function)}
-;
-; @--- Examples
-; {:option-helper-f (fn [option] ...)}
-; {:option-helper-f :helper}
-;
-;
-;
-; @title option-label-f property
-;
-; @--- Accepted types
-; {:option-label-f (function)}
-;
-; @--- Examples
-; {:option-label-f (fn [option] ...)}
-; {:option-label-f :label}
+; {:option-selected {:fill-color :highlight}}
 ;
 ;
 ;

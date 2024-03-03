@@ -19,6 +19,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Background action properties
+; @redirect (pretty-properties.appearance.tutorials/background-action-properties)
+
 ; @tutorial Background color properties
 ; @redirect (pretty-properties.appearance.tutorials/background-color-properties)
 
@@ -41,13 +44,14 @@
 ; @redirect (pretty-properties.appearance.tutorials/visibility-properties)
 
 ; @redirect (pretty-properties.appearance.props/*)
-(def default-background-color-props appearance.props/default-background-color-props)
-(def default-background-image-props appearance.props/default-background-image-props)
-(def default-border-props           appearance.props/default-border-props)
-(def default-line-props             appearance.props/default-line-props)
-(def default-shadow-props           appearance.props/default-shadow-props)
-(def default-theme-props            appearance.props/default-theme-props)
-(def default-visibility-props       appearance.props/default-visibility-props)
+(def default-background-action-props appearance.props/default-background-action-props)
+(def default-background-color-props  appearance.props/default-background-color-props)
+(def default-background-image-props  appearance.props/default-background-image-props)
+(def default-border-props            appearance.props/default-border-props)
+(def default-line-props              appearance.props/default-line-props)
+(def default-shadow-props            appearance.props/default-shadow-props)
+(def default-theme-props             appearance.props/default-theme-props)
+(def default-visibility-props        appearance.props/default-visibility-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

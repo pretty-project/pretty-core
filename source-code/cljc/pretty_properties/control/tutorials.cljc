@@ -42,16 +42,6 @@
 ;
 ;
 ;
-; @title highlighted? property
-;
-; @--- Accepted types
-; {:highlighted? (boolean)}
-;
-; @--- Examples
-; {:highlighted? true}
-;
-;
-;
 ; @title tab-disabled? property
 ;
 ; @--- Accepted types

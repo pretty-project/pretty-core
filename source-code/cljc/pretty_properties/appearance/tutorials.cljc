@@ -4,19 +4,29 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Background color properties
+; @tutorial Background action properties
 ;
 ; @note
 ; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
 ;
-; @title fill-color property
+; @title highlighted? property
 ;
 ; @--- Accepted types
-; {:fill-color (keyword or string)}
+; {:highlighted? (boolean)}
 ;
 ; @--- Examples
-; {:fill-color :primary}
-; {:fill-color "#888"}
+; {:highlighted? true}
+;
+;
+;
+; @title highlight-color property
+;
+; @--- Accepted types
+; {:highlight-color (keyword or string)}
+;
+; @--- Examples
+; {:highlight-color :primary}
+; {:highlight-color "#888"}
 ;
 ; @--- Predefined values
 ; :transparent,
@@ -24,13 +34,13 @@
 ;
 ;
 ;
-; @title fill-pattern property
+; @title highlight-pattern property
 ;
 ; @--- Accepted types
-; {:fill-pattern (keyword)}
+; {:highlight-pattern (keyword)}
 ;
 ; @--- Examples
-; {:fill-pattern :striped}
+; {:highlight-pattern :striped}
 ;
 ; @--- Predefined values
 ; :cover, :striped
@@ -59,6 +69,40 @@
 ;
 ; @--- Examples
 ; {:hover-pattern :striped}
+;
+; @--- Predefined values
+; :cover, :striped
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Background color properties
+;
+; @note
+; Using predefined color values requires the presence of a set theme on the element / any ancestor element.
+;
+; @title fill-color property
+;
+; @--- Accepted types
+; {:fill-color (keyword or string)}
+;
+; @--- Examples
+; {:fill-color :primary}
+; {:fill-color "#888"}
+;
+; @--- Predefined values
+; :transparent,
+; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
+;
+;
+;
+; @title fill-pattern property
+;
+; @--- Accepted types
+; {:fill-pattern (keyword)}
+;
+; @--- Examples
+; {:fill-pattern :striped}
 ;
 ; @--- Predefined values
 ; :cover, :striped

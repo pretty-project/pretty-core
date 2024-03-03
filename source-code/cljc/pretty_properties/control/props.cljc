@@ -37,7 +37,6 @@
   ;
   ; @param (map) props
   ; {:disabled? (keyword)(opt)
-  ;  :highlighted? (boolean)(opt)
   ;  :tab-disabled? (keyword)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -50,7 +49,6 @@
   ;
   ; @return (map)
   ; {:disabled? (keyword)
-  ;  :highlighted? (boolean)
   ;  :tab-disabled? (boolean)
   ;  ...}
   [props & [default-props]]

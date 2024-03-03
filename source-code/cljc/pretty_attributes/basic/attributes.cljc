@@ -89,7 +89,6 @@
   ; @param (map) attributes
   ; @param (map) props
   ; {:disabled? (boolean)(opt)
-  ;  :highlighted? (boolean)(opt)
   ;  ...}
   ;
   ; @usage
@@ -102,9 +101,8 @@
   ; {:data-disabled (boolean)
   ;  :data-highlighted (boolean)
   ;  ...}
-  [attributes {:keys [disabled? highlighted?]}]
-  (-> attributes (map/merge-some {:data-disabled    disabled?
-                                  :data-highlighted highlighted?})))
+  [attributes {:keys [disabled?]}]
+  (-> attributes (map/merge-some {:data-disabled disabled?})))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
