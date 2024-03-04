@@ -23,26 +23,6 @@
 ;
 ; @--- Examples
 ; {:on-empty-f (fn [value] ...)}
-;
-;
-;
-; @title on-selected-f property
-;
-; @--- Accepted types
-; {:on-selected-f (function)}
-;
-; @--- Examples
-; {:on-selected-f (fn [selected-options] ...)}
-;
-;
-;
-; @title on-unselected-f property
-;
-; @--- Accepted types
-; {:on-unselected-f (function)}
-;
-; @--- Examples
-; {:on-unselected-f (fn [selected-options] ...)}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -138,6 +118,36 @@
 ;; ----------------------------------------------------------------------------
 
 ; @tutorial Input option properties
+;
+; @title max-selection property
+;
+; @--- Accepted types
+; {:max-selection (integer)}
+;
+; @--- Examples
+; {:max-selection 1}
+;
+;
+;
+; @title on-selected-f property
+;
+; @--- Accepted types
+; {:on-selected-f (function)}
+;
+; @--- Examples
+; {:on-selected-f (fn [selected-options] ...)}
+;
+;
+;
+; @title on-unselected-f property
+;
+; @--- Accepted types
+; {:on-unselected-f (function)}
+;
+; @--- Examples
+; {:on-unselected-f (fn [selected-options] ...)}
+;
+;
 ;
 ; @title option-highlighted property
 ;

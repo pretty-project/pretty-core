@@ -10,8 +10,7 @@
   ; Applies the given default expandable properties on the given property map.
   ;
   ; @param (map) props
-  ; {:expandable? (boolean)(opt)
-  ;  :expanded? (boolean)(opt)
+  ; {:expanded? (boolean)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -22,8 +21,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:expandable? (boolean)
-  ;  :expanded? (boolean)
+  ; {:expanded? (boolean)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

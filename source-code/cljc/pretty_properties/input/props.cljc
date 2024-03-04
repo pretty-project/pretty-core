@@ -27,8 +27,6 @@
   ; @return (map)
   ; {:on-changed-f (function)
   ;  :on-empty-f (function)
-  ;  :on-selected-f (function)
-  ;  :on-unselected-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -89,7 +87,10 @@
   ; Applies the given default input option properties on the given property map.
   ;
   ; @param (map) props
-  ; {:option-highlighted (map)(opt)
+  ; {:max-selection (integer)(opt)
+  ;  :on-selected-f (function)(opt)
+  ;  :on-unselected-f (function)(opt)
+  ;  :option-highlighted (map)(opt)
   ;  :option-selected (map)(opt)
   ;  :option-value-f (function)(opt)
   ;  ...}
@@ -102,7 +103,10 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:option-highlighted (map)
+  ; {:max-selection (integer)
+  ;  :on-selected-f (function)
+  ;  :on-unselected-f (function)
+  ;  :option-highlighted (map)
   ;  :option-selected (map)
   ;  :option-value-f (function)
   ;  ...}

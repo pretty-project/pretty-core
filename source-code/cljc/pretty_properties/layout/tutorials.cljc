@@ -6,16 +6,6 @@
 
 ; @tutorial Expandable properties
 ;
-; @title expandable? property
-;
-; @--- Accepted types
-; {:expandable? (boolean)}
-;
-; @--- Examples
-; {:expandable? true}
-;
-;
-;
 ; @title expanded? property
 ;
 ; @--- Accepted types
