@@ -33,9 +33,7 @@
       :line-height    :text-block
       ; Additional trigger properties:
       :content             nil
-      :content-placeholder nil
-      :label               nil
-      :label-placeholder   nil})
+      :content-placeholder nil})
 
 ; @constant (map)
 ; {:line-count (integer)
@@ -67,6 +65,4 @@
       :text-transform   nil
       ; Additional trigger properties:
       :content             nil
-      :content-placeholder nil
-      :label               nil
-      :label-placeholder   nil})
+      :content-placeholder nil})

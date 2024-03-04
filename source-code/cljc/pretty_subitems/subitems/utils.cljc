@@ -106,9 +106,9 @@
   ;
   ; @return (map)
   [{:keys [disabled?] :as props} subitem-key]
-  (if (-> disabled? nil?)
-      (-> props)
-      (-> props (assoc-in [subitem-key :disabled?] disabled?))))
+  (cond (-> disabled? nil?)         (-> props)
+        (-> props subitem-key nil?) (-> props)
+        :else (-> props (assoc-in [subitem-key :disabled?] disabled?))))
 
 (defn subitems<-disabled-state
   ; @description

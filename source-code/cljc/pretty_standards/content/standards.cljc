@@ -10,16 +10,13 @@
   ; @description
   ; - Applies the standard font properties on the given property map; in case of any font related value is provided.
   ; - The presence of any of the following properties in the given property map also triggers
-  ;   the application of the standard font properties:
-  ;   ':content', ':content-placeholder', ':label', ':label-placeholder'
+  ;   the application of the standard font properties: ':content', ':content-placeholder'
   ;
   ; @param (map) props
   ; {:content (multitype-content)(opt)
   ;  :content-placeholder (multitype-content)(opt)
   ;  :font-size (keyword, px or string)(opt)
   ;  :font-weight (keyword)(opt)
-  ;  :label (multitype-content)(opt)
-  ;  :label-placeholder (multitype-content)(opt)
   ;  :letter-spacing (keyword, px or string)(opt)
   ;  :line-height (keyword, px or string)(opt)
   ;  ...}
@@ -113,14 +110,11 @@
   ; @description
   ; - Applies the standard text properties on the given property map; in case of any text related value is provided.
   ; - The presence of any of the following values in the given property map also triggers
-  ;   the application of the standard text properties:
-  ;   ':content', ':content-placeholder', ':label', ':label-placeholder'
+  ;   the application of the standard text properties: ':content', ':content-placeholder'
   ;
   ; @param (map) props
   ; {:content (multitype-content)(opt)
   ;  :content-placeholder (multitype-content)(opt)
-  ;  :label (multitype-content)(opt)
-  ;  :label-placeholder (multitype-content)(opt)
   ;  :text-align (keyword)(opt)
   ;  :text-caret (keyword)(opt)
   ;  :text-color (keyword or string)(opt)
