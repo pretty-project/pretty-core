@@ -27,7 +27,7 @@
   ; {:cursor (keyword)
   ;  ...}
   [{:keys [disabled?] :as props}]
-  (if disabled? (-> props (map/use-default-values props {:cursor :default}))
+  (if disabled? (-> props (map/use-default-values {:cursor :default}))
                 (-> props)))
 
 ;; ----------------------------------------------------------------------------

@@ -188,9 +188,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Expandable properties
-; @redirect (pretty-properties.layout.tutorials/expandable-properties)
-
 ; @tutorial Flex properties
 ; @redirect (pretty-properties.layout.tutorials/flex-properties)
 
@@ -231,7 +228,6 @@
 ; @redirect (pretty-properties.layout.tutorials/outer-space-properties)
 
 ; @redirect (pretty-properties.layout.props/*)
-(def default-expandable-props     layout.props/default-expandable-props)
 (def default-flex-props           layout.props/default-flex-props)
 (def default-grid-props           layout.props/default-grid-props)
 (def default-fullscreen-props     layout.props/default-fullscreen-props)

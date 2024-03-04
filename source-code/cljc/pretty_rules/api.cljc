@@ -23,6 +23,9 @@
 (def auto-disable-highlight-color appearance.rules/auto-disable-highlight-color)
 (def apply-auto-border-crop       appearance.rules/apply-auto-border-crop)
 
+; @redirect (pretty-rules.basic.rules/*)
+(def auto-set-mounted basic.rules/auto-set-mounted)
+
 ; @redirect (pretty-rules.content.rules/*)
 (def auto-disable-cursor        content.rules/auto-disable-cursor)
 (def inherit-icon-props         content.rules/inherit-icon-props)

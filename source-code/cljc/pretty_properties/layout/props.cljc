@@ -5,30 +5,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-expandable-props
-  ; @description
-  ; Applies the given default expandable properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:expanded? (boolean)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-expandable-props {...} {:expanded? true})
-  ; =>
-  ; {:expanded? true
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:expanded? (boolean)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn default-flex-props
   ; @description
   ; Applies the given default flex properties on the given property map.

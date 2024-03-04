@@ -20,6 +20,16 @@
 
 ; @tutorial Lifecycle properties
 ;
+; @title mounted? property
+;
+; @--- Accepted types
+; {:mounted? (boolean)}
+;
+; @--- Examples
+; {:mounted? true}
+;
+;
+;
 ; @title on-mount-f property
 ;
 ; @--- Accepted types

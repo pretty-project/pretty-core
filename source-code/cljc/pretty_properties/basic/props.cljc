@@ -34,7 +34,8 @@
   ; Applies the given default CSS lifecycle properties on the given property map.
   ;
   ; @param (map) props
-  ; {:on-mount-f (function)(opt)
+  ; {:mounted? (boolean)(opt)
+  ;  :on-mount-f (function)(opt)
   ;  :on-unmount-f (function)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -46,7 +47,8 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:on-mount-f (function)
+  ; {:mounted? (boolean)
+  ;  :on-mount-f (function)
   ;  :on-unmount-f (function)
   ;  ...}
   [props & [default-props]]
