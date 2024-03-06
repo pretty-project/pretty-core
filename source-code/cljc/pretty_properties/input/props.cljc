@@ -6,34 +6,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-input-event-props
-  ; @description
-  ; Applies the given default input event properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:on-empty-f (function)(opt)
-  ;  :on-input-f (function)(opt)
-  ;  :on-type-ended-f (function)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-input-event-props {...} {:on-input-f (fn [_] ...)})
-  ; =>
-  ; {:on-input-f (fn [_] ...)
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:on-empty-f (function)
-  ;  :on-input-f (function)
-  ;  :on-type-ended-f (function)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn default-input-field-props
   ; @description
   ; Applies the given default input field properties on the given property map.
@@ -48,6 +20,9 @@
   ;  :field-type (keyword)(opt)
   ;  :max-length (integer)(opt)
   ;  :multiline? (boolean)(opt)
+  ;  :on-empty-f (function)(opt)
+  ;  :on-input-f (function)(opt)
+  ;  :on-type-ended-f (function)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -77,6 +52,9 @@
   ;  :field-type (keyword)
   ;  :max-length (integer)
   ;  :multiline? (boolean)
+  ;  :on-empty-f (function)
+  ;  :on-input-f (function)
+  ;  :on-type-ended-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -147,7 +125,8 @@
   ; Applies the given default input validation properties on the given property map.
   ;
   ; @param (map) props
-  ; {:on-invalid-f (function)(opt)
+  ; {:form-id (keyword)(opt)
+  ;  :on-invalid-f (function)(opt)
   ;  :on-valid-f (function)(opt)
   ;  :validate-when-change? (boolean)(opt)
   ;  :validate-when-leave? (boolean)(opt)
@@ -166,7 +145,8 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:on-invalid-f (function)
+  ; {:form-id (keyword)
+  ;  :on-invalid-f (function)
   ;  :on-valid-f (function)
   ;  :validate-when-change? (boolean)
   ;  :validate-when-leave? (boolean)
@@ -188,7 +168,6 @@
   ; @param (map) props
   ; {:get-value-f (function)(opt)
   ;  :initial-value (*)(opt)
-  ;  :modify-value-f (function)(opt)
   ;  :projected-value (*)(opt)
   ;  :set-value-f (function)(opt)
   ;  ...}
@@ -203,7 +182,6 @@
   ; @return (map)
   ; {:get-value-f (function)
   ;  :initial-value (*)
-  ;  :modify-value-f (function)
   ;  :projected-value (*)
   ;  :set-value-f (function)
   ;  ...}

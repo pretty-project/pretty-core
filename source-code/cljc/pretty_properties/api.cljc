@@ -134,18 +134,22 @@
 ; @tutorial Focus event properties
 ; @redirect (pretty-properties.control.tutorials/focus-event-properties)
 
-; @tutorial Keypress properties
-; @redirect (pretty-properties.control.tutorials/keypress-properties)
+; @tutorial Keypress control properties
+; @redirect (pretty-properties.control.tutorials/keypress-control-properties)
+
+; @tutorial Keypress event properties
+; @redirect (pretty-properties.control.tutorials/keypress-event-properties)
 
 ; @tutorial Mouse event properties
 ; @redirect (pretty-properties.control.tutorials/mouse-event-properties)
 
 ; @redirect (pretty-properties.control.props/*)
-(def default-anchor-props          control.props/default-anchor-props)
-(def default-clickable-state-props control.props/default-clickable-state-props)
-(def default-focus-event-props     control.props/default-focus-event-props)
-(def default-keypress-props        control.props/default-keypress-props)
-(def default-mouse-event-props     control.props/default-mouse-event-props)
+(def default-anchor-props           control.props/default-anchor-props)
+(def default-clickable-state-props  control.props/default-clickable-state-props)
+(def default-focus-event-props      control.props/default-focus-event-props)
+(def default-keypress-control-props control.props/default-keypress-control-props)
+(def default-keypress-event-props   control.props/default-keypress-event-props)
+(def default-mouse-event-props      control.props/default-mouse-event-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -158,9 +162,6 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
-
-; @tutorial Input event properties
-; @redirect (pretty-properties.input.tutorials/input-event-properties)
 
 ; @tutorial Input field properties
 ; @redirect (pretty-properties.input.tutorials/input-field-properties)
@@ -178,7 +179,6 @@
 ; @redirect (pretty-properties.input.tutorials/input-value-properties)
 
 ; @redirect (pretty-properties.input.props/*)
-(def default-input-event-props      input.props/default-input-event-props)
 (def default-input-field-props      input.props/default-input-field-props)
 (def default-input-option-props     input.props/default-input-option-props)
 (def default-input-state-props      input.props/default-input-state-props)

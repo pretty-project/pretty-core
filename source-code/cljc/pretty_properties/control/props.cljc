@@ -86,9 +86,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-keypress-props
+(defn default-keypress-control-props
   ; @description
-  ; Applies the given default keypress properties on the given property map.
+  ; Applies the given default keypress control properties on the given property map.
   ;
   ; @param (map) props
   ; {:keypress (map)(opt)
@@ -96,7 +96,7 @@
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-keypress-props {...} {:keypress {:key-code 27}})
+  ; (default-keypress-control-props {...} {:keypress {:key-code 27}})
   ; =>
   ; {:keypress {:key-code 27}
   ;  ...}
@@ -107,8 +107,28 @@
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
 
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
+(defn default-keypress-event-props
+  ; @description
+  ; Applies the given default keypress event properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:on-enter-f (function)(opt)
+  ;  :on-escape-f (function)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-keypress-event-props {:on-enter-f (fn [_] ...) ...})
+  ; =>
+  ; {:on-enter-f (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:on-enter-f (function)(opt)
+  ;  :on-escape-f (function)(opt)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
 
 (defn default-mouse-event-props
   ; @description

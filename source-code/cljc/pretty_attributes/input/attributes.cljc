@@ -7,36 +7,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn input-event-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the input event related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:on-change-f (function)(opt)
-  ;  :on-input-f (string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (input-event-attributes {...} {:on-change-f (fn [_] ...)})
-  ; =>
-  ; {:on-change (fn [_] ...)
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:on-change (function)
-  ;  :on-input (string)
-  ;  ...}
-  [attributes {:keys [on-change-f on-input-f]}]
-  (-> attributes (map/merge-some {:on-change on-change-f
-                                  :on-input  on-input-f})))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn input-field-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -53,6 +23,8 @@
   ;  :field-to (number)(opt)
   ;  :field-type (keyword)(opt)
   ;  :max-length (integer)(opt)
+  ;  :on-change-f (function)(opt)
+  ;  :on-input-f (string)(opt)
   ;  ...}
   ;
   ; @usage
@@ -91,16 +63,20 @@
   ;  :max-length (integer)
   ;  :min (number or string)
   ;  :name (keyword)
+  ;  :on-change (function)
+  ;  :on-input (string)
   ;  :type (keyword)
   ;  ...}
-  [attributes {:keys [autofill-name date-from date-to field-from field-to field-type max-length]}]
+  [attributes {:keys [autofill-name date-from date-to field-from field-to field-type max-length on-change-f on-input-f]}]
   ; The range of '{:type :date}' fields is controlled by the ':min' and ':max' properties.
   (-> attributes (map/merge-some {:max-length    (-> max-length)
                                   :min           (or date-from field-from)
                                   :max           (or date-to   field-to)
                                   :type          (-> field-type)
                                   :auto-complete (-> autofill-name)
-                                  :name          (-> autofill-name)})))
+                                  :name          (-> autofill-name)
+                                  :on-change     (-> on-change-f)
+                                  :on-input      (-> on-input-f)})))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

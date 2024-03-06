@@ -1,38 +1,6 @@
 
 (ns pretty-properties.input.tutorials)
 
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Input event properties
-;
-; @title on-empty-f property
-;
-; @--- Accepted types
-; {:on-empty-f (function)}
-;
-; @--- Examples
-; {:on-empty-f (fn [value] ...)}
-;
-;
-;
-; @title on-input-f property
-;
-; @--- Accepted types
-; {:on-input-f (function)}
-;
-; @--- Examples
-; {:on-input-f (fn [value] ...)}
-;
-;
-;
-; @title on-type-ended-f property
-;
-; @--- Accepted types
-; {:on-type-ended-f (function)}
-;
-; @--- Examples
-; {:on-type-ended-f (fn [value] ...)}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -102,6 +70,16 @@
 ;
 ;
 ;
+; @title field-value-f property
+;
+; @--- Accepted types
+; {:field-value-f (function)}
+;
+; @--- Examples
+; {:field-value-f (fn [value] ...)}
+;
+;
+;
 ; @title max-length property
 ;
 ; @--- Accepted types
@@ -122,13 +100,33 @@
 ;
 ;
 ;
-; @title field-value-f property
+; @title on-empty-f property
 ;
 ; @--- Accepted types
-; {:field-value-f (function)}
+; {:on-empty-f (function)}
 ;
 ; @--- Examples
-; {:field-value-f (fn [value] ...)}
+; {:on-empty-f (fn [value] ...)}
+;
+;
+;
+; @title on-input-f property
+;
+; @--- Accepted types
+; {:on-input-f (function)}
+;
+; @--- Examples
+; {:on-input-f (fn [value] ...)}
+;
+;
+;
+; @title on-type-ended-f property
+;
+; @--- Accepted types
+; {:on-type-ended-f (function)}
+;
+; @--- Examples
+; {:on-type-ended-f (fn [value] ...)}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -215,6 +213,18 @@
 ; @links
 ; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
 ;
+;
+;
+; @title form-id property
+;
+; @--- Accepted types
+; {:form-id (keyword)}
+;
+; @--- Examples
+; {:form-id :my-form}
+;
+;
+;
 ; @title on-invalid-f property
 ;
 ; @--- Accepted types
@@ -288,16 +298,6 @@
 ;
 ; @--- Examples
 ; {:initial-value "My initial value"}
-;
-;
-;
-; @title modify-value-f property
-;
-; @--- Accepted types
-; {:modify-value-f (function)}
-;
-; @--- Examples
-; {:modify-value-f (fn [value] ...)}
 ;
 ;
 ;

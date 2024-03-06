@@ -89,7 +89,7 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Keypress properties
+; @tutorial Keypress control properties
 ;
 ; @links
 ; Check out the [cljs-keypress-handler](https://mt-app-kit.github.io/cljs-keypress-handler) library.
@@ -101,6 +101,29 @@
 ;
 ; @--- Examples
 ; {:keypress {:key-code 27}}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Keypress event properties
+;
+; @title on-enter-f property
+;
+; @--- Accepted types
+; {:on-enter-f (function)}
+;
+; @--- Examples
+; {:on-enter-f (fn [_] ...)}
+;
+;
+;
+; @title on-escape-f property
+;
+; @--- Accepted types
+; {:on-escape-f (function)}
+;
+; @--- Examples
+; {:on-escape-f (fn [_] ...)}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

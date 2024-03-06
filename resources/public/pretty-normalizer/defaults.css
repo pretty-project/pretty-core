@@ -172,6 +172,7 @@ a:active {
 input {
   background-color: transparent;
   border:           none;
+  display:          block;
   font-family:      inherit;
   font-size:        inherit;
   letter-spacing:   inherit;
@@ -192,6 +193,7 @@ input {
 textarea {
   background-color: transparent;
   border:           none;
+  display:          block;
   font-family:      inherit;
   font-size:        inherit;
   letter-spacing:   inherit;
@@ -199,10 +201,11 @@ textarea {
   margin:           0;
   outline-style:    none;
   padding:          0;
+  resize:           none;
  -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 
   /* Removes the default vertical scrollbar in IE 10+ */
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 /*** TEXTAREA ***/

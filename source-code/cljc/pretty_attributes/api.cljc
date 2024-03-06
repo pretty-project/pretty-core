@@ -58,7 +58,6 @@
 (def mouse-event-attributes     control.attributes/mouse-event-attributes)
 
 ; @redirect (pretty-attributes.input.attributes/*)
-(def input-event-attributes input.attributes/input-event-attributes)
 (def input-field-attributes input.attributes/input-field-attributes)
 (def input-state-attributes input.attributes/input-state-attributes)
 
