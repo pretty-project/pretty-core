@@ -1,6 +1,6 @@
 
 (ns pretty-standards.input.standards
-    (:require [fruits.map.api :as map]
+    (:require [fruits.map.api                :as map]
               [pretty-standards.input.config :as input.config]))
 
 ;; ----------------------------------------------------------------------------

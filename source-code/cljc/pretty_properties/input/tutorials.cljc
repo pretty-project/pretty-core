@@ -6,16 +6,6 @@
 
 ; @tutorial Input event properties
 ;
-; @title on-changed-f property
-;
-; @--- Accepted types
-; {:on-changed-f (function)}
-;
-; @--- Examples
-; {:on-changed-f (fn [value] ...)}
-;
-;
-;
 ; @title on-empty-f property
 ;
 ; @--- Accepted types
@@ -23,6 +13,26 @@
 ;
 ; @--- Examples
 ; {:on-empty-f (fn [value] ...)}
+;
+;
+;
+; @title on-input-f property
+;
+; @--- Accepted types
+; {:on-input-f (function)}
+;
+; @--- Examples
+; {:on-input-f (fn [value] ...)}
+;
+;
+;
+; @title on-type-ended-f property
+;
+; @--- Accepted types
+; {:on-type-ended-f (function)}
+;
+; @--- Examples
+; {:on-type-ended-f (fn [value] ...)}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -72,20 +82,6 @@
 ;
 ;
 ;
-; @title field-placeholder property
-;
-; @--- Accepted types
-; {:field-placeholder (multitype-content)}
-;
-; @--- Examples
-; {:field-placeholder "My field placeholder"}
-; {:field-placeholder :my-dictionary-term}
-; {:field-placeholder [:div "My field placeholder"]}
-; {:field-placeholder [my-field-placeholder-component]}
-; {:field-placeholder 123456}
-;
-;
-;
 ; @title field-to property
 ;
 ; @--- Accepted types
@@ -113,6 +109,26 @@
 ;
 ; @--- Examples
 ; {:max-length 69}
+;
+;
+;
+; @title multiline? property
+;
+; @--- Accepted types
+; {:multiline? (boolean)}
+;
+; @--- Examples
+; {:multiline? true}
+;
+;
+;
+; @title field-value-f property
+;
+; @--- Accepted types
+; {:field-value-f (function)}
+;
+; @--- Examples
+; {:field-value-f (fn [value] ...)}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

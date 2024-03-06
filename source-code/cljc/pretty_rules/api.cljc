@@ -1,13 +1,13 @@
 
 (ns pretty-rules.api
     (:require [pretty-rules.appearance.rules :as appearance.rules]
-              [pretty-rules.basic.rules :as basic.rules]
-              [pretty-rules.content.rules :as content.rules]
-              [pretty-rules.control.rules :as control.rules]
-              [pretty-rules.input.rules :as input.rules]
-              [pretty-rules.layout.rules :as layout.rules]
-              [pretty-rules.live.rules :as live.rules]
-              [pretty-rules.svg.rules :as svg.rules]))
+              [pretty-rules.basic.rules      :as basic.rules]
+              [pretty-rules.content.rules    :as content.rules]
+              [pretty-rules.control.rules    :as control.rules]
+              [pretty-rules.input.rules      :as input.rules]
+              [pretty-rules.layout.rules     :as layout.rules]
+              [pretty-rules.live.rules       :as live.rules]
+              [pretty-rules.svg.rules        :as svg.rules]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -42,6 +42,7 @@
 ; @redirect (pretty-rules.input.rules/*)
 (def auto-disable-input-autofill input.rules/auto-disable-input-autofill)
 (def generate-input-autofill     input.rules/generate-input-autofill)
+(def auto-disable-input-events   input.rules/auto-disable-input-events)
 
 ; @redirect (pretty-rules.layout.rules/*)
 (def auto-align-scrollable-flex layout.rules/auto-align-scrollable-flex)

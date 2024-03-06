@@ -71,7 +71,8 @@
   ; @param (map) event-f
   ;
   ; @usage
-  ; (apply-event-function {:on-click #(println "Function #1") ...} :on-click #(println "Function #2"))
+  ; (apply-event-function {:on-click #(println "Function #1") ...}
+  ;                       :on-click #(println "Function #2"))
   ; =>
   ; {:on-click (fn [_] (println "Function #1")
   ;                    (println "Function #2"))

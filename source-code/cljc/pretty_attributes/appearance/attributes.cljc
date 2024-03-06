@@ -1,7 +1,7 @@
 
 (ns pretty-attributes.appearance.attributes
-    (:require [fruits.map.api                     :as map]
-              [fruits.css.api                     :as css]
+    (:require [fruits.css.api                     :as css]
+              [fruits.map.api                     :as map]
               [pretty-attributes.appearance.utils :as appearance.utils]
               [pretty-attributes.utils            :as utils]))
 

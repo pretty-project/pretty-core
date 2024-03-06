@@ -7,6 +7,36 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn input-event-attributes
+  ; @note
+  ; Values derived from the given property map, and applied on the given attribute map.
+  ;
+  ; @description
+  ; Applies the input event related values on the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ; {:on-change-f (function)(opt)
+  ;  :on-input-f (string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (input-event-attributes {...} {:on-change-f (fn [_] ...)})
+  ; =>
+  ; {:on-change (fn [_] ...)
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:on-change (function)
+  ;  :on-input (string)
+  ;  ...}
+  [attributes {:keys [on-change-f on-input-f]}]
+  (-> attributes (map/merge-some {:on-change on-change-f
+                                  :on-input  on-input-f})))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn input-field-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -71,6 +101,9 @@
                                   :type          (-> field-type)
                                   :auto-complete (-> autofill-name)
                                   :name          (-> autofill-name)})))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
 
 (defn input-state-attributes
   ; @note

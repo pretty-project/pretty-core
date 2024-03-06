@@ -1,8 +1,8 @@
 
 (ns pretty-subitems.subitem-groups.utils
-    (:require [fruits.map.api     :as map]
-              [fruits.vector.api  :as vector]
-              [fruits.string.api  :as string]))
+    (:require [fruits.map.api    :as map]
+              [fruits.string.api :as string]
+              [fruits.vector.api :as vector]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

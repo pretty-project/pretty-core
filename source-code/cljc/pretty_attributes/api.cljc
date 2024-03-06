@@ -1,15 +1,15 @@
 
 (ns pretty-attributes.api
-    (:require [pretty-attributes.appearance.attributes  :as appearance.attributes]
-              [pretty-attributes.appearance.utils       :as appearance.utils]
-              [pretty-attributes.basic.attributes       :as basic.attributes]
-              [pretty-attributes.content.adaptive       :as content.adaptive]
-              [pretty-attributes.content.attributes     :as content.attributes]
-              [pretty-attributes.control.attributes     :as control.attributes]
-              [pretty-attributes.input.attributes       :as input.attributes]
-              [pretty-attributes.layout.attributes      :as layout.attributes]
-              [pretty-attributes.live.attributes        :as live.attributes]
-              [pretty-attributes.svg.attributes         :as svg.attributes]))
+    (:require [pretty-attributes.appearance.attributes :as appearance.attributes]
+              [pretty-attributes.appearance.utils      :as appearance.utils]
+              [pretty-attributes.basic.attributes      :as basic.attributes]
+              [pretty-attributes.content.adaptive      :as content.adaptive]
+              [pretty-attributes.content.attributes    :as content.attributes]
+              [pretty-attributes.control.attributes    :as control.attributes]
+              [pretty-attributes.input.attributes      :as input.attributes]
+              [pretty-attributes.layout.attributes     :as layout.attributes]
+              [pretty-attributes.live.attributes       :as live.attributes]
+              [pretty-attributes.svg.attributes        :as svg.attributes]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -58,6 +58,7 @@
 (def mouse-event-attributes     control.attributes/mouse-event-attributes)
 
 ; @redirect (pretty-attributes.input.attributes/*)
+(def input-event-attributes input.attributes/input-event-attributes)
 (def input-field-attributes input.attributes/input-field-attributes)
 (def input-state-attributes input.attributes/input-state-attributes)
 

@@ -1,6 +1,6 @@
 
 (ns pretty-properties.input.props
-    (:require [fruits.map.api :as map]
+    (:require [fruits.map.api    :as map]
               [fruits.random.api :as random]))
 
 ;; ----------------------------------------------------------------------------
@@ -11,22 +11,22 @@
   ; Applies the given default input event properties on the given property map.
   ;
   ; @param (map) props
-  ; {:on-changed-f (function)(opt)
-  ;  :on-empty-f (function)(opt)
-  ;  :on-selected-f (function)(opt)
-  ;  :on-unselected-f (function)(opt)
+  ; {:on-empty-f (function)(opt)
+  ;  :on-input-f (function)(opt)
+  ;  :on-type-ended-f (function)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-input-event-props {...} {:on-empty-f (fn [_] ...)})
+  ; (default-input-event-props {...} {:on-input-f (fn [_] ...)})
   ; =>
-  ; {:on-empty-f (fn [_] ...)
+  ; {:on-input-f (fn [_] ...)
   ;  ...}
   ;
   ; @return (map)
-  ; {:on-changed-f (function)
-  ;  :on-empty-f (function)
+  ; {:on-empty-f (function)
+  ;  :on-input-f (function)
+  ;  :on-type-ended-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -43,10 +43,11 @@
   ;  :date-from (string)(opt)
   ;  :date-to (string)(opt)
   ;  :field-from (number)(opt)
-  ;  :field-placeholder (multitype-content)(opt)
   ;  :field-to (number)(opt)
+  ;  :field-value-f (function)(opt)
   ;  :field-type (keyword)(opt)
   ;  :max-length (integer)(opt)
+  ;  :multiline? (boolean)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -71,10 +72,11 @@
   ;  :date-from (string)
   ;  :date-to (string)
   ;  :field-from (number)
-  ;  :field-placeholder (multitype-content)
   ;  :field-to (number)
+  ;  :field-value-f (function)
   ;  :field-type (keyword)
   ;  :max-length (integer)
+  ;  :multiline? (boolean)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

@@ -1,6 +1,6 @@
 
 (ns pretty-rules.input.rules
-    (:require [fruits.map.api :as map]
+    (:require [fruits.map.api    :as map]
               [fruits.random.api :as random]))
 
 ;; ----------------------------------------------------------------------------
@@ -55,3 +55,25 @@
   ;   E.g., {:autofill-name :phone-number}
   (if-not disabled? (-> props (map/use-default-values {:autofill-name (random/generate-keyword)}))
                     (-> props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn auto-disable-input-events
+  ; @description
+  ; Dissociates the input event properties of disabled elements.
+  ;
+  ; @param (map) props
+  ; {:disabled? (boolean)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (auto-disable-input-events {:disabled? true :on-input-f (fn [_] ...) ...})
+  ; =>
+  ; {:disabled? true
+  ;  ...}
+  ;
+  ; @return (map)
+  [{:keys [disabled?] :as props}]
+  (if disabled? (-> props (dissoc :on-empty-f :on-input-f))
+                (-> props)))

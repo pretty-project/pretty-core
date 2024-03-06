@@ -2,7 +2,7 @@
 (ns pretty-subitems.subitems.utils
     (:require [fruits.keyword.api :as keyword]
               [fruits.map.api     :as map]
-              [fruits.random.api :as random]))
+              [fruits.random.api  :as random]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

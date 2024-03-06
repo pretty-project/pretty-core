@@ -1,14 +1,14 @@
 
 (ns pretty-standards.api
-    (:require [pretty-standards.appearance.standards  :as appearance.standards]
-              [pretty-standards.basic.standards       :as basic.standards]
-              [pretty-standards.content.standards     :as content.standards]
-              [pretty-standards.control.standards     :as control.standards]
-              [pretty-standards.data.standards        :as data.standards]
-              [pretty-standards.input.standards :as input.standards]
-              [pretty-standards.layout.standards      :as layout.standards]
-              [pretty-standards.live.standards        :as live.standards]
-              [pretty-standards.svg.standards         :as svg.standards]))
+    (:require [pretty-standards.appearance.standards :as appearance.standards]
+              [pretty-standards.basic.standards      :as basic.standards]
+              [pretty-standards.content.standards    :as content.standards]
+              [pretty-standards.control.standards    :as control.standards]
+              [pretty-standards.data.standards       :as data.standards]
+              [pretty-standards.input.standards      :as input.standards]
+              [pretty-standards.layout.standards     :as layout.standards]
+              [pretty-standards.live.standards       :as live.standards]
+              [pretty-standards.svg.standards        :as svg.standards]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

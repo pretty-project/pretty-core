@@ -1,6 +1,6 @@
 
 (ns pretty-standards.svg.standards
-    (:require [fruits.map.api               :as map]
+    (:require [fruits.map.api              :as map]
               [pretty-standards.svg.config :as svg.config]))
 
 ;; ----------------------------------------------------------------------------

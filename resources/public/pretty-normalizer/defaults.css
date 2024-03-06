@@ -40,6 +40,7 @@ iframe {
 *::after {
   /* Inherits the box-sizing property of the body element */
   box-sizing: inherit;
+  position:   relative;
 }
 
 /*** * ***/
@@ -60,8 +61,8 @@ h6 {
 /*** DIV ***/
 
 div {
-  cursor:   inherit;
-  position: relative;
+  cursor: inherit;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 }
 
 div[contenteditable="true"] {
@@ -106,7 +107,7 @@ button {
   margin:           0;
   outline-style:    none;
   padding:          0;
-  position:         relative;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
   border:           none;
 
   /* Displays the overflow content in IE and Edge */
@@ -153,7 +154,7 @@ a {
   /* Removes the gray background on active links in IE 10 */
   background-color: transparent;
   outline-style:    none;
-  position:         relative;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 }
 
 a,
@@ -178,6 +179,7 @@ input {
   margin:           0;
   outline-style:    none;
   padding:          0;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 
   /* Displays the overflow content in IE and Edge */
   overflow: visible;
@@ -197,6 +199,7 @@ textarea {
   margin:           0;
   outline-style:    none;
   padding:          0;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 
   /* Removes the default vertical scrollbar in IE 10+ */
   /* overflow: auto; */
@@ -232,7 +235,7 @@ hr {
 img {
   box-sizing: content-box;
   display:    block;
-  position:   relative;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 
   /* Removes the border of images inside links in IE 10 */
   border-style: none;
@@ -250,8 +253,8 @@ p {
 p,
 span,
 label {
-  cursor:   inherit;
-  position: relative;
+  cursor: inherit;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 }
 
 /*** P, SPAN, LABEL ***/
@@ -261,8 +264,8 @@ label {
 footer,
 header,
 section {
-  cursor:   inherit;
-  position: relative;
+  cursor: inherit;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 }
 
 /*** FOOTER, HEADER, SECTION ***/
@@ -279,7 +282,7 @@ th {
 }
 
 td {
-  position: relative;
+ -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 }
 
 /*** TABLE, TD, TH ***/

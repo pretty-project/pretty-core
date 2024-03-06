@@ -1,7 +1,7 @@
 
 (ns pretty-rules.content.rules
-    (:require [fruits.map.api :as map]
-              [fruits.string.api :as string]
+    (:require [fruits.map.api        :as map]
+              [fruits.string.api     :as string]
               [multitype-content.api :as multitype-content]
               [pretty-attributes.api :as pretty-attributes]))
 

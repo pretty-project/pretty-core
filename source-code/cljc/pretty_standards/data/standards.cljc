@@ -1,6 +1,6 @@
 
 (ns pretty-standards.data.standards
-    (:require [fruits.map.api                :as map]
+    (:require [fruits.map.api               :as map]
               [pretty-standards.data.config :as data.config]))
 
 ;; ----------------------------------------------------------------------------

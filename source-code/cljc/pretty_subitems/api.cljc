@@ -1,7 +1,7 @@
 
 (ns pretty-subitems.api
     (:require [pretty-subitems.subitem-groups.utils :as subitem-groups.utils]
-              [pretty-subitems.subitems.utils :as subitems.utils]))
+              [pretty-subitems.subitems.utils       :as subitems.utils]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

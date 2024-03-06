@@ -1,14 +1,14 @@
 
 (ns pretty-properties.api
-    (:require [pretty-properties.appearance.props  :as appearance.props]
-              [pretty-properties.basic.props       :as basic.props]
-              [pretty-properties.content.props     :as content.props]
-              [pretty-properties.control.props     :as control.props]
-              [pretty-properties.data.props        :as data.props]
-              [pretty-properties.input.props :as input.props]
-              [pretty-properties.layout.props      :as layout.props]
-              [pretty-properties.live.props        :as live.props]
-              [pretty-properties.svg.props         :as svg.props]))
+    (:require [pretty-properties.appearance.props :as appearance.props]
+              [pretty-properties.basic.props      :as basic.props]
+              [pretty-properties.content.props    :as content.props]
+              [pretty-properties.control.props    :as control.props]
+              [pretty-properties.data.props       :as data.props]
+              [pretty-properties.input.props      :as input.props]
+              [pretty-properties.layout.props     :as layout.props]
+              [pretty-properties.live.props       :as live.props]
+              [pretty-properties.svg.props        :as svg.props]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
