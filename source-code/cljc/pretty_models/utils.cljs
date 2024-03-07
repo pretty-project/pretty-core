@@ -64,7 +64,7 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn use-shorthand
+(defn use-longhand
   ; @description
   ; Converts the given property map to longhand from in case it is provided in shorthand form.
   ;
@@ -73,17 +73,43 @@
   ; @param (keyword) shorthand-key
   ;
   ; @usage
-  ; (use-shorthand :my-element {:label "My label"} :label)
+  ; (use-longhand :my-element {:content "My content"} :content)
   ; =>
-  ; {:label "My label"}
+  ; {:content "My content"}
   ;
   ; @usage
-  ; (use-shorthand :my-element "My label" :label)
+  ; (use-longhand :my-element "My content" :content)
   ; =>
-  ; {:label "My label"}
+  ; {:content "My content"}
   ;
   ; @return (map)
   [_ props shorthand-key]
   (if (-> props map?)
       (-> props)
       (-> {shorthand-key props})))
+
+(defn use-subitem-longhand
+  ; @description
+  ; Converts a specific subitem in the given property map to longhand from in case it is provided in shorthand form.
+  ;
+  ; @param (keyword) id
+  ; @param (map) props
+  ; @param (keyword) subitem-key
+  ; @param (keyword) shorthand-key
+  ;
+  ; @usage
+  ; (use-subitem-longhand :my-element {:my-subitem {:content "My content"}} :my-subitem :content)
+  ; =>
+  ; {:my-subitem {:content "My content"}}
+  ;
+  ; @usage
+  ; (use-subitem-longhand :my-element {:my-subitem "My content"} :my-subitem :content)
+  ; =>
+  ; {:my-subitem {:content "My content"}}
+  ;
+  ; @return (map)
+  [_ props subitem-key shorthand-key]
+  (cond (-> props subitem-key nil?) (-> props)
+        (-> props subitem-key map?) (-> props)
+        :else (let [subitem (-> props subitem-key)]
+                   (-> props (assoc subitem-key {shorthand-key subitem})))))

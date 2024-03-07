@@ -32,4 +32,5 @@
 ; @redirect (pretty-models.utils/*)
 (def clickable-auto-tag   utils/clickable-auto-tag)
 (def input-field-auto-tag utils/input-field-auto-tag)
-(def use-shorthand        utils/use-shorthand)
+(def use-longhand         utils/use-longhand)
+(def use-subitem-longhand utils/use-subitem-longhand)
