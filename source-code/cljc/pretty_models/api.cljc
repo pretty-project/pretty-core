@@ -1,6 +1,8 @@
 
 (ns pretty-models.api
-    (:require [pretty-models.utils :as utils]))
+    (:require [pretty-models.input.utils :as input.utils]
+              [pretty-models.basic.utils :as basic.utils]
+              [pretty-models.control.utils :as control.utils]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -29,7 +31,11 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @redirect (pretty-models.utils/*)
-(def clickable-auto-tag   utils/clickable-auto-tag)
-(def input-field-auto-tag utils/input-field-auto-tag)
-(def use-longhand         utils/use-longhand)
+; @redirect (pretty-models.basic.utils/*)
+(def use-longhand basic.utils/use-longhand)
+
+; @redirect (pretty-models.control.utils/*)
+(def clickable-auto-tag control.utils/clickable-auto-tag)
+
+; @redirect (pretty-models.input.utils/*)
+(def input-field-auto-tag input.utils/input-field-auto-tag)

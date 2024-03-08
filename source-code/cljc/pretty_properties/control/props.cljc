@@ -22,8 +22,8 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:href-target (keyword)(opt)
-  ;  :href-uri (string)(opt)
+  ; {:href-target (keyword)
+  ;  :href-uri (string)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -112,7 +112,11 @@
   ; Applies the given default keypress event properties on the given property map.
   ;
   ; @param (map) props
-  ; {:on-enter-f (function)(opt)
+  ; {:on-arrow-down-f (function)(opt)
+  ;  :on-arrow-left-f (function)(opt)
+  ;  :on-arrow-right-f (function)(opt)
+  ;  :on-arrow-up-f (function)(opt)
+  ;  :on-enter-f (function)(opt)
   ;  :on-escape-f (function)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -124,8 +128,12 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:on-enter-f (function)(opt)
-  ;  :on-escape-f (function)(opt)
+  ; {:on-arrow-down-f (function)
+  ;  :on-arrow-left-f (function)
+  ;  :on-arrow-right-f (function)
+  ;  :on-arrow-up-f (function)
+  ;  :on-enter-f (function)
+  ;  :on-escape-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
@@ -152,13 +160,13 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:on-click-f (function)(opt)
-  ;  :on-click-timeout (ms)(opt)
-  ;  :on-mouse-down-f (function)(opt)
-  ;  :on-mouse-leave-f (function)(opt)
-  ;  :on-mouse-over-f (function)(opt)
-  ;  :on-mouse-up-f (function)(opt)
-  ;  :on-right-click-f (function)(opt)
+  ; {:on-click-f (function)
+  ;  :on-click-timeout (ms)
+  ;  :on-mouse-down-f (function)
+  ;  :on-mouse-leave-f (function)
+  ;  :on-mouse-over-f (function)
+  ;  :on-mouse-up-f (function)
+  ;  :on-right-click-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

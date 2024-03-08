@@ -107,6 +107,46 @@
 
 ; @tutorial Keypress event properties
 ;
+; @title on-arrow-down-f property
+;
+; @--- Accepted types
+; {:on-arrow-down-f (function)}
+;
+; @--- Examples
+; {:on-arrow-down-f (fn [_] ...)}
+;
+;
+;
+; @title on-arrow-left-f property
+;
+; @--- Accepted types
+; {:on-arrow-left-f (function)}
+;
+; @--- Examples
+; {:on-arrow-left-f (fn [_] ...)}
+;
+;
+;
+; @title on-arrow-right-f property
+;
+; @--- Accepted types
+; {:on-arrow-right-f (function)}
+;
+; @--- Examples
+; {:on-arrow-right-f (fn [_] ...)}
+;
+;
+;
+; @title on-arrow-up-f property
+;
+; @--- Accepted types
+; {:on-arrow-up-f (function)}
+;
+; @--- Examples
+; {:on-arrow-up-f (fn [_] ...)}
+;
+;
+;
 ; @title on-enter-f property
 ;
 ; @--- Accepted types
