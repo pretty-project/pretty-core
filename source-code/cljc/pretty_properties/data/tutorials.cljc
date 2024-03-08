@@ -17,17 +17,6 @@
 ;
 ;
 ;
-; @title datum-label-f property
-;
-; @--- Accepted types
-; {:datum-label-f (function)}
-;
-; @--- Examples
-; {:datum-label-f (fn [datum] ...)}
-; {:datum-label-f :label}
-;
-;
-;
 ; @title datum-value-f property
 ;
 ; @--- Accepted types
