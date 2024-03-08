@@ -50,6 +50,16 @@
 ;
 ;
 ;
+; @title field-modifier-f property
+;
+; @--- Accepted types
+; {:field-modifier-f (function)}
+;
+; @--- Examples
+; {:field-modifier-f clojure.string/upper-case}
+;
+;
+;
 ; @title field-to property
 ;
 ; @--- Accepted types
@@ -68,15 +78,19 @@
 ; @--- Examples
 ; {:field-type :password}
 ;
+; @--- Predefined values
+; :color, :date, :datetime-local, :email, :file, :hidden, :month,
+; :number, :password, :range, :reset, :search, :tel, :text, :time, :url, :week
 ;
 ;
-; @title field-value-f property
+;
+; @title field-value property
 ;
 ; @--- Accepted types
-; {:field-value-f (function)}
+; {:field-value (*)}
 ;
 ; @--- Examples
-; {:field-value-f (fn [value] ...)}
+; {:field-value "My field value"}
 ;
 ;
 ;
@@ -180,6 +194,17 @@
 ;
 ; @--- Examples
 ; {:option-selected {:fill-color :highlight}}
+;
+;
+;
+; @title option-filter-f property
+;
+; @--- Accepted types
+; {:option-filter-f (function)}
+;
+; @--- Examples
+; {:option-filter-f (fn [option] ...)}
+; {:option-filter-f :value}
 ;
 ;
 ;

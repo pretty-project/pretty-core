@@ -40,9 +40,10 @@
 (def auto-blur-click-events    control.rules/auto-blur-click-events)
 
 ; @redirect (pretty-rules.input.rules/*)
-(def auto-disable-input-autofill input.rules/auto-disable-input-autofill)
-(def generate-input-autofill     input.rules/generate-input-autofill)
-(def auto-disable-input-events   input.rules/auto-disable-input-events)
+(def auto-disable-input-autofill  input.rules/auto-disable-input-autofill)
+(def generate-input-autofill      input.rules/generate-input-autofill)
+(def auto-disable-input-events    input.rules/auto-disable-input-events)
+(def assoc-field-value-as-content input.rules/assoc-field-value-as-content)
 
 ; @redirect (pretty-rules.layout.rules/*)
 (def auto-align-scrollable-flex layout.rules/auto-align-scrollable-flex)

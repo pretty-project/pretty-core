@@ -1,5 +1,6 @@
 
-(ns pretty-models.utils)
+(ns pretty-models.utils
+    (:require [fruits.map.api :as map]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -84,32 +85,4 @@
   ;
   ; @return (map)
   [_ props shorthand-key]
-  (if (-> props map?)
-      (-> props)
-      (-> {shorthand-key props})))
-
-(defn use-subitem-longhand
-  ; @description
-  ; Converts a specific subitem in the given property map to longhand from in case it is provided in shorthand form.
-  ;
-  ; @param (keyword) id
-  ; @param (map) props
-  ; @param (keyword) subitem-key
-  ; @param (keyword) shorthand-key
-  ;
-  ; @usage
-  ; (use-subitem-longhand :my-element {:my-subitem {:content "My content"}} :my-subitem :content)
-  ; =>
-  ; {:my-subitem {:content "My content"}}
-  ;
-  ; @usage
-  ; (use-subitem-longhand :my-element {:my-subitem "My content"} :my-subitem :content)
-  ; =>
-  ; {:my-subitem {:content "My content"}}
-  ;
-  ; @return (map)
-  [_ props subitem-key shorthand-key]
-  (cond (-> props subitem-key nil?) (-> props)
-        (-> props subitem-key map?) (-> props)
-        :else (let [subitem (-> props subitem-key)]
-                   (-> props (assoc subitem-key {shorthand-key subitem})))))
+  (map/to-longhand props shorthand-key))

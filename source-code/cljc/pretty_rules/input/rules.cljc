@@ -77,3 +77,28 @@
   [{:keys [disabled?] :as props}]
   (if disabled? (-> props (dissoc :on-empty-f :on-input-f))
                 (-> props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn assoc-field-value-as-content
+  ; @description
+  ; Duplicates the 'field-value' property as 'content' property to make it available for content related rule functions.
+  ;
+  ; @param (map) props
+  ; {:field-value (*)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (assoc-field-value-as-content {:field-value "..." ...})
+  ; =>
+  ; {:content     "..."
+  ;  :field-value "..."
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:content (*)
+  ;  :field-value (*)
+  ;  ...}
+  [{:keys [field-value] :as props}]
+  (-> props (assoc :content field-value)))

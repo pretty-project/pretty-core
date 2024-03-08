@@ -64,6 +64,32 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn apply-subitem-longhand
+  ; @note
+  ; Elements must convert their subitem maps to longhand forms before applying prototype functions on them.
+  ;
+  ; @description
+  ; Converts a specific subitem in the given property map to longhand from in case it is provided in shorthand form.
+  ;
+  ; @param (map) props
+  ; @param (keyword) subitem-key
+  ; @param (keyword) shorthand-key
+  ;
+  ; @usage
+  ; (apply-subitem-longhand {:my-subitem {:content "My content"}} :my-subitem :content)
+  ; =>
+  ; {:my-subitem {:content "My content"}}
+  ;
+  ; @usage
+  ; (apply-subitem-longhand {:my-subitem "My content"} :my-subitem :content)
+  ; =>
+  ; {:my-subitem {:content "My content"}}
+  ;
+  ; @return (map)
+  [props subitem-key shorthand-key]
+  (letfn [(f0 [%] (map/to-longhand % shorthand-key))]
+         (update props subitem-key f0)))
+
 (defn apply-subitem-prototype
   ; @description
   ; Applies the given prototype function on a specific subitem property map within the given property map,

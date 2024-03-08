@@ -15,9 +15,10 @@
   ;  :date-from (string)(opt)
   ;  :date-to (string)(opt)
   ;  :field-from (number)(opt)
+  ;  :field-modifier-f (function)(opt)
   ;  :field-to (number)(opt)
-  ;  :field-value-f (function)(opt)
   ;  :field-type (keyword)(opt)
+  ;  :field-value (*)(opt)
   ;  :max-length (integer)(opt)
   ;  :multiline? (boolean)(opt)
   ;  :on-empty-f (function)(opt)
@@ -27,19 +28,21 @@
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-input-field-props {...} {:autofill-name :password :field-type :password :max-length 8})
+  ; (default-input-field-props {...} {:autofill-name :password :field-type :password :field-value "..." :max-length 8})
   ; =>
   ; {:autofill-name :password
   ;  :field-type    :password
+  ;  :field-value   "..."
   ;  :max-length    8
   ;  ...}
   ;
   ; @usage
-  ; (default-input-field-props {...} {:date-from "2020-04-20" :date-to "2020-04-20" :field-type :date})
+  ; (default-input-field-props {...} {:date-from "2020-04-20" :date-to "2020-04-20" :field-type :date :field-value "..."})
   ; =>
-  ; {:date-from  "2020-04-20"
-  ;  :date-to    "2020-04-20"
-  ;  :field-type :date
+  ; {:date-from   "2020-04-20"
+  ;  :date-to     "2020-04-20"
+  ;  :field-type  :date
+  ;  :field-value "..."
   ;  ...}
   ;
   ; @return (map)
@@ -47,9 +50,10 @@
   ;  :date-from (string)
   ;  :date-to (string)
   ;  :field-from (number)
+  ;  :field-modifier-f (function)
   ;  :field-to (number)
-  ;  :field-value-f (function)
   ;  :field-type (keyword)
+  ;  :field-value (*)
   ;  :max-length (integer)
   ;  :multiline? (boolean)
   ;  :on-empty-f (function)
@@ -70,6 +74,7 @@
   ; {:max-selection (integer)(opt)
   ;  :on-selected-f (function)(opt)
   ;  :on-unselected-f (function)(opt)
+  ;  :option-filter-f (function)(opt)
   ;  :option-highlighted (map)(opt)
   ;  :option-selected (map)(opt)
   ;  :option-value-f (function)(opt)
@@ -86,6 +91,7 @@
   ; {:max-selection (integer)
   ;  :on-selected-f (function)
   ;  :on-unselected-f (function)
+  ;  :option-filter-f (function)
   ;  :option-highlighted (map)
   ;  :option-selected (map)
   ;  :option-value-f (function)
