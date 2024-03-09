@@ -77,7 +77,9 @@
   ; {:line-count (integer)
   ;  ...}
   [{:keys [content] :as props}]
-  (-> props (assoc :line-count (string/line-count content))))
+  (if (-> content string?)
+      (-> props (map/use-default-values {:line-count (string/line-count content)}))
+      (-> props)))
 
 (defn auto-limit-multiline-count
   ; @description
@@ -127,5 +129,6 @@
   ; {:content-height (keyword, px or string)
   ;  ...}
   [{:keys [font-size line-count line-height] :as props}]
-  (let [multiline-height (pretty-attributes/adaptive-text-height font-size line-height line-count)]
-       (-> props (assoc :content-height multiline-height))))
+  (if line-count (if-let [multiline-height (pretty-attributes/adaptive-text-height font-size line-height line-count)]
+                         (-> props (map/use-default-values {:content-height multiline-height}))
+                         (-> props))))

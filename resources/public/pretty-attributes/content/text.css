@@ -45,18 +45,20 @@
 
 /*** Text overflow ***/
 
-[data-text-overflow="ellipsis"] { max-width:     100%;
-                                  overflow:      hidden;
+/* Max-width property is turned off for testing whether it is necessarry. */
+/* Overflow property is turned off because it was concurent for the 'data-*-overflow' attributes. */
+[data-text-overflow="ellipsis"] { -max-width:     100%;
+                                  -overflow:      hidden;
                                   text-overflow: ellipsis;
                                   white-space:   nowrap; }
-[data-text-overflow="hidden"]   { max-width:     100%;
-                                  overflow:      hidden;
+[data-text-overflow="hidden"]   { -max-width:     100%;
+                                  -overflow:      hidden;
                                   white-space:   nowrap;
                                   word-wrap:     normal; }
-[data-text-overflow="visible"]  { overflow:      hidden;
+[data-text-overflow="visible"]  { -overflow:      hidden;
                                   white-space:   nowrap; }
-[data-text-overflow="wrap"]     { max-width:     100%;
-                                  overflow:      hidden;
+[data-text-overflow="wrap"]     { -max-width:     100%;
+                                  -overflow:      hidden;
                                   word-wrap:     break-word; }
 
 /*** Text overflow ***/

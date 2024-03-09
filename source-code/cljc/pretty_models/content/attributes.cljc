@@ -7,8 +7,10 @@
 
 (defn content-model-content-attributes
   [attributes props]
-  (-> attributes (pretty-attributes/font-attributes props)
-                 (pretty-attributes/text-attributes props)))
+  (-> attributes (pretty-attributes/content-size-attributes props)
+                 (pretty-attributes/font-attributes         props)
+                 (pretty-attributes/overflow-attributes     props)
+                 (pretty-attributes/text-attributes         props)))
 
 (defn content-model-inner-attributes
   [attributes _]

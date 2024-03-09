@@ -5,6 +5,10 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn plain-model-content-attributes
+  [attributes _]
+  (-> attributes))
+
 (defn plain-model-inner-attributes
   [attributes props]
   (-> attributes (pretty-attributes/animation-attributes        props)

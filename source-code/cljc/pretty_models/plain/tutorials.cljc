@@ -1,10 +1,10 @@
 
-(ns pretty-models.container.tutorials)
+(ns pretty-models.plain.tutorials)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Container model
+; @tutorial Plain model
 ;
 ; @links Implemented attributes
 ; [Animation attributes](pretty-core/cljs/pretty-attributes/api.html#animation-attributes)
@@ -12,8 +12,6 @@
 ; [Border attributes](pretty-core/cljs/pretty-attributes/api.html#border-attributes)
 ; [Class attributes](pretty-core/cljs/pretty-attributes/api.html#class-attributes)
 ; [Cursor attributes](pretty-core/cljs/pretty-attributes/api.html#cursor-attributes)
-; [Flex attributes](pretty-core/cljs/pretty-attributes/api.html#flex-attributes)
-; [Grid attributes](pretty-core/cljs/pretty-attributes/api.html#grid-attributes)
 ; [Inner position attributes](pretty-core/cljs/pretty-attributes/api.html#inner-position-attributes)
 ; [Inner size attributes](pretty-core/cljs/pretty-attributes/api.html#inner-size-attributes)
 ; [Inner space attributes](pretty-core/cljs/pretty-attributes/api.html#inner-space-attributes)
@@ -33,8 +31,6 @@
 ; [Border properties](pretty-core/cljs/pretty-properties/api.html#border-properties)
 ; [Class properties](pretty-core/cljs/pretty-properties/api.html#class-properties)
 ; [Cursor properties](pretty-core/cljs/pretty-properties/api.html#cursor-properties)
-; [Flex properties](pretty-core/cljs/pretty-properties/api.html#flex-properties)
-; [Grid properties](pretty-core/cljs/pretty-properties/api.html#grid-properties)
 ; [Inner position properties](pretty-core/cljs/pretty-properties/api.html#inner-position-properties)
 ; [Inner size properties](pretty-core/cljs/pretty-properties/api.html#inner-size-properties)
 ; [Inner space properties](pretty-core/cljs/pretty-properties/api.html#inner-space-properties)

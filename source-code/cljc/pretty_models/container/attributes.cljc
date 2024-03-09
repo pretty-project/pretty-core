@@ -5,6 +5,10 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn container-model-content-attributes
+  [attributes _]
+  (-> attributes))
+
 (defn container-model-inner-attributes
   [attributes props]
   (-> attributes (pretty-attributes/animation-attributes        props)
@@ -12,6 +16,7 @@
                  (pretty-attributes/border-attributes           props)
                  (pretty-attributes/cursor-attributes           props)
                  (pretty-attributes/flex-attributes             props)
+                 (pretty-attributes/grid-attributes             props)
                  (pretty-attributes/inner-size-attributes       props)
                  (pretty-attributes/inner-space-attributes      props)
                  (pretty-attributes/mouse-event-attributes      props)

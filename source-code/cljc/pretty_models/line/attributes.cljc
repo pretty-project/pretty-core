@@ -1,18 +1,18 @@
 
-(ns pretty-models.multiline.attributes
+(ns pretty-models.line.attributes
     (:require [pretty-attributes.api :as pretty-attributes]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn multiline-model-content-attributes
+(defn line-model-content-attributes
+  [attributes props]
+  (-> attributes (pretty-attributes/line-attributes props)))
+
+(defn line-model-inner-attributes
   [attributes _]
   (-> attributes))
 
-(defn multiline-model-inner-attributes
-  [attributes _]
-  (-> attributes))
-
-(defn multiline-model-outer-attributes
+(defn line-model-outer-attributes
   [attributes _]
   (-> attributes))
