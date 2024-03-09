@@ -38,38 +38,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn clickable-state-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; - Applies the clickable state related values on the given attribute map.
-  ; - Applies the disabled state via the 'disabled' attribute (supported by form controls).
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:disabled? (boolean)(opt)
-  ;  :tab-disabled? (boolean)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (clickable-state-attributes {...} {:disabled? true :tab-disabled? true})
-  ; =>
-  ; {:disabled  true
-  ;  :tab-index -1
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:disabled (boolean)
-  ;  :tab-index (integer)
-  ;  ...}
-  [attributes {:keys [disabled? tab-disabled?]}]
-  (-> attributes (map/merge-some {:disabled  (-> disabled?)
-                                  :tab-index (if tab-disabled? -1)})))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn focus-event-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.

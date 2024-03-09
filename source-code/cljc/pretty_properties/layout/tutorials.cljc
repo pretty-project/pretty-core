@@ -332,7 +332,7 @@
 ; @title strength property
 ;
 ; @--- Accepted types
-; {:strength (percentage)}
+; {:strength (percent)}
 ;
 ; @--- Examples
 ; {:strength 100}

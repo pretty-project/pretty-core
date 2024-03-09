@@ -8,46 +8,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn background-action-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the background action related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:highlighted? (boolean)(opt)
-  ;  :highlight-color (keyword or string)(opt)
-  ;  :highlight-pattern (keyword)(opt)
-  ;  :hover-color (keyword or string)(opt)
-  ;  :hover-pattern (keyword)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (background-action-attributes {...} {:hover-color :highlight})
-  ; =>
-  ; {:data-hover-color :highlight
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-highlighted (boolean)
-  ;  :data-highlight-color (keyword)
-  ;  :data-highlight-pattern (keyword)
-  ;  :data-hover-color (keyword)
-  ;  :data-hover-pattern (keyword)
-  ;  :style (map)
-  ;   {"--highlight-color" (string)}
-  ;    "--hover-color" (string)
-  ;    ...}
-  ;  ...}
-  [attributes {:keys [highlight-color highlight-pattern highlighted? hover-color hover-pattern]}]
-  (-> attributes (map/assoc-some             :data-highlighted                      highlighted?)
-                 (map/assoc-some             :data-highlight-pattern                highlight-pattern)
-                 (map/assoc-some             :data-hover-pattern                    hover-pattern)
-                 (utils/apply-property-value :highlight-color :data-highlight-color highlight-color)
-                 (utils/apply-property-value :hover-color     :data-hover-color     hover-color)))
-
 (defn background-color-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.

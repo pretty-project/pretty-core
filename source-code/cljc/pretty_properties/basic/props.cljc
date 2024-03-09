@@ -110,7 +110,15 @@
   ; Applies the given default state properties on the given property map.
   ;
   ; @param (map) props
-  ; {:disabled? (boolean)(opt)
+  ; {:active (map)(opt)
+  ;  :active? (boolean)(opt)
+  ;  :disabled (map)(opt)
+  ;  :disabled? (boolean)(opt)
+  ;  :highlighted (map)(opt)
+  ;  :highlighted? (boolean)(opt)
+  ;  :hovered (map)(opt)
+  ;  :hovered? (boolean)(opt)
+  ;  :tab-disabled? (boolean)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -121,7 +129,15 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:disabled? (boolean)
+  ; {:active (map)
+  ;  :active? (boolean)
+  ;  :disabled (map)
+  ;  :disabled? (boolean)
+  ;  :highlighted (map)
+  ;  :highlighted? (boolean)
+  ;  :hovered (map)
+  ;  :hovered? (boolean)
+  ;  :tab-disabled? (boolean)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

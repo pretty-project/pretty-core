@@ -67,35 +67,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Effect properties
-;
-; @title click-effect property
-;
-; @--- Accepted types
-; {:click-effect (keyword)}
-;
-; @--- Examples
-; {:click-effect :opacity}
-;
-; @--- Predefined values
-; :none, :opacity
-;
-;
-;
-; @title hover-effect property
-;
-; @--- Accepted types
-; {:hover-effect (keyword)}
-;
-; @--- Examples
-; {:hover-effect :opacity}
-;
-; @--- Predefined values
-; :none, :opacity
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 ; @tutorial Progress properties
 ;
 ; @note
@@ -104,7 +75,7 @@
 ; @title progress property
 ;
 ; @--- Accepted types
-; {:progress (percentage)}
+; {:progress (percent)}
 ;
 ; @--- Examples
 ; {:progress 42}
@@ -149,7 +120,7 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Transform properties
+; @tutorial transformation properties
 ;
 ; @title transform property
 ;

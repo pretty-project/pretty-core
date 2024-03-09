@@ -21,7 +21,7 @@
       :vertical-align   :center})
 
 ; @constant (map)
-; {:strength (percentage)}
+; {:strength (percent)}
 (def STANDARD-SHAPE-PROPERTIES
      {:strength 100})
 

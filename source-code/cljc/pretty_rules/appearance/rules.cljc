@@ -4,47 +4,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn auto-disable-hover-color
-  ; @description
-  ; Dissociates the ':hover-color' and ':hover-pattern' properties (from the given property map) of disabled elements.
-  ;
-  ; @param (map) props
-  ; {:disabled? (boolean)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (auto-disable-hover-color {:disabled? true :fill-color :muted :hover-color :muted ...})
-  ; =>
-  ; {:disabled?  true
-  ;  :fill-color :muted
-  ;  ...}
-  ;
-  ; @return (map)
-  [{:keys [disabled?] :as props}]
-  (if disabled? (-> props (dissoc :hover-color :hover-pattern))
-                (-> props)))
-
-(defn auto-disable-highlight-color
-  ; @description
-  ; Dissociates the ':highlight-color' and ':highlight-pattern' properties (from the given property map) of non-highlighted elements.
-  ;
-  ; @param (map) props
-  ; {:highlighted? (boolean)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (auto-disable-highlight-color {:highlight-color :muted ...})
-  ; =>
-  ; {...}
-  ;
-  ; @return (map)
-  [{:keys [highlighted?] :as props}]
-  (if-not highlighted? (-> props (dissoc :highlight-color :highlight-pattern))
-                       (-> props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn apply-auto-border-crop
   ; @description
   ; If the ':border-crop' property is provided as ':auto',

@@ -19,9 +19,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Background action properties
-; @redirect (pretty-properties.appearance.tutorials/background-action-properties)
-
 ; @tutorial Background color properties
 ; @redirect (pretty-properties.appearance.tutorials/background-color-properties)
 
@@ -44,14 +41,13 @@
 ; @redirect (pretty-properties.appearance.tutorials/visibility-properties)
 
 ; @redirect (pretty-properties.appearance.props/*)
-(def default-background-action-props appearance.props/default-background-action-props)
-(def default-background-color-props  appearance.props/default-background-color-props)
-(def default-background-image-props  appearance.props/default-background-image-props)
-(def default-border-props            appearance.props/default-border-props)
-(def default-line-props              appearance.props/default-line-props)
-(def default-shadow-props            appearance.props/default-shadow-props)
-(def default-theme-props             appearance.props/default-theme-props)
-(def default-visibility-props        appearance.props/default-visibility-props)
+(def default-background-color-props appearance.props/default-background-color-props)
+(def default-background-image-props appearance.props/default-background-image-props)
+(def default-border-props           appearance.props/default-border-props)
+(def default-line-props             appearance.props/default-line-props)
+(def default-shadow-props           appearance.props/default-shadow-props)
+(def default-theme-props            appearance.props/default-theme-props)
+(def default-visibility-props       appearance.props/default-visibility-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -128,9 +124,6 @@
 ; @tutorial Anchor properties
 ; @redirect (pretty-properties.control.tutorials/anchor-properties)
 
-; @tutorial Clickable state properties
-; @redirect (pretty-properties.control.tutorials/clickable-state-properties)
-
 ; @tutorial Focus event properties
 ; @redirect (pretty-properties.control.tutorials/focus-event-properties)
 
@@ -145,7 +138,6 @@
 
 ; @redirect (pretty-properties.control.props/*)
 (def default-anchor-props           control.props/default-anchor-props)
-(def default-clickable-state-props  control.props/default-clickable-state-props)
 (def default-focus-event-props      control.props/default-focus-event-props)
 (def default-keypress-control-props control.props/default-keypress-control-props)
 (def default-keypress-event-props   control.props/default-keypress-event-props)
@@ -169,9 +161,6 @@
 ; @tutorial Input option properties
 ; @redirect (pretty-properties.input.tutorials/input-option-properties)
 
-; @tutorial Input state properties
-; @redirect (pretty-properties.input.tutorials/input-state-properties)
-
 ; @tutorial Input validation properties
 ; @redirect (pretty-properties.input.tutorials/input-validation-properties)
 
@@ -181,7 +170,6 @@
 ; @redirect (pretty-properties.input.props/*)
 (def default-input-field-props      input.props/default-input-field-props)
 (def default-input-option-props     input.props/default-input-option-props)
-(def default-input-state-props      input.props/default-input-state-props)
 (def default-input-validation-props input.props/default-input-validation-props)
 (def default-input-value-props      input.props/default-input-value-props)
 
@@ -247,20 +235,16 @@
 ; @tutorial Animation properties
 ; @redirect (pretty-properties.live.tutorials/animation-properties)
 
-; @tutorial Effect properties
-; @redirect (pretty-properties.live.tutorials/effect-properties)
-
 ; @tutorial Progress properties
 ; @redirect (pretty-properties.live.tutorials/progress-properties)
 
-; @tutorial Transform properties
-; @redirect (pretty-properties.live.tutorials/transform-properties)
+; @tutorial Transformation properties
+; @redirect (pretty-properties.live.tutorials/transformation-properties)
 
 ; @redirect (pretty-properties.live.props/*)
-(def default-animation-props live.props/default-animation-props)
-(def default-effect-props    live.props/default-effect-props)
-(def default-progress-props  live.props/default-progress-props)
-(def default-transform-props live.props/default-transform-props)
+(def default-animation-props      live.props/default-animation-props)
+(def default-progress-props       live.props/default-progress-props)
+(def default-transformation-props live.props/default-transformation-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

@@ -21,16 +21,15 @@
 ;; ----------------------------------------------------------------------------
 
 ; @redirect (pretty-attributes.appearance.attributes/*)
-(def background-action-attributes appearance.attributes/background-action-attributes)
-(def background-color-attributes  appearance.attributes/background-color-attributes)
-(def background-image-attributes  appearance.attributes/background-image-attributes)
-(def border-radius-attributes     appearance.attributes/border-radius-attributes)
-(def border-attributes            appearance.attributes/border-attributes)
-(def adaptive-border-attributes   appearance.attributes/adaptive-border-attributes)
-(def line-attributes              appearance.attributes/line-attributes)
-(def shadow-attributes            appearance.attributes/shadow-attributes)
-(def theme-attributes             appearance.attributes/theme-attributes)
-(def visibility-attributes        appearance.attributes/visibility-attributes)
+(def background-color-attributes appearance.attributes/background-color-attributes)
+(def background-image-attributes appearance.attributes/background-image-attributes)
+(def border-radius-attributes    appearance.attributes/border-radius-attributes)
+(def border-attributes           appearance.attributes/border-attributes)
+(def adaptive-border-attributes  appearance.attributes/adaptive-border-attributes)
+(def line-attributes             appearance.attributes/line-attributes)
+(def shadow-attributes           appearance.attributes/shadow-attributes)
+(def theme-attributes            appearance.attributes/theme-attributes)
+(def visibility-attributes       appearance.attributes/visibility-attributes)
 
 ; @redirect (pretty-attributes.appearance.utils/*)
 (def adaptive-border-radius appearance.utils/adaptive-border-radius)
@@ -53,13 +52,11 @@
 
 ; @redirect (pretty-attributes.control.attributes/*)
 (def anchor-attributes          control.attributes/anchor-attributes)
-(def clickable-state-attributes control.attributes/clickable-state-attributes)
 (def focus-event-attributes     control.attributes/focus-event-attributes)
 (def mouse-event-attributes     control.attributes/mouse-event-attributes)
 
 ; @redirect (pretty-attributes.input.attributes/*)
 (def input-field-attributes input.attributes/input-field-attributes)
-(def input-state-attributes input.attributes/input-state-attributes)
 
 ; @redirect (pretty-attributes.layout.attributes/*)
 (def flex-attributes           layout.attributes/flex-attributes)
@@ -74,10 +71,9 @@
 (def content-size-attributes   layout.attributes/content-size-attributes)
 
 ; @redirect (pretty-attributes.live.attributes/*)
-(def animation-attributes live.attributes/animation-attributes)
-(def effect-attributes    live.attributes/effect-attributes)
-(def progress-attributes  live.attributes/progress-attributes)
-(def transform-attributes live.attributes/transform-attributes)
+(def animation-attributes      live.attributes/animation-attributes)
+(def progress-attributes       live.attributes/progress-attributes)
+(def transformation-attributes live.attributes/transformation-attributes)
 
 ; @redirect (pretty-attributes.svg.attributes/*)
 (def svg-circle-attributes svg.attributes/svg-circle-attributes)

@@ -42,7 +42,7 @@
   ; Applies the standard progress properties on the given property map; in case of any progress related value is provided.
   ;
   ; @param (map) props
-  ; {:progress (percentage)(opt)
+  ; {:progress (percent)(opt)
   ;  :progress-color (keyword or string)(opt)
   ;  :progress-direction (keyword)(opt)
   ;  :progress-duration (ms)(opt)
@@ -58,7 +58,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:progress (percentage)
+  ; {:progress (percent)
   ;  :progress-color (keyword or string)
   ;  :progress-direction (keyword)
   ;  :progress-duration (ms)

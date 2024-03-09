@@ -33,40 +33,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn inherit-icon-props
-  ; @note
-  ; Inheriting font/text related values (as default values for icon related properties)
-  ; is recommended for icons that are attached to labels.
-  ;
-  ; @description
-  ; Uses the ':text-color' and ':font-size' properties (if any) as default values
-  ; for the ':icon-color' and ':icon-size' properties; in case the ':icon-name' property is provided.
-  ;
-  ; @param (map) props
-  ; {:font-size (keyword, px or string)(opt)
-  ;  :icon-name (keyword)(opt)
-  ;  :text-color (keyword or string)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (inherit-icon-props {:icon-name :my_icon :text-color :primary ...})
-  ; =>
-  ; {:icon-color :primary
-  ;  :icon-name  :my_icon
-  ;  :text-color :primary
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:icon-color (keyword or string)
-  ;  :icon-size (keyword, px or string)
-  ;  ...}
-  [{:keys [font-size icon-name text-color] :as props}]
-  (if icon-name (-> props (map/use-default-values {:icon-color text-color :icon-size font-size}))
-                (-> props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn compose-content
   ; @description
   ; Composes the ':content' or the ':content-placeholder' metamorphic content value (if any);
@@ -88,28 +54,6 @@
   ;  ...}
   [{:keys [content content-placeholder] :as props}]
   (-> props (map/assoc-some :content (multitype-content/compose content content-placeholder))))
-
-(defn compose-label
-  ; @description
-  ; Composes the ':label' or the ':label-placeholder' metamorphic content value (if any);
-  ; and associates the composed result as ':label' property to the given property map.
-  ;
-  ; @param (map) props
-  ; {:label (multitype-content)(opt)
-  ;  :label-placeholder (multitype-content)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (compose-label {:label nil :label-placeholder "My placeholder" ...})
-  ; =>
-  ; {:label "My placeholder"
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:label (multitype-content)
-  ;  ...}
-  [{:keys [label label-placeholder] :as props}]
-  (-> props (map/assoc-some :label (multitype-content/compose label label-placeholder))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

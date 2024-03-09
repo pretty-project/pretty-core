@@ -102,30 +102,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-input-state-props
-  ; @description
-  ; Applies the given default input state properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:disabled? (keyword)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-input-state-props {...} {:disabled? true})
-  ; =>
-  ; {:disabled? true
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:disabled? (keyword)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn default-input-validation-props
   ; @description
   ; Applies the given default input validation properties on the given property map.

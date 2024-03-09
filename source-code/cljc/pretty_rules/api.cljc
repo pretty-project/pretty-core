@@ -6,7 +6,6 @@
               [pretty-rules.control.rules    :as control.rules]
               [pretty-rules.input.rules      :as input.rules]
               [pretty-rules.layout.rules     :as layout.rules]
-              [pretty-rules.live.rules       :as live.rules]
               [pretty-rules.svg.rules        :as svg.rules]))
 
 ;; ----------------------------------------------------------------------------
@@ -19,18 +18,14 @@
 ;; ----------------------------------------------------------------------------
 
 ; @redirect (pretty-rules.appearance.rules/*)
-(def auto-disable-hover-color     appearance.rules/auto-disable-hover-color)
-(def auto-disable-highlight-color appearance.rules/auto-disable-highlight-color)
-(def apply-auto-border-crop       appearance.rules/apply-auto-border-crop)
+(def apply-auto-border-crop appearance.rules/apply-auto-border-crop)
 
 ; @redirect (pretty-rules.basic.rules/*)
 (def auto-set-mounted basic.rules/auto-set-mounted)
 
 ; @redirect (pretty-rules.content.rules/*)
 (def auto-disable-cursor        content.rules/auto-disable-cursor)
-(def inherit-icon-props         content.rules/inherit-icon-props)
 (def compose-content            content.rules/compose-content)
-(def compose-label              content.rules/compose-label)
 (def auto-count-content-lines   content.rules/auto-count-content-lines)
 (def auto-limit-multiline-count content.rules/auto-limit-multiline-count)
 (def auto-set-multiline-height  content.rules/auto-set-multiline-height)
@@ -47,7 +42,3 @@
 
 ; @redirect (pretty-rules.layout.rules/*)
 (def auto-align-scrollable-flex layout.rules/auto-align-scrollable-flex)
-
-; @redirect (pretty-rules.live.rules/*)
-(def auto-disable-effects  live.rules/auto-disable-effects)
-(def auto-set-click-effect live.rules/auto-set-click-effect)

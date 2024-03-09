@@ -31,32 +31,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-clickable-state-props
-  ; @description
-  ; Applies the given default clickable state properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:disabled? (keyword)(opt)
-  ;  :tab-disabled? (keyword)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-clickable-state-props {...} {:tab-disabled? true})
-  ; =>
-  ; {:tab-disabled? true
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:disabled? (keyword)
-  ;  :tab-disabled? (boolean)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn default-focus-event-props
   ; @description
   ; Applies the given default focus event properties on the given property map.

@@ -85,31 +85,3 @@
                                   :name          (-> autofill-name)
                                   :on-change     (-> on-change-f)
                                   :on-input      (-> on-input-f)})))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn input-state-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; - Applies the input state related values on the given attribute map.
-  ; - Applies the disabled state via the 'disabled' attribute (supported by form controls).
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:disabled? (boolean)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (input-state-attributes {...} {:disabled? true})
-  ; =>
-  ; {:disabled true
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:disabled (boolean)
-  ;  ...}
-  [attributes {:keys [disabled?]}]
-  (-> attributes (map/merge-some {:disabled disabled?})))

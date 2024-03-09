@@ -32,38 +32,6 @@
 
 /*** Fill color ***/
 
-/*** Highlight color ***/
-
-[data-theme="soft-light"] {
-  --highlight-color-default:   var( --fill-color-default   );
-  --highlight-color-muted:     var( --fill-color-muted     );
-  --highlight-color-highlight: var( --fill-color-highlight );
-  --highlight-color-invert:    var( --fill-color-invert    );
-  --highlight-color-primary:   var( --fill-color-primary   );
-  --highlight-color-secondary: var( --fill-color-secondary );
-  --highlight-color-tertiary:  var( --fill-color-tertiary  );
-  --highlight-color-success:   var( --fill-color-success   );
-  --highlight-color-warning:   var( --fill-color-warning   );
-}
-
-/*** Highlight color ***/
-
-/*** Hover color ***/
-
-[data-theme="soft-light"] {
-  --hover-color-default:   var( --hard-white-light    ); /* 245 */
-  --hover-color-muted:     var( --hard-white-dark     ); /* 235 */
-  --hover-color-highlight: var( --hard-white-xx-light ); /* 255 */
-  --hover-color-invert:    var( --soft-black-x-light  ); /* 060 */
-  --hover-color-primary:   var( --soft-blue-x-light   );
-  --hover-color-secondary: var( --soft-purple-x-light );
-  --hover-color-tertiary:  var( --soft-khaki-x-light  );
-  --hover-color-success:   var( --soft-green-x-light  );
-  --hover-color-warning:   var( --soft-red-x-light    );
-}
-
-/*** Hover color ***/
-
 /*** Icon color ***/
 
 [data-theme="soft-light"] {
@@ -115,15 +83,15 @@
 /*** Progress color ***/
 
 [data-theme="soft-light"] {
-  --progress-color-default:   var( --hover-color-default   );
-  --progress-color-muted:     var( --hover-color-muted     );
-  --progress-color-highlight: var( --hover-color-highlight );
-  --progress-color-invert:    var( --hover-color-invert    );
-  --progress-color-primary:   var( --hover-color-primary   );
-  --progress-color-secondary: var( --hover-color-secondary );
-  --progress-color-tertiary:  var( --hover-color-tertiary  );
-  --progress-color-success:   var( --hover-color-success   );
-  --progress-color-warning:   var( --hover-color-warning   );
+  --progress-color-default:   var( --fill-color-default   );
+  --progress-color-muted:     var( --fill-color-muted     );
+  --progress-color-highlight: var( --fill-color-highlight );
+  --progress-color-invert:    var( --fill-color-invert    );
+  --progress-color-primary:   var( --fill-color-primary   );
+  --progress-color-secondary: var( --fill-color-secondary );
+  --progress-color-tertiary:  var( --fill-color-tertiary  );
+  --progress-color-success:   var( --fill-color-success   );
+  --progress-color-warning:   var( --fill-color-warning   );
 }
 
 /*** Progress color ***/

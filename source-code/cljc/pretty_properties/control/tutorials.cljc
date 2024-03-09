@@ -30,29 +30,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Clickable state properties
-;
-; @title disabled? property
-;
-; @--- Accepted types
-; {:disabled? (boolean)}
-;
-; @--- Examples
-; {:disabled? true}
-;
-;
-;
-; @title tab-disabled? property
-;
-; @--- Accepted types
-; {:tab-disabled? (boolean)}
-;
-; @--- Examples
-; {:tab-disabled? true}
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 ; @tutorial Focus event properties
 ;
 ; @title autofocus? property

@@ -93,7 +93,7 @@
   ; Applies the standard shape properties on the given property map.
   ;
   ; @param (map) props
-  ; {:strength (percentage)(opt)
+  ; {:strength (percent)(opt)
   ;  ...}
   ;
   ; @usage
@@ -103,7 +103,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:strength (percentage)
+  ; {:strength (percent)
   ;  ...}
   [props]
   (-> props (map/use-default-values layout.config/STANDARD-SHAPE-PROPERTIES)))

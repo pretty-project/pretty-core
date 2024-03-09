@@ -52,37 +52,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn effect-attributes
-  ; @note
-  ; Values derived from the given property map, and applied on the given attribute map.
-  ;
-  ; @description
-  ; Applies the effect related values on the given attribute map.
-  ;
-  ; @param (map) attributes
-  ; @param (map) props
-  ; {:click-effect (keyword)(opt)
-  ;  :hover-effect (keyword)(opt)
-  ;  ...}
-  ;
-  ; @usage
-  ; (effect-attributes {...} {:click-effect :opacity :hover-effect :opacity})
-  ; =>
-  ; {:data-click-effect :opacity
-  ;  :data-hover-effect :opacity
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:data-click-effect (keyword)
-  ;  :data-hover-effect (keyword)
-  ;  ...}
-  [attributes {:keys [click-effect disabled? hover-effect]}]
-  (-> attributes (map/merge-some {:data-click-effect click-effect
-                                  :data-hover-effect hover-effect})))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn progress-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
@@ -93,7 +62,7 @@
   ; @param (map) attributes
   ; {:style (map)(opt)}
   ; @param (map) props
-  ; {:progress (percentage)(opt)
+  ; {:progress (percent)(opt)
   ;  :progress-color (keyword or string)(opt)
   ;  :progress-direction (keyword)(opt)
   ;  :progress-duration (ms)(opt)
@@ -129,12 +98,12 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn transform-attributes
+(defn transformation-attributes
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @description
-  ; Applies the transform related values on the given attribute map.
+  ; Applies the transformation related values on the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
@@ -142,7 +111,7 @@
   ;  ...}
   ;
   ; @usage
-  ; (transform-attributes {...} {:transform :rotate-90})
+  ; (transformation-attributes {...} {:transform :rotate-90})
   ; =>
   ; {:data-transform :rotate-90
   ;  ...}

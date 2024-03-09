@@ -187,7 +187,7 @@
   ; Applies the given default shape properties on the given property map.
   ;
   ; @param (map) props
-  ; {:strength (percentage)(opt)
+  ; {:strength (percent)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -198,7 +198,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:strength (percentage)
+  ; {:strength (percent)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

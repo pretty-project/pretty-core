@@ -5,35 +5,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-background-action-props
-  ; @description
-  ; Applies the given default background action properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:highlighted? (boolean)(opt)
-  ;  :highlight-color (keyword or string)(opt)
-  ;  :highlight-pattern (keyword)(opt)
-  ;  :hover-color (keyword or string)(opt)
-  ;  :hover-pattern (keyword)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-background-action-props {...} {:hover-color :highlight})
-  ; =>
-  ; {:hover-color :highlight
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:highlighted? (boolean)
-  ;  :highlight-color (keyword or string)
-  ;  :highlight-pattern (keyword)
-  ;  :hover-color (keyword or string)
-  ;  :hover-pattern (keyword)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
 (defn default-background-color-props
   ; @description
   ; Applies the given default background color properties on the given property map.

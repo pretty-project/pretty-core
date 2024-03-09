@@ -88,7 +88,11 @@
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:disabled? (boolean)(opt)
+  ; {:active? (boolean)(opt)
+  ;  :disabled? (boolean)(opt)
+  ;  :highlighted? (boolean)(opt)
+  ;  :hovered? (boolean)(opt)
+  ;  :tab-disabled? (boolean)(opt)
   ;  ...}
   ;
   ; @usage
@@ -98,11 +102,18 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:data-disabled (boolean)
+  ; {:data-active (boolean)
+  ;  :data-disabled (boolean)
   ;  :data-highlighted (boolean)
+  ;  :data-hovered (boolean)
+  ;  :tab-index (integer)
   ;  ...}
-  [attributes {:keys [disabled?]}]
-  (-> attributes (map/merge-some {:data-disabled disabled?})))
+  [attributes {:keys [active? disabled? highlighted? hovered? tab-disabled?]}]
+  (-> attributes (map/merge-some {:data-active      (-> active?)
+                                  :data-disabled    (-> disabled?)
+                                  :data-highlighted (-> highlighted?)
+                                  :data-hovered     (-> hovered?)
+                                  :tab-index        (if tab-disabled? -1)})))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

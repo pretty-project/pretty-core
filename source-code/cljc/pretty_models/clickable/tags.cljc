@@ -1,36 +1,35 @@
 
-(ns pretty-models.control.utils)
+(ns pretty-models.clickable.tags)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn clickable-auto-tag
+(defn clickable-model-auto-tag
   ; @description
   ; Selects a HICCUP tag for a clickable element based on its properties.
   ;
-  ; @param (keyword) id
   ; @param (map) props
   ; {:href-uri (string)(opt)
   ;  :on-click-f (function)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (clickable-auto-tag :my-element {:href-uri "..." ...})
+  ; (clickable-model-auto-tag {:href-uri "..." ...})
   ; =>
   ; :a
   ;
   ; @usage
-  ; (clickable-auto-tag :my-element {:on-click-f (fn [] ...) ...})
+  ; (clickable-model-auto-tag {:on-click-f (fn [] ...) ...})
   ; =>
   ; :button
   ;
   ; @usage
-  ; (clickable-auto-tag :my-element {...})
+  ; (clickable-model-auto-tag {...})
   ; =>
   ; :div
   ;
   ; @return (keyword)
-  [_ {:keys [href-uri on-click-f]}]
+  [{:keys [href-uri on-click-f]}]
   (cond href-uri   :a
         on-click-f :button
         :static    :div))

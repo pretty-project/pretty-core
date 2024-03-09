@@ -1,28 +1,27 @@
 
-(ns pretty-models.input.utils)
+(ns pretty-models.field.tags)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn input-field-auto-tag
+(defn field-model-auto-tag
   ; @description
   ; Selects a HICCUP tag for an input field based on its properties.
   ;
-  ; @param (keyword) id
   ; @param (map) props
   ; {:multiline? (boolean)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (input-field-auto-tag :my-element {...})
+  ; (field-model-auto-tag {...})
   ; =>
   ; :input
   ;
   ; @usage
-  ; (input-field-auto-tag :my-element {:multiline? true ...})
+  ; (field-model-auto-tag {:multiline? true ...})
   ; =>
   ; :textarea
   ;
   ; @return (keyword)
-  [_ {:keys [multiline?]}]
+  [{:keys [multiline?]}]
   (if multiline? :textarea :input))

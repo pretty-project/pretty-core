@@ -220,19 +220,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Input state properties
-;
-; @title disabled? property
-;
-; @--- Accepted types
-; {:disabled? (boolean)}
-;
-; @--- Examples
-; {:disabled? true}
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 ; @tutorial Input validation properties
 ;
 ; @links
@@ -241,6 +228,8 @@
 ;
 ;
 ; @title form-id property
+;
+; Allows inputs to be validated in groups based on their form ID.
 ;
 ; @--- Accepted types
 ; {:form-id (keyword)}
@@ -299,7 +288,7 @@
 ;      :test-f (function)}]}
 ;
 ; @--- Examples
-; {:validators [{:error-text "Please fill out this field!" :test-f #(-> % empty? not)}]}
+; {:validators [{:error-text "Please fill out this field!" :test-f (fn [value] (-> value empty? not))}]}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

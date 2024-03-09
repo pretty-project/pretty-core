@@ -53,8 +53,6 @@
 (def subitem-id               subitems.utils/subitem-id)
 (def ensure-subitem           subitems.utils/ensure-subitem)
 (def ensure-subitems          subitems.utils/ensure-subitems)
-(def apply-subitem-longhand   subitems.utils/apply-subitem-longhand)
 (def apply-subitem-prototype  subitems.utils/apply-subitem-prototype)
 (def subitem<-disabled-state  subitems.utils/subitem<-disabled-state)
 (def subitems<-disabled-state subitems.utils/subitems<-disabled-state)
-(def leave-disabled-state     subitems.utils/leave-disabled-state)

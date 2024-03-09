@@ -64,32 +64,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn apply-subitem-longhand
-  ; @note
-  ; Elements must convert their subitem maps to longhand forms before applying prototype functions on them.
-  ;
-  ; @description
-  ; Converts a specific subitem in the given property map to longhand from in case it is provided in shorthand form.
-  ;
-  ; @param (map) props
-  ; @param (keyword) subitem-key
-  ; @param (keyword) shorthand-key
-  ;
-  ; @usage
-  ; (apply-subitem-longhand {:my-subitem {:content "My content"}} :my-subitem :content)
-  ; =>
-  ; {:my-subitem {:content "My content"}}
-  ;
-  ; @usage
-  ; (apply-subitem-longhand {:my-subitem "My content"} :my-subitem :content)
-  ; =>
-  ; {:my-subitem {:content "My content"}}
-  ;
-  ; @return (map)
-  [props subitem-key shorthand-key]
-  (letfn [(f0 [%] (map/to-longhand % shorthand-key))]
-         (update props subitem-key f0)))
-
 (defn apply-subitem-prototype
   ; @description
   ; Applies the given prototype function on a specific subitem property map within the given property map,
@@ -157,28 +131,3 @@
   ; @return (map)
   [props & subitem-keys]
   (reduce subitem<-disabled-state props subitem-keys))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn leave-disabled-state
-  ; @description
-  ; Dissociates the ':disabled?' property from the given property map,
-  ; in case it contains any of the given subitem keys or no subitem key is provided.
-  ;
-  ; @param (map) props
-  ; @param (list of keywords)(opt) subitem-keys
-  ;
-  ; @usage
-  ; (leave-disabled-state {:disabled? true :my-subitem {...} ...}
-  ;                       :my-subitem :another-subitem)
-  ; =>
-  ; {:disabled?  nil
-  ;  :my-subitem {...}
-  ;  ...}
-  ;
-  ; @return (map)
-  [props & subitem-keys]
-  (cond (-> subitem-keys empty?)                        (-> props (dissoc :disabled?))
-        (-> props (map/contains-any-key? subitem-keys)) (-> props (dissoc :disabled?))
-        :return props))

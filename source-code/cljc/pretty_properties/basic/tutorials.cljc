@@ -82,6 +82,36 @@
 
 ; @tutorial State properties
 ;
+; @title active property
+;
+; @--- Accepted types
+; {:active (map)}
+;
+; @--- Examples
+; {:active {:opacity :medium}}
+;
+;
+;
+; @title active? property
+;
+; @--- Accepted types
+; {:active? (boolean)}
+;
+; @--- Examples
+; {:active? true}
+;
+;
+;
+; @title disabled property
+;
+; @--- Accepted types
+; {:disabled (map)}
+;
+; @--- Examples
+; {:disabled {:opacity :medium}}
+;
+;
+;
 ; @title disabled? property
 ;
 ; @--- Accepted types
@@ -89,6 +119,58 @@
 ;
 ; @--- Examples
 ; {:disabled? true}
+;
+;
+;
+; @title highlighted property
+;
+; @--- Accepted types
+; {:highlighted (map)}
+;
+; @--- Examples
+; {:highlighted {:opacity :medium}}
+;
+;
+;
+; @title highlighted? property
+;
+; @--- Accepted types
+; {:highlighted? (boolean)}
+;
+; @--- Examples
+; {:highlighted? true}
+;
+;
+;
+; @title hovered property
+;
+; @--- Accepted types
+; {:hovered (map)}
+;
+; @--- Examples
+; {:hovered {:opacity :medium}}
+;
+;
+;
+; @title hovered? property
+;
+; The ':hovered?' property is applied automaticaly.
+;
+; @--- Accepted types
+; {:hovered? (boolean)}
+;
+; @--- Examples
+; {:hovered? true}
+;
+;
+;
+; @title tab-disabled? property
+;
+; @--- Accepted types
+; {:tab-disabled? (boolean)}
+;
+; @--- Examples
+; {:tab-disabled? true}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

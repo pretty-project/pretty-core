@@ -35,38 +35,12 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-effect-props
-  ; @description
-  ; Applies the given default effect properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:click-effect (keyword)(opt)
-  ;  :hover-effect (keyword)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-effect-props {...} {:click-effect :opacity})
-  ; =>
-  ; {:click-effect :opacity
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:click-effect (keyword)
-  ;  :hover-effect (keyword)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
 (defn default-progress-props
   ; @description
   ; Applies the given default progress properties on the given property map.
   ;
   ; @param (map) props
-  ; {:progress (percentage)(opt)
+  ; {:progress (percent)(opt)
   ;  :progress-color (keyword or string)(opt)
   ;  :progress-direction (keyword)(opt)
   ;  :progress-duration (ms)(opt)
@@ -80,7 +54,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:progress (percentage)
+  ; {:progress (percent)
   ;  :progress-color (keyword or string)
   ;  :progress-direction (keyword)
   ;  :progress-duration (ms)
@@ -91,9 +65,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn default-transform-props
+(defn default-transformation-props
   ; @description
-  ; Applies the given default transform properties on the given property map.
+  ; Applies the given default transformation properties on the given property map.
   ;
   ; @param (map) props
   ; {:transform (keyword or string)(opt)
