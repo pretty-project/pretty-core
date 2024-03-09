@@ -6,5 +6,5 @@
 ;; ----------------------------------------------------------------------------
 
 (defn icon-model-content-attributes
-  [props]
-  (-> props (pretty-attributes/icon-attributes props)))
+  [attributes props]
+  (-> attributes (pretty-attributes/icon-attributes props)))

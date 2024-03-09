@@ -1,10 +1,9 @@
 
-(ns pretty-models.content.rules
-    (:require [pretty-rules.api :as pretty-rules]))
+(ns pretty-models.multiline.rules)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn content-model-rules
+(defn multiline-model-rules
   [props]
-  (-> props (pretty-rules/compose-content props)))
+  (-> props))

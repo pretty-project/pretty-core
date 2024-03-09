@@ -9,5 +9,6 @@
   [props]
   (-> props (pretty-rules/apply-auto-border-crop    props)
             (pretty-rules/auto-blur-click-events    props)
+            (pretty-rules/auto-disable-cursor       props)
             (pretty-rules/auto-disable-mouse-events props)
             (pretty-rules/auto-set-mounted          props)))

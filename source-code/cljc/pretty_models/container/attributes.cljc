@@ -1,23 +1,24 @@
 
-(ns pretty-models.plain.attributes
+(ns pretty-models.container.attributes
     (:require [pretty-attributes.api :as pretty-attributes]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn plain-model-inner-attributes
+(defn container-model-inner-attributes
   [attributes props]
   (-> attributes (pretty-attributes/animation-attributes        props)
                  (pretty-attributes/background-color-attributes props)
                  (pretty-attributes/border-attributes           props)
                  (pretty-attributes/cursor-attributes           props)
+                 (pretty-attributes/flex-attributes             props)
                  (pretty-attributes/inner-size-attributes       props)
                  (pretty-attributes/inner-space-attributes      props)
                  (pretty-attributes/mouse-event-attributes      props)
                  (pretty-attributes/state-attributes            props)
                  (pretty-attributes/style-attributes            props)))
 
-(defn plain-model-outer-attributes
+(defn container-model-outer-attributes
   [attributes props]
   (-> attributes (pretty-attributes/class-attributes          props)
                  (pretty-attributes/inner-position-attributes props)

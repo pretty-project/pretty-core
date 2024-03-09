@@ -74,7 +74,7 @@
   ;  :type (keyword)
   ;  :value (*)
   ;  ...}
-  [attributes {:keys [autofill-name date-from date-to field-from field-to field-type field-value max-length on-change-f on-input-f]}]
+  [attributes {:keys [autofill-name date-from date-to field-from field-to field-type field-value max-length on-change-f on-input-f] :as x}]
   ; The range of '{:type :date}' fields is controlled by the ':min' and ':max' properties.
   (-> attributes (map/merge-some {:max-length    (-> max-length)
                                   :min           (or date-from field-from)

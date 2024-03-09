@@ -1,11 +1,10 @@
 
-(ns pretty-models.text.attributes
+(ns pretty-models.multiline.attributes
     (:require [pretty-attributes.api :as pretty-attributes]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn text-model-content-attributes
-  [props]
-  (-> props (pretty-attributes/font-attributes props)
-            (pretty-attributes/text-attributes props)))
+(defn multiline-model-content-attributes
+  [attributes props]
+  (-> attributes))

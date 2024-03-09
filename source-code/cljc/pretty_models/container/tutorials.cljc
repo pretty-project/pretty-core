@@ -1,9 +1,11 @@
 
-(ns pretty-models.text.rules)
+(ns pretty-models.container.tutorials)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn text-model-rules
-  [props]
-  (-> props))
+; @tutorial Container model
+;
+; @links Implemented attributes
+;
+; @links Implemented properties

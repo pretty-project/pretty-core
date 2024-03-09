@@ -1,11 +1,10 @@
 
-(ns pretty-models.text.standards
+(ns pretty-models.multiline.standards
     (:require [pretty-standards.api :as pretty-standards]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn text-model-standard-props
+(defn multiline-model-standard-props
   [props]
-  (-> props (pretty-standards/standard-font-props)
-            (pretty-standards/standard-text-props)))
+  (-> props))

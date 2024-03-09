@@ -245,7 +245,7 @@
 ; {:on-invalid-f (function)}
 ;
 ; @--- Examples
-; {:on-invalid-f (fn [value error-text])}
+; {:on-invalid-f (fn [value error])}
 ;
 ;
 ;
@@ -284,11 +284,11 @@
 ; @--- Accepted types
 ; {:validators (maps in vector)
 ;   [(map) validator
-;     {:error-text (multitype-content)
+;     {:error (multitype-content)
 ;      :test-f (function)}]}
 ;
 ; @--- Examples
-; {:validators [{:error-text "Please fill out this field!" :test-f (fn [value] (-> value empty? not))}]}
+; {:validators [{:error "Please fill out this field!" :test-f (fn [value] (-> value empty? not))}]}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

@@ -114,16 +114,16 @@
   ;  :validate-when-leave? (boolean)(opt)
   ;  :validators (maps in vector)(opt)
   ;   [(map) validator
-  ;     {:error-text (multitype-content)(opt)
+  ;     {:error (multitype-content)(opt)
   ;      :f (function)}]
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-input-validation-props {...} {:on-valid-f (fn [_] ...) :validators [{:f some? :error-text "Please fill out this field!"}]})
+  ; (default-input-validation-props {...} {:on-valid-f (fn [_] ...) :validators [{:f some? :error "Please fill out this field!"}]})
   ; =>
   ; {:on-valid-f (fn [_] ...)
-  ;  :validators [{:f some? :error-text "Please fill out this field!"}]
+  ;  :validators [{:f some? :error "Please fill out this field!"}]
   ;  ...}
   ;
   ; @return (map)
@@ -134,7 +134,7 @@
   ;  :validate-when-leave? (boolean)
   ;  :validators (maps in vector)
   ;   [(map) validator
-  ;     {:error-text (multitype-content)
+  ;     {:error (multitype-content)
   ;      :f (function)}]
   ;  ...}
   [props & [default-props]]
