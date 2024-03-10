@@ -46,6 +46,13 @@
       :outer-position-method :absolute})
 
 ; @constant (map)
+; {:content-height (keyword, px or string)
+;  :content-width (keyword, px or string)}
+(def STANDARD-CONTENT-SIZE-PROPERTIES
+     {:content-height :content
+      :content-width  :content})
+
+; @constant (map)
 ; {:inner-height (keyword, px or string)
 ;  :inner-width (keyword, px or string)}
 (def STANDARD-INNER-SIZE-PROPERTIES

@@ -40,6 +40,7 @@
 (def standard-inner-position-props layout.standards/standard-inner-position-props)
 (def standard-outer-position-props layout.standards/standard-outer-position-props)
 (def standard-shape-props          layout.standards/standard-shape-props)
+(def standard-content-size-props   layout.standards/standard-content-size-props)
 (def standard-inner-size-props     layout.standards/standard-inner-size-props)
 (def standard-outer-size-props     layout.standards/standard-outer-size-props)
 

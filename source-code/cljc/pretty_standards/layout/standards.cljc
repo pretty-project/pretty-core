@@ -111,6 +111,29 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn standard-content-size-props
+  ; @description
+  ; Applies the standard content size properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:content-height (keyword, px or string)(opt)
+  ;  :content-width (keyword, px or string)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (standard-content-size-props {...})
+  ; =>
+  ; {:content-height :content
+  ;  :content-width  :content
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:content-height (keyword, px or string)
+  ;  :content-width (keyword, px or string)
+  ;  ...}
+  [props]
+  (-> props (map/use-default-values layout.config/STANDARD-CONTENT-SIZE-PROPERTIES)))
+
 (defn standard-inner-size-props
   ; @description
   ; Applies the standard inner size properties on the given property map.
