@@ -17,4 +17,4 @@
 
 (defn click-control-outer-attributes
   [attributes _]
-  (-> attributes ))
+  (-> attributes))

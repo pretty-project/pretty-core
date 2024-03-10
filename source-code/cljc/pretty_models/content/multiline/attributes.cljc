@@ -8,8 +8,8 @@
 (defn multiline-content-content-attributes
   [attributes props]
   (-> attributes (pretty-attributes/content-size-attributes props)
-                 (pretty-attributes/flex-attributes         props)
                  (pretty-attributes/font-attributes         props)
+                 (pretty-attributes/overflow-attributes     props)
                  (pretty-attributes/text-attributes         props)))
 
 (defn multiline-content-inner-attributes

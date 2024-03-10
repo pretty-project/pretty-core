@@ -37,6 +37,9 @@
               [pretty-models.content.plain.attributes :as content.plain.attributes]
               [pretty-models.content.plain.rules :as content.plain.rules]
               [pretty-models.content.plain.standards :as content.plain.standards]
+              [pretty-models.input.field.attributes :as input.field.attributes]
+              [pretty-models.input.field.rules :as input.field.rules]
+              [pretty-models.input.field.standards :as input.field.standards]
               [pretty-models.input.field.tags :as input.field.tags]))
 
 ;; ----------------------------------------------------------------------------
@@ -230,6 +233,20 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
+
+; @tutorial Field input model
+; @redirect (pretty-models.input.field.tutorials/field-input-model)
+
+; @redirect (pretty-models.input.field.attributes/*)
+(def field-input-content-attributes input.field.attributes/field-input-content-attributes)
+(def field-input-inner-attributes   input.field.attributes/field-input-inner-attributes)
+(def field-input-outer-attributes   input.field.attributes/field-input-outer-attributes)
+
+; @redirect (pretty-models.input.field.rules/*)
+(def field-input-rules input.field.rules/field-input-rules)
+
+; @redirect (pretty-models.input.field.standards/*)
+(def field-input-standard-props input.field.standards/field-input-standard-props)
 
 ; @redirect (pretty-models.input.field.tags/*)
 (def field-input-auto-tag input.field.tags/field-input-auto-tag)
