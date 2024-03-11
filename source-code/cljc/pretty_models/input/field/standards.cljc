@@ -6,5 +6,11 @@
 ;; ----------------------------------------------------------------------------
 
 (defn field-input-standard-props
+  ; @description
+  ; Associates the standard properties of the field input model to the given property map.
+  ;
+  ; @param (map) props
+  ;
+  ; @return (map)
   [props]
   (-> props))

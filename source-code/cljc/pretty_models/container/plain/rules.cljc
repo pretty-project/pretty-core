@@ -6,6 +6,12 @@
 ;; ----------------------------------------------------------------------------
 
 (defn plain-container-rules
+  ; @description
+  ; Applies the rule functions of the plain container model on the given property map.
+  ;
+  ; @param (map) props
+  ;
+  ; @return (map)
   [props]
   (-> props (pretty-rules/apply-auto-border-crop)
             (pretty-rules/auto-blur-click-events)

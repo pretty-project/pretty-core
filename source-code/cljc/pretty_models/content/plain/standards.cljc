@@ -6,6 +6,12 @@
 ;; ----------------------------------------------------------------------------
 
 (defn plain-content-standard-props
+  ; @description
+  ; Associates the standard properties of the plain content model to the given property map.
+  ;
+  ; @param (map) props
+  ;
+  ; @return (map)
   [props]
   (-> props (pretty-standards/standard-content-size-props)
             (pretty-standards/standard-font-props)

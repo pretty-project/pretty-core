@@ -6,6 +6,12 @@
 ;; ----------------------------------------------------------------------------
 
 (defn plain-container-standard-props
+  ; @description
+  ; Associates the standard properties of the plain container model to the given property map.
+  ;
+  ; @param (map) props
+  ;
+  ; @return (map)
   [props]
   (-> props (pretty-standards/standard-animation-props)
             (pretty-standards/standard-border-props)

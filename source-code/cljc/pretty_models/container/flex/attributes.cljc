@@ -6,10 +6,24 @@
 ;; ----------------------------------------------------------------------------
 
 (defn flex-container-content-attributes
+  ; @description
+  ; Associates the content element attributes of the flex container model to the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ;
+  ; @return (map)
   [attributes _]
   (-> attributes))
 
 (defn flex-container-inner-attributes
+  ; @description
+  ; Associates the inner element attributes of the flex container model to the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ;
+  ; @return (map)
   [attributes props]
   (-> attributes (pretty-attributes/animation-attributes        props)
                  (pretty-attributes/background-color-attributes props)
@@ -23,6 +37,13 @@
                  (pretty-attributes/style-attributes            props)))
 
 (defn flex-container-outer-attributes
+  ; @description
+  ; Associates the outer element attributes of the flex container model to the given attribute map.
+  ;
+  ; @param (map) attributes
+  ; @param (map) props
+  ;
+  ; @return (map)
   [attributes props]
   (-> attributes (pretty-attributes/class-attributes          props)
                  (pretty-attributes/inner-position-attributes props)

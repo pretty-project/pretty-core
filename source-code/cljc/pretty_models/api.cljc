@@ -47,6 +47,15 @@
 
 ; @tutorial Pretty models
 ; ...
+;
+; (defn my-element
+;   [id props]
+;   (let [props (flex-container-standard-props)
+;         props (flex-container-rules props)]
+;        [:div (flex-container-outer-attributes {:class :my-element-outer} props)
+;              [:div (flex-container-inner-attributes {:class :my-element-inner} props)
+;                    [:div (flex-container-content-attributes {:class :my-element-content} props)
+;                          "My element"]]]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

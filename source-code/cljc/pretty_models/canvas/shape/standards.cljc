@@ -6,5 +6,11 @@
 ;; ----------------------------------------------------------------------------
 
 (defn shape-canvas-standard-props
+  ; @description
+  ; Associates the standard properties of the shape canvas model to the given property map.
+  ;
+  ; @param (map) props
+  ;
+  ; @return (map)
   [props]
   (-> props (pretty-standards/standard-shape-props)))
