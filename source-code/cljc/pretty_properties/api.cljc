@@ -155,6 +155,9 @@
 ; @tutorial Input field properties
 ; @redirect (pretty-properties.input.tutorials/input-field-properties)
 
+; @tutorial Input numeric properties
+; @redirect (pretty-properties.input.tutorials/input-numeric-properties)
+
 ; @tutorial Input option properties
 ; @redirect (pretty-properties.input.tutorials/input-option-properties)
 
@@ -166,6 +169,7 @@
 
 ; @redirect (pretty-properties.input.props/*)
 (def default-input-field-props      input.props/default-input-field-props)
+(def default-input-numeric-props    input.props/default-input-numeric-props)
 (def default-input-option-props     input.props/default-input-option-props)
 (def default-input-validation-props input.props/default-input-validation-props)
 (def default-input-value-props      input.props/default-input-value-props)
@@ -260,4 +264,5 @@
 ;; ----------------------------------------------------------------------------
 
 ; @redirect (pretty-properties.utils/*)
-(def merge-event-fn utils/merge-event-fn)
+(def clickable-props? utils/clickable-props?)
+(def merge-event-fn   utils/merge-event-fn)

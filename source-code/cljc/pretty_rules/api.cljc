@@ -32,12 +32,13 @@
 (def auto-set-multiline-height  content.rules/auto-set-multiline-height)
 
 ; @redirect (pretty-rules.control.rules/*)
+(def auto-disable-focus-events control.rules/auto-disable-focus-events)
 (def auto-disable-mouse-events control.rules/auto-disable-mouse-events)
 (def auto-blur-click-events    control.rules/auto-blur-click-events)
 
 ; @redirect (pretty-rules.input.rules/*)
 (def auto-hide-input-caret          input.rules/auto-hide-input-caret)
-(def assoc-blank-input-change-event input.rules/assoc-blank-input-change-event) 
+(def assoc-blank-input-change-event input.rules/assoc-blank-input-change-event)
 (def auto-disable-input-autofill    input.rules/auto-disable-input-autofill)
 (def generate-input-autofill        input.rules/generate-input-autofill)
 (def auto-disable-input-events      input.rules/auto-disable-input-events)

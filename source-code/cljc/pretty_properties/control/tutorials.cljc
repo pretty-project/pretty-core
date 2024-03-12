@@ -34,8 +34,7 @@
 ;
 ; @title autofocus? property
 ;
-; @note
-; The ':autofocus?' property is not necessarily supported by elements that implement the focus event properties!
+; Not necessarily supported by elements that implement the focus event properties!
 ;
 ; @--- Accepted types
 ; {:autofocus? (boolean)}
@@ -159,8 +158,8 @@
 ;
 ; @title on-click-timeout property
 ;
-; @note
-; The ':on-click-timeout' property is not necessarily supported by elements that implement the mouse event properties!
+; - Disables the element for a specific interval after the on-click-f event is triggered.
+; - Not necessarily supported by elements that implement the mouse event properties!
 ;
 ; @--- Accepted types
 ; {:on-click-timeout (ms)}

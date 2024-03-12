@@ -8,6 +8,9 @@
 ;
 ; @title autofill-name property
 ;
+; - Guides the browser on suggested values.
+; - Leave empty to disable autosuggestions.
+;
 ; @--- Accepted types
 ; {:autofill-name (keyword)}
 ;
@@ -166,6 +169,49 @@
 ;
 ; @--- Examples
 ; {:on-type-ended-f (fn [value] ...)}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Input numeric properties
+;
+; @title max-value property
+;
+; @--- Accepted types
+; {:max-value (integer)}
+;
+; @--- Examples
+; {:max-value 1}
+;
+;
+;
+; @title min-value property
+;
+; @--- Accepted types
+; {:min-value (integer)}
+;
+; @--- Examples
+; {:min-value 1}
+;
+;
+;
+; @title on-decreased-f property
+;
+; @--- Accepted types
+; {:on-decreased-f (function)}
+;
+; @--- Examples
+; {:on-decreased-f (fn [value] ...)}
+;
+;
+;
+; @title on-increased-f property
+;
+; @--- Accepted types
+; {:on-decreased-f (function)}
+;
+; @--- Examples
+; {:on-decreased-f (fn [value] ...)}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

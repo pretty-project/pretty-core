@@ -12,4 +12,4 @@
   ;
   ; @return (map)
   [props]
-  (-> props))
+  (-> props ))

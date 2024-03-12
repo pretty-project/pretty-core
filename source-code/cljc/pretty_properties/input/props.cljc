@@ -57,9 +57,9 @@
   ; @usage
   ; (default-input-field-props {...} {:field-type :password :field-value "..." :max-length 8})
   ; =>
-  ; {:field-type    :password
-  ;  :field-value   "..."
-  ;  :max-length    8
+  ; {:field-type  :password
+  ;  :field-value "..."
+  ;  :max-length  8
   ;  ...}
   ;
   ; @usage
@@ -85,6 +85,37 @@
   ;  :on-empty-f (function)
   ;  :on-input-f (function)
   ;  :on-type-ended-f (function)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+(defn default-input-numeric-props
+  ; @description
+  ; Applies the given default input numeric properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:max-value (integer)(opt)
+  ;  :min-value (integer)(opt)
+  ;  :on-decreased-f (function)(opt)
+  ;  :on-increased-f (function)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-input-numeric-props {...} {:min-value 0 :max-value 42})
+  ; =>
+  ; {:max-value 42
+  ;  :min-value 0
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:max-value (integer)
+  ;  :min-value (integer)
+  ;  :on-decreased-f (function)
+  ;  :on-increased-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

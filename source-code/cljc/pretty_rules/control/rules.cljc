@@ -1,11 +1,32 @@
 
 (ns pretty-rules.control.rules
-    #?(:clj  (:require [fruits.map.api :as map])
-       :cljs (:require [dom.api        :as dom]
-                       [fruits.map.api :as map])))
+    #?(:clj  (:require [fruits.map.api        :as map]
+                       [pretty-properties.api :as pretty-properties])
+       :cljs (:require [dom.api               :as dom]
+                       [fruits.map.api        :as map]
+                       [pretty-properties.api :as pretty-properties])))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
+
+(defn auto-disable-focus-events
+  ; @description
+  ; Dissociates the focus event properties of disabled elements.
+  ;
+  ; @param (map) props
+  ; {:disabled? (boolean)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (auto-disable-focus-events {:disabled? true :on-focus-f (fn [_] ...)})
+  ; =>
+  ; {:disabled? true
+  ;  ...}
+  ;
+  ; @return (map)
+  [{:keys [disabled?] :as props}]
+  (if disabled? (-> props (dissoc :on-blur-f :on-focus-f))
+                (-> props)))
 
 (defn auto-disable-mouse-events
   ; @description
@@ -28,16 +49,10 @@
 
 (defn auto-blur-click-events
   ; @description
-  ; In case the ':href-uri', ':on-click-f', ':on-mouse-down-f' or ':on-mouse-up-f' property is provided,
-  ; it extends the ':on-mouse-up-f' function with the 'dom.api/blur-active-element!' function
+  ; Extends the ':on-mouse-up-f' function with the 'dom.api/blur-active-element!' function
   ; in the given property map to prevent clickable elements staying focused after a click event.
   ;
   ; @param (map) props
-  ; {:href-uri (string)(opt)
-  ;  :on-click-f (function)(opt)
-  ;  :on-mouse-down-f (function)(opt)
-  ;  :on-mouse-up-f (function)(opt)
-  ;  ...}
   ;
   ; @usage
   ; (auto-blur-click-events {:on-click-f (fn [_] ...) ...})
@@ -47,12 +62,9 @@
   ;  ...}
   ;
   ; @return (map)
-  [{:keys [href-uri on-click-f on-mouse-down-f on-mouse-up-f] :as props}]
-  (letfn [(f0 [e] #?(:clj  (do (when on-mouse-up-f (on-mouse-up-f e)))
-                     :cljs (do (when on-mouse-up-f (on-mouse-up-f e))
-                               (when :always       (dom/blur-active-element!)))))]
-         (cond on-click-f      (-> props (map/use-default-values {:on-mouse-up-f f0}))
-               on-mouse-down-f (-> props (map/use-default-values {:on-mouse-up-f f0}))
-               on-mouse-up-f   (-> props (map/use-default-values {:on-mouse-up-f f0}))
-               href-uri        (-> props (map/use-default-values {:on-mouse-up-f f0}))
-               :else           (-> props))))
+  ; {:on-mouse-up-f (function)
+  ;  ...}
+  [props]
+  (if (-> props pretty-properties/clickable-props?)
+      (-> props (pretty-properties/merge-event-fn :on-mouse-up-f #?(:cljs dom/blur-active-element!)))
+      (-> props)))

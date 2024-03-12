@@ -56,6 +56,9 @@
                                                  (assoc-in [data-attribute-name] :var))
         :return attributes))
 
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn merge-event-fn
   ; @description
   ; - Associates the given 'event-f' function to a specific DOM event (e.g., 'on-click') within the given attribute map.
@@ -76,8 +79,7 @@
   ;
   ; @return (map)
   [attributes event-key event-f]
-  (letfn [(f0 [e] (event-f e)
-                  (if-let [default-f (event-key attributes)]
-                          (default-f e)))]
-         (if event-f (-> attributes (assoc event-key f0))
-                     (-> attributes))))
+  (cond (-> event-f              ifn? not) (-> attributes)
+        (-> attributes event-key ifn? not) (-> attributes (assoc event-key (fn [& params] (-> event-f              (apply params)))))
+        :merge-event-fn                    (-> attributes (assoc event-key (fn [& params] (-> event-f              (apply params))
+                                                                                          (-> attributes event-key (apply params)))))))
