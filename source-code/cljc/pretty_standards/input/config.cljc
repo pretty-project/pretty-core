@@ -4,6 +4,11 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @constant (map)
+; {:autofill-style (keyword)}
+(def STANDARD-INPUT-AUTOFILL-PROPERTIES
+     {:autofill-style :normalized})
+ 
 ; @note (pretty-standards.appearance.config#4011)
 ; @note (pretty-standards.appearance.config#4012)
 ;
@@ -15,5 +20,5 @@
 (def STANDARD-INPUT-OPTION-PROPERTIES
      {:option-highlighted {}
       :option-selected    {}
-      :option-value-f     #(-> % :label :content)
+      :option-value-f     nil
       :options            nil})

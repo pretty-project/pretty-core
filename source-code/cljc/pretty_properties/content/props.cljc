@@ -94,7 +94,6 @@
   ; {:icon-color (keyword or string)(opt)
   ;  :icon-family (keyword)(opt)
   ;  :icon-name (keyword)(opt)
-  ;  :icon-position (keyword)(opt)
   ;  :icon-size (keyword, px or string)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -109,7 +108,6 @@
   ; {:icon-color (keyword or string)
   ;  :icon-family (keyword)
   ;  :icon-name (keyword)
-  ;  :icon-position (keyword)
   ;  :icon-size (keyword, px or string)
   ;  ...}
   [props & [default-props]]
@@ -231,29 +229,6 @@
   ; @return (map)
   ; {:content (multitype-content)
   ;  :content-placeholder (multitype-content)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-(defn default-label-props
-  ; @description
-  ; Applies the given default label properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:label (multitype-content)(opt)
-  ;  :label-placeholder (multitype-content)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-label-props {...} {:label "My label"})
-  ; =>
-  ; {:label "My label"
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:label (multitype-content)
-  ;  :label-placeholder (multitype-content)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

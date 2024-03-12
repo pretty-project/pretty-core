@@ -2,10 +2,10 @@
 /***** Autofill presets *****/
 /*** Autofill style ***/
 
-[data-autofill-style="none"]:-webkit-autofill,
-[data-autofill-style="none"]:-webkit-autofill:hover,
-[data-autofill-style="none"]:-webkit-autofill:focus {
-  /* This little hack disables the default autofill browser styles ... */
+[data-autofill-style="normalized"]:-webkit-autofill,
+[data-autofill-style="normalized"]:-webkit-autofill:hover,
+[data-autofill-style="normalized"]:-webkit-autofill:focus {
+  /* Disables the default autofill browser styles ... */
   -webkit-text-fill-color: var( --text-color-default );
   -webkit-box-shadow: 0 0 0px 1000px var( --fill-color-default ) inset;
   transition: background-color 9999s ease-in-out 0s;

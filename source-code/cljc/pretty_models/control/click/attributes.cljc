@@ -5,9 +5,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn click-control-content-attributes
+(defn click-control-body-attributes
   ; @description
-  ; Associates the content element attributes of the click control model to the given attribute map.
+  ; Associates the body element attributes of the click control model to the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props

@@ -31,9 +31,10 @@
 
 ; @redirect (pretty-properties.control.standards/*)
 (def standard-anchor-props control.standards/standard-anchor-props)
-
+ 
 ; @redirect (pretty-properties.input.standards/*)
-(def standard-input-option-props input.standards/standard-input-option-props)
+(def standard-input-autofill-props input.standards/standard-input-autofill-props)
+(def standard-input-option-props   input.standards/standard-input-option-props)
 
 ; @redirect (pretty-properties.layout.standards/*)
 (def standard-flex-props           layout.standards/standard-flex-props)

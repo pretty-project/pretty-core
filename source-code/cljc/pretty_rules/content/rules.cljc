@@ -130,5 +130,5 @@
   ;  ...}
   [{:keys [font-size line-count line-height] :as props}]
   (if line-count (if-let [multiline-height (pretty-attributes/adaptive-text-height font-size line-height line-count)]
-                         (-> props (map/use-default-values {:content-height multiline-height}))
+                         (-> props (assoc :content-height multiline-height))
                          (-> props))))

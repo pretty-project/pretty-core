@@ -6,13 +6,39 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-input-autofill-props
+  ; @description
+  ; Applies the given default input autofill properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:autofill-name (keyword)(opt)
+  ;  :autofill-style (keyword)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-input-autofill-props {...} {:autofill-name :password :autofill-style :none})
+  ; =>
+  ; {:autofill-name  :password
+  ;  :autofill-style :normalized
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:autofill-name (keyword)
+  ;  :autofill-style (keyword)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-input-field-props
   ; @description
   ; Applies the given default input field properties on the given property map.
   ;
   ; @param (map) props
-  ; {:autofill-name (keyword)(opt)
-  ;  :date-from (string)(opt)
+  ; {:date-from (string)(opt)
   ;  :date-to (string)(opt)
   ;  :field-from (number)(opt)
   ;  :field-modifier-f (function)(opt)
@@ -21,6 +47,7 @@
   ;  :field-value (*)(opt)
   ;  :max-length (integer)(opt)
   ;  :multiline? (boolean)(opt)
+  ;  :on-change-f (function)(opt)
   ;  :on-empty-f (function)(opt)
   ;  :on-input-f (function)(opt)
   ;  :on-type-ended-f (function)(opt)
@@ -28,10 +55,9 @@
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-input-field-props {...} {:autofill-name :password :field-type :password :field-value "..." :max-length 8})
+  ; (default-input-field-props {...} {:field-type :password :field-value "..." :max-length 8})
   ; =>
-  ; {:autofill-name :password
-  ;  :field-type    :password
+  ; {:field-type    :password
   ;  :field-value   "..."
   ;  :max-length    8
   ;  ...}
@@ -46,8 +72,7 @@
   ;  ...}
   ;
   ; @return (map)
-  ; {:autofill-name (keyword)
-  ;  :date-from (string)
+  ; {:date-from (string)
   ;  :date-to (string)
   ;  :field-from (number)
   ;  :field-modifier-f (function)
@@ -56,6 +81,7 @@
   ;  :field-value (*)
   ;  :max-length (integer)
   ;  :multiline? (boolean)
+  ;  :on-change-f (function)
   ;  :on-empty-f (function)
   ;  :on-input-f (function)
   ;  :on-type-ended-f (function)

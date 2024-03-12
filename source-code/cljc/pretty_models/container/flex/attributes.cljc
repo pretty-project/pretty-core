@@ -5,9 +5,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn flex-container-content-attributes
+(defn flex-container-body-attributes
   ; @description
-  ; Associates the content element attributes of the flex container model to the given attribute map.
+  ; Associates the body element attributes of the flex container model to the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props

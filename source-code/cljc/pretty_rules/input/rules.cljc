@@ -6,6 +6,31 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn auto-hide-input-caret
+  ; @description
+  ; Hides the text caret of disabled input fields.
+  ;
+  ; @param (map) props
+  ; {:disabled? (boolean)(opt)
+  ;  ...}
+  ;
+  ; @usage
+  ; (auto-hide-input-caret {:disabled? true ...})
+  ; =>
+  ; {:disabled?  true
+  ;  :text-caret :hidden
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:text-caret (keyword)
+  ;  ...}
+  [{:keys [disabled?] :as props}]
+  (if disabled? (-> props (map/use-default-values {:text-caret :hidden}))
+                (-> props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn auto-disable-input-autofill
   ; @description
   ; Dissociates the ':autofill-name' property of disabled elements.
@@ -27,8 +52,7 @@
 
 (defn generate-input-autofill
   ; @description
-  ; Provides a randomly generated value as default ':autofill-name' value in the given property map;
-  ; only in case the element is not disabled.
+  ; Provides a randomly generated value as default value of the ':autofill-name' property for non-disabled elements.
   ;
   ; @param (map) props
   ; {:disabled? (boolean)(opt)
@@ -38,6 +62,12 @@
   ; (generate-input-autofill {...})
   ; =>
   ; {:autofill-name :xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  ;  ...}
+  ;
+  ; @usage
+  ; (generate-input-autofill {:disabled? true ...})
+  ; =>
+  ; {:disabled? true
   ;  ...}
   ;
   ; @return (map)
@@ -58,6 +88,23 @@
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
+
+(defn assoc-blank-input-change-event
+  ; @description
+  ; Associates a blank ':on-change-f' event to the given property map to prevent React warning about uncontrolled input state.
+  ;
+  ; @param (map) props
+  ;
+  ; @usage
+  ; (assoc-blank-input-change-event {...})
+  ; =>
+  ; {:on-change-f (fn [_])
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:on-change-f (function)}
+  [props]
+  (-> props (assoc :on-change-f (fn [_]))))
 
 (defn auto-disable-input-events
   ; @description

@@ -8,7 +8,8 @@
               [pretty-properties.input.props      :as input.props]
               [pretty-properties.layout.props     :as layout.props]
               [pretty-properties.live.props       :as live.props]
-              [pretty-properties.svg.props        :as svg.props]))
+              [pretty-properties.svg.props        :as svg.props]
+              [pretty-properties.utils :as utils]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -105,9 +106,6 @@
 ; @tutorial Content properties
 ; @redirect (pretty-properties.content.tutorials/content-properties)
 
-; @tutorial Label properties
-; @redirect (pretty-properties.content.tutorials/label-properties)
-
 ; @redirect (pretty-properties.content.props/*)
 (def default-cursor-props    content.props/default-cursor-props)
 (def default-font-props      content.props/default-font-props)
@@ -116,7 +114,6 @@
 (def default-multiline-props content.props/default-multiline-props)
 (def default-text-props      content.props/default-text-props)
 (def default-content-props   content.props/default-content-props)
-(def default-label-props     content.props/default-label-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -258,3 +255,9 @@
 ; @redirect (pretty-properties.svg.props/*)
 (def default-svg-circle-props svg.props/default-svg-circle-props)
 (def default-svg-stroke-props svg.props/default-svg-stroke-props)
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @redirect (pretty-properties.utils/*)
+(def merge-event-fn utils/merge-event-fn)

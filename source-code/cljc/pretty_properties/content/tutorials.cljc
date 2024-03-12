@@ -16,7 +16,7 @@
 ; {:cursor "my-cursor"}
 ;
 ; @--- Predefined values
-; :default, :disabled, :grab, :grabbing, :move, :pointer, :progress
+; :default, :disabled, :grab, :grabbing, :help, :move, :pointer, :progress, :text, :zoom-in, :zoom-out
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -168,21 +168,6 @@
 ; @--- Examples
 ; {:icon-name :material_icon_name}
 ; {:icon-name :material_symbol_name}
-;
-;
-;
-; @title icon-position property
-;
-; Works only for icons attached to labels.
-;
-; @--- Accepted types
-; {:icon-position (keyword)}
-;
-; @--- Examples
-; {:icon-position :left}
-;
-; @--- Predefined values
-; :left, :right
 ;
 ;
 ;

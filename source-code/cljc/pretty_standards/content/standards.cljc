@@ -51,7 +51,6 @@
   ; {:icon-color (keyword or string)(opt)
   ;  :icon-family (keyword)(opt)
   ;  :icon-name (keyword)(opt)
-  ;  :icon-position (keyword)(opt)
   ;  :icon-size (keyword, px or string)(opt)
   ;  ...}
   ;
@@ -68,7 +67,6 @@
   ; {:icon-color (keyword or string)
   ;  :icon-family (keyword)
   ;  :icon-name (keyword)
-  ;  :icon-position (keyword)
   ;  :icon-size (keyword, px or string)
   ;  ...}
   [props]

@@ -1,14 +1,10 @@
 
 (ns pretty-properties.input.tutorials)
 
-
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Input field properties
-;
-; @links
-; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
+; @tutorial Input autofill properties
 ;
 ; @title autofill-name property
 ;
@@ -19,6 +15,25 @@
 ; {:autofill-name :password}
 ;
 ;
+;
+; @title autofill-style property
+;
+; @--- Accepted types
+; {:autofill-style (keyword)}
+;
+; @--- Examples
+; {:autofill-style :none}
+;
+; @--- Predefined values
+; :none, :normalized
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Input field properties
+;
+; @links
+; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
 ;
 ; @title date-from property
 ;
@@ -111,6 +126,16 @@
 ;
 ; @--- Examples
 ; {:multiline? true}
+;
+;
+;
+; @title on-change-f property
+;
+; @--- Accepted types
+; {:on-change-f (function)}
+;
+; @--- Examples
+; {:on-change-f (fn [value] ...)}
 ;
 ;
 ;

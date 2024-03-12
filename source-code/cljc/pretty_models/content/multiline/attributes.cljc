@@ -5,9 +5,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn multiline-content-content-attributes
+(defn multiline-content-body-attributes
   ; @description
-  ; Associates the content element attributes of the multiline content model to the given attribute map.
+  ; Associates the body element attributes of the multiline content model to the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props

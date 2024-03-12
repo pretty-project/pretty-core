@@ -6,6 +6,27 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn standard-input-autofill-props
+  ; @description
+  ; Applies the standard input autofill properties on the given property map.
+  ;
+  ; @param (map) props
+  ;
+  ; @usage
+  ; (standard-input-autofill-props {...})
+  ; =>
+  ; {:autofill-style :normalized
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:autofill-style (keyword)
+  ;  ...}
+  [props]
+  (-> props (map/use-default-values input.config/STANDARD-INPUT-AUTOFILL-PROPERTIES)))
+ 
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn standard-input-option-props
   ; @description
   ; Applies the standard input option properties on the given property map; in case of any input option related value is provided.
@@ -22,7 +43,6 @@
   ; =>
   ; {:option-highlighted {}
   ;  :option-selected    {}
-  ;  :option-value-f     #(-> % :label :content)
   ;  :options            [{...} {...}]
   ;  ...}
   ;

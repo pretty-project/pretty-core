@@ -18,4 +18,5 @@
             (pretty-rules/auto-blur-click-events)
             (pretty-rules/auto-disable-cursor)
             (pretty-rules/auto-disable-mouse-events)
+            (pretty-rules/auto-disable-tab)
             (pretty-rules/auto-set-mounted)))

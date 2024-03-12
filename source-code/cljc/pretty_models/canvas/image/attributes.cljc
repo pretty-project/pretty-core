@@ -5,9 +5,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn image-canvas-content-attributes
+(defn image-canvas-body-attributes
   ; @description
-  ; Associates the content element attributes of the image canvas model to the given attribute map.
+  ; Associates the body element attributes of the image canvas model to the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props

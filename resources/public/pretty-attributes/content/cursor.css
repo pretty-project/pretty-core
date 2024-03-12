@@ -7,9 +7,13 @@
 [data-cursor="disabled"] { cursor: not-allowed;     }
 [data-cursor="grab"]     { cursor: grab;            }
 [data-cursor="grabbing"] { cursor: grabbing;        }
+[data-cursor="help"]     { cursor: help;            }
 [data-cursor="move"]     { cursor: move;            }
 [data-cursor="pointer"]  { cursor: pointer;         }
 [data-cursor="progress"] { cursor: progress;        }
+[data-cursor="text"]     { cursor: text;            }
+[data-cursor="zoom-in"]  { cursor: zoom-in;         }
+[data-cursor="zoom-out"] { cursor: zoom-out;        }
 
 /*** Cursor ***/
 /***** Cursor presets *****/

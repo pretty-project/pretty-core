@@ -4,9 +4,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn shape-canvas-content-attributes
+(defn shape-canvas-body-attributes
   ; @description
-  ; Associates the content element attributes of the shape canvas model to the given attribute map.
+  ; Associates the body element attributes of the shape canvas model to the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props

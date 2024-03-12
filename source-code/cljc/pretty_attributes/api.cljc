@@ -9,7 +9,8 @@
               [pretty-attributes.input.attributes      :as input.attributes]
               [pretty-attributes.layout.attributes     :as layout.attributes]
               [pretty-attributes.live.attributes       :as live.attributes]
-              [pretty-attributes.svg.attributes        :as svg.attributes]))
+              [pretty-attributes.svg.attributes        :as svg.attributes]
+              [pretty-attributes.utils :as utils]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -56,7 +57,8 @@
 (def mouse-event-attributes     control.attributes/mouse-event-attributes)
 
 ; @redirect (pretty-attributes.input.attributes/*)
-(def input-field-attributes input.attributes/input-field-attributes)
+(def input-autofill-attributes input.attributes/input-autofill-attributes)
+(def input-field-attributes    input.attributes/input-field-attributes)
 
 ; @redirect (pretty-attributes.layout.attributes/*)
 (def flex-attributes           layout.attributes/flex-attributes)
@@ -78,3 +80,7 @@
 ; @redirect (pretty-attributes.svg.attributes/*)
 (def svg-circle-attributes svg.attributes/svg-circle-attributes)
 (def svg-stroke-attributes svg.attributes/svg-stroke-attributes)
+
+; @redirect (pretty-attributes.utils/*)
+(def apply-property-value utils/apply-property-value)
+(def merge-event-fn utils/merge-event-fn)

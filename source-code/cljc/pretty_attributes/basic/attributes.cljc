@@ -12,7 +12,7 @@
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @note
-  ; In case the attribute map already contained any CSS class value, it merges the contained and the applied value.
+  ; In case the attribute map already contains any CSS class value, it merges the existing value with the applied value.
   ;
   ; @description
   ; Applies the given CSS class value on the given attribute map.
@@ -123,7 +123,7 @@
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
   ; @note
-  ; In case the attribute map already contained any inline style value, it merges the contained and the applied value.
+  ; In case the attribute map already contains any inline style value, it merges the existing value with the applied value.
   ;
   ; @description
   ; Applies the given inline style value on the given attribute map.

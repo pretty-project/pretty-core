@@ -5,9 +5,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn grid-content-content-attributes
+(defn grid-content-body-attributes
   ; @description
-  ; Associates the content element attributes of the grid content model to the given attribute map.
+  ; Associates the body element attributes of the grid content model to the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props

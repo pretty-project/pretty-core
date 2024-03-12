@@ -13,7 +13,9 @@
   ;
   ; @return (map)
   [props]
-  (-> props (pretty-rules/assoc-field-value-as-content)
-            (pretty-rules/auto-disable-input-autofill)
+  (-> props (pretty-rules/assoc-blank-input-change-event)
+            (pretty-rules/assoc-field-value-as-content)
+            (pretty-rules/auto-disable-input-autofill) 
             (pretty-rules/auto-disable-input-events)
+            (pretty-rules/auto-hide-input-caret)
             (pretty-rules/generate-input-autofill)))

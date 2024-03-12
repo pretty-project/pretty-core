@@ -54,7 +54,7 @@
 ;         props (flex-container-rules props)]
 ;        [:div (flex-container-outer-attributes {:class :my-element-outer} props)
 ;              [:div (flex-container-inner-attributes {:class :my-element-inner} props)
-;                    [:div (flex-container-content-attributes {:class :my-element-content} props)
+;                    [:div (flex-container-body-attributes {:class :my-element-body} props)
 ;                          "My element"]]]))
 
 ;; ----------------------------------------------------------------------------
@@ -73,9 +73,9 @@
 ; @redirect (pretty-models.canvas.shape.tutorials/shape-canvas-model)
 
 ; @redirect (pretty-models.canvas.icon.attributes/*)
-(def icon-canvas-content-attributes canvas.icon.attributes/icon-canvas-content-attributes)
-(def icon-canvas-inner-attributes   canvas.icon.attributes/icon-canvas-inner-attributes)
-(def icon-canvas-outer-attributes   canvas.icon.attributes/icon-canvas-outer-attributes)
+(def icon-canvas-body-attributes  canvas.icon.attributes/icon-canvas-body-attributes)
+(def icon-canvas-inner-attributes canvas.icon.attributes/icon-canvas-inner-attributes)
+(def icon-canvas-outer-attributes canvas.icon.attributes/icon-canvas-outer-attributes)
 
 ; @redirect (pretty-models.canvas.icon.rules/*)
 (def icon-canvas-rules canvas.icon.rules/icon-canvas-rules)
@@ -84,9 +84,9 @@
 (def icon-canvas-standard-props canvas.icon.standards/icon-canvas-standard-props)
 
 ; @redirect (pretty-models.canvas.image.attributes/*)
-(def image-canvas-content-attributes canvas.image.attributes/image-canvas-content-attributes)
-(def image-canvas-inner-attributes   canvas.image.attributes/image-canvas-inner-attributes)
-(def image-canvas-outer-attributes   canvas.image.attributes/image-canvas-outer-attributes)
+(def image-canvas-body-attributes  canvas.image.attributes/image-canvas-body-attributes)
+(def image-canvas-inner-attributes canvas.image.attributes/image-canvas-inner-attributes)
+(def image-canvas-outer-attributes canvas.image.attributes/image-canvas-outer-attributes)
 
 ; @redirect (pretty-models.canvas.image.rules/*)
 (def image-canvas-rules canvas.image.rules/image-canvas-rules)
@@ -95,9 +95,9 @@
 (def image-canvas-standard-props canvas.image.standards/image-canvas-standard-props)
 
 ; @redirect (pretty-models.canvas.line.attributes/*)
-(def line-canvas-content-attributes canvas.line.attributes/line-canvas-content-attributes)
-(def line-canvas-inner-attributes   canvas.line.attributes/line-canvas-inner-attributes)
-(def line-canvas-outer-attributes   canvas.line.attributes/line-canvas-outer-attributes)
+(def line-canvas-body-attributes  canvas.line.attributes/line-canvas-body-attributes)
+(def line-canvas-inner-attributes canvas.line.attributes/line-canvas-inner-attributes)
+(def line-canvas-outer-attributes canvas.line.attributes/line-canvas-outer-attributes)
 
 ; @redirect (pretty-models.canvas.line.rules/*)
 (def line-canvas-rules canvas.line.rules/line-canvas-rules)
@@ -106,9 +106,9 @@
 (def line-canvas-standard-props canvas.line.standards/line-canvas-standard-props)
 
 ; @redirect (pretty-models.canvas.shape.attributes/*)
-(def shape-canvas-content-attributes canvas.shape.attributes/shape-canvas-content-attributes)
-(def shape-canvas-inner-attributes   canvas.shape.attributes/shape-canvas-inner-attributes)
-(def shape-canvas-outer-attributes   canvas.shape.attributes/shape-canvas-outer-attributes)
+(def shape-canvas-body-attributes  canvas.shape.attributes/shape-canvas-body-attributes)
+(def shape-canvas-inner-attributes canvas.shape.attributes/shape-canvas-inner-attributes)
+(def shape-canvas-outer-attributes canvas.shape.attributes/shape-canvas-outer-attributes)
 
 ; @redirect (pretty-models.canvas.shape.rules/*)
 (def shape-canvas-rules canvas.shape.rules/shape-canvas-rules)
@@ -129,9 +129,9 @@
 ; @redirect (pretty-models.container.plain.tutorials/plain-container-model)
 
 ; @redirect (pretty-models.container.flex.attributes/*)
-(def flex-container-content-attributes container.flex.attributes/flex-container-content-attributes)
-(def flex-container-inner-attributes   container.flex.attributes/flex-container-inner-attributes)
-(def flex-container-outer-attributes   container.flex.attributes/flex-container-outer-attributes)
+(def flex-container-body-attributes  container.flex.attributes/flex-container-body-attributes)
+(def flex-container-inner-attributes container.flex.attributes/flex-container-inner-attributes)
+(def flex-container-outer-attributes container.flex.attributes/flex-container-outer-attributes)
 
 ; @redirect (pretty-models.container.flex.rules/*)
 (def flex-container-rules container.flex.rules/flex-container-rules)
@@ -140,9 +140,9 @@
 (def flex-container-standard-props container.flex.standards/flex-container-standard-props)
 
 ; @redirect (pretty-models.container.grid.attributes/*)
-(def grid-container-content-attributes container.grid.attributes/grid-container-content-attributes)
-(def grid-container-inner-attributes   container.grid.attributes/grid-container-inner-attributes)
-(def grid-container-outer-attributes   container.grid.attributes/grid-container-outer-attributes)
+(def grid-container-body-attributes  container.grid.attributes/grid-container-body-attributes)
+(def grid-container-inner-attributes container.grid.attributes/grid-container-inner-attributes)
+(def grid-container-outer-attributes container.grid.attributes/grid-container-outer-attributes)
 
 ; @redirect (pretty-models.container.grid.rules/*)
 (def grid-container-rules container.grid.rules/grid-container-rules)
@@ -151,9 +151,9 @@
 (def grid-container-standard-props container.grid.standards/grid-container-standard-props)
 
 ; @redirect (pretty-models.container.plain.attributes/*)
-(def plain-container-content-attributes container.plain.attributes/plain-container-content-attributes)
-(def plain-container-inner-attributes   container.plain.attributes/plain-container-inner-attributes)
-(def plain-container-outer-attributes   container.plain.attributes/plain-container-outer-attributes)
+(def plain-container-body-attributes  container.plain.attributes/plain-container-body-attributes)
+(def plain-container-inner-attributes container.plain.attributes/plain-container-inner-attributes)
+(def plain-container-outer-attributes container.plain.attributes/plain-container-outer-attributes)
 
 ; @redirect (pretty-models.container.plain.rules/*)
 (def plain-container-rules container.plain.rules/plain-container-rules)
@@ -177,9 +177,9 @@
 ; @redirect (pretty-models.content.plain.tutorials/plain-content-model)
 
 ; @redirect (pretty-models.content.flex.attributes/*)
-(def flex-content-content-attributes content.flex.attributes/flex-content-content-attributes)
-(def flex-content-inner-attributes   content.flex.attributes/flex-content-inner-attributes)
-(def flex-content-outer-attributes   content.flex.attributes/flex-content-outer-attributes)
+(def flex-content-body-attributes  content.flex.attributes/flex-content-body-attributes)
+(def flex-content-inner-attributes content.flex.attributes/flex-content-inner-attributes)
+(def flex-content-outer-attributes content.flex.attributes/flex-content-outer-attributes)
 
 ; @redirect (pretty-models.content.flex.rules/*)
 (def flex-content-rules content.flex.rules/flex-content-rules)
@@ -188,9 +188,9 @@
 (def flex-content-standard-props content.flex.standards/flex-content-standard-props)
 
 ; @redirect (pretty-models.content.grid.attributes/*)
-(def grid-content-content-attributes content.grid.attributes/grid-content-content-attributes)
-(def grid-content-inner-attributes   content.grid.attributes/grid-content-inner-attributes)
-(def grid-content-outer-attributes   content.grid.attributes/grid-content-outer-attributes)
+(def grid-content-body-attributes  content.grid.attributes/grid-content-body-attributes)
+(def grid-content-inner-attributes content.grid.attributes/grid-content-inner-attributes)
+(def grid-content-outer-attributes content.grid.attributes/grid-content-outer-attributes)
 
 ; @redirect (pretty-models.content.grid.rules/*)
 (def grid-content-rules content.grid.rules/grid-content-rules)
@@ -199,9 +199,9 @@
 (def grid-content-standard-props content.grid.standards/grid-content-standard-props)
 
 ; @redirect (pretty-models.content.multiline.attributes/*)
-(def multiline-content-content-attributes content.multiline.attributes/multiline-content-content-attributes)
-(def multiline-content-inner-attributes   content.multiline.attributes/multiline-content-inner-attributes)
-(def multiline-content-outer-attributes   content.multiline.attributes/multiline-content-outer-attributes)
+(def multiline-content-body-attributes  content.multiline.attributes/multiline-content-body-attributes)
+(def multiline-content-inner-attributes content.multiline.attributes/multiline-content-inner-attributes)
+(def multiline-content-outer-attributes content.multiline.attributes/multiline-content-outer-attributes)
 
 ; @redirect (pretty-models.content.multiline.rules/*)
 (def multiline-content-rules content.multiline.rules/multiline-content-rules)
@@ -210,9 +210,9 @@
 (def multiline-content-standard-props content.multiline.standards/multiline-content-standard-props)
 
 ; @redirect (pretty-models.content.plain.attributes/*)
-(def plain-content-content-attributes content.plain.attributes/plain-content-content-attributes)
-(def plain-content-inner-attributes   content.plain.attributes/plain-content-inner-attributes)
-(def plain-content-outer-attributes   content.plain.attributes/plain-content-outer-attributes)
+(def plain-content-body-attributes  content.plain.attributes/plain-content-body-attributes)
+(def plain-content-inner-attributes content.plain.attributes/plain-content-inner-attributes)
+(def plain-content-outer-attributes content.plain.attributes/plain-content-outer-attributes)
 
 ; @redirect (pretty-models.content.plain.rules/*)
 (def plain-content-rules content.plain.rules/plain-content-rules)
@@ -227,9 +227,9 @@
 ; @redirect (pretty-models.control.click.tutorials/click-control-model)
 
 ; @redirect (pretty-models.control.click.attributes/*)
-(def click-control-content-attributes control.click.attributes/click-control-content-attributes)
-(def click-control-inner-attributes   control.click.attributes/click-control-inner-attributes)
-(def click-control-outer-attributes   control.click.attributes/click-control-outer-attributes)
+(def click-control-body-attributes  control.click.attributes/click-control-body-attributes)
+(def click-control-inner-attributes control.click.attributes/click-control-inner-attributes)
+(def click-control-outer-attributes control.click.attributes/click-control-outer-attributes)
 
 ; @redirect (pretty-models.control.click.rules/*)
 (def click-control-rules control.click.rules/click-control-rules)
@@ -247,9 +247,9 @@
 ; @redirect (pretty-models.input.field.tutorials/field-input-model)
 
 ; @redirect (pretty-models.input.field.attributes/*)
-(def field-input-content-attributes input.field.attributes/field-input-content-attributes)
-(def field-input-inner-attributes   input.field.attributes/field-input-inner-attributes)
-(def field-input-outer-attributes   input.field.attributes/field-input-outer-attributes)
+(def field-input-body-attributes  input.field.attributes/field-input-body-attributes)
+(def field-input-inner-attributes input.field.attributes/field-input-inner-attributes)
+(def field-input-outer-attributes input.field.attributes/field-input-outer-attributes)
 
 ; @redirect (pretty-models.input.field.rules/*)
 (def field-input-rules input.field.rules/field-input-rules)

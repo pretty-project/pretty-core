@@ -5,9 +5,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-(defn plain-content-content-attributes
+(defn plain-content-body-attributes
   ; @description
-  ; Associates the content element attributes of the plain content model to the given attribute map.
+  ; Associates the body element attributes of the plain content model to the given attribute map.
   ;
   ; @param (map) attributes
   ; @param (map) props
