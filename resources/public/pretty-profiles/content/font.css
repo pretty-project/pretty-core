@@ -13,7 +13,7 @@
 
 /* XXX#0663
  * Text block heights are line heights designed for fitting texts to the block size profiles.
- * (The native line height profiles aren't standardized with the block size profiles.) */
+ * (The native line height profiles are not standardized with the block size profiles.) */
 
 /* REM:
  * https://www.w3.org/TR/css-values-3

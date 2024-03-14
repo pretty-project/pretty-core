@@ -18,7 +18,7 @@
 /*** Icon size ***/
 
 /* To avoid FOIT/FOUT effect, the 'height', 'line-height', 'overflow' and width properties must be set. */
-/* To avoid collapsing icon wrappers when there isn't enough space, the 'flex-shrink' property must be set. */
+/* To avoid collapsing icon wrappers when there is not enough space, the 'flex-shrink' property must be set. */
 [data-icon-size]         { flex-shrink: 0;
                            overflow:    hidden; }
 [data-icon-size="var"]   { font-size:   var( --icon-size               );
