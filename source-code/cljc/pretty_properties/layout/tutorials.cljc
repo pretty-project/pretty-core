@@ -445,7 +445,8 @@
 ;
 ; @title content-size-unit property
 ;
-; Check out the [size unit systems](#size-unit-systems) section.
+; @links
+; [Size unit systems](#size-unit-systems)
 ;
 ; @--- Accepted types
 ; {:content-size-unit (keyword)}
@@ -563,7 +564,8 @@
 ;
 ; @title inner-size-unit property
 ;
-; Check out the [size unit systems](#size-unit-systems) section.
+; @links
+; [Size unit systems](#size-unit-systems)
 ;
 ; @--- Accepted types
 ; {:inner-size-unit (keyword)}
@@ -681,7 +683,8 @@
 ;
 ; @title outer-size-unit property
 ;
-; Check out the [size unit systems](#size-unit-systems) section.
+; @links
+; [Size unit systems](#size-unit-systems)
 ;
 ; @--- Accepted types
 ; {:outer-size-unit (keyword)}

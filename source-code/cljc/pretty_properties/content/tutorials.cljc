@@ -24,7 +24,7 @@
 ; @tutorial Dropdown properties
 ;
 ; @links
-; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
+; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
 ;
 ; @title dropdown-content property
 ;
@@ -342,7 +342,7 @@
 ; @tutorial Content properties
 ;
 ; @links
-; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
+; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
 ;
 ; @note
 ; The ':content-placeholder' property provides fallback value for the ':content' property in case it has no value.
@@ -379,7 +379,7 @@
 ; @tutorial Label properties
 ;
 ; @links
-; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
+; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
 ;
 ; @note
 ; The ':label-placeholder' property provides fallback value for the ':label' property in case it has no value.

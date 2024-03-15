@@ -36,7 +36,7 @@
 ; @tutorial Input field properties
 ;
 ; @links
-; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
+; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
 ;
 ; @title date-from property
 ;
@@ -294,8 +294,8 @@
 ; @tutorial Input validation properties
 ;
 ; @links
-; Check out the [cljc-form-validator](https://mt-app-kit.github.io/cljc-form-validator/cljc/form-validator/api.html) library.
-; Check out the [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content) library.
+; [cljc-form-validator](https://mt-app-kit.github.io/cljc-form-validator)
+; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
 ;
 ; @title form-id property
 ;

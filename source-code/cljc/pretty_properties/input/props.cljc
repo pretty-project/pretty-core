@@ -161,7 +161,7 @@
 
 (defn default-input-validation-props
   ; @links
-  ; Check out the [cljc-form-validator](https://mt-app-kit.github.io/cljc-form-validator/cljc/form-validator/api.html) library.
+  ; [cljc-form-validator](https://mt-app-kit.github.io/cljc-form-validator)
   ;
   ; @description
   ; Applies the given default input validation properties on the given property map.

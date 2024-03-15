@@ -54,7 +54,7 @@
 ; @tutorial Preset properties
 ;
 ; @links
-; Check out the [pretty-presets](https://mt-app-kit.github.io/pretty-ui/cljs/pretty-presets/api.html) library.
+; [pretty-presets](https://pretty-project.github.io/pretty-ui/cljs/pretty-presets/api.html)
 ;
 ; @title preset property
 ;

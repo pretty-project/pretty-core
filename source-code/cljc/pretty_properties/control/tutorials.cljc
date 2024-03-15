@@ -68,7 +68,7 @@
 ; @tutorial Keypress control properties
 ;
 ; @links
-; Check out the [cljs-keypress-handler](https://mt-app-kit.github.io/cljs-keypress-handler) library.
+; [cljs-keypress-handler](https://mt-app-kit.github.io/cljs-keypress-handler)
 ;
 ; @title keypress property
 ;
