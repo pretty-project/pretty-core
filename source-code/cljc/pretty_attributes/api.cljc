@@ -10,7 +10,7 @@
               [pretty-attributes.layout.attributes     :as layout.attributes]
               [pretty-attributes.live.attributes       :as live.attributes]
               [pretty-attributes.svg.attributes        :as svg.attributes]
-              [pretty-attributes.utils :as utils]))
+              [pretty-attributes.utils                 :as utils]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

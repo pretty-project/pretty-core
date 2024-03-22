@@ -9,7 +9,7 @@
               [pretty-properties.layout.props     :as layout.props]
               [pretty-properties.live.props       :as live.props]
               [pretty-properties.svg.props        :as svg.props]
-              [pretty-properties.utils :as utils]))
+              [pretty-properties.utils            :as utils]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
