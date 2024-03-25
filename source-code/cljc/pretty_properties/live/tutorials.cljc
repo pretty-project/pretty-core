@@ -92,7 +92,7 @@
 ; {:progress-color "#888"}
 ;
 ; @--- Predefined values
-; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
+; :default, :highlight, :inverse, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;

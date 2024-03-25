@@ -8,7 +8,7 @@
 ; {:autofill-style (keyword)}
 (def STANDARD-INPUT-AUTOFILL-PROPERTIES
      {:autofill-style :normalized})
- 
+
 ; @note (pretty-standards.appearance.config#4011)
 ; @note (pretty-standards.appearance.config#4012)
 ;

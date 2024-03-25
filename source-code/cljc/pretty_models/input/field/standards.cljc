@@ -14,4 +14,3 @@
   ; @return (map)
   [props]
   (-> props (pretty-standards/standard-input-autofill-props)))
- 

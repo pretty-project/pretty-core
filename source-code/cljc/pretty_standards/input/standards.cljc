@@ -23,9 +23,6 @@
   ;  ...}
   [props]
   (-> props (map/use-default-values input.config/STANDARD-INPUT-AUTOFILL-PROPERTIES)))
- 
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
 
 (defn standard-input-option-props
   ; @description

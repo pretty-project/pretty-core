@@ -629,6 +629,7 @@
 ; {:max-outer-height "5%"}
 ;
 ; @--- Predefined values
+; :content, :parent,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
@@ -645,6 +646,7 @@
 ; {:max-outer-width "5%"}
 ;
 ; @--- Predefined values
+; :content, :parent,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
@@ -661,6 +663,7 @@
 ; {:min-outer-height "5%"}
 ;
 ; @--- Predefined values
+; :content, :parent,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;
@@ -677,6 +680,7 @@
 ; {:min-outer-width "5%"}
 ;
 ; @--- Predefined values
+; :content, :parent,
 ; :micro, :xxs, :xs, :s, :m, :l, :xl, :xxl, :3xl, :4xl, :5xl
 ;
 ;

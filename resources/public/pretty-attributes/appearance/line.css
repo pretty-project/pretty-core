@@ -4,7 +4,7 @@
 
 [data-line-color="var"]       { background-color: var( --line-color           ); }
 [data-line-color="default"]   { background-color: var( --line-color-default   ); }
-[data-line-color="invert"]    { background-color: var( --line-color-invert    ); }
+[data-line-color="inverse"]   { background-color: var( --line-color-inverse   ); }
 [data-line-color="highlight"] { background-color: var( --line-color-highlight ); }
 [data-line-color="muted"]     { background-color: var( --line-color-muted     ); }
 [data-line-color="primary"]   { background-color: var( --line-color-primary   ); }

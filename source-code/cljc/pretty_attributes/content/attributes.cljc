@@ -170,6 +170,7 @@
   ; {:text-align (keyword)(opt)
   ;  :text-caret (keyword)(opt)
   ;  :text-color (keyword or string)(opt)
+  ;  :text-decoration (keyword)(opt)
   ;  :text-direction (keyword)(opt)
   ;  :text-overflow (keyword)(opt)
   ;  :text-selectable? (boolean)(opt)
@@ -186,19 +187,21 @@
   ; @return (map)
   ; {:data-text-color (keyword)
   ;  :data-text-caret (keyword)
-  ;  :data-text-selectable (boolean)
-  ;  :data-text-horizontal-align (keyword)
+  ;  :data-text-decoration (keyword)
   ;  :data-text-direction (keyword)
+  ;  :data-text-horizontal-align (keyword)
   ;  :data-text-overflow (keyword)}
+  ;  :data-text-selectable (boolean)
   ;  :data-text-transform (keyword)
   ;  :style (map)
   ;   {"--text-color" (string)
   ;    ...}
   ;  ...}
-  [attributes {:keys [text-align text-caret text-color text-direction text-overflow text-selectable? text-transform]}]
+  [attributes {:keys [text-align text-caret text-color text-decoration text-direction text-overflow text-selectable? text-transform]}]
   (-> attributes (map/merge-some {:data-text-caret            text-caret
-                                  :data-text-horizontal-align text-align
+                                  :data-text-decoration       text-decoration
                                   :data-text-direction        text-direction
+                                  :data-text-horizontal-align text-align
                                   :data-text-overflow         text-overflow
                                   :data-text-selectable       text-selectable?
                                   :data-text-transform        text-transform})

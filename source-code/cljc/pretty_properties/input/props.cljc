@@ -51,6 +51,7 @@
   ;  :on-empty-f (function)(opt)
   ;  :on-input-f (function)(opt)
   ;  :on-type-ended-f (function)(opt)
+  ;  :type-ended-after (ms)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
@@ -85,6 +86,7 @@
   ;  :on-empty-f (function)
   ;  :on-input-f (function)
   ;  :on-type-ended-f (function)
+  ;  :type-ended-after (ms)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

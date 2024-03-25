@@ -153,6 +153,7 @@ button::-moz-focus-inner,
 a {
   /* Removes the gray background on active links in IE 10 */
   background-color: transparent;
+  color:            inherit;
   outline-style:    none;
  -position: relative; /* The '*' selector got the relative positioning. It's in test phase. */
 }

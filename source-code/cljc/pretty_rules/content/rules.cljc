@@ -60,7 +60,7 @@
 
 (defn auto-count-content-lines
   ; @description
-  ; Counts newlines in the value of ':content' property and associates the result as ':line-count' property.
+  ; Counts newlines in the value of ':content' property (if string) and associates the result as ':line-count' property.
   ;
   ; @param (map) props
   ; {:content (multitype-content)(opt)
@@ -83,7 +83,7 @@
 
 (defn auto-limit-multiline-count
   ; @description
-  ; Limits the value of ':line-count' property based on the ':max-lines' and ':min-lines' properties.
+  ; Limits the value of ':line-count' property (if any) based on the ':max-lines' and ':min-lines' properties.
   ;
   ; @param (map) props
   ; {:line-count (integer)(opt)
@@ -102,18 +102,19 @@
   ; {:line-count (integer)
   ;  ...}
   [{:keys [line-count max-lines min-lines] :as props}]
-  (if line-count (cond-> props (-> min-lines) (update :line-count max min-lines)
-                               (-> max-lines) (update :line-count min max-lines))
-                 (-> props)))
+  (if-not line-count (->     props)
+                     (cond-> props (-> min-lines) (update :line-count max min-lines)
+                                   (-> max-lines) (update :line-count min max-lines))))
+
 
 (defn auto-set-multiline-height
   ; @description
   ; Sets the value of height property based on the ':font-size', ':line-count' and ':line-height' properties.
   ;
   ; @param (map)(opt)
-  ; {:font-size (keyword, px or string)
-  ;  :line-count (integer)
-  ;  :line-height (keyword, px or string)
+  ; {:font-size (keyword, px or string)(opt)
+  ;  :line-count (integer)(opt)
+  ;  :line-height (keyword, px or string)(opt)
   ;  ...}
   ;
   ; @usage
@@ -129,6 +130,7 @@
   ; {:content-height (keyword, px or string)
   ;  ...}
   [{:keys [font-size line-count line-height] :as props}]
-  (if line-count (if-let [multiline-height (pretty-attributes/adaptive-text-height font-size line-height line-count)]
-                         (-> props (assoc :content-height multiline-height))
-                         (-> props))))
+  (if-not line-count (-> props)
+                     (if-let [multiline-height (pretty-attributes/adaptive-text-height font-size line-height line-count)]
+                             (-> props (assoc :content-height multiline-height))
+                             (-> props))))

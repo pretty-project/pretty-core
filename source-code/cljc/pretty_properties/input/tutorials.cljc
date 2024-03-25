@@ -169,6 +169,18 @@
 ;
 ; @--- Examples
 ; {:on-type-ended-f (fn [value] ...)}
+;
+;
+;
+; @title type-ended-after property
+;
+; How much time has to elapse after the last key is pressed to consider the typing as ended.
+;
+; @--- Accepted types
+; {:type-ended-after (ms)}
+;
+; @--- Examples
+; {:type-ended-after 450}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

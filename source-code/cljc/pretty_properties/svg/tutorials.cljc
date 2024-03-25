@@ -33,7 +33,7 @@
 ;
 ; @--- Predefined values
 ; :transparent,
-; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
+; :default, :highlight, :inverse, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;

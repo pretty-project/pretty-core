@@ -5,7 +5,7 @@
 [data-icon-color="var"]       { color: var( --icon-color           ); }
 [data-icon-color="default"]   { color: var( --icon-color-default   ); }
 [data-icon-color="highlight"] { color: var( --icon-color-highlight ); }
-[data-icon-color="invert"]    { color: var( --icon-color-invert    ); }
+[data-icon-color="inverse"]   { color: var( --icon-color-inverse   ); }
 [data-icon-color="muted"]     { color: var( --icon-color-muted     ); }
 [data-icon-color="primary"]   { color: var( --icon-color-primary   ); }
 [data-icon-color="secondary"] { color: var( --icon-color-secondary ); }

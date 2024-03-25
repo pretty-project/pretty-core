@@ -143,7 +143,7 @@
 ; {:icon-color "#888"}
 ;
 ; @--- Predefined values
-; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
+; :default, :highlight, :inverse, :muted, :primary, :secondary, :tertiary, :success, :warning
 ;
 ;
 ;
@@ -285,7 +285,20 @@
 ; {:text-color "#888"}
 ;
 ; @--- Predefined values
-; :default, :highlight, :invert, :muted, :primary, :secondary, :tertiary, :success, :warning
+; :default, :highlight, :inverse, :muted, :primary, :secondary, :tertiary, :success, :warning
+;
+;
+;
+; @title text-decoration property
+;
+; @--- Accepted types
+; {:text-decoration (keyword)}
+;
+; @--- Examples
+; {:text-decoration :underline}
+;
+; @--- Predefined values
+; :line-through, :overline, :underline
 ;
 ;
 ;

@@ -6,7 +6,7 @@
 [data-progress-color="default"]   { background-image: linear-gradient( var( --progress-color-default   ), var( --progress-color-default   )); }
 [data-progress-color="muted"]     { background-image: linear-gradient( var( --progress-color-muted     ), var( --progress-color-muted     )); }
 [data-progress-color="highlight"] { background-image: linear-gradient( var( --progress-color-highlight ), var( --progress-color-highlight )); }
-[data-progress-color="invert"]    { background-image: linear-gradient( var( --progress-color-invert    ), var( --progress-color-invert    )); }
+[data-progress-color="inverse"]   { background-image: linear-gradient( var( --progress-color-inverse   ), var( --progress-color-inverse   )); }
 [data-progress-color="primary"]   { background-image: linear-gradient( var( --progress-color-primary   ), var( --progress-color-primary   )); }
 [data-progress-color="secondary"] { background-image: linear-gradient( var( --progress-color-secondary ), var( --progress-color-secondary )); }
 [data-progress-color="tertiary"]  { background-image: linear-gradient( var( --progress-color-tertiary  ), var( --progress-color-tertiary  )); }

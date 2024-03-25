@@ -5,7 +5,7 @@
 [data-fill-color="var"]       { background-color: var( --fill-color           ); }
 [data-fill-color="default"]   { background-color: var( --fill-color-default   ); }
 [data-fill-color="highlight"] { background-color: var( --fill-color-highlight ); }
-[data-fill-color="invert"]    { background-color: var( --fill-color-invert    ); }
+[data-fill-color="inverse"]   { background-color: var( --fill-color-inverse   ); }
 [data-fill-color="muted"]     { background-color: var( --fill-color-muted     ); }
 [data-fill-color="primary"]   { background-color: var( --fill-color-primary   ); }
 [data-fill-color="secondary"] { background-color: var( --fill-color-secondary ); }
@@ -20,7 +20,7 @@
 [data-fill-color="var"][data-fill-pattern="striped"]       { background: repeating-linear-gradient(45deg, var( --fill-color           ), var( --fill-color           ) 10px, transparent 10px, transparent 20px ); }
 [data-fill-color="default"][data-fill-pattern="striped"]   { background: repeating-linear-gradient(45deg, var( --fill-color-default   ), var( --fill-color-default   ) 10px, transparent 10px, transparent 20px ); }
 [data-fill-color="highlight"][data-fill-pattern="striped"] { background: repeating-linear-gradient(45deg, var( --fill-color-highlight ), var( --fill-color-highlight ) 10px, transparent 10px, transparent 20px ); }
-[data-fill-color="invert"][data-fill-pattern="striped"]    { background: repeating-linear-gradient(45deg, var( --fill-color-invert    ), var( --fill-color-invert    ) 10px, transparent 10px, transparent 20px ); }
+[data-fill-color="inverse"][data-fill-pattern="striped"]   { background: repeating-linear-gradient(45deg, var( --fill-color-inverse   ), var( --fill-color-inverse   ) 10px, transparent 10px, transparent 20px ); }
 [data-fill-color="muted"][data-fill-pattern="striped"]     { background: repeating-linear-gradient(45deg, var( --fill-color-muted     ), var( --fill-color-muted     ) 10px, transparent 10px, transparent 20px ); }
 [data-fill-color="primary"][data-fill-pattern="striped"]   { background: repeating-linear-gradient(45deg, var( --fill-color-primary   ), var( --fill-color-primary   ) 10px, transparent 10px, transparent 20px ); }
 [data-fill-color="secondary"][data-fill-pattern="striped"] { background: repeating-linear-gradient(45deg, var( --fill-color-secondary ), var( --fill-color-secondary ) 10px, transparent 10px, transparent 20px ); }

@@ -4,7 +4,7 @@
 
 [data-border-color="var"]       { border-color: var( --border-color           ); }
 [data-border-color="default"]   { border-color: var( --border-color-default   ); }
-[data-border-color="invert"]    { border-color: var( --border-color-invert    ); }
+[data-border-color="inverse"]   { border-color: var( --border-color-inverse   ); }
 [data-border-color="highlight"] { border-color: var( --border-color-highlight ); }
 [data-border-color="muted"]     { border-color: var( --border-color-muted     ); }
 [data-border-color="primary"]   { border-color: var( --border-color-primary   ); }

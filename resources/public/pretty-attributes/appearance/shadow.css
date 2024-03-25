@@ -5,7 +5,7 @@
 [data-shadow-color="var"]       { box-shadow: 0 0 2px 0 var( --shadow-color           ); }
 [data-shadow-color="default"]   { box-shadow: 0 0 2px 0 var( --shadow-color-default   ); }
 [data-shadow-color="highlight"] { box-shadow: 0 0 2px 0 var( --shadow-color-highlight ); }
-[data-shadow-color="invert"]    { box-shadow: 0 0 2px 0 var( --shadow-color-invert    ); }
+[data-shadow-color="inverse"]   { box-shadow: 0 0 2px 0 var( --shadow-color-inverse   ); }
 [data-shadow-color="muted"]     { box-shadow: 0 0 2px 0 var( --shadow-color-muted     ); }
 [data-shadow-color="primary"]   { box-shadow: 0 0 2px 0 var( --shadow-color-primary   ); }
 [data-shadow-color="secondary"] { box-shadow: 0 0 2px 0 var( --shadow-color-secondary ); }

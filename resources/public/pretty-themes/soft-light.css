@@ -6,7 +6,7 @@
   --border-color-default:   var( --hard-grey-xx-dark   ); /* 120 */
   --border-color-muted:     var( --soft-grey-x-light   ); /* 180 */
   --border-color-highlight: var( --hard-white-dark     ); /* 235 */
-  --border-color-invert:    var( --hard-grey           ); /* 135 */
+  --border-color-inverse:   var( --hard-grey           ); /* 135 */
   --border-color-primary:   var( --soft-blue-xx-dark   );
   --border-color-secondary: var( --soft-purple-xx-dark );
   --border-color-tertiary:  var( --soft-khaki-xx-dark  );
@@ -22,7 +22,7 @@
   --fill-color-default:   var( --hard-white-xx-light ); /* 255 */
   --fill-color-muted:     var( --hard-white-xx-dark  ); /* 225 */
   --fill-color-highlight: var( --hard-white-light    ); /* 245 */
-  --fill-color-invert:    var( --soft-black          ); /* 050 */
+  --fill-color-inverse:   var( --soft-black          ); /* 050 */
   --fill-color-primary:   var( --soft-blue           );
   --fill-color-secondary: var( --soft-purple         );
   --fill-color-tertiary:  var( --soft-khaki          );
@@ -38,7 +38,7 @@
   --icon-color-default:   var( --text-color-default   );
   --icon-color-muted:     var( --text-color-muted     );
   --icon-color-highlight: var( --text-color-highlight );
-  --icon-color-invert:    var( --text-color-invert    );
+  --icon-color-inverse:   var( --text-color-inverse   );
   --icon-color-primary:   var( --text-color-primary   );
   --icon-color-secondary: var( --text-color-secondary );
   --icon-color-tertiary:  var( --text-color-tertiary  );
@@ -54,7 +54,7 @@
   --line-color-default:   var( --border-color-default   );
   --line-color-muted:     var( --border-color-muted     );
   --line-color-highlight: var( --border-color-highlight );
-  --line-color-invert:    var( --border-color-invert    );
+  --line-color-inverse:   var( --border-color-inverse   );
   --line-color-primary:   var( --border-color-primary   );
   --line-color-secondary: var( --border-color-secondary );
   --line-color-tertiary:  var( --border-color-tertiary  );
@@ -70,7 +70,7 @@
   --overlay-color-default:   var( --fill-color-default   );
   --overlay-color-muted:     var( --fill-color-muted     );
   --overlay-color-highlight: var( --fill-color-highlight );
-  --overlay-color-invert:    var( --fill-color-invert    );
+  --overlay-color-inverse:   var( --fill-color-inverse   );
   --overlay-color-primary:   var( --fill-color-primary   );
   --overlay-color-secondary: var( --fill-color-secondary );
   --overlay-color-tertiary:  var( --fill-color-tertiary  );
@@ -86,7 +86,7 @@
   --progress-color-default:   var( --fill-color-default   );
   --progress-color-muted:     var( --fill-color-muted     );
   --progress-color-highlight: var( --fill-color-highlight );
-  --progress-color-invert:    var( --fill-color-invert    );
+  --progress-color-inverse:   var( --fill-color-inverse   );
   --progress-color-primary:   var( --fill-color-primary   );
   --progress-color-secondary: var( --fill-color-secondary );
   --progress-color-tertiary:  var( --fill-color-tertiary  );
@@ -102,7 +102,7 @@
   --shadow-color-default:   var( --black-shadow-thin );
   --shadow-color-muted:     var( --black-shadow-thin );
   --shadow-color-highlight: var( --black-shadow-thin );
-  --shadow-color-invert:    var( --black-shadow-thin );
+  --shadow-color-inverse:   var( --black-shadow-thin );
   --shadow-color-primary:   var( --black-shadow-thin );
   --shadow-color-secondary: var( --black-shadow-thin );
   --shadow-color-tertiary:  var( --black-shadow-thin );
@@ -118,7 +118,7 @@
   --stroke-color-default:   var( --border-color-default   );
   --stroke-color-muted:     var( --border-color-muted     );
   --stroke-color-highlight: var( --border-color-highlight );
-  --stroke-color-invert:    var( --border-color-invert    );
+  --stroke-color-inverse:   var( --border-color-inverse   );
   --stroke-color-primary:   var( --border-color-primary   );
   --stroke-color-secondary: var( --border-color-secondary );
   --stroke-color-tertiary:  var( --border-color-tertiary  );
@@ -134,7 +134,7 @@
   --text-color-default:   var( --soft-black-x-light  ); /* 060 */
   --text-color-muted:     var( --hard-grey-xx-dark   ); /* 120 */
   --text-color-highlight: var( --soft-grey-x-light   ); /* 180 */
-  --text-color-invert:    var( --hard-white          ); /* 240 */
+  --text-color-inverse:   var( --hard-white          ); /* 240 */
   --text-color-primary:   var( --soft-blue-xx-dark   );
   --text-color-secondary: var( --soft-purple-xx-dark );
   --text-color-tertiary:  var( --soft-khaki-xx-dark  );

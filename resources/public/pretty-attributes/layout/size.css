@@ -44,69 +44,77 @@
 
 /*** Max height ***/
 
-[data-max-height="var"]   { max-height: var( --max-height   ); }
-[data-max-height="micro"] { max-height: var( --height-micro ); }
-[data-max-height="xxs"]   { max-height: var( --height-xxs   ); }
-[data-max-height="xs"]    { max-height: var( --height-xs    ); }
-[data-max-height="s"]     { max-height: var( --height-s     ); }
-[data-max-height="m"]     { max-height: var( --height-m     ); }
-[data-max-height="l"]     { max-height: var( --height-l     ); }
-[data-max-height="xl"]    { max-height: var( --height-xl    ); }
-[data-max-height="xxl"]   { max-height: var( --height-xxl   ); }
-[data-max-height="3xl"]   { max-height: var( --height-3xl   ); }
-[data-max-height="4xl"]   { max-height: var( --height-4xl   ); }
-[data-max-height="5xl"]   { max-height: var( --height-5xl   ); }
+[data-max-height="var"]     { max-height: var( --max-height   ); }
+[data-max-height="micro"]   { max-height: var( --height-micro ); }
+[data-max-height="xxs"]     { max-height: var( --height-xxs   ); }
+[data-max-height="xs"]      { max-height: var( --height-xs    ); }
+[data-max-height="s"]       { max-height: var( --height-s     ); }
+[data-max-height="m"]       { max-height: var( --height-m     ); }
+[data-max-height="l"]       { max-height: var( --height-l     ); }
+[data-max-height="xl"]      { max-height: var( --height-xl    ); }
+[data-max-height="xxl"]     { max-height: var( --height-xxl   ); }
+[data-max-height="3xl"]     { max-height: var( --height-3xl   ); }
+[data-max-height="4xl"]     { max-height: var( --height-4xl   ); }
+[data-max-height="5xl"]     { max-height: var( --height-5xl   ); }
+[data-max-height="content"] { max-height: fit-content;           }
+[data-max-height="parent"]  { max-height: 100%;                  }
 
 /*** Max height ***/
 
 /*** Max width ***/
 
-[data-max-width="var"]   { max-width: var( --max-width   ); }
-[data-max-width="micro"] { max-width: var( --width-micro ); }
-[data-max-width="xxs"]   { max-width: var( --width-xxs   ); }
-[data-max-width="xs"]    { max-width: var( --width-xs    ); }
-[data-max-width="s"]     { max-width: var( --width-s     ); }
-[data-max-width="m"]     { max-width: var( --width-m     ); }
-[data-max-width="l"]     { max-width: var( --width-l     ); }
-[data-max-width="xl"]    { max-width: var( --width-xl    ); }
-[data-max-width="xxl"]   { max-width: var( --width-xxl   ); }
-[data-max-width="3xl"]   { max-width: var( --width-3xl   ); }
-[data-max-width="4xl"]   { max-width: var( --width-4xl   ); }
-[data-max-width="5xl"]   { max-width: var( --width-5xl   ); }
+[data-max-width="var"]     { max-width: var( --max-width   ); }
+[data-max-width="micro"]   { max-width: var( --width-micro ); }
+[data-max-width="xxs"]     { max-width: var( --width-xxs   ); }
+[data-max-width="xs"]      { max-width: var( --width-xs    ); }
+[data-max-width="s"]       { max-width: var( --width-s     ); }
+[data-max-width="m"]       { max-width: var( --width-m     ); }
+[data-max-width="l"]       { max-width: var( --width-l     ); }
+[data-max-width="xl"]      { max-width: var( --width-xl    ); }
+[data-max-width="xxl"]     { max-width: var( --width-xxl   ); }
+[data-max-width="3xl"]     { max-width: var( --width-3xl   ); }
+[data-max-width="4xl"]     { max-width: var( --width-4xl   ); }
+[data-max-width="5xl"]     { max-width: var( --width-5xl   ); }
+[data-max-width="content"] { max-width: fit-content;          }
+[data-max-width="parent"]  { max-width: 100%;                 }
 
 /*** Max height ***/
 
 /*** Min height ***/
 
-[data-min-height="var"]   { min-height: var( --min-height   ); }
-[data-min-height="micro"] { min-height: var( --height-micro ); }
-[data-min-height="xxs"]   { min-height: var( --height-xxs   ); }
-[data-min-height="xs"]    { min-height: var( --height-xs    ); }
-[data-min-height="s"]     { min-height: var( --height-s     ); }
-[data-min-height="m"]     { min-height: var( --height-m     ); }
-[data-min-height="l"]     { min-height: var( --height-l     ); }
-[data-min-height="xl"]    { min-height: var( --height-xl    ); }
-[data-min-height="xxl"]   { min-height: var( --height-xxl   ); }
-[data-min-height="3xl"]   { min-height: var( --height-3xl   ); }
-[data-min-height="4xl"]   { min-height: var( --height-4xl   ); }
-[data-min-height="5xl"]   { min-height: var( --height-5xl   ); }
+[data-min-height="var"]     { min-height: var( --min-height   ); }
+[data-min-height="micro"]   { min-height: var( --height-micro ); }
+[data-min-height="xxs"]     { min-height: var( --height-xxs   ); }
+[data-min-height="xs"]      { min-height: var( --height-xs    ); }
+[data-min-height="s"]       { min-height: var( --height-s     ); }
+[data-min-height="m"]       { min-height: var( --height-m     ); }
+[data-min-height="l"]       { min-height: var( --height-l     ); }
+[data-min-height="xl"]      { min-height: var( --height-xl    ); }
+[data-min-height="xxl"]     { min-height: var( --height-xxl   ); }
+[data-min-height="3xl"]     { min-height: var( --height-3xl   ); }
+[data-min-height="4xl"]     { min-height: var( --height-4xl   ); }
+[data-min-height="5xl"]     { min-height: var( --height-5xl   ); }
+[data-min-height="content"] { min-height: fit-content;           }
+[data-min-height="parent"]  { min-height: 100%;                  }
 
 /*** Min height ***/
 
 /*** Min width ***/
 
-[data-min-width="var"]   { min-width: var( --min-width   ); }
-[data-min-width="micro"] { min-width: var( --width-micro ); }
-[data-min-width="xxs"]   { min-width: var( --width-xxs   ); }
-[data-min-width="xs"]    { min-width: var( --width-xs    ); }
-[data-min-width="s"]     { min-width: var( --width-s     ); }
-[data-min-width="m"]     { min-width: var( --width-m     ); }
-[data-min-width="l"]     { min-width: var( --width-l     ); }
-[data-min-width="xl"]    { min-width: var( --width-xl    ); }
-[data-min-width="xxl"]   { min-width: var( --width-xxl   ); }
-[data-min-width="3xl"]   { min-width: var( --width-3xl   ); }
-[data-min-width="4xl"]   { min-width: var( --width-4xl   ); }
-[data-min-width="5xl"]   { min-width: var( --width-5xl   ); }
+[data-min-width="var"]     { min-width: var( --min-width   ); }
+[data-min-width="micro"]   { min-width: var( --width-micro ); }
+[data-min-width="xxs"]     { min-width: var( --width-xxs   ); }
+[data-min-width="xs"]      { min-width: var( --width-xs    ); }
+[data-min-width="s"]       { min-width: var( --width-s     ); }
+[data-min-width="m"]       { min-width: var( --width-m     ); }
+[data-min-width="l"]       { min-width: var( --width-l     ); }
+[data-min-width="xl"]      { min-width: var( --width-xl    ); }
+[data-min-width="xxl"]     { min-width: var( --width-xxl   ); }
+[data-min-width="3xl"]     { min-width: var( --width-3xl   ); }
+[data-min-width="4xl"]     { min-width: var( --width-4xl   ); }
+[data-min-width="5xl"]     { min-width: var( --width-5xl   ); }
+[data-min-width="content"] { min-width: fit-content;          }
+[data-min-width="parent"]  { min-width: 100%;                 }
 
 /*** Min height ***/
 /***** Size presets *****/

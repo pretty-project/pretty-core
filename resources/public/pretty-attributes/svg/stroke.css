@@ -5,7 +5,7 @@
 [data-stroke-color="var"]       { stroke: var( --stroke-color           ); }
 [data-stroke-color="default"]   { stroke: var( --stroke-color-default   ); }
 [data-stroke-color="highlight"] { stroke: var( --stroke-color-highlight ); }
-[data-stroke-color="invert"]    { stroke: var( --stroke-color-invert    ); }
+[data-stroke-color="inverse"]   { stroke: var( --stroke-color-inverse   ); }
 [data-stroke-color="muted"]     { stroke: var( --stroke-color-muted     ); }
 [data-stroke-color="primary"]   { stroke: var( --stroke-color-primary   ); }
 [data-stroke-color="secondary"] { stroke: var( --stroke-color-secondary ); }

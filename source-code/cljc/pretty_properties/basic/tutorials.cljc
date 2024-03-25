@@ -56,13 +56,13 @@
 ; @links
 ; [pretty-presets](https://pretty-project.github.io/pretty-ui/cljs/pretty-presets/api.html)
 ;
-; @title preset property
+; @title presets property
 ;
 ; @--- Accepted types
-; {:preset (keyword)}
+; {:presets (keywords in vector)}
 ;
 ; @--- Examples
-; {:preset :my-preset}
+; {:presets [:my-preset]}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
