@@ -54,7 +54,7 @@
 /*** Text overflow ***/
 
 /* Max-width property is turned off for testing whether it is necessarry. */
-/* Overflow property is turned off because it was concurent for the 'data-*-overflow' attributes. */
+/* Overflow property is turned off because it was a concurent for the 'data-*-overflow' attributes. */
 [data-text-overflow="ellipsis"] { -max-width:     100%;
                                   -overflow:      hidden;
                                   text-overflow: ellipsis;
@@ -67,6 +67,7 @@
                                   white-space:   nowrap; }
 [data-text-overflow="wrap"]     { -max-width:     100%;
                                   -overflow:      hidden;
+                                  white-space:   normal; /* This wasn't here and the wrapping didn't work. */
                                   word-wrap:     break-word; }
 
 /*** Text overflow ***/
