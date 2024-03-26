@@ -179,6 +179,16 @@
 ;
 ;
 ;
+; @title on-mouse-leave-f property
+;
+; @--- Accepted types
+; {:on-mouse-leave-f (function)}
+;
+; @--- Examples
+; {:on-mouse-leave-f (fn [_] ...)}
+;
+;
+;
 ; @title on-mouse-over-f property
 ;
 ; @--- Accepted types
