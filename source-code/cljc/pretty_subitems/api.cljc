@@ -6,31 +6,31 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Subitems
+; @tutorial Pretty Subitems
 ;
 ; @---
-; Subitems are additional items within an element.
-; E.g., A menu bar element within a dropdown menu element.
+; Subitems are additional items within a UI component.
+; E.g., A menu bar component within a dropdown menu component.
 ;
 ; @usage
-; [my-element :my-element
-;             {:label      "My element"
-;              :my-subitem {:label "My subitem"}}]
+; [my-component :my-component
+;               {:label      "My component"
+;                :my-subitem {:label "My subitem"}}]
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Subitem groups
+; @tutorial Pretty Subitem Groups
 ;
 ; @---
-; Subitem groups are group of subitems within an element.
-; E.g., A group of menu items within a menu bar element.
+; Subitem groups are group of subitems within a UI component.
+; E.g., A group of menu items within a menu bar component.
 ;
 ; @usage
-; [my-element :my-element
-;             {:label              "My element"
-;              :my-subitem-default {:fill-color :default}
-;              :my-subitems        [{:label "My subitem #1"} {:label "My subitem #2"}]}]
+; [my-component :my-component
+;               {:label              "My component"
+;                :my-subitem-default {:fill-color :default}
+;                :my-subitems        [{:label "My subitem #1"} {:label "My subitem #2"}]}]
 ;
 ; @---
 ; Default property maps of subitem groups are applied on each group item.

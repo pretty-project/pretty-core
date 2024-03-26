@@ -45,17 +45,65 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Pretty models
-; ...
+; @tutorial Pretty Models
 ;
-; (defn my-element
+; Models for UI components defining which properties a component take and which data attributes it implements.
+;
+; Each model specifies ...
+; ... a set of data attributes the component's outer element implements,
+; ... a set of data attributes the component's inner element implements,
+; ... a set of data attributes the component's optional body element implements,
+; ... a set of property rules,
+; ... a set of property standards.
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Demo
+;
+; @usage
+; (defn my-props-prototype
+;   [props]
+;   ;; 1. Apply the property standards of a model (first) on the provided properties of the component.
+;   ;; 2. Apply the property rules of a model (second) on the provided properties of the component.
+;   (-> props (flex-container-standard-props)
+;             (flex-container-rules props)))
+;
+; (defn my-card
 ;   [id props]
-;   (let [props (flex-container-standard-props)
-;         props (flex-container-rules props)]
-;        [:div (flex-container-outer-attributes {:class :my-element-outer} props)
-;              [:div (flex-container-inner-attributes {:class :my-element-inner} props)
-;                    [:div (flex-container-body-attributes {:class :my-element-body} props)
-;                          "My element"]]]))
+;   (let [props (my-props-prototype props)]
+;
+;        ;; Outer element of the component:
+;        [:div (-> {:class :my-card-outer}
+;                  (flex-content-outer-attributes    props)
+;                  (plain-container-outer-attributes props))
+;
+;              ;; Inner element of the component:
+;              [:div (-> {:class :my-card-inner}
+;                        (flex-content-inner-attributes    props)
+;                        (plain-container-inner-attributes props))
+;
+;                    ;; Body element of the component:
+;                    [:div (-> {:class :my-card-body})
+;                              (flex-content-body-attributes    props)
+;                              (plain-container-body-attributes props)
+;
+;                          ;; Content of the component:
+;                          (:content props)]]]))
+;
+; (defn my-ui
+;   []
+;   [my-card {:content     "My card"
+;             :fill-color  :primary
+;             :gap         :xs
+;             :orientation :horizontal
+;             :outer-width :parent}])
+; =>
+; [:div {:data-fill-color       :primary
+;        :data-flex-gap         :xs
+;        :data-flex-orientation :horizontal
+;        :data-outer-width      :parent}
+;       "My card"]
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

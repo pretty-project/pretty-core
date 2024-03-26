@@ -3,7 +3,7 @@
 
 ### Overview
 
-The <strong>pretty-core</strong> is a simple data attribute based atomic CSS preset kit for Clojure projects.
+The <strong>pretty-core</strong> is a simple build kit for Pretty UI.
 
 ### deps.edn
 
@@ -23,7 +23,3 @@ You can track the changes of the <strong>pretty-core</strong> library [here](CHA
 # Documentation
 
 The <strong>pretty-core</strong> functional documentation is [available here](https://pretty-project.github.io/pretty-core).
-
-### First steps
-
-Place the [`pretty-core.min.core`](https://github.com/pretty-project/pretty-core/tree/release/resources/public) CSS stylesheet in the HTML header.

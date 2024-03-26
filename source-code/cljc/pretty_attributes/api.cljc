@@ -15,8 +15,57 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Pretty attributes
-; ...
+; @tutorial Pretty Attributes
+;
+; A set of utility functions converting UI component properties into HTML data attributes to implement the Pretty Attributes atomic CSS preset kit.
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial CSS dependencies
+;
+; [pretty-attributes.min.css](github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-attributes.min.css)
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Demo
+;
+; @usage
+; (defn my-button
+;   [props]
+;   ;; Attribute functions converting the provided button properties into data attributes:
+;   [:button (-> {:class :my-button}
+;                (background-color-attributes props)
+;                (cursor-attributes           props)
+;                (class-attributes            props)
+;                (font-attributes             props)
+;                (mouse-event-attributes      props)
+;                (text-attributes             props)
+;                (theme-attributes            props))
+;            (:content props)])
+;
+; (defn my-ui
+;   []
+;   ;; Properties of the button component:
+;   [my-button {:class            :another-class
+;               :content          "My button"
+;               :cursor           :pointer
+;               :fill-color       :highlight
+;               :font-size        :s
+;               :on-click-f       (fn [e] ...)
+;               :text-selectable? false
+;               :theme            :my-theme}])
+; =>
+; ;; The output of the button component implementing Pretty Attributes:
+; [:button {:class                [:my-button :another-class]
+;           :data-cursor          :pointer
+;           :data-fill-color      :highlight
+;           :data-font-size       :s
+;           :data-text-selectable false
+;           :data-theme           :my-theme
+;           :on-click             (fn [e] ...)}
+;          "My button"]
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -52,9 +101,9 @@
 (def text-attributes   content.attributes/text-attributes)
 
 ; @redirect (pretty-attributes.control.attributes/*)
-(def anchor-attributes          control.attributes/anchor-attributes)
-(def focus-event-attributes     control.attributes/focus-event-attributes)
-(def mouse-event-attributes     control.attributes/mouse-event-attributes)
+(def anchor-attributes      control.attributes/anchor-attributes)
+(def focus-event-attributes control.attributes/focus-event-attributes)
+(def mouse-event-attributes control.attributes/mouse-event-attributes)
 
 ; @redirect (pretty-attributes.input.attributes/*)
 (def input-autofill-attributes input.attributes/input-autofill-attributes)
@@ -83,4 +132,4 @@
 
 ; @redirect (pretty-attributes.utils/*)
 (def apply-property-value utils/apply-property-value)
-(def merge-event-fn utils/merge-event-fn)
+(def merge-event-fn       utils/merge-event-fn)

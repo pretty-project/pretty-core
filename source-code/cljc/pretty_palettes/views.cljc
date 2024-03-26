@@ -5,7 +5,12 @@
 ;; ----------------------------------------------------------------------------
 
 (defn full-palette
+  ; @description
+  ; A sample color collection component displaying the colors of a specific palette.
+  ;
   ; @param (keyword) palette
+  ; :hard-black, :hard-blue, :hard-green, :hard-grey, :hard-khaki, :hard-purple, :hard-red, :hard-white,
+  ; :soft-black, :soft-blue, :soft-green, :soft-grey, :soft-khaki, :soft-purple, :soft-red, :soft-white
   ;
   ; @usage
   ; (full-palette :soft-grey)
@@ -22,6 +27,9 @@
         [:div {:style {:background-color (str "var(--"(name palette)"-xx-dark)")  :height :48px :width :48px}}]])
 
 (defn palettes
+  ; @description
+  ; A sample color collection component displaying the colors of all palettes.
+  ;
   ; @usage
   ; (palettes)
   ;

@@ -5,6 +5,9 @@
 ;; ----------------------------------------------------------------------------
 
 (defn text-color
+  ; @description
+  ; A sample text color component displaying a specific text color (corresponding to the set theme).
+  ;
   ; @param (keyword) text-color
   ;
   ; @usage
@@ -16,6 +19,9 @@
         (name text-color)])
 
 (defn text-colors
+  ; @description
+  ; A sample text colors component displaying all text colors (corresponding to the set theme).
+  ;
   ; @param (keyword) theme
   ;
   ; @usage
@@ -38,6 +44,9 @@
 ;; ----------------------------------------------------------------------------
 
 (defn color-box
+  ; @description
+  ; A sample color box component displaying a specific fill color and border color (corresponding to the set theme).
+  ;
   ; @param (keyword) text-color
   ;
   ; @usage
@@ -45,11 +54,14 @@
   ;
   ; @return (hiccup)
   [color]
-  [:div {:data-fill-color color :data-hover-color color :data-border-color color
+  [:div {:data-fill-color color :data-border-color color
          :style {:border-radius :12px :border-style :solid :border-width :2px :height :144px :width :144px :display :flex :align-items :center :justify-content :center}}
         [text-color color]])
 
 (defn color-boxes
+  ; @description
+  ; A sample color boxes component displaying all fill colors and border colors (corresponding to the set theme).
+  ;
   ; @param (keyword) theme
   ;
   ; @usage
