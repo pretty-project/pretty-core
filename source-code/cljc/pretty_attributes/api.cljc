@@ -132,4 +132,3 @@
 
 ; @redirect (pretty-attributes.utils/*)
 (def apply-property-value utils/apply-property-value)
-(def merge-event-fn       utils/merge-event-fn)

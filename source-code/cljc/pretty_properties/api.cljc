@@ -83,6 +83,9 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Content properties
+; @redirect (pretty-properties.content.tutorials/content-properties)
+
 ; @tutorial Cursor properties
 ; @redirect (pretty-properties.content.tutorials/cursor-properties)
 
@@ -101,20 +104,21 @@
 ; @tutorial Multiline properties
 ; @redirect (pretty-properties.content.tutorials/multiline-properties)
 
+; @tutorial Renderer properties
+; @redirect (pretty-properties.content.tutorials/renderer-properties)
+
 ; @tutorial Text properties
 ; @redirect (pretty-properties.content.tutorials/text-properties)
 
-; @tutorial Content properties
-; @redirect (pretty-properties.content.tutorials/content-properties)
-
 ; @redirect (pretty-properties.content.props/*)
+(def default-content-props   content.props/default-content-props)
 (def default-cursor-props    content.props/default-cursor-props)
 (def default-font-props      content.props/default-font-props)
 (def default-icon-props      content.props/default-icon-props)
 (def default-image-props     content.props/default-image-props)
 (def default-multiline-props content.props/default-multiline-props)
+(def default-renderer-props  content.props/default-renderer-props)
 (def default-text-props      content.props/default-text-props)
-(def default-content-props   content.props/default-content-props)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -266,4 +270,3 @@
 
 ; @redirect (pretty-properties.utils/*)
 (def clickable-props? utils/clickable-props?)
-(def merge-event-fn   utils/merge-event-fn)

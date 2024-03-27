@@ -4,6 +4,43 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Content properties
+;
+; @links
+; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
+;
+; @note
+; The ':content-placeholder' property provides fallback value for the ':content' property in case it has no value.
+;
+; @title content property
+;
+; @--- Accepted types
+; {:content (multitype-content)}
+;
+; @--- Examples
+; {:content "My content"}
+; {:content :my-dictionary-term}
+; {:content [:div "My content"]}
+; {:content [my-content-component]}
+; {:content 123456}
+;
+;
+;
+; @title content-placeholder property
+;
+; @--- Accepted types
+; {:content-placeholder (multitype-content)}
+;
+; @--- Examples
+; {:content-placeholder "My content placeholder"}
+; {:content-placeholder :my-dictionary-term}
+; {:content-placeholder [:div "My content placeholder"]}
+; {:content-placeholder [my-content-placeholder-component]}
+; {:content-placeholder 123456}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Cursor properties
 ;
 ; @title cursor property
@@ -254,6 +291,41 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+; @tutorial Renderer properties
+;
+; @links
+; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
+;
+; @title initial-content property
+;
+; @--- Accepted types
+; {:initial-content (multitype-content)}
+;
+; @--- Examples
+; {:initial-content "My initial content"}
+; {:initial-content :my-dictionary-term}
+; {:initial-content [:div "My initial content"]}
+; {:initial-content [my-initial-content-component]}
+; {:initial-content 123456}
+
+; @title initial-content property
+;
+; @--- Accepted types
+; {:initial-content (multitype-content)}
+;
+;
+;
+; @title max-content-rendered property
+;
+; @--- Accepted types
+; {:max-content-rendered (integer)}
+;
+; @--- Examples
+; {:max-content-rendered 420}
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 ; @tutorial Text properties
 ;
 ; @note
@@ -358,77 +430,3 @@
 ;
 ; @--- Predefined values
 ; :capitalize, :lowercase, :uppercase
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Content properties
-;
-; @links
-; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
-;
-; @note
-; The ':content-placeholder' property provides fallback value for the ':content' property in case it has no value.
-;
-; @title content property
-;
-; @--- Accepted types
-; {:content (multitype-content)}
-;
-; @--- Examples
-; {:content "My content"}
-; {:content :my-dictionary-term}
-; {:content [:div "My content"]}
-; {:content [my-content-component]}
-; {:content 123456}
-;
-;
-;
-; @title content-placeholder property
-;
-; @--- Accepted types
-; {:content-placeholder (multitype-content)}
-;
-; @--- Examples
-; {:content-placeholder "My content placeholder"}
-; {:content-placeholder :my-dictionary-term}
-; {:content-placeholder [:div "My content placeholder"]}
-; {:content-placeholder [my-content-placeholder-component]}
-; {:content-placeholder 123456}
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-; @tutorial Label properties
-;
-; @links
-; [cljc-multitype-content](https://mt-app-kit.github.io/cljc-multitype-content)
-;
-; @note
-; The ':label-placeholder' property provides fallback value for the ':label' property in case it has no value.
-;
-; @title label property
-;
-; @--- Accepted types
-; {:label (multitype-content)}
-;
-; @--- Examples
-; {:label "My label"}
-; {:label :my-dictionary-term}
-; {:label [:div "My label"]}
-; {:label [my-label-component]}
-; {:label 123456}
-;
-;
-;
-; @title label-placeholder property
-;
-; @--- Accepted types
-; {:label-placeholder (metamorphic-label)}
-;
-; @--- Examples
-; {:label-placeholder "My label placeholder"}
-; {:label-placeholder :my-dictionary-term}
-; {:label-placeholder [:div "My label placeholder"]}
-; {:label-placeholder [my-label-placeholder-component]}
-; {:label-placeholder 123456}

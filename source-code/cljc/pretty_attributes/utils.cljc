@@ -55,31 +55,3 @@
         (string?  property-value) (-> attributes (assoc-in [:style (str "--" (name css-var-name))] property-value)
                                                  (assoc-in [data-attribute-name] :var))
         :return attributes))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn merge-event-fn
-  ; @description
-  ; - Associates the given 'event-f' function to a specific DOM event (e.g., 'on-click') within the given attribute map.
-  ; - In case the attribute map already contains a function associated to the same DOM event, it ensures that the existing function will be fired also.
-  ;
-  ; @param (map) attributes
-  ; @param (keyword) event-key
-  ; @param (map) event-f
-  ;
-  ; @usage
-  ; (merge-event-fn {:on-click (fn [e] (println "Function #1")) ...}
-  ;                 :on-click
-  ;                 (fn [e] (println "Function #2")))
-  ; =>
-  ; {:on-click (fn [e] (println "Function #1")
-  ;                    (println "Function #2"))
-  ;  ...}
-  ;
-  ; @return (map)
-  [attributes event-key event-f]
-  (cond (-> event-f              ifn? not) (-> attributes)
-        (-> attributes event-key ifn? not) (-> attributes (assoc event-key (fn [& params] (-> event-f              (apply params)))))
-        :merge-event-fn                    (-> attributes (assoc event-key (fn [& params] (-> event-f              (apply params))
-                                                                                          (-> attributes event-key (apply params)))))))

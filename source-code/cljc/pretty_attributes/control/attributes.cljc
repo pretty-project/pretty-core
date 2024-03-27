@@ -1,7 +1,7 @@
 
 (ns pretty-attributes.control.attributes
     (:require [fruits.map.api          :as map]
-              [pretty-attributes.utils :as utils]))
+              [fruits.hiccup.api :as hiccup]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -63,8 +63,8 @@
   ;  :on-focus (function)
   ;  ...}
   [attributes {:keys [on-blur-f on-focus-f]}]
-  (-> attributes (utils/merge-event-fn :on-blur  on-blur-f)
-                 (utils/merge-event-fn :on-focus on-focus-f)))
+  (-> attributes (hiccup/merge-event-fn :on-blur  on-blur-f)
+                 (hiccup/merge-event-fn :on-focus on-focus-f)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -101,9 +101,9 @@
   ;  :on-mouse-up (function)
   ;  ...}
   [attributes {:keys [on-click-f on-mouse-down-f on-mouse-leave-f on-mouse-over-f on-mouse-up-f on-right-click-f]}]
-  (-> attributes (utils/merge-event-fn :on-click        on-click-f)
-                 (utils/merge-event-fn :on-context-menu on-right-click-f) ; <- Test it!
-                 (utils/merge-event-fn :on-mouse-down   on-mouse-down-f)
-                 (utils/merge-event-fn :on-mouse-leave  on-mouse-leave-f)
-                 (utils/merge-event-fn :on-mouse-over   on-mouse-over-f)
-                 (utils/merge-event-fn :on-mouse-up     on-mouse-up-f)))
+  (-> attributes (hiccup/merge-event-fn :on-click        on-click-f)
+                 (hiccup/merge-event-fn :on-context-menu on-right-click-f) ; <- Test it!
+                 (hiccup/merge-event-fn :on-mouse-down   on-mouse-down-f)
+                 (hiccup/merge-event-fn :on-mouse-leave  on-mouse-leave-f)
+                 (hiccup/merge-event-fn :on-mouse-over   on-mouse-over-f)
+                 (hiccup/merge-event-fn :on-mouse-up     on-mouse-up-f)))

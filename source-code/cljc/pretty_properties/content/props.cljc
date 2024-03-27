@@ -5,6 +5,32 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-content-props
+  ; @description
+  ; Applies the given default content properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:content (multitype-content)(opt)
+  ;  :content-placeholder (multitype-content)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-content-props {...} {:content "My content"})
+  ; =>
+  ; {:content "My content"
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:content (multitype-content)
+  ;  :content-placeholder (multitype-content)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-cursor-props
   ; @description
   ; Applies the given default cursor properties on the given property map.
@@ -174,6 +200,32 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
+(defn default-renderer-props
+  ; @description
+  ; Applies the given default renderer properties on the given property map.
+  ;
+  ; @param (map) props
+  ; {:initial-content (multitype-content)(opt)
+  ;  :max-content-rendered (integer)(opt)
+  ;  ...}
+  ; @param (map)(opt) default-props
+  ;
+  ; @usage
+  ; (default-renderer-props {...} {:initial-content "My initial content"})
+  ; =>
+  ; {:content "My initial content"
+  ;  ...}
+  ;
+  ; @return (map)
+  ; {:initial-content (multitype-content)
+  ;  :max-content-rendered (integer)
+  ;  ...}
+  [props & [default-props]]
+  (-> props (map/use-default-values default-props)))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
 (defn default-text-props
   ; @description
   ; Applies the given default text properties on the given property map.
@@ -205,32 +257,6 @@
   ;  :text-overflow (keyword)
   ;  :text-selectable? (boolean)
   ;  :text-transform (keyword)
-  ;  ...}
-  [props & [default-props]]
-  (-> props (map/use-default-values default-props)))
-
-;; ----------------------------------------------------------------------------
-;; ----------------------------------------------------------------------------
-
-(defn default-content-props
-  ; @description
-  ; Applies the given default content properties on the given property map.
-  ;
-  ; @param (map) props
-  ; {:content (multitype-content)(opt)
-  ;  :content-placeholder (multitype-content)(opt)
-  ;  ...}
-  ; @param (map)(opt) default-props
-  ;
-  ; @usage
-  ; (default-content-props {...} {:content "My content"})
-  ; =>
-  ; {:content "My content"
-  ;  ...}
-  ;
-  ; @return (map)
-  ; {:content (multitype-content)
-  ;  :content-placeholder (multitype-content)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

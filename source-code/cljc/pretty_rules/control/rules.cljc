@@ -1,8 +1,10 @@
 
 (ns pretty-rules.control.rules
-    #?(:clj  (:require [fruits.map.api        :as map]
+    #?(:clj  (:require [fruits.hiccup.api     :as hiccup]
+                       [fruits.map.api        :as map]
                        [pretty-properties.api :as pretty-properties])
        :cljs (:require [dom.api               :as dom]
+                       [fruits.hiccup.api     :as hiccup]
                        [fruits.map.api        :as map]
                        [pretty-properties.api :as pretty-properties])))
 
@@ -66,5 +68,5 @@
   ;  ...}
   [props]
   (if (-> props pretty-properties/clickable-props?)
-      (-> props (pretty-properties/merge-event-fn :on-mouse-up-f #?(:cljs dom/blur-active-element!)))
+      (-> props (hiccup/merge-event-fn :on-mouse-up-f #?(:cljs dom/blur-active-element!)))
       (-> props)))
