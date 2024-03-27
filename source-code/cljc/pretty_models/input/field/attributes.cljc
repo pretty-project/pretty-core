@@ -22,7 +22,7 @@
   ; 1. The input element would lose its focus.
   ; 2. The 'on-blur' event may not occur in some browsers when the 'disabled="true"' attribute is applied. Leading to:
   ;    - The keypress handler staying in type mode.
-  ;    - The the field remaining marked as focused.
+  ;    - The field remaining marked as focused.
   ; 3. After the '{:disabled? true}' state ends, the field may not regain its focused state.
   (-> attributes (pretty-attributes/cursor-attributes         props)
                  (pretty-attributes/focus-event-attributes    props)
