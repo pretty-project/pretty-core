@@ -3,7 +3,7 @@
 
 ### Overview
 
-The <strong>pretty-core</strong> is a simple build kit for Pretty UI.
+The <strong>pretty-core</strong> is a build kit for Pretty UI.
 
 ### deps.edn
 
