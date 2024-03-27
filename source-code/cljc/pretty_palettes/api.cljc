@@ -14,7 +14,7 @@
 
 ; @tutorial CSS dependencies
 ;
-; [pretty-palettes.min.css](github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-palettes.min.css)
+; [pretty-palettes.min.css](https://github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-palettes.min.css)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

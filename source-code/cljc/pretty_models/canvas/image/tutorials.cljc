@@ -7,7 +7,7 @@
 ; @tutorial Image canvas model
 ;
 ; @links Implemented attributes
-; [Background image attributes](pretty-core/cljs/pretty-attributes/api.html#background-image-attributes)
+; [Background image attributes](../pretty-attributes/api.html#background-image-attributes)
 ;
 ; @links Implemented properties
-; [Background image properties](pretty-core/cljs/pretty-properties/api.html#background-image-properties)
+; [Background image properties](../pretty-properties/api.html#background-image-properties)

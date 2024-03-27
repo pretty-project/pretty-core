@@ -14,7 +14,7 @@
 
 ; @tutorial CSS dependencies
 ;
-; [pretty-icons.min.css](github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-icons.min.css)
+; [pretty-icons.min.css](https://github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-icons.min.css)
 ;
 ; [fonts.googleapis.com/icon?family=Material+Icons](https://fonts.googleapis.com/icon?family=Material+Icons)
 ; [fonts.googleapis.com/icon?family=Material+Icons+Outlined](https://fonts.googleapis.com/icon?family=Material+Icons+Outlined)

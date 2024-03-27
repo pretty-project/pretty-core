@@ -24,7 +24,7 @@
 
 ; @tutorial CSS dependencies
 ;
-; [pretty-attributes.min.css](github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-attributes.min.css)
+; [pretty-attributes.min.css](https://github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-attributes.min.css)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

@@ -14,8 +14,8 @@
 
 ; @tutorial Sample themes
 ;
-; [soft-dark.css](github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-themes/soft-dark.css)
-; [soft-light.css](github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-themes/soft-light.css)
+; [soft-dark.css](https://github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-themes/soft-dark.css)
+; [soft-light.css](https://github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-themes/soft-light.css)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -36,7 +36,7 @@
 
 ; @tutorial CSS dependencies
 ;
-; [pretty-themes.min.css](github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-themes.min.css)
+; [pretty-themes.min.css](https://github.com/pretty-project/pretty-core/tree/release/resources/public/pretty-themes.min.css)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

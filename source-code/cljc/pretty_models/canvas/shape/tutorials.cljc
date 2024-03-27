@@ -7,4 +7,4 @@
 ; @tutorial Shape canvas model
 ;
 ; @links Implemented properties
-; [Shape properties](pretty-core/cljs/pretty-properties/api.html#shape-properties)
+; [Shape properties](../pretty-properties/api.html#shape-properties)

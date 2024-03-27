@@ -7,7 +7,7 @@
 ; @tutorial Line canvas model
 ;
 ; @links Implemented attributes
-; [Line attributes](pretty-core/cljs/pretty-attributes/api.html#line-attributes)
+; [Line attributes](../pretty-attributes/api.html#line-attributes)
 ;
 ; @links Implemented properties
-; [Line properties](pretty-core/cljs/pretty-properties/api.html#line-properties)
+; [Line properties](../pretty-properties/api.html#line-properties)

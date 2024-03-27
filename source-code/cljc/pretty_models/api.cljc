@@ -64,8 +64,8 @@
 ; @usage
 ; (defn my-props-prototype
 ;   [props]
-;   ;; 1. Apply the property standards of a model (first) on the provided properties of the component.
-;   ;; 2. Apply the property rules of a model (second) on the provided properties of the component.
+;   ;; 1. Apply the property standards of a model on the provided properties of the component,
+;   ;; 2. Apply the property rules of a model on the provided properties of the component.
 ;   (-> props (flex-container-standard-props)
 ;             (flex-container-rules props)))
 ;
