@@ -122,6 +122,46 @@
 ;
 ;
 ;
+; @title failured property
+;
+; @--- Accepted types
+; {:failured (map)}
+;
+; @--- Examples
+; {:failured {:opacity :medium}}
+;
+;
+;
+; @title focused? property
+;
+; @--- Accepted types
+; {:focused? (boolean)}
+;
+; @--- Examples
+; {:focused? true}
+;
+;
+;
+; @title focused property
+;
+; @--- Accepted types
+; {:focused (map)}
+;
+; @--- Examples
+; {:focused {:opacity :medium}}
+;
+;
+;
+; @title failured? property
+;
+; @--- Accepted types
+; {:failured? (boolean)}
+;
+; @--- Examples
+; {:failured? true}
+;
+;
+;
 ; @title highlighted property
 ;
 ; @--- Accepted types
@@ -161,6 +201,66 @@
 ;
 ; @--- Examples
 ; {:hovered? true}
+;
+;
+;
+; @title pressed property
+;
+; @--- Accepted types
+; {:pressed (map)}
+;
+; @--- Examples
+; {:pressed {:opacity :medium}}
+;
+;
+;
+; @title pressed? property
+;
+; @--- Accepted types
+; {:pressed? (boolean)}
+;
+; @--- Examples
+; {:pressed? true}
+;
+;
+;
+; @title selected property
+;
+; @--- Accepted types
+; {:selected (map)}
+;
+; @--- Examples
+; {:selected {:opacity :medium}}
+;
+;
+;
+; @title selected? property
+;
+; @--- Accepted types
+; {:selected? (boolean)}
+;
+; @--- Examples
+; {:selected? true}
+;
+;
+;
+; @title succeeded property
+;
+; @--- Accepted types
+; {:succeeded (map)}
+;
+; @--- Examples
+; {:succeeded {:opacity :medium}}
+;
+;
+;
+; @title succeeded? property
+;
+; @--- Accepted types
+; {:succeeded? (boolean)}
+;
+; @--- Examples
+; {:succeeded? true}
 ;
 ;
 ;

@@ -2,7 +2,8 @@
 (ns pretty-attributes.basic.attributes
     (:require [fruits.map.api    :as map]
               [fruits.mixed.api  :as mixed]
-              [fruits.vector.api :as vector]))
+              [fruits.vector.api :as vector]
+              [component-states.api :as component-states]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -80,6 +81,9 @@
 ;; ----------------------------------------------------------------------------
 
 (defn state-attributes
+  ; @links
+  ; [cljs-component-states](https://mt-app-kit.github.io/cljs-component-states)
+  ;
   ; @note
   ; Values derived from the given property map, and applied on the given attribute map.
   ;
@@ -90,8 +94,13 @@
   ; @param (map) props
   ; {:active? (boolean)(opt)
   ;  :disabled? (boolean)(opt)
+  ;  :failured? (boolean)(opt)
+  ;  :focused? (boolean)(opt)
   ;  :highlighted? (boolean)(opt)
   ;  :hovered? (boolean)(opt)
+  ;  :pressed? (boolean)(opt)
+  ;  :selected? (boolean)(opt)
+  ;  :succeeded? (boolean)(opt)
   ;  :tab-disabled? (boolean)(opt)
   ;  ...}
   ;
@@ -104,16 +113,18 @@
   ; @return (map)
   ; {:data-active (boolean)
   ;  :data-disabled (boolean)
+  ;  :data-failured (boolean)
+  ;  :data-focused (boolean)
   ;  :data-highlighted (boolean)
   ;  :data-hovered (boolean)
+  ;  :data-pressed (boolean)
+  ;  :data-selected (boolean)
+  ;  :data-succeeded (boolean)
   ;  :tab-index (integer)
   ;  ...}
-  [attributes {:keys [active? disabled? highlighted? hovered? tab-disabled?]}]
-  (-> attributes (map/merge-some {:data-active      (-> active?)
-                                  :data-disabled    (-> disabled?)
-                                  :data-highlighted (-> highlighted?)
-                                  :data-hovered     (-> hovered?)
-                                  :tab-index        (if tab-disabled? -1)})))
+  [attributes {:keys [tab-disabled?] :as props}]
+  (-> attributes (map/merge-some {:tab-index (if tab-disabled? -1)})
+                 (component-states/component-state-attributes props)))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

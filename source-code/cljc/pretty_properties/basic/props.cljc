@@ -106,6 +106,9 @@
 ;; ----------------------------------------------------------------------------
 
 (defn default-state-props
+  ; @links
+  ; [cljs-component-states](https://mt-app-kit.github.io/cljs-component-states)
+  ;
   ; @description
   ; Applies the given default state properties on the given property map.
   ;
@@ -114,10 +117,20 @@
   ;  :active? (boolean)(opt)
   ;  :disabled (map)(opt)
   ;  :disabled? (boolean)(opt)
+  ;  :failured (map)(opt)
+  ;  :failured? (boolean)(opt)
+  ;  :focused (map)(opt)
+  ;  :focused? (boolean)(opt)
   ;  :highlighted (map)(opt)
   ;  :highlighted? (boolean)(opt)
   ;  :hovered (map)(opt)
   ;  :hovered? (boolean)(opt)
+  ;  :pressed (map)(opt)
+  ;  :pressed? (boolean)(opt)
+  ;  :selected (map)(opt)
+  ;  :selected? (boolean)(opt)
+  ;  :succeeded (map)(opt)
+  ;  :succeeded? (boolean)(opt)
   ;  :tab-disabled? (boolean)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
@@ -133,10 +146,20 @@
   ;  :active? (boolean)
   ;  :disabled (map)
   ;  :disabled? (boolean)
+  ;  :failured (map)
+  ;  :failured? (boolean)
+  ;  :focused (map)
+  ;  :focused? (boolean)
   ;  :highlighted (map)
   ;  :highlighted? (boolean)
   ;  :hovered (map)
   ;  :hovered? (boolean)
+  ;  :pressed (map)
+  ;  :pressed? (boolean)
+  ;  :selected (map)
+  ;  :selected? (boolean)
+  ;  :succeeded (map)
+  ;  :succeeded? (boolean)
   ;  :tab-disabled? (boolean)
   ;  ...}
   [props & [default-props]]
