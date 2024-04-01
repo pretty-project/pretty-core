@@ -170,34 +170,31 @@
   ;
   ; @param (map) props
   ; {:form-id (keyword)(opt)
-  ;  :on-invalid-f (function)(opt)
-  ;  :on-valid-f (function)(opt)
-  ;  :validate-when-change? (boolean)(opt)
-  ;  :validate-when-leave? (boolean)(opt)
-  ;  :validators (maps in vector)(opt)
+  ;  :validators (keywords and/or maps in vector)(opt)
   ;   [(map) validator
   ;     {:error (multitype-content)(opt)
-  ;      :f (function)}]
+  ;      :test-f (function)
+  ;      :when-changed? (boolean)(opt)
+  ;      :when-left? (boolean)(opt)
+  ;      :when-visited? (boolean)(opt)}]
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-input-validation-props {...} {:on-valid-f (fn [_] ...) :validators [{:f some? :error "Please fill out this field!"}]})
+  ; (default-input-validation-props {...} {:validators [{:error "Please fill out this field!" :test-f (fn [value] (-> value empty? not))}]})
   ; =>
-  ; {:on-valid-f (fn [_] ...)
-  ;  :validators [{:f some? :error "Please fill out this field!"}]
+  ; {:validators [{:error "Please fill out this field!" :test-f (fn [value] (-> value empty? not))}]
   ;  ...}
   ;
   ; @return (map)
   ; {:form-id (keyword)
-  ;  :on-invalid-f (function)
-  ;  :on-valid-f (function)
-  ;  :validate-when-change? (boolean)
-  ;  :validate-when-leave? (boolean)
-  ;  :validators (maps in vector)
+  ;  :validators (keywords and/or maps in vector)
   ;   [(map) validator
   ;     {:error (multitype-content)
-  ;      :f (function)}]
+  ;      :test-f (function)
+  ;      :when-changed? (boolean)(opt)
+  ;      :when-left? (boolean)(opt)
+  ;      :when-visited? (boolean)(opt)}]
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))

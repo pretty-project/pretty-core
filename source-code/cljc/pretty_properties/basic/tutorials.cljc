@@ -69,13 +69,13 @@
 
 ; @tutorial React properties
 ;
-; @title set-reference-f property
+; @title store-reference-f property
 ;
 ; @--- Accepted types
-; {:set-reference-f (function)}
+; {:store-reference-f (function)}
 ;
 ; @--- Examples
-; {:set-reference-f (fn [ref] ...)}
+; {:store-reference-f (fn [ref] ...)}
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

@@ -74,7 +74,7 @@
 ; {:field-modifier-f (function)}
 ;
 ; @--- Examples
-; {:field-modifier-f clojure.string/upper-case}
+; {:field-modifier-f (fn [value] (clojure.string/upper-case value))}
 ;
 ;
 ;
@@ -321,53 +321,16 @@
 ;
 ;
 ;
-; @title on-invalid-f property
-;
-; @--- Accepted types
-; {:on-invalid-f (function)}
-;
-; @--- Examples
-; {:on-invalid-f (fn [value error])}
-;
-;
-;
-; @title on-valid-f property
-;
-; @--- Accepted types
-; {:on-valid-f (function)}
-;
-; @--- Examples
-; {:on-valid-f (fn [value])}
-;
-;
-;
-; @title validate-when-change? property
-;
-; @--- Accepted types
-; {:validate-when-change? (boolean)}
-;
-; @--- Examples
-; {:validate-when-change? true}
-;
-;
-;
-; @title validate-when-leave? property
-;
-; @--- Accepted types
-; {:validate-when-leave? (boolean)}
-;
-; @--- Examples
-; {:validate-when-leave? true}
-;
-;
-;
 ; @title validators property
 ;
 ; @--- Accepted types
-; {:validators (maps in vector)
+; {:validators (keywords and/or maps in vector)
 ;   [(map) validator
 ;     {:error (multitype-content)
-;      :test-f (function)}]}
+;      :test-f (function)
+;      :when-changed? (boolean)(opt)
+;      :when-left? (boolean)(opt)
+;      :when-visited? (boolean)(opt)}]}
 ;
 ; @--- Examples
 ; {:validators [{:error "Please fill out this field!" :test-f (fn [value] (-> value empty? not))}]}

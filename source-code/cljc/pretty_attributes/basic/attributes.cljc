@@ -1,9 +1,12 @@
 
 (ns pretty-attributes.basic.attributes
-    (:require [fruits.map.api    :as map]
-              [fruits.mixed.api  :as mixed]
-              [fruits.vector.api :as vector]
-              [component-states.api :as component-states]))
+    #?(:clj  (:require [fruits.map.api       :as map]
+                       [fruits.mixed.api     :as mixed]
+                       [fruits.vector.api    :as vector])
+       :cljs (:require [component-states.api :as component-states]
+                       [fruits.map.api       :as map]
+                       [fruits.mixed.api     :as mixed]
+                       [fruits.vector.api    :as vector])))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -62,11 +65,11 @@
   ;
   ; @param (map) attributes
   ; @param (map) props
-  ; {:set-reference-f (function)(opt)
+  ; {:store-reference-f (function)(opt)
   ;  ...}
   ;
   ; @usage
-  ; (react-attributes {...} {:set-reference-f (fn [_] ...)})
+  ; (react-attributes {...} {:store-reference-f (fn [_] ...)})
   ; =>
   ; {:ref (fn [_] ...)
   ;  ...}
@@ -74,8 +77,8 @@
   ; @return (map)
   ; {:ref (function)
   ;  ...}
-  [attributes {:keys [set-reference-f]}]
-  (-> attributes (map/merge-some {:ref set-reference-f})))
+  [attributes {:keys [store-reference-f]}]
+  (-> attributes (map/merge-some {:ref store-reference-f})))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -123,8 +126,9 @@
   ;  :tab-index (integer)
   ;  ...}
   [attributes {:keys [tab-disabled?] :as props}]
-  (-> attributes (map/merge-some {:tab-index (if tab-disabled? -1)})
-                 (component-states/component-state-attributes props)))
+  #?(:clj  (-> attributes (map/merge-some {:tab-index (if tab-disabled? -1)}))
+     :cljs (-> attributes (map/merge-some {:tab-index (if tab-disabled? -1)})
+                          (component-states/component-state-attributes props))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

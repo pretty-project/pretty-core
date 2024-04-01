@@ -86,18 +86,18 @@
   ; Applies the given default React properties on the given property map.
   ;
   ; @param (map) props
-  ; {:set-reference-f (function)(opt)
+  ; {:store-reference-f (function)(opt)
   ;  ...}
   ; @param (map)(opt) default-props
   ;
   ; @usage
-  ; (default-react-props {...} {:set-reference-f (fn [_] ...)})
+  ; (default-react-props {...} {:store-reference-f (fn [_] ...)})
   ; =>
-  ; {:set-reference-f (fn [_] ...)
+  ; {:store-reference-f (fn [_] ...)
   ;  ...}
   ;
   ; @return (map)
-  ; {:set-reference-f (function)
+  ; {:store-reference-f (function)
   ;  ...}
   [props & [default-props]]
   (-> props (map/use-default-values default-props)))
